@@ -17,8 +17,9 @@
 
     ext.Setting_targetIP = function (ip) {
         console.log("Setting_targetIP");
-		
-		$.ajax({
+
+/*		
+            $.ajax({
             url: 'http://' + ip + port + '/?name=Add_and_update_sentence' + '&p1=' + 'test' + '&p2=' + 'zenbo',
             dataType: 'text',
             crossDomain: true,
@@ -53,7 +54,7 @@
             }
         });
 		
-		
+*/		
         return ip;
     };
 
@@ -348,6 +349,42 @@
     };
 
     ext.Add_and_update_sentence = function (ip, p1, p2) {
+        
+        $.ajax({
+            url: 'http://' + ip + port + '/?name=Add_and_update_sentence' + '&p1=' + 'test' + '&p2=' + 'zenbo',
+            dataType: 'text',
+            crossDomain: true,
+            success: function (data) {
+            console.log("success handler");
+
+                        var setupFlag = true;
+                        var flagIndex = 0;
+
+                        for(var i=0; i < flagArray.data.length; i++){
+
+                                 if ( ip == flagArray.data[i].device) {
+                                          setupFlag = false;
+                                          flagIndex = i;
+                                          console.log("false " + "flagIndex: "+ flagIndex);
+                                 }
+                        }
+
+                        if (setupFlag == true) {
+                                flagArray.data.push( { device: ip, correctedSentence: "", sentence_1_flag: false, sentence_2_flag: false, sentence_3_flag: false, sentence_4_flag: false, sentence_5_flag: false, number_flag: false, get_sentences_flag: true } );
+                                console.log("add new device IP and its flags");
+                                flagIndex = flagArray.data.length -1 ;
+                                console.log("true " + "flagIndex: "+ flagIndex);
+                         }
+
+                         getSentencesRecursion(ip, flagIndex);
+
+
+            },
+            error: function (jqXHR, textStatus, errorThrown) {
+                console.log("error handler");
+            }
+        }); 
+         
         console.log("Add_and_update_sentence");
         console.log(ip);
         console.log(p1);
