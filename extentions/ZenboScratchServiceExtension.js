@@ -1,19 +1,26 @@
 (function (ext) {
 
+    var flagArray = {
+        data:[]
+    };
+	
     ext._shutdown = function () {
         console.log('Shutting down...');
+
         $.ajax({
             url: 'http://' + ip + port + '/?name=Delete_instance',
-            dataType: 'jsonp',
+            dataType: 'text',
             crossDomain: true,
             success: function (data) {
                 console.log("success handler");
+                console.log("shutdown-Delete_instance");
 
             },
             error: function (jqXHR, textStatus, errorThrown) {
                 console.log("error handler");
             }
         });
+
     };
 
     ext._getStatus = function () {
@@ -34,7 +41,7 @@
         console.log(p2);
         $.ajax({
             url: 'http://' + ip + port + '/?name=Head_movement' + '&p1=' + p1 + '&p2=' + p2,
-            dataType: 'jsonp',
+            dataType: 'text',
             crossDomain: true,
             success: function (data) {
                 console.log("success handler");
@@ -54,7 +61,7 @@
         console.log(p3);
         $.ajax({
             url: 'http://' + ip + port + '/?name=Body_movement' + '&p1=' + p1 + '&p2=' + p2 + '&p3=' + p3,
-            dataType: 'jsonp',
+            dataType: 'text',
             crossDomain: true,
             success: function (data) {
                 console.log("success handler");
@@ -73,7 +80,7 @@
         console.log(p2);
         $.ajax({
             url: 'http://' + ip + port + '/?name=Body_turn' + '&p1=' + p1 + '&p2=' + p2,
-            dataType: 'jsonp',
+            dataType: 'text',
             crossDomain: true,
             success: function (data) {
                 console.log("success handler");
@@ -91,7 +98,7 @@
         console.log(p1);
         $.ajax({
             url: 'http://' + ip + port + '/?name=Remote_control_body' + '&p1=' + p1,
-            dataType: 'jsonp',
+            dataType: 'text',
             crossDomain: true,
             success: function (data) {
                 console.log("success handler");
@@ -108,7 +115,7 @@
         console.log(ip);
         $.ajax({
             url: 'http://' + ip + port + '/?name=Stop_moving',
-            dataType: 'jsonp',
+            dataType: 'text',
             crossDomain: true,
             success: function (data) {
                 console.log("success handler");
@@ -126,7 +133,7 @@
         console.log(p1);
         $.ajax({
             url: 'http://' + ip + port + '/?name=Action' + '&p1=' + p1,
-            dataType: 'jsonp',
+            dataType: 'text',
             crossDomain: true,
             success: function (data) {
                 console.log("success handler");
@@ -144,7 +151,7 @@
         console.log(p1);
         $.ajax({
             url: 'http://' + ip + port + '/?name=Facial' + '&p1=' + p1,
-            dataType: 'jsonp',
+            dataType: 'text',
             crossDomain: true,
             success: function (data) {
                 console.log("success handler");
@@ -162,7 +169,7 @@
         console.log(p1);
         $.ajax({
             url: 'http://' + ip + port + '/?name=TTS' + '&p1=' + p1,
-            dataType: 'jsonp',
+            dataType: 'text',
             crossDomain: true,
             success: function (data) {
                 console.log("success handler");
@@ -180,7 +187,7 @@
         console.log(p1);
         $.ajax({
             url: 'http://' + ip + port + '/?name=TTS_editor' + '&p1=' + p1,
-            dataType: 'jsonp',
+            dataType: 'text',
             crossDomain: true,
             success: function (data) {
                 console.log("success handler");
@@ -197,7 +204,7 @@
         console.log(ip);
         $.ajax({
             url: 'http://' + ip + port + '/?name=Cancel_actionset',
-            dataType: 'jsonp',
+            dataType: 'text',
             crossDomain: true,
             success: function (data) {
                 console.log("success handler");
@@ -216,7 +223,7 @@
         console.log(p2);
         $.ajax({
             url: 'http://' + ip + port + '/?name=Adjust_stream_volume' + '&p1=' + p1 + '&p2=' + p2,
-            dataType: 'jsonp',
+            dataType: 'text',
             crossDomain: true,
             success: function (data) {
                 console.log("success handler");
@@ -228,17 +235,41 @@
         });
     };
 
-    ext.Add_and_update_sentence = function (ip, p1, callback) {
+    ext.Add_and_update_sentence = function (ip, p1, p2) {
         console.log("Add_and_update_sentence");
         console.log(ip);
         console.log(p1);
+        console.log(p2);
         $.ajax({
-            url: 'http://' + ip + port + '/?name=Add_and_update_sentence' + '&p1=' + p1,
-            dataType: 'jsonp',
+            url: 'http://' + ip + port + '/?name=Add_and_update_sentence' + '&p1=' + p1 + '&p2=' + p2,
+            dataType: 'text',
             crossDomain: true,
             success: function (data) {
-                console.log("success handler");
+            console.log("success handler");
 
+			
+			var setupFlag = true;
+			var flagIndex = 0;   
+
+			for(var i=0; i < flagArray.data.length; i++){
+
+				 if ( ip == flagArray.data[i].device) {    
+					  setupFlag = false;
+					  flagIndex = i;  
+					  console.log("false " + "flagIndex: "+ flagIndex);
+				 }     
+			}
+		  
+			if (setupFlag == true) {
+				flagArray.data.push( { device: ip,  sentence_1_flag: false, sentence_2_flag: false, sentence_3_flag: false, sentence_4_flag: false, sentence_5_flag: false, get_sentences_flag: true } );
+				console.log("add new device IP and its flags");
+				flagIndex = flagArray.data.length -1 ;  
+				console.log("true " + "flagIndex: "+ flagIndex);
+			 }
+
+            getSentencesRecursion(ip, flagIndex); 
+			
+							
             },
             error: function (jqXHR, textStatus, errorThrown) {
                 console.log("error handler");
@@ -246,12 +277,91 @@
         });
     };    
 
+	var getSentencesRecursion = function(ip, flagIndex) {
+
+		if ( flagArray.data[flagIndex].get_sentences_flag === true ) {  	 
+			 flagArray.data[flagIndex].get_sentences_flag = false;  
+			 
+			$.ajax({
+				type: 'GET',
+				url: 'http://' + ip + port + '/?name=Get_sentences',
+				dataType: 'text',
+				crossDomain: true,
+				success: function (data) {
+				console.log("Get_sentences-success handler");
+
+				switch(data) {
+
+					case '語句一':
+						
+						console.log('辨識到語句一'); 
+						console.log( ip + " "  + flagIndex + "sentence_1_flag true");
+						flagArray.data[flagIndex].sentence_1_flag = true;
+
+						break;
+
+					case '語句二':
+						
+						console.log('辨識到語句二'); 
+						console.log( ip + " "  + flagIndex + "sentence_2_flag true");
+						flagArray.data[flagIndex].sentence_2_flag = true;
+
+						break;
+
+					case '語句三':
+						
+
+						console.log('辨識到語句三');  
+						console.log( ip + " "  + flagIndex + "sentence_3_flag true");
+						flagArray.data[flagIndex].sentence_3_flag = true;
+
+						break;
+
+					case '語句四':
+						
+						console.log('辨識到語句四'); 
+						console.log( ip + " "  + flagIndex + "sentence_4_flag true");
+						flagArray.data[flagIndex].sentence_4_flag = true;
+
+						break;
+
+
+					case '語句五':
+
+						console.log('辨識到語句五');                   
+						console.log( ip + " "  + flagIndex + "sentence_5_flag true");
+						flagArray.data[flagIndex].sentence_5_flag = true;
+
+					   break;
+					   
+				}  
+
+                 flagArray.data[flagIndex].get_sentences_flag = true;
+                 getSentencesRecursion(ip, flagIndex);  				 
+				
+				},
+				error: function (jqXHR, textStatus, errorThrown) {
+					console.log("error handler");
+			 
+			     flagArray.data[flagIndex].get_sentences_flag = true;
+                 	     getSentencesRecursion(ip, flagIndex);	 
+					
+				}
+			});
+				
+            }    
+	
+	
+	
+    };
+	
+	
     ext.Delete_instance = function (ip,callback){
         console.log("Delete_instance");
         console.log(ip);
         $.ajax({
             url: 'http://' + ip + port + '/?name=Delete_instance',
-            dataType: 'jsonp',
+            dataType: 'text',
             crossDomain: true,
             success: function (data) {
                 console.log("success handler");
@@ -263,16 +373,16 @@
         });
     };
 
-    ext.Speak_and_listen = function (ip,callback){
+    ext.Speak_and_listen = function (ip){
         console.log("Speak_and_listen");
         console.log(ip);
         $.ajax({
             url: 'http://' + ip + port + '/?name=Speak_and_listen',
-            dataType: 'jsonp',
+            dataType: 'text',
             crossDomain: true,
             success: function (data) {
-                console.log("success handler");
-
+            console.log("Speak_and_listen-success handler");	 
+				               				   
             },
             error: function (jqXHR, textStatus, errorThrown) {
                 console.log("error handler");
@@ -287,7 +397,7 @@
         console.log(p2);
         $.ajax({
             url: 'http://' + ip + port + '/?name=Play_music' + '&p1=' + p1 + '&p2=' + p2,
-            dataType: 'jsonp',
+            dataType: 'text',
             crossDomain: true,
             success: function (data) {
                 console.log("success handler");
@@ -306,7 +416,7 @@
         console.log(p2);
         $.ajax({
             url: 'http://' + ip + port + '/?name=Adjust_tts_and_speed' + '&p1=' + p1 + '&p2=' + p2,
-            dataType: 'jsonp',
+            dataType: 'text',
             crossDomain: true,
             success: function (data) {
                 console.log("success handler");
@@ -317,6 +427,114 @@
             }
         });
     };
+
+    ext.Get_sentences = function (ip, p1, callback){
+        console.log("Get_sentences");
+        console.log(ip);
+        console.log(p1);
+        $.ajax({
+            type: 'GET',  
+            url: 'http://' + ip + port + '/?name=Get_sentences',
+            dataType: 'text',
+            crossDomain: true,
+            success: function (data) {
+                console.log("success handler");
+                if (p1 == data) {  
+                    callback(true);
+                    console.log("true");  
+                }
+                else { 
+                    callback(false);
+                    console.log("false");
+                } 
+
+            },
+            error: function (jqXHR, textStatus, errorThrown) {
+                console.log("error handler");
+                callback(textStatus);
+            }
+        });        
+    };
+
+    ext.when_listen_and_run = function(ip, p1) {
+       
+    var checkFlag = false;
+    var valueIndex = 0;
+
+    for(var i=0; i < flagArray.data.length; i++){
+
+             if ( ip == flagArray.data[i].device) {
+                  checkFlag = true;
+                  valueIndex = i;
+             }
+    }
+
+    if ( checkFlag === false )
+    return false;
+
+    switch(p1) {
+
+    case '語句一':
+        
+       console.log('語句一'); 
+       if (flagArray.data[valueIndex].sentence_1_flag === true) {
+           flagArray.data[valueIndex].sentence_1_flag = false;
+           return true;
+       }
+
+        break;
+
+    case '語句二':
+        
+       console.log('語句二'); 
+       if (flagArray.data[valueIndex].sentence_2_flag === true) {
+           flagArray.data[valueIndex].sentence_2_flag = false;
+           return true;
+       }
+
+
+        break;
+
+    case '語句三':
+        
+
+       console.log('語句三');  
+       if (flagArray.data[valueIndex].sentence_3_flag === true) {
+           flagArray.data[valueIndex].sentence_3_flag = false;
+           return true;
+       }
+
+
+        break;
+
+    case '語句四':
+        
+       console.log('語句四'); 
+       if (flagArray.data[valueIndex].sentence_4_flag === true) {
+           flagArray.data[valueIndex].sentence_4_flag = false;
+           return true;
+       }
+
+
+
+        break;
+
+
+    case '語句五':
+
+       console.log('語句五');                   
+       if (flagArray.data[valueIndex].sentence_5_flag === true) {
+           flagArray.data[valueIndex].sentence_5_flag = false;
+           return true;
+       }
+
+       break;
+       
+   }
+     return false;
+    };
+
+
 
     var descriptor = {
         blocks: [
@@ -333,6 +551,10 @@
             ['', 'IP %s 說話 %s', 'TTS_editor', "192.168.0.1", '請填入文字'],
             ['', 'IP %s 調整 %m.volume_option_type 音量 %m.volume_type', 'Adjust_stream_volume', "192.168.0.1", '說話', '大聲點'],
             ['', 'IP %s 說話 %s 速度 %m.tts_speed_type', 'Adjust_tts_and_speed', "192.168.0.1", '請填入文字', 'L2'],
+            ['', 'IP %s 準備要聽 %m.sentence_type 是 %s', 'Add_and_update_sentence', "192.168.0.1", '語句一', '吃飯'], 
+            ['', 'IP %s 我要開始聽', 'Speak_and_listen', "192.168.0.1"], 
+            ['h', '當我聽到 IP %s 的 %m.sentence_type', 'when_listen_and_run', "192.168.0.1", '語句一'],
+            ['', 'IP %s 刪除全部語句', 'Delete_instance', "192.168.0.1"],
         ],
         menus: {
             "head_direction": ["左", "右", "上", "下"],
@@ -354,10 +576,11 @@
             "music_type": ["開始", "暫停", "繼續", "停止", "重新"],
             "volume_option_type": ["音樂", "鬧鐘", "通知", "說話"],
             "tts_speed_type": ["L1", "L2", "L3", "L4", "L5", "L6", "L7", "L8"],
+            "sentence_type": ["語句一", "語句二", "語句三", "語句四", "語句五"],
         },
-        url: 'https://zenboscratch.github.io/' // Link to extension documentation, homepage, etc.
+        url: 'https://zenboscratchservice.github.io/' // Link to extension documentation, homepage, etc.
     };
 
     // Register the extension
-    ScratchExtensions.register('ZenboScratch', descriptor, ext);
+    ScratchExtensions.register('ZenboScratchService', descriptor, ext);
 })({});
