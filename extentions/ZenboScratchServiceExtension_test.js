@@ -674,6 +674,82 @@
         });
     };
 
+    ext.openDriveVideoUrl = function (ip, p1, p2) {
+        console.log("openDriveVideoUrl");
+        console.log(ip);
+        console.log(p1);
+        console.log(p2);
+        $.ajax({
+            url: 'http://' + ip + port + '/?name=openDriveVideoUrl' + '&p1=' + p1 + '&p2=' + p2,
+            dataType: 'text',
+            crossDomain: true,
+            success: function (data) {
+                console.log("success handler");
+
+            },
+            error: function (jqXHR, textStatus, errorThrown) {
+                console.log("error handler");
+            }
+        });
+    };
+
+    ext.openDriveAudioUrl = function (ip, p1, p2) {
+        console.log("openDriveAudioUrl");
+        console.log(ip);
+        console.log(p1);
+        console.log(p2);
+        $.ajax({
+            url: 'http://' + ip + port + '/?name=openDriveAudioUrl' + '&p1=' + p1 + '&p2=' + p2,
+            dataType: 'text',
+            crossDomain: true,
+            success: function (data) {
+                console.log("success handler");
+
+            },
+            error: function (jqXHR, textStatus, errorThrown) {
+                console.log("error handler");
+            }
+        });
+    };
+
+    ext.openDrivePictureUrl = function (ip, p1, p2) {
+        console.log("openDrivePictureUrl");
+        console.log(ip);
+        console.log(p1);
+        console.log(p2);
+        $.ajax({
+            url: 'http://' + ip + port + '/?name=openDrivePictureUrl' + '&p1=' + p1 + '&p2=' + p2,
+            dataType: 'text',
+            crossDomain: true,
+            success: function (data) {
+                console.log("success handler");
+
+            },
+            error: function (jqXHR, textStatus, errorThrown) {
+                console.log("error handler");
+            }
+        });
+    };
+
+    ext.openDriveDocumentUrl = function (ip, p1, p2) {
+        console.log("openDriveDocumentUrl");
+        console.log(ip);
+        console.log(p1);
+        console.log(p2);
+        $.ajax({
+            url: 'http://' + ip + port + '/?name=openDriveDocumentUrl' + '&p1=' + p1 + '&p2=' + p2,
+            dataType: 'text',
+            crossDomain: true,
+            success: function (data) {
+                console.log("success handler");
+            
+            },
+            error: function (jqXHR, textStatus, errorThrown) {
+                console.log("error handler");
+            }
+        });
+    };
+
 
     var descriptor = {
         blocks: [
@@ -698,9 +774,12 @@
             ['h', '當我聽到 IP %s 的數字', 'when_listen_number_and_run', "192.168.0.1"],
             ['r', '目前 IP %s 聽到的數字 ', 'getCorrectedSentence', "192.168.0.1"],
             ['', 'IP %s %m.playVideosInYoutubeItems 播放Youtube網址: %s', 'playVideosInYoutube', "192.168.0.1", '開始', 'https://www.youtube.com/watch?v=09R8_2nJtjg'],
-            ['', 'IP %s %m.displayUrlPicturesItems 瀏覽線上圖片: %s', 'displayUrlPictures', "192.168.0.1", '開始', 'http://seacrestwolfpreserve.org/site/templates/images/home-slider-wolf-face-01.jpg'],
             ['', 'IP %s %m.playUrlMusicItems 播放線上音樂: %s', 'playUrlMusic', "192.168.0.1", '開始', 'http://www.abstractpath.com/files/audiosamples/sample.mp3'],
-            ['', 'IP %s %m.openDriveUrlItems 瀏覽Google Drive網址: %s', 'openDriveUrl', "192.168.0.1", '開始', 'https://drive.google.com/open?id=0B5o6VwYT7NaiUUhrTW12Ql9tcUk'],
+            ['', 'IP %s %m.displayUrlPicturesItems 瀏覽線上圖片: %s', 'displayUrlPictures', "192.168.0.1", '開始', 'http://seacrestwolfpreserve.org/site/templates/images/home-slider-wolf-face-01.jpg'],
+            ['', 'IP %s %m.openDriveVideoUrlItems 播放 Google Drive 影片: %s', 'openDriveVideoUrl', "192.168.0.1", '開始', 'https://drive.google.com/open?id=0B5o6VwYT7NaiUUhrTW12Ql9tcUk'],
+            ['', 'IP %s %m.openDriveAudioUrlItems 播放 Google Drive 音樂: %s', 'openDriveAudioUrl', "192.168.0.1", '開始', 'https://drive.google.com/open?id=0B5o6VwYT7NaiQzRpdWxnTEFmV1U'], 
+            ['', 'IP %s %m.openDrivePictureUrlItems 瀏覽 Google Drive 圖片: %s', 'openDrivePictureUrl', "192.168.0.1", '開始', 'https://drive.google.com/open?id=0B5o6VwYT7NaiY3FjT1dxelpGcjg'],
+            ['', 'IP %s %m.openDriveDocumentUrlItems 瀏覽 Google Drive 文件: %s', 'openDriveDocumentUrl', "192.168.0.1", '開始', 'https://drive.google.com/open?id=0B5o6VwYT7NaiRGV0NnZJLVQ0OVE'],
         ],
         menus: {
             "head_direction": ["左", "右", "上", "下"],
@@ -726,7 +805,10 @@
             "playVideosInYoutubeItems": ["開始", "關閉"],
             "displayUrlPicturesItems": ["開始", "關閉"],
             "playUrlMusicItems": ["開始", "關閉"],
-            "openDriveUrlItems": ["開始", "關閉"],
+            "openDriveVideoUrlItems": ["開始", "關閉"],
+            "openDriveAudioUrlItems": ["開始", "關閉"],
+            "openDrivePictureUrlItems": ["開始", "關閉"],
+            "openDriveDocumentUrlItems": ["開始", "關閉"],
         },
         url: 'https://zenboscratchservice.github.io/' // Link to extension documentation, homepage, etc.
     };
