@@ -814,7 +814,7 @@ ext.Add_and_update_sentence_number = function (ip) {
             ['', 'IP %s 準備要聽數字', 'Add_and_update_sentence_number', "192.168.0.1"],
             ['h', '當我聽到 IP %s 的數字', 'when_listen_number_and_run', "192.168.0.1"],
             ['r', '目前 IP %s 聽到的數字 ', 'getCorrectedSentence', "192.168.0.1"],
-            ['', 'IP %s %m.playVideosInYoutubeItems 播放Youtube網址: %s', 'playVideosInYoutube', "192.168.0.1", '開始', 'https://www.youtube.com/watch?v=09R8_2nJtjg'],
+            ['', 'IP %s %m.playVideosInYoutubeItems 播放 Youtube 網址: %s', 'playVideosInYoutube', "192.168.0.1", '開始', 'https://www.youtube.com/watch?v=09R8_2nJtjg'],
             ['', 'IP %s %m.playUrlMusicItems 播放線上音樂: %s', 'playUrlMusic', "192.168.0.1", '開始', 'http://www.abstractpath.com/files/audiosamples/sample.mp3'],
             ['', 'IP %s %m.displayUrlPicturesItems 瀏覽線上圖片: %s', 'displayUrlPictures', "192.168.0.1", '開始', 'http://seacrestwolfpreserve.org/site/templates/images/home-slider-wolf-face-01.jpg'],
             ['', 'IP %s %m.openDriveVideoUrlItems 播放 Google Drive 影片: %s', 'openDriveVideoUrl', "192.168.0.1", '開始', 'https://drive.google.com/open?id=0B5o6VwYT7NaiUUhrTW12Ql9tcUk'],
