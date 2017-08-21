@@ -751,6 +751,46 @@
     };
 
 
+ext.Add_and_update_sentence_number = function (ip) {
+        
+        $.ajax({
+            url: 'http://' + ip + port + '/?name=Add_and_update_sentence' + '&p1=' + 'test' + '&p2=' + 'zenbo',
+            dataType: 'text',
+            crossDomain: true,
+            success: function (data) {
+            console.log("success handler");
+
+                        var setupFlag = true;
+                        var flagIndex = 0;
+
+                        for(var i=0; i < flagArray.data.length; i++){
+
+                                 if ( ip == flagArray.data[i].device) {
+                                          setupFlag = false;
+                                          flagIndex = i;
+                                          console.log("false " + "flagIndex: "+ flagIndex);
+                                 }
+                        }
+
+                        if (setupFlag == true) {
+                                flagArray.data.push( { device: ip, correctedSentence: "", sentence_1_flag: false, sentence_2_flag: false, sentence_3_flag: false, sentence_4_flag: false, sentence_5_flag: false, number_flag: false, get_sentences_flag: true } );
+                                console.log("add new device IP and its flags");
+                                flagIndex = flagArray.data.length -1 ;
+                                console.log("true " + "flagIndex: "+ flagIndex);
+                         }
+
+                         getSentencesRecursion(ip, flagIndex);
+
+
+            },
+            error: function (jqXHR, textStatus, errorThrown) {
+                console.log("error handler");
+            }
+        }); 
+         
+
+    };    
+
     var descriptor = {
         blocks: [
             ['r', '設定目標IP: %s', 'Setting_targetIP', "192.168.0.1"],
@@ -771,6 +811,7 @@
             ['', 'IP %s 我要開始聽', 'Speak_and_listen', "192.168.0.1"], 
             ['h', '當我聽到 IP %s 的 %m.sentence_type', 'when_listen_and_run', "192.168.0.1", '語句一'],
             ['', 'IP %s 刪除全部語句', 'Delete_instance', "192.168.0.1"],
+            ['', 'IP %s 準備要聽數字', 'Add_and_update_sentence_number', "192.168.0.1"],
             ['h', '當我聽到 IP %s 的數字', 'when_listen_number_and_run', "192.168.0.1"],
             ['r', '目前 IP %s 聽到的數字 ', 'getCorrectedSentence', "192.168.0.1"],
             ['', 'IP %s %m.playVideosInYoutubeItems 播放Youtube網址: %s', 'playVideosInYoutube', "192.168.0.1", '開始', 'https://www.youtube.com/watch?v=09R8_2nJtjg'],
