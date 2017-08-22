@@ -816,7 +816,7 @@ ext.Add_and_update_sentence_number = function (ip) {
             ['r', '目前 IP %s 聽到的數字 ', 'getCorrectedSentence', "192.168.0.1"],
             ['', 'IP %s %m.playVideosInYoutubeItems 播放 Youtube 網址: %s', 'playVideosInYoutube', "192.168.0.1", '開始', 'https://www.youtube.com/watch?v=Ou21RusvBcg'],
             ['', 'IP %s %m.playUrlMusicItems 播放線上音樂: %s', 'playUrlMusic', "192.168.0.1", '開始', 'http://www.abstractpath.com/files/audiosamples/sample.mp3'],
-            ['', 'IP %s %m.displayUrlPicturesItems 瀏覽線上圖片: %s', 'displayUrlPictures', "192.168.0.1", '開始', 'https://raw.githubusercontent.com/zenboscratch/zenboscratch.github.io/master/images/banner.png'],
+            ['', 'IP %s %m.displayUrlPicturesItems 瀏覽線上圖片: %s', 'displayUrlPictures', "192.168.0.1", '開始', 'https://zenboscratch.github.io/images/zenbo.png'],
             ['', 'IP %s %m.openDriveVideoUrlItems 播放 Google Drive 影片: %s', 'openDriveVideoUrl', "192.168.0.1", '開始', 'https://drive.google.com/open?id=0B5o6VwYT7NaiUUhrTW12Ql9tcUk'],
             ['', 'IP %s %m.openDriveAudioUrlItems 播放 Google Drive 音樂: %s', 'openDriveAudioUrl', "192.168.0.1", '開始', 'https://drive.google.com/open?id=0B5o6VwYT7NaiQzRpdWxnTEFmV1U'], 
             ['', 'IP %s %m.openDrivePictureUrlItems 瀏覽 Google Drive 圖片: %s', 'openDrivePictureUrl', "192.168.0.1", '開始', 'https://drive.google.com/open?id=0B5o6VwYT7NaiSVJ0S3JKeEZwODA'],
