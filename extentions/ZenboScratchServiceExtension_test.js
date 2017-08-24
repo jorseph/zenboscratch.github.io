@@ -12,7 +12,10 @@
     };
 
     ext._getStatus = function () {
-        return {status: 2, msg: 'Ready'};
+       //  return {status: 2, msg: 'Ready'};
+
+       return {status: 1, msg: 'Test'}; 
+
     };
 
     ext.Setting_targetIP = function (ip) {
