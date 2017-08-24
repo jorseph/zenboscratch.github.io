@@ -12,7 +12,7 @@
     };
 
     ext._getStatus = function () {
-         return {status: 2, msg: 'Ready'};
+        return {status: 2, msg: 'Ready'};
     };
 
     ext.Setting_targetIP = function (ip) {
@@ -791,36 +791,153 @@ ext.Add_and_update_sentence_number = function (ip) {
 
     };    
 
+	
+	var TRANSLATIONS = {
+        en: {
+            Setting_targetIP: 'Set target IP: %s',
+            Body_movement: 'IP %s move %m.move_direction by %m.move_far Meter %m.move_speed',
+            Stop_moving: 'IP %s stop',
+            Head_movement: 'IP %s turn head to %m.head_direction by %m.head_degree degree(s)',
+            Body_turn: 'IP %s turn body to %m.body_turn_direction by %m.body_turn_degree degree(s)',
+            Remote_control_body: 'IP %s move body %m.remote_control_body',
+            Action: 'IP %s perform the canned action %m.action_type',
+            Cancel_actionset: 'IP %s stop the canned action',
+            Facial: 'IP %s make the %m.facial_type face', 
+            hideFace: 'IP %s hide the face',
+            TTS: 'IP %s speak %m.tts_type '
+			TTS_editor: 'IP %s speak %s'
+			Adjust_stream_volume: 'IP %s adjust %m.volume_option_type volume %m.volume_type'
+			Adjust_tts_and_speed: 'IP %s speak %s , %m.tts_speed_type'
+			Add_and_update_sentence: 'IP %s is ready to listen %m.sentence_type : %s'
+			Speak_and_listen: 'IP %s want to start listening'
+			when_listen_and_run: 'When IP %s heard %m.sentence_type'
+			Delete_instance: 'IP %s delete all statements'
+			Add_and_update_sentence_number: 'IP %s is ready to listen to numbers'
+			when_listen_number_and_run: 'When IP %s heard numbers'
+			getCorrectedSentence: 'Current number heard by IP %s'
+			playVideosInYoutube: 'IP %s %m.playVideosInYoutubeItems play Youtube URL: %s'
+			playUrlMusic: 'IP %s %m.playUrlMusicItems play online music: %s'
+			displayUrlPictures: 'IP %s %m.displayUrlPicturesItems browse online pitcture: %s'
+			openDriveVideoUrl: 'IP %s %m.openDriveVideoUrlItems play Google Drive video: %s'
+			openDriveAudioUrl: 'IP %s %m.openDriveAudioUrlItems play Google Drive music: %s'
+			openDrivePictureUrl: 'IP %s %m.openDrivePictureUrlItems browse Google Drive pitcture: %s'
+            openDriveDocumentUrl: 'IP %s %m.openDriveDocumentUrlItems browse Google Drive document: %s'
+        },
+        zh-rTW: {
+            Setting_targetIP: '設定目標IP: %s',
+            Body_movement: 'IP %s 移動 %m.move_direction %m.move_far 公尺 %m.move_speed 速度',
+            Stop_moving: 'IP %s 停止移動',
+            Head_movement: 'IP %s 轉動頭部 向 %m.head_direction %m.head_degree 度',
+            Body_turn: 'IP %s 轉動身體 向 %m.body_turn_direction %m.body_turn_degree 度',
+            Remote_control_body: 'IP %s 控制身體 %m.remote_control_body',
+            Action: 'IP %s 做出罐頭動作 %m.action_type',
+            Cancel_actionset: 'IP %s 停止罐頭動作',
+            Facial: 'IP %s 做出表情 %m.facial_type', 
+            hideFace: 'IP %s 隱藏表情',
+            TTS: 'IP %s 說話 %m.tts_type '
+			TTS_editor: 'IP %s 說話 %s'
+			Adjust_stream_volume: 'IP %s 調整 %m.volume_option_type 音量 %m.volume_type'
+			Adjust_tts_and_speed: 'IP %s 說話 %s 速度 %m.tts_speed_type'
+			Add_and_update_sentence: 'IP %s 準備要聽 %m.sentence_type 是 %s'
+			Speak_and_listen: 'IP %s 我要開始聽'
+			when_listen_and_run: '當我聽到 IP %s 的 %m.sentence_type'
+			Delete_instance: 'IP %s 刪除全部語句'
+			Add_and_update_sentence_number: 'IP %s 準備要聽數字'
+			when_listen_number_and_run: '當我聽到 IP %s 的數字'
+			getCorrectedSentence: '目前 IP %s 聽到的數字 '
+			playVideosInYoutube: 'IP %s %m.playVideosInYoutubeItems 播放 Youtube 網址: %s'
+			playUrlMusic: 'IP %s %m.playUrlMusicItems 播放線上音樂: %s'
+			displayUrlPictures: 'IP %s %m.displayUrlPicturesItems 瀏覽線上圖片: %s'
+			openDriveVideoUrl: 'IP %s %m.openDriveVideoUrlItems 播放 Google Drive 影片: %s'
+			openDriveAudioUrl: 'IP %s %m.openDriveAudioUrlItems 播放 Google Drive 音樂: %s'
+			openDrivePictureUrl: 'IP %s %m.openDrivePictureUrlItems 瀏覽 Google Drive 圖片: %s'
+            openDriveDocumentUrl: 'IP %s %m.openDriveDocumentUrlItems 瀏覽 Google Drive 文件: %s'
+        },		
+		zh-rCN: {
+            Setting_targetIP: '设定目标IP: %s',
+            Body_movement: 'IP %s 移动 %m.move_direction %m.move_far 公尺 %m.move_speed 速度',
+            Stop_moving: 'IP %s 停止移动',
+            Head_movement: 'IP %s 转动头部 向 %m.head_direction %m.head_degree 度',
+            Body_turn: 'IP %s 转动身体 向 %m.body_turn_direction %m.body_turn_degree 度',
+            Remote_control_body: 'IP %s 控制身体 %m.remote_control_body',
+            Action: 'IP %s 做出罐头动作 %m.action_type',
+            Cancel_actionset: 'IP %s 停止罐头动作',
+            Facial: 'IP %s 做出表情 %m.facial_type', 
+            hideFace: 'IP %s 隐藏表情',
+            TTS: 'IP %s 说话 %m.tts_type '
+			TTS_editor: 'IP %s 说话 %s'
+			Adjust_stream_volume: 'IP %s 调整 %m.volume_option_type 音量 %m.volume_type'
+			Adjust_tts_and_speed: 'IP %s 說話 %s 速度 %m.tts_speed_type'
+			Add_and_update_sentence: 'IP %s 准备要听 %m.sentence_type 是 %s'
+			Speak_and_listen: 'IP %s 我要开始听'
+			when_listen_and_run: '当我听到 IP %s 的 %m.sentence_type'
+			Delete_instance: 'IP %s 删除全部语句'
+			Add_and_update_sentence_number: 'IP %s 准备要听数字'
+			when_listen_number_and_run: '当我听到 IP %s 的数字'
+			getCorrectedSentence: '目前 IP %s 听到的数字 '
+			playVideosInYoutube: 'IP %s %m.playVideosInYoutubeItems 播放 Youtube 网址: %s'
+			playUrlMusic: 'IP %s %m.playUrlMusicItems 播放线上音乐: %s'
+			displayUrlPictures: 'IP %s %m.displayUrlPicturesItems 浏览线上图片: %s'
+			openDriveVideoUrl: 'IP %s %m.openDriveVideoUrlItems 播放 Google Drive 影片: %s'
+			openDriveAudioUrl: 'IP %s %m.openDriveAudioUrlItems 播放 Google Drive 音乐: %s'
+			openDrivePictureUrl: 'IP %s %m.openDrivePictureUrlItems 浏览 Google Drive 图片: %s'
+            openDriveDocumentUrl: 'IP %s %m.openDriveDocumentUrlItems 浏览 Google Drive 文件: %s'
+        },
+    }
+	
+	 function getTranslationForLang( lang ){
+        switch (lang){
+          case "en":
+		    return TRANSLATIONS.en; 
+          case "zh-rCN":
+            return TRANSLATIONS.zh-rCN;
+          default:
+            return TRANSLATIONS.zh-rTW;
+            
+        }
+    }
+	
+	// how which language translation is chosen (increasing priority):
+    //   1 - explicit 'lang' parameter in the url (e.g: http://scratchx.org/?url=https://paulolc.neocities.org/mcpi-scratch/mcpi-scratch.js&lang=pt#scratch)
+    //   2 - browser first preferred language (navigator.languages[0])
+    //   3 - default (zh-rTW)
+	
+	
+	var urlParams = new URLSearchParams(window.location.search);
+    var lang = urlParams.get('lang') || navigator.languages[0];
+    var translate = getTranslationForLang(lang);
+	
+	
     var descriptor = {
         blocks: [
-            ['r', '設定目標IP: %s', 'Setting_targetIP', "192.168.0.1"],
-            ['', 'IP %s 移動 %m.move_direction %m.move_far 公尺 %m.move_speed 速度', 'Body_movement', "192.168.0.1", "前進", "0.25", "一般"],
-            ['', 'IP %s 停止移動', 'Stop_moving', "192.168.0.1"],
-            ['', 'IP %s 轉動頭部 向 %m.head_direction %m.head_degree 度', 'Head_movement', "192.168.0.1", "左", "45"], 
-            ['', 'IP %s 轉動身體 向 %m.body_turn_direction %m.body_turn_degree 度', 'Body_turn', "192.168.0.1", "左轉", "90"],
-            ['', 'IP %s 控制身體 %m.remote_control_body', 'Remote_control_body', "192.168.0.1", "右轉"],
-            ['', 'IP %s 做出罐頭動作 %m.action_type', 'Action', "192.168.0.1", '打招呼'],
-            ['', 'IP %s 停止罐頭動作', 'Cancel_actionset', "192.168.0.1"],
-            ['', 'IP %s 做出表情 %m.facial_type', 'Facial', "192.168.0.1", '期待'],
-            ['', 'IP %s 隱藏表情', 'hideFace', "192.168.0.1"],
-            ['', 'IP %s 說話 %m.tts_type ', 'TTS', "192.168.0.1", 'Hi,你好'],
-            ['', 'IP %s 說話 %s', 'TTS_editor', "192.168.0.1", '請填入文字'],
-            ['', 'IP %s 調整 %m.volume_option_type 音量 %m.volume_type', 'Adjust_stream_volume', "192.168.0.1", '說話', '大聲點'],
-            ['', 'IP %s 說話 %s 速度 %m.tts_speed_type', 'Adjust_tts_and_speed', "192.168.0.1", '請填入文字', 'L2'],
-            ['', 'IP %s 準備要聽 %m.sentence_type 是 %s', 'Add_and_update_sentence', "192.168.0.1", '語句一', '吃飯'], 
-            ['', 'IP %s 我要開始聽', 'Speak_and_listen', "192.168.0.1"], 
-            ['h', '當我聽到 IP %s 的 %m.sentence_type', 'when_listen_and_run', "192.168.0.1", '語句一'],
-            ['', 'IP %s 刪除全部語句', 'Delete_instance', "192.168.0.1"],
-            ['', 'IP %s 準備要聽數字', 'Add_and_update_sentence_number', "192.168.0.1"],
-            ['h', '當我聽到 IP %s 的數字', 'when_listen_number_and_run', "192.168.0.1"],
-            ['r', '目前 IP %s 聽到的數字 ', 'getCorrectedSentence', "192.168.0.1"],
-            ['', 'IP %s %m.playVideosInYoutubeItems 播放 Youtube 網址: %s', 'playVideosInYoutube', "192.168.0.1", '開始', 'https://www.youtube.com/watch?v=Ou21RusvBcg'],
-            ['', 'IP %s %m.playUrlMusicItems 播放線上音樂: %s', 'playUrlMusic', "192.168.0.1", '開始', 'https://zenboscratch.github.io/examples/zenbo_music.mp3'],
-            ['', 'IP %s %m.displayUrlPicturesItems 瀏覽線上圖片: %s', 'displayUrlPictures', "192.168.0.1", '開始', 'https://zenboscratch.github.io/images/zenbo.jpg'],
-            ['', 'IP %s %m.openDriveVideoUrlItems 播放 Google Drive 影片: %s', 'openDriveVideoUrl', "192.168.0.1", '開始', 'https://drive.google.com/open?id=0B5o6VwYT7NaiUUhrTW12Ql9tcUk'],
-            ['', 'IP %s %m.openDriveAudioUrlItems 播放 Google Drive 音樂: %s', 'openDriveAudioUrl', "192.168.0.1", '開始', 'https://drive.google.com/open?id=0B5o6VwYT7NaibHJ0LWtHN0JtVFU'], 
-            ['', 'IP %s %m.openDrivePictureUrlItems 瀏覽 Google Drive 圖片: %s', 'openDrivePictureUrl', "192.168.0.1", '開始', 'https://drive.google.com/open?id=0B5o6VwYT7NaiSVJ0S3JKeEZwODA'],
-            ['', 'IP %s %m.openDriveDocumentUrlItems 瀏覽 Google Drive 文件: %s', 'openDriveDocumentUrl', "192.168.0.1", '開始', 'https://drive.google.com/open?id=0B5o6VwYT7NaiN1h3SXZHTjRsc2s'],
+            ['r', translate.Setting_targetIP, 'Setting_targetIP', "192.168.0.1"],
+            ['', translate.Body_movement, 'Body_movement', "192.168.0.1", "前進", "0.25", "一般"],
+            ['', translate.Stop_moving, 'Stop_moving', "192.168.0.1"],
+            ['', translate.Head_movement, 'Head_movement', "192.168.0.1", "左", "45"], 
+            ['', translate.Body_turn, 'Body_turn', "192.168.0.1", "左轉", "90"],
+            ['', translate.Remote_control_body, 'Remote_control_body', "192.168.0.1", "右轉"],
+            ['', translate.Action, 'Action', "192.168.0.1", '打招呼'],
+            ['', translate.Cancel_actionset, 'Cancel_actionset', "192.168.0.1"],
+            ['', translate.Facial, 'Facial', "192.168.0.1", '期待'],
+            ['', translate.hideFace, 'hideFace', "192.168.0.1"],
+            ['', translate.TTS, 'TTS', "192.168.0.1", 'Hi,你好'],
+            ['', translate.TTS_editor, 'TTS_editor', "192.168.0.1", '請填入文字'],
+            ['', translate.Adjust_stream_volume, 'Adjust_stream_volume', "192.168.0.1", '說話', '大聲點'],
+            ['', translate.Adjust_tts_and_speed, 'Adjust_tts_and_speed', "192.168.0.1", '請填入文字', 'L2'],
+            ['', translate.Add_and_update_sentence, 'Add_and_update_sentence', "192.168.0.1", '語句一', '吃飯'], 
+            ['', translate.Speak_and_listen, 'Speak_and_listen', "192.168.0.1"], 
+            ['h', translate.when_listen_and_run, 'when_listen_and_run', "192.168.0.1", '語句一'],
+            ['', translate.Delete_instance, 'Delete_instance', "192.168.0.1"],
+            ['', translate.Add_and_update_sentence_number, 'Add_and_update_sentence_number', "192.168.0.1"],
+            ['h', translate.when_listen_number_and_run, 'when_listen_number_and_run', "192.168.0.1"],
+            ['r', translate.getCorrectedSentence, 'getCorrectedSentence', "192.168.0.1"],
+            ['', translate.playVideosInYoutube, 'playVideosInYoutube', "192.168.0.1", '開始', 'https://www.youtube.com/watch?v=Ou21RusvBcg'],
+            ['', translate.playUrlMusic, 'playUrlMusic', "192.168.0.1", '開始', 'https://zenboscratch.github.io/examples/zenbo_music.mp3'],
+            ['', translate.displayUrlPictures, 'displayUrlPictures', "192.168.0.1", '開始', 'https://zenboscratch.github.io/images/zenbo.jpg'],
+            ['', translate.openDriveVideoUrl, 'openDriveVideoUrl', "192.168.0.1", '開始', 'https://drive.google.com/open?id=0B5o6VwYT7NaiUUhrTW12Ql9tcUk'],
+            ['', translate.openDriveAudioUrl, 'openDriveAudioUrl', "192.168.0.1", '開始', 'https://drive.google.com/open?id=0B5o6VwYT7NaibHJ0LWtHN0JtVFU'], 
+            ['', translate.openDrivePictureUrl, 'openDrivePictureUrl', "192.168.0.1", '開始', 'https://drive.google.com/open?id=0B5o6VwYT7NaiSVJ0S3JKeEZwODA'],
+            ['', translate.openDriveDocumentUrl, 'openDriveDocumentUrl', "192.168.0.1", '開始', 'https://drive.google.com/open?id=0B5o6VwYT7NaiN1h3SXZHTjRsc2s'],
         ],
         menus: {
             "head_direction": ["左", "右", "上", "下"],
