@@ -836,7 +836,7 @@ ext.Add_and_update_sentence_number = function (ip) {
                             "結束向左急轉", "結束向右急轉", "解除連續任務衝突"],
             facial_type: ["有興趣", "疑惑", "驕傲", "輕鬆愉快(預設)", "開心", "期待", "愣一下", "質疑", "不耐煩", "自信", "有活力一", "得意", "無奈", "嚴肅", "煩惱", "裝平靜", "慵懶", "察覺", 
                             "倦怠", "害羞", "無辜", "有活力二", "察覺", "預設"],
-            tts_type: ["Hi,你好", "看這裡", "WoW", "YA"],
+            tts_type: ["Hi, welcome to zenbo scratch service", "看這裡", "WoW", "YA"],
             volume_type: ["大聲點", "小聲點"],
             music_type: ["開始", "暫停", "繼續", "停止", "重新"],
             volume_option_type: ["音樂", "鬧鐘", "通知", "說話"],
@@ -849,7 +849,6 @@ ext.Add_and_update_sentence_number = function (ip) {
             openDriveAudioUrlItems: ["開始", "關閉"],
             openDrivePictureUrlItems: ["開始", "關閉"],
             openDriveDocumentUrlItems: ["開始", "關閉"],
-			ttsWelcome: 'Hi, welcome to zenbo scratch service',
 			ttsEditorDefaultText: 'Please fill the sentence',
 			defaultAddedSentence: 'Eating'
         },
@@ -909,7 +908,6 @@ ext.Add_and_update_sentence_number = function (ip) {
             openDriveAudioUrlItems: ["開始", "關閉"],
             openDrivePictureUrlItems: ["開始", "關閉"],
             openDriveDocumentUrlItems: ["開始", "關閉"],
-			ttsWelcome: 'Hi,你好',
 			ttsEditorDefaultText: '請填入文字',
             defaultAddedSentence: '吃飯'			
         },  		
@@ -969,7 +967,6 @@ ext.Add_and_update_sentence_number = function (ip) {
             openDriveAudioUrlItems: ["開始", "關閉"],
             openDrivePictureUrlItems: ["開始", "關閉"],
             openDriveDocumentUrlItems: ["開始", "關閉"],
-			ttsWelcome: 'Hi,你好',
 			ttsEditorDefaultText: '請填入文字',
 			defaultAddedSentence: '吃飯' 
         },
@@ -1018,7 +1015,7 @@ ext.Add_and_update_sentence_number = function (ip) {
             ['', translate.Cancel_actionset, 'Cancel_actionset', "192.168.0.1"],
             ['', translate.Facial, 'Facial', "192.168.0.1", translate.facial_type[5]],
             ['', translate.hideFace, 'hideFace', "192.168.0.1"],
-            ['', translate.TTS, 'TTS', "192.168.0.1", translate.ttsWelcome],
+            ['', translate.TTS, 'TTS', "192.168.0.1", translate.tts_type[0]],
             ['', translate.TTS_editor, 'TTS_editor', "192.168.0.1", translate.ttsEditorDefaultText],
             ['', translate.Adjust_stream_volume, 'Adjust_stream_volume', "192.168.0.1", translate.volume_option_type[3], translate.volume_type[0]],
             ['', translate.Adjust_tts_and_speed, 'Adjust_tts_and_speed', "192.168.0.1", translate.ttsEditorDefaultText, translate.tts_speed_type[1]],
