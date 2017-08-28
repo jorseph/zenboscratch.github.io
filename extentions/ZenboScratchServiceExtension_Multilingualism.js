@@ -804,26 +804,26 @@ ext.Add_and_update_sentence_number = function (ip) {
             Cancel_actionset: 'IP %s stop the canned action',
             Facial: 'IP %s make the %m.facial_type face', 
             hideFace: 'IP %s hide the face',
-            TTS: 'IP %s speak %m.tts_type '
-			TTS_editor: 'IP %s speak %s'
-			Adjust_stream_volume: 'IP %s adjust %m.volume_option_type volume %m.volume_type'
-			Adjust_tts_and_speed: 'IP %s speak %s , %m.tts_speed_type'
-			Add_and_update_sentence: 'IP %s is ready to listen %m.sentence_type : %s'
-			Speak_and_listen: 'IP %s want to start listening'
-			when_listen_and_run: 'When IP %s heard %m.sentence_type'
-			Delete_instance: 'IP %s delete all statements'
-			Add_and_update_sentence_number: 'IP %s is ready to listen to numbers'
-			when_listen_number_and_run: 'When IP %s heard numbers'
-			getCorrectedSentence: 'Current number heard by IP %s'
-			playVideosInYoutube: 'IP %s %m.playVideosInYoutubeItems play Youtube URL: %s'
-			playUrlMusic: 'IP %s %m.playUrlMusicItems play online music: %s'
-			displayUrlPictures: 'IP %s %m.displayUrlPicturesItems browse online pitcture: %s'
-			openDriveVideoUrl: 'IP %s %m.openDriveVideoUrlItems play Google Drive video: %s'
-			openDriveAudioUrl: 'IP %s %m.openDriveAudioUrlItems play Google Drive music: %s'
-			openDrivePictureUrl: 'IP %s %m.openDrivePictureUrlItems browse Google Drive pitcture: %s'
+            TTS: 'IP %s speak %m.tts_type ',
+			TTS_editor: 'IP %s speak %s',
+			Adjust_stream_volume: 'IP %s adjust %m.volume_option_type volume %m.volume_type',
+			Adjust_tts_and_speed: 'IP %s speak %s , %m.tts_speed_type',
+			Add_and_update_sentence: 'IP %s is ready to listen %m.sentence_type : %s',
+			Speak_and_listen: 'IP %s want to start listening',
+			when_listen_and_run: 'When IP %s heard %m.sentence_type',
+			Delete_instance: 'IP %s delete all statements',
+			Add_and_update_sentence_number: 'IP %s is ready to listen to numbers',
+			when_listen_number_and_run: 'When IP %s heard numbers',
+			getCorrectedSentence: 'Current number heard by IP %s',
+			playVideosInYoutube: 'IP %s %m.playVideosInYoutubeItems play Youtube URL: %s',
+			playUrlMusic: 'IP %s %m.playUrlMusicItems play online music: %s',
+			displayUrlPictures: 'IP %s %m.displayUrlPicturesItems browse online pitcture: %s',
+			openDriveVideoUrl: 'IP %s %m.openDriveVideoUrlItems play Google Drive video: %s',
+			openDriveAudioUrl: 'IP %s %m.openDriveAudioUrlItems play Google Drive music: %s',
+			openDrivePictureUrl: 'IP %s %m.openDrivePictureUrlItems browse Google Drive pitcture: %s',
             openDriveDocumentUrl: 'IP %s %m.openDriveDocumentUrlItems browse Google Drive document: %s'
         },
-        zh-rTW: {
+        zh-tw: {
             Setting_targetIP: '設定目標IP: %s',
             Body_movement: 'IP %s 移動 %m.move_direction %m.move_far 公尺 %m.move_speed 速度',
             Stop_moving: 'IP %s 停止移動',
@@ -834,26 +834,26 @@ ext.Add_and_update_sentence_number = function (ip) {
             Cancel_actionset: 'IP %s 停止罐頭動作',
             Facial: 'IP %s 做出表情 %m.facial_type', 
             hideFace: 'IP %s 隱藏表情',
-            TTS: 'IP %s 說話 %m.tts_type '
-			TTS_editor: 'IP %s 說話 %s'
-			Adjust_stream_volume: 'IP %s 調整 %m.volume_option_type 音量 %m.volume_type'
-			Adjust_tts_and_speed: 'IP %s 說話 %s 速度 %m.tts_speed_type'
-			Add_and_update_sentence: 'IP %s 準備要聽 %m.sentence_type 是 %s'
-			Speak_and_listen: 'IP %s 我要開始聽'
-			when_listen_and_run: '當我聽到 IP %s 的 %m.sentence_type'
-			Delete_instance: 'IP %s 刪除全部語句'
-			Add_and_update_sentence_number: 'IP %s 準備要聽數字'
-			when_listen_number_and_run: '當我聽到 IP %s 的數字'
-			getCorrectedSentence: '目前 IP %s 聽到的數字 '
-			playVideosInYoutube: 'IP %s %m.playVideosInYoutubeItems 播放 Youtube 網址: %s'
-			playUrlMusic: 'IP %s %m.playUrlMusicItems 播放線上音樂: %s'
-			displayUrlPictures: 'IP %s %m.displayUrlPicturesItems 瀏覽線上圖片: %s'
-			openDriveVideoUrl: 'IP %s %m.openDriveVideoUrlItems 播放 Google Drive 影片: %s'
-			openDriveAudioUrl: 'IP %s %m.openDriveAudioUrlItems 播放 Google Drive 音樂: %s'
-			openDrivePictureUrl: 'IP %s %m.openDrivePictureUrlItems 瀏覽 Google Drive 圖片: %s'
+            TTS: 'IP %s 說話 %m.tts_type',
+			TTS_editor: 'IP %s 說話 %s',
+			Adjust_stream_volume: 'IP %s 調整 %m.volume_option_type 音量 %m.volume_type',
+			Adjust_tts_and_speed: 'IP %s 說話 %s 速度 %m.tts_speed_type',
+			Add_and_update_sentence: 'IP %s 準備要聽 %m.sentence_type 是 %s',
+			Speak_and_listen: 'IP %s 我要開始聽',
+			when_listen_and_run: '當我聽到 IP %s 的 %m.sentence_type',
+			Delete_instance: 'IP %s 刪除全部語句',
+			Add_and_update_sentence_number: 'IP %s 準備要聽數字',
+			when_listen_number_and_run: '當我聽到 IP %s 的數字',
+			getCorrectedSentence: '目前 IP %s 聽到的數字 ',
+			playVideosInYoutube: 'IP %s %m.playVideosInYoutubeItems 播放 Youtube 網址: %s',
+			playUrlMusic: 'IP %s %m.playUrlMusicItems 播放線上音樂: %s',
+			displayUrlPictures: 'IP %s %m.displayUrlPicturesItems 瀏覽線上圖片: %s',
+			openDriveVideoUrl: 'IP %s %m.openDriveVideoUrlItems 播放 Google Drive 影片: %s',
+			openDriveAudioUrl: 'IP %s %m.openDriveAudioUrlItems 播放 Google Drive 音樂: %s',
+			openDrivePictureUrl: 'IP %s %m.openDrivePictureUrlItems 瀏覽 Google Drive 圖片: %s',
             openDriveDocumentUrl: 'IP %s %m.openDriveDocumentUrlItems 瀏覽 Google Drive 文件: %s'
         },		
-		zh-rCN: {
+		zh-cn: {
             Setting_targetIP: '设定目标IP: %s',
             Body_movement: 'IP %s 移动 %m.move_direction %m.move_far 公尺 %m.move_speed 速度',
             Stop_moving: 'IP %s 停止移动',
@@ -864,35 +864,37 @@ ext.Add_and_update_sentence_number = function (ip) {
             Cancel_actionset: 'IP %s 停止罐头动作',
             Facial: 'IP %s 做出表情 %m.facial_type', 
             hideFace: 'IP %s 隐藏表情',
-            TTS: 'IP %s 说话 %m.tts_type '
-			TTS_editor: 'IP %s 说话 %s'
-			Adjust_stream_volume: 'IP %s 调整 %m.volume_option_type 音量 %m.volume_type'
-			Adjust_tts_and_speed: 'IP %s 說話 %s 速度 %m.tts_speed_type'
-			Add_and_update_sentence: 'IP %s 准备要听 %m.sentence_type 是 %s'
-			Speak_and_listen: 'IP %s 我要开始听'
-			when_listen_and_run: '当我听到 IP %s 的 %m.sentence_type'
-			Delete_instance: 'IP %s 删除全部语句'
-			Add_and_update_sentence_number: 'IP %s 准备要听数字'
-			when_listen_number_and_run: '当我听到 IP %s 的数字'
-			getCorrectedSentence: '目前 IP %s 听到的数字 '
-			playVideosInYoutube: 'IP %s %m.playVideosInYoutubeItems 播放 Youtube 网址: %s'
-			playUrlMusic: 'IP %s %m.playUrlMusicItems 播放线上音乐: %s'
-			displayUrlPictures: 'IP %s %m.displayUrlPicturesItems 浏览线上图片: %s'
-			openDriveVideoUrl: 'IP %s %m.openDriveVideoUrlItems 播放 Google Drive 影片: %s'
-			openDriveAudioUrl: 'IP %s %m.openDriveAudioUrlItems 播放 Google Drive 音乐: %s'
-			openDrivePictureUrl: 'IP %s %m.openDrivePictureUrlItems 浏览 Google Drive 图片: %s'
+            TTS: 'IP %s 说话 %m.tts_type',
+			TTS_editor: 'IP %s 说话 %s',
+			Adjust_stream_volume: 'IP %s 调整 %m.volume_option_type 音量 %m.volume_type',
+			Adjust_tts_and_speed: 'IP %s 說話 %s 速度 %m.tts_speed_type',
+			Add_and_update_sentence: 'IP %s 准备要听 %m.sentence_type 是 %s',
+			Speak_and_listen: 'IP %s 我要开始听',
+			when_listen_and_run: '当我听到 IP %s 的 %m.sentence_type',
+			Delete_instance: 'IP %s 删除全部语句',
+			Add_and_update_sentence_number: 'IP %s 准备要听数字',
+			when_listen_number_and_run: '当我听到 IP %s 的数字',
+			getCorrectedSentence: '目前 IP %s 听到的数字 ',
+			playVideosInYoutube: 'IP %s %m.playVideosInYoutubeItems 播放 Youtube 网址: %s',
+			playUrlMusic: 'IP %s %m.playUrlMusicItems 播放线上音乐: %s',
+			displayUrlPictures: 'IP %s %m.displayUrlPicturesItems 浏览线上图片: %s',
+			openDriveVideoUrl: 'IP %s %m.openDriveVideoUrlItems 播放 Google Drive 影片: %s',
+			openDriveAudioUrl: 'IP %s %m.openDriveAudioUrlItems 播放 Google Drive 音乐: %s',
+			openDrivePictureUrl: 'IP %s %m.openDrivePictureUrlItems 浏览 Google Drive 图片: %s',
             openDriveDocumentUrl: 'IP %s %m.openDriveDocumentUrlItems 浏览 Google Drive 文件: %s'
         },
     }
 	
 	 function getTranslationForLang( lang ){
         switch (lang){
-          case "en":
-		    return TRANSLATIONS.en; 
-          case "zh-rCN":
-            return TRANSLATIONS.zh-rCN;
+		  case "en":
+		    return TRANSLATIONS.en; 	
+          case "zh-tw":
+		    return TRANSLATIONS.zh-tw; 
+          case "zh-cn":
+            return TRANSLATIONS.zh-cn;
           default:
-            return TRANSLATIONS.zh-rTW;
+            return TRANSLATIONS.en;
             
         }
     }
@@ -904,7 +906,9 @@ ext.Add_and_update_sentence_number = function (ip) {
 	
 	
 	var urlParams = new URLSearchParams(window.location.search);
-    var lang = urlParams.get('lang') || navigator.languages[0];
+    var lang = urlParams.get('lang') || navigator.browserLanguage || navigator.language;
+	console.log("lang:" + lang);
+	
     var translate = getTranslationForLang(lang);
 	
 	
