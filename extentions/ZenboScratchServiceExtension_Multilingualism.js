@@ -823,7 +823,8 @@ ext.Add_and_update_sentence_number = function (ip) {
 			openDrivePictureUrl: 'IP %s %m.openDrivePictureUrlItems browse Google Drive pitcture: %s',
             openDriveDocumentUrl: 'IP %s %m.openDriveDocumentUrlItems browse Google Drive document: %s'
         },
-        zh-tw: {
+		/*
+		zh-tw: {
             Setting_targetIP: '設定目標IP: %s',
             Body_movement: 'IP %s 移動 %m.move_direction %m.move_far 公尺 %m.move_speed 速度',
             Stop_moving: 'IP %s 停止移動',
@@ -883,6 +884,7 @@ ext.Add_and_update_sentence_number = function (ip) {
 			openDrivePictureUrl: 'IP %s %m.openDrivePictureUrlItems 浏览 Google Drive 图片: %s',
             openDriveDocumentUrl: 'IP %s %m.openDriveDocumentUrlItems 浏览 Google Drive 文件: %s'
         },
+		*/
     }
 	
 	 function getTranslationForLang( lang ){
