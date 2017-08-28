@@ -823,8 +823,7 @@ ext.Add_and_update_sentence_number = function (ip) {
 			openDrivePictureUrl: 'IP %s %m.openDrivePictureUrlItems browse Google Drive pitcture: %s',
             openDriveDocumentUrl: 'IP %s %m.openDriveDocumentUrlItems browse Google Drive document: %s'
         },
-		/*
-		zh-tw: {
+		tw: {
             Setting_targetIP: '設定目標IP: %s',
             Body_movement: 'IP %s 移動 %m.move_direction %m.move_far 公尺 %m.move_speed 速度',
             Stop_moving: 'IP %s 停止移動',
@@ -853,7 +852,8 @@ ext.Add_and_update_sentence_number = function (ip) {
 			openDriveAudioUrl: 'IP %s %m.openDriveAudioUrlItems 播放 Google Drive 音樂: %s',
 			openDrivePictureUrl: 'IP %s %m.openDrivePictureUrlItems 瀏覽 Google Drive 圖片: %s',
             openDriveDocumentUrl: 'IP %s %m.openDriveDocumentUrlItems 瀏覽 Google Drive 文件: %s'
-        },		
+        },
+        /*   		
 		zh-cn: {
             Setting_targetIP: '设定目标IP: %s',
             Body_movement: 'IP %s 移动 %m.move_direction %m.move_far 公尺 %m.move_speed 速度',
@@ -892,7 +892,7 @@ ext.Add_and_update_sentence_number = function (ip) {
 		  case "en":
 		    return TRANSLATIONS.en; 	
           case "zh-tw":
-		    return TRANSLATIONS.zh-tw; 
+		    return TRANSLATIONS.tw; 
           case "zh-cn":
             return TRANSLATIONS.zh-cn;
           default:
