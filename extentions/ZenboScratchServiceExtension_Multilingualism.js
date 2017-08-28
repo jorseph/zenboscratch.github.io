@@ -852,9 +852,8 @@ ext.Add_and_update_sentence_number = function (ip) {
 			openDriveAudioUrl: 'IP %s %m.openDriveAudioUrlItems 播放 Google Drive 音樂: %s',
 			openDrivePictureUrl: 'IP %s %m.openDrivePictureUrlItems 瀏覽 Google Drive 圖片: %s',
             openDriveDocumentUrl: 'IP %s %m.openDriveDocumentUrlItems 瀏覽 Google Drive 文件: %s'
-        },
-        /*   		
-		zh-cn: {
+        },  		
+		cn: {
             Setting_targetIP: '设定目标IP: %s',
             Body_movement: 'IP %s 移动 %m.move_direction %m.move_far 公尺 %m.move_speed 速度',
             Stop_moving: 'IP %s 停止移动',
@@ -884,17 +883,16 @@ ext.Add_and_update_sentence_number = function (ip) {
 			openDrivePictureUrl: 'IP %s %m.openDrivePictureUrlItems 浏览 Google Drive 图片: %s',
             openDriveDocumentUrl: 'IP %s %m.openDriveDocumentUrlItems 浏览 Google Drive 文件: %s'
         },
-		*/
     }
 	
 	 function getTranslationForLang( lang ){
         switch (lang){
-		  case "en":
+		  case "en-us":
 		    return TRANSLATIONS.en; 	
           case "zh-tw":
 		    return TRANSLATIONS.tw; 
           case "zh-cn":
-            return TRANSLATIONS.zh-cn;
+            return TRANSLATIONS.cn;
           default:
             return TRANSLATIONS.en;
             
@@ -908,7 +906,7 @@ ext.Add_and_update_sentence_number = function (ip) {
 	
 	
 	var urlParams = new URLSearchParams(window.location.search);
-    var lang = urlParams.get('lang') || navigator.browserLanguage || navigator.language;
+    var lang = ( urlParams.get('lang') || navigator.browserLanguage || navigator.language ).toLowerCase();
 	console.log("lang:" + lang);
 	
     var translate = getTranslationForLang(lang);
