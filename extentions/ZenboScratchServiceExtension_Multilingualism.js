@@ -793,7 +793,7 @@ ext.Add_and_update_sentence_number = function (ip) {
 
 	
 	var TRANSLATIONS = {
-        en: {
+        us: {
             Setting_targetIP: 'Set target IP: %s',
             Body_movement: 'IP %s move %m.move_direction by %m.move_far Meter %m.move_speed',
             Stop_moving: 'IP %s stop',
@@ -887,20 +887,24 @@ ext.Add_and_update_sentence_number = function (ip) {
 	
 	 function getTranslationForLang( lang ){
         switch (lang){
+		  case "en":
+		    return TRANSLATIONS.us;
 		  case "en-us":
-		    return TRANSLATIONS.en; 	
+		    return TRANSLATIONS.us; 			
+		  case "zh":
+		    return TRANSLATIONS.tw; 	
           case "zh-tw":
 		    return TRANSLATIONS.tw; 
           case "zh-cn":
             return TRANSLATIONS.cn;
           default:
-            return TRANSLATIONS.en;
+            return TRANSLATIONS.us;
             
         }
     }
 	
 	// how which language translation is chosen (increasing priority):
-    //   1 - explicit 'lang' parameter in the url (e.g: http://scratchx.org/?url=https://paulolc.neocities.org/mcpi-scratch/mcpi-scratch.js&lang=pt#scratch)
+    //   1 - explicit 'lang' parameter in the url (e.g: http://scratchx.org/?url=https://zenboscratch.github.io/extentions/ZenboScratchServiceExtension_Multilingualism.js&lang=en#scratch)
     //   2 - browser first preferred language (navigator.languages[0])
     //   3 - default (zh-rTW)
 	
