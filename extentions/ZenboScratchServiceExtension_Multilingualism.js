@@ -807,7 +807,7 @@ ext.Add_and_update_sentence_number = function (ip) {
             TTS: 'IP %s speak:  %m.tts_type ',
 	    TTS_editor: 'IP %s speak:  %s',
 	    Adjust_stream_volume: 'IP %s make %m.volume_option_type volume %m.volume_type',
-	    Adjust_tts_and_speed: 'IP %s speak %s by %m.tts_speed_type speed',
+	    Adjust_tts_and_speed: 'IP %s speak: %s by %m.tts_speed_type speed',
 	    Add_and_update_sentence: 'IP %s is ready to listen %m.sentence_type which is %s',
 	    Speak_and_listen: 'IP %s would start listening',
 	    when_listen_and_run: 'When IP %s heard %m.sentence_type',
