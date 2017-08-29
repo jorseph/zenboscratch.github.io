@@ -822,7 +822,7 @@ ext.Add_and_update_sentence_number = function (ip) {
 			openDriveAudioUrl: 'IP %s %m.openDriveAudioUrlItems play Google Drive music: %s',
 			openDrivePictureUrl: 'IP %s %m.openDrivePictureUrlItems browse Google Drive pitcture: %s',
             openDriveDocumentUrl: 'IP %s %m.openDriveDocumentUrlItems browse Google Drive document: %s',
-			head_direction: ["left", "right", "up", "down"],
+			head_direction: ["left", "right", "top", "bottom"],
             head_degree: ["0", "15", "30", "45"],
             move_direction: ["forward", "backward"],
             move_far: ["0.25", "0.50", "0.75", "1.00", "1.25", "1.50", "1.75", "2.00"],
