@@ -839,7 +839,7 @@ ext.Add_and_update_sentence_number = function (ip) {
             tts_type: ["Hi, welcome to zenbo scratch service", "look here", "WoW", "YA"],
             volume_type: ["louder", "quieter"],
             music_type: ["start", "pause", "resume", "stop", "restart"],
-            volume_option_type: ["music", "alarm", "notice", "robot speaking"],
+            volume_option_type: ["music", "alarm clock", "notification", "robot speaking"],
             tts_speed_type: ["L1", "L2", "L3", "L4", "L5", "L6", "L7", "L8"],
             sentence_type: ["sentence1", "sentence2", "sentence3", "sentence4", "sentence5"],
             playVideosInYoutubeItems: ["open", "close"],
