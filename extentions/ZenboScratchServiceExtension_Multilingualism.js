@@ -826,7 +826,7 @@ ext.Add_and_update_sentence_number = function (ip) {
             head_degree: ["0", "15", "30", "45"],
             move_direction: ["forward", "backward"],
             move_far: ["0.25", "0.50", "0.75", "1.00", "1.25", "1.50", "1.75", "2.00"],
-            move_speed: ["slowly", "normally", "fastly"],
+            move_speed: ["slowly", "normally", "fast"],
             body_turn_direction: ["Turn left", "Turn right"],
             body_turn_degree: ["0", "15", "30", "45", "60", "75", "90", "105", "120", "135", "150", "165", "180"],
             remote_control_body_type: ["Stop", "forward", "turn left", "turn right"],
