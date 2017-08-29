@@ -829,14 +829,14 @@ ext.Add_and_update_sentence_number = function (ip) {
             move_speed: ["slowly", "normally", "fast"],
             body_turn_direction: ["left", "right"],
             body_turn_degree: ["0", "15", "30", "45", "60", "75", "90", "105", "120", "135", "150", "165", "180"],
-            remote_control_body_type: ["Stop", "move forward", "turn left", "turn right"],
+            remote_control_body_type: ["stop", "move forward", "turn left", "turn right"],
             action_type: ["Default_1", "Default_2", "Nod_1", "Head_up_1", "Head_up_2", "Shake_head_1", "Head_up_3", "Head_up_4", "Head_down_1", "Head_down_2",
                             "Head_down_3", "Shake_head_2", "Head_down_4", "Head_up_5", "Head_down_5", "Dance_b_1", "Head_up_7", "Music_1", "Turn_left_1", "Turn_left_2", "Shake_head_3", "Dance_s_1", 
                             "Body_twist_1", "Body_twist_2", "Dance_2", "Shake_head_4", "Head_twist_1", "Dance_3", "Shake_head_5", "Head_down_6", "Head_down_7", "Turn_right_1", "Turn_right_2", "Turn_left_reverse_1", "Turn_right_reverse_1",
                             "Turn_left_reverse_2", "Turn_right_reverse_2", "Head_up_6"],
-            facial_type: ["Interested", "Doubting", "Proud", "Defualt", "Happy", "Expecting", "Shocked", "Questioning", "Impatient", "Confident", "Active", "Pleased", "Helpless", "Serious", "Worried", "Pretending", "Lazy", "Aware_R", 
+            facial_type: ["interested", "doubting", "proud", "defualt", "happy", "expecting", "shocked", "questioning", "impatient", "confident", "active", "pleased", "helpless", "serious", "worried", "pretending", "lazy", "aware_R", 
                             "Tired", "Shy", "Innocent", "Singing", "Aware_L", "Default_still"],
-            tts_type: ["Hi, welcome to zenbo scratch service", "look here", "WoW", "YA"],
+            tts_type: ["Hi, welcome to zenbo scratch service", "Look here", "WoW", "YA"],
             volume_type: ["louder", "quieter"],
             music_type: ["start", "pause", "resume", "stop", "restart"],
             volume_option_type: ["music", "alarm clock", "notification", "robot speaking"],
@@ -849,8 +849,8 @@ ext.Add_and_update_sentence_number = function (ip) {
             openDriveAudioUrlItems: ["start", "finish"],
             openDrivePictureUrlItems: ["start", "finish"],
             openDriveDocumentUrlItems: ["start", "finish"],
-	    ttsEditorDefaultText: 'Please fill the sentence',
-	    defaultAddedSentence: 'Eating'
+	    ttsEditorDefaultText: 'please fill the sentence',
+	    defaultAddedSentence: 'eating'
         },
 	tw: {
             Setting_targetIP: '設定目標IP: %s',
