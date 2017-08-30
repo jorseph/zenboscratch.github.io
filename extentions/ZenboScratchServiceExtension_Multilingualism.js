@@ -996,7 +996,7 @@ ext.Add_and_update_sentence_number = function (ip) {
 	// how which language translation is chosen (increasing priority):
     //   1 - explicit 'lang' parameter in the url (e.g: http://scratchx.org/?url=https://zenboscratch.github.io/extentions/ZenboScratchServiceExtension_Multilingualism.js&lang=en#scratch)
     //   2 - browser first preferred language (navigator.languages[0])
-    //   3 - default (zh-rTW)
+    //   3 - default (en-us)
 	
 	
 	var urlParams = new URLSearchParams(window.location.search);
