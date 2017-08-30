@@ -977,31 +977,30 @@ ext.Add_and_update_sentence_number = function (ip) {
 	
 	 function getTranslationForLang( lang ){
         switch (lang){
-		  case "en":
+               case "en":
 		    return TRANSLATIONS.us;
-		  case "en-us":
+	       case "en-us":
 		    return TRANSLATIONS.us; 			
-		  case "zh":
+               case "zh":
 		    return TRANSLATIONS.tw; 	
-          case "zh-tw":
+               case "zh-tw":
 		    return TRANSLATIONS.tw; 
-          case "zh-cn":
-            return TRANSLATIONS.cn;
-          default:
-            return TRANSLATIONS.us;
+               case "zh-cn":
+                    return TRANSLATIONS.cn;
+               default:
+                    return TRANSLATIONS.us;
             
         }
     }
 	
-	// how which language translation is chosen (increasing priority):
+    // how which language translation is chosen (increasing priority):
     //   1 - explicit 'lang' parameter in the url (e.g: http://scratchx.org/?url=https://zenboscratch.github.io/extentions/ZenboScratchServiceExtension_Multilingualism.js&lang=en#scratch)
     //   2 - browser first preferred language (navigator.languages[0])
     //   3 - default (en-us)
-	
-	
-	var urlParams = new URLSearchParams(window.location.search);
+		
+    var urlParams = new URLSearchParams(window.location.search);
     var lang = ( urlParams.get('lang') || navigator.browserLanguage || navigator.language ).toLowerCase();
-	console.log("lang:" + lang);
+    console.log("lang:" + lang);
 	
     var translate = getTranslationForLang(lang);
 	
