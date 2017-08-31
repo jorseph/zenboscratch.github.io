@@ -599,7 +599,7 @@
 
     ext.when_listen_and_run = function(ip, p1) {
 
-	for(var s = 0;  < translate.sentence_type.length; s++){
+	for(var s = 0; s < translate.sentence_type.length; s++){
 
             if ( p1 == translate.sentence_type[s]) {
                                          
