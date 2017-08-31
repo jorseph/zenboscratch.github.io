@@ -110,6 +110,26 @@
     };
 	
     ext.Head_movement = function (ip, p1, p2, callback) {
+		
+		for(var i = 0; i < translate.head_direction.length; i++){
+
+            if ( p1 == translate.head_direction[i]) {
+                                         
+				p1 = TRANSLATIONS.tw.head_direction[i];
+            }   
+	  
+        }
+		
+		for(var j = 0; j < translate.head_degree.length; j++){
+
+            if ( p2 == translate.head_degree[j]) {
+                                         
+				p2 = TRANSLATIONS.tw.head_degree[j];
+            }   
+	  
+        }
+		
+		
         console.log("Head_movement");
         console.log(ip);
         console.log(p1);
