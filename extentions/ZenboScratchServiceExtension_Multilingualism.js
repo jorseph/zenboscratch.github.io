@@ -199,6 +199,26 @@
     };
 
     ext.Body_turn = function (ip, p1, p2, callback) {
+		
+		for(var i = 0; i < translate.body_turn_direction.length; i++){
+
+            if ( p1 == translate.body_turn_direction[i]) {
+                                         
+				p1 = TRANSLATIONS.tw.body_turn_direction[i];
+            }   
+	  
+        }
+		
+		for(var j = 0; j < translate.body_turn_degree.length; j++){
+
+            if ( p2 == translate.body_turn_degree[j]) {
+                                         
+				p2 = TRANSLATIONS.tw.body_turn_degree[j];
+            }   
+	  
+        }
+		
+		
         console.log("Body_turn");
         console.log(ip);
         console.log(p1);
@@ -218,6 +238,16 @@
     };
 
     ext.Remote_control_body = function (ip, p1, callback){
+		
+		for(var i = 0; i < translate.remote_control_body_type.length; i++){
+
+            if ( p1 == translate.remote_control_body_type[i]) {
+                                         
+				p1 = TRANSLATIONS.tw.remote_control_body_type[i];
+            }   
+	  
+        }
+		
         console.log("Remote_control_body");
         console.log(ip);
         console.log(p1);
@@ -253,6 +283,17 @@
     };
 
     ext.Action = function (ip, p1,callback){
+		
+		for(var i = 0; i < translate.action_type.length; i++){
+
+            if ( p1 == translate.action_type[i]) {
+                                         
+				p1 = TRANSLATIONS.tw.action_type[i];
+            }   
+	  
+        }
+		
+		
         console.log("Action");
         console.log(ip);
         console.log(p1);
@@ -271,6 +312,16 @@
     };
 
     ext.Facial = function (ip, p1, callback) {
+		
+		for(var i = 0; i < translate.facial_type.length; i++){
+
+            if ( p1 == translate.facial_type[i]) {
+                                         
+				p1 = TRANSLATIONS.tw.facial_type[i];
+            }   
+	  
+        }
+		
         console.log("Facial");
         console.log(ip);
         console.log(p1);
@@ -342,6 +393,26 @@
     };
 
     ext.Adjust_stream_volume = function (ip, p1, p2, callback) {
+		
+		for(var i = 0; i < translate.volume_option_type.length; i++){
+
+            if ( p1 == translate.volume_option_type[i]) {
+                                         
+				p1 = TRANSLATIONS.tw.volume_option_type[i];
+            }   
+	  
+        }
+		
+		for(var j = 0; j < translate.volume_type.length; j++){
+
+            if ( p2 == translate.volume_type[j]) {
+                                         
+				p2 = TRANSLATIONS.tw.volume_type[j];
+            }   
+	  
+        }
+		
+		
         console.log("Adjust_stream_volume");
         console.log(ip);
         console.log(p1);
@@ -361,6 +432,16 @@
     };
 
     ext.Add_and_update_sentence = function (ip, p1, p2) {
+		
+		for(var i = 0; i < translate.sentence_type.length; i++){
+
+            if ( p1 == translate.sentence_type[i]) {
+                                         
+				p1 = TRANSLATIONS.tw.sentence_type[i];
+            }   
+	  
+        }
+		
         
         $.ajax({
             url: 'http://' + ip + port + '/?name=Add_and_update_sentence' + '&p1=' + 'test' + '&p2=' + 'zenbo',
@@ -469,6 +550,16 @@
     };
 
     ext.Adjust_tts_and_speed = function (ip, p1, p2, callback) {
+		
+		for(var i = 0; i < translate.tts_speed_type.length; i++){
+
+            if ( p2 == translate.tts_speed_type[i]) {
+                                         
+				p2 = TRANSLATIONS.tw.tts_speed_type[i];
+            }   
+	  
+        }
+		
         console.log("Adjust_tts_and_speed");
         console.log(ip);
         console.log(p1);
@@ -507,7 +598,17 @@
     };
 
     ext.when_listen_and_run = function(ip, p1) {
-       
+
+	for(var i = 0; i < translate.sentence_type.length; i++){
+
+            if ( p1 == translate.sentence_type[i]) {
+                                         
+				p1 = TRANSLATIONS.tw.sentence_type[i];
+            }   
+	  
+    }	
+
+ 
     var checkFlag = false;
     var valueIndex = 0;
 
@@ -632,6 +733,17 @@
 
 
     ext.playVideosInYoutube = function (ip, p1, p2) {
+		
+		
+		for(var i = 0; i < translate.playVideosInYoutubeItems.length; i++){
+
+            if ( p1 == translate.playVideosInYoutubeItems[i]) {
+                                         
+				p1 = TRANSLATIONS.tw.playVideosInYoutubeItems[i];
+            }   
+	  
+        }
+		
         console.log("playVideosInYoutube");
         console.log(ip);
         console.log(p1);
@@ -651,6 +763,16 @@
     };
 
     ext.displayUrlPictures = function (ip, p1, p2) {
+		
+		for(var i = 0; i < translate.displayUrlPicturesItems.length; i++){
+
+            if ( p1 == translate.displayUrlPicturesItems[i]) {
+                                         
+				p1 = TRANSLATIONS.tw.displayUrlPicturesItems[i];
+            }   
+	  
+        }
+		
         console.log("displayUrlPictures");
         console.log(ip);
         console.log(p1);
@@ -670,6 +792,16 @@
     };
 	
     ext.playUrlMusic = function (ip, p1, p2) {
+		
+		for(var i = 0; i < translate.playUrlMusicItems.length; i++){
+
+            if ( p1 == translate.playUrlMusicItems[i]) {
+                                         
+				p1 = TRANSLATIONS.tw.playUrlMusicItems[i];
+            }   
+	  
+        }
+		
         console.log("playUrlMusic");
         console.log(ip);
         console.log(p1);
@@ -725,6 +857,16 @@
     };
 
     ext.openDriveVideoUrl = function (ip, p1, p2) {
+		
+		for(var i = 0; i < translate.openDriveVideoUrlItems.length; i++){
+
+            if ( p1 == translate.openDriveVideoUrlItems[i]) {
+                                         
+				p1 = TRANSLATIONS.tw.openDriveVideoUrlItems[i];
+            }   
+	  
+        }
+		
         console.log("openDriveVideoUrl");
         console.log(ip);
         console.log(p1);
@@ -744,6 +886,16 @@
     };
 
     ext.openDriveAudioUrl = function (ip, p1, p2) {
+		
+		for(var i = 0; i < translate.openDriveAudioUrlItems.length; i++){
+
+            if ( p1 == translate.openDriveAudioUrlItems[i]) {
+                                         
+				p1 = TRANSLATIONS.tw.openDriveAudioUrlItems[i];
+            }   
+	  
+        }
+		
         console.log("openDriveAudioUrl");
         console.log(ip);
         console.log(p1);
@@ -763,6 +915,17 @@
     };
 
     ext.openDrivePictureUrl = function (ip, p1, p2) {
+		
+		
+		for(var i = 0; i < translate.openDrivePictureUrlItems.length; i++){
+
+            if ( p1 == translate.openDrivePictureUrlItems[i]) {
+                                         
+				p1 = TRANSLATIONS.tw.openDrivePictureUrlItems[i];
+            }   
+	  
+        }
+		
         console.log("openDrivePictureUrl");
         console.log(ip);
         console.log(p1);
@@ -782,6 +945,16 @@
     };
 
     ext.openDriveDocumentUrl = function (ip, p1, p2) {
+		
+		for(var i = 0; i < translate.openDriveDocumentUrlItems.length; i++){
+
+            if ( p1 == translate.openDriveDocumentUrlItems[i]) {
+                                         
+				p1 = TRANSLATIONS.tw.openDriveDocumentUrlItems[i];
+            }   
+	  
+        }
+		
         console.log("openDriveDocumentUrl");
         console.log(ip);
         console.log(p1);
