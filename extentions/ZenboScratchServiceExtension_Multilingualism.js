@@ -239,11 +239,11 @@
 
     ext.Remote_control_body = function (ip, p1, callback){
 		
-	for(var i = 0; i < translate.remote_control_body_type.length; i++){
+	for(var i = 0; i < translate.remote_control_body.length; i++){
 
-            if ( p1 == translate.remote_control_body_type[i]) {
+            if ( p1 == translate.remote_control_body[i]) {
                                          
-		 p1 = TRANSLATIONS.tw.remote_control_body_type[i];
+		 p1 = TRANSLATIONS.tw.remote_control_body[i];
             }   
 	  
         }
@@ -1022,7 +1022,7 @@ ext.Add_and_update_sentence_number = function (ip) {
             Stop_moving: 'IP %s stop',
             Head_movement: 'IP %s turn head to the %m.head_direction by %m.head_degree degree(s)',
             Body_turn: 'IP %s turn body to the  %m.body_turn_direction by %m.body_turn_degree degree(s)',
-            Remote_control_body: 'IP %s control body to %m.remote_control_body_type',
+            Remote_control_body: 'IP %s control body to %m.remote_control_body',
             Action: 'IP %s perform the canned action %m.action_type',
             Cancel_actionset: 'IP %s stop the canned action',
             Facial: 'IP %s make the %m.facial_type expression', 
@@ -1052,7 +1052,7 @@ ext.Add_and_update_sentence_number = function (ip) {
             move_speed: ["slowly", "normally", "fast"],
             body_turn_direction: ["left", "right"],
             body_turn_degree: ["0", "15", "30", "45", "60", "75", "90", "105", "120", "135", "150", "165", "180"],
-            remote_control_body_type: ["stop", "move forward", "turn left", "turn right"],
+            remote_control_body: ["stop", "move forward", "turn left", "turn right"],
             action_type: ["relax(default)", "listen to the command/briefing(high)", "complete the task/satisfaction", "greet", "there is a general message-1", "standby(boring)",
                           "charge(satisfaction)", "listen to the command/briefing(low)", "there are continuous task conflicts", "be disappointed(user finishing)", 
                           "be frustrated(user finishing)", "standby(tired)", "there is no electricity soon", "charge(pleasure)", "charge(lazy)", "dance-1 more powerfully", 
@@ -1084,7 +1084,7 @@ ext.Add_and_update_sentence_number = function (ip) {
             Stop_moving: 'IP %s 停止移動',
             Head_movement: 'IP %s 轉動頭部 向 %m.head_direction %m.head_degree 度',
             Body_turn: 'IP %s 轉動身體 向 %m.body_turn_direction %m.body_turn_degree 度',
-            Remote_control_body: 'IP %s 控制身體 %m.remote_control_body_type',
+            Remote_control_body: 'IP %s 控制身體 %m.remote_control_body',
             Action: 'IP %s 做出罐頭動作 %m.action_type',
             Cancel_actionset: 'IP %s 停止罐頭動作',
             Facial: 'IP %s 做出表情 %m.facial_type', 
@@ -1114,7 +1114,7 @@ ext.Add_and_update_sentence_number = function (ip) {
             move_speed: ["慢", "一般", "快"],
             body_turn_direction: ["左轉", "右轉"],
             body_turn_degree: ["0", "15", "30", "45", "60", "75", "90", "105", "120", "135", "150", "165", "180"],
-            remote_control_body_type: ["停止", "前進", "左轉", "右轉"],
+            remote_control_body: ["停止", "前進", "左轉", "右轉"],
             action_type: ["輕鬆(預設)", "Listen to the command/briefing(high)", "Complete the task/satisfaction", "打招呼", "一般訊息一", "待機(無聊)", "充電(滿足)", "聽指令/briefing(矮)", "連續任務衝突", "失望(使用者結束)",
                             "沮喪(使用者結束)", "待機(疲倦)", "快沒電", "充電(愉悅)", "充電(慵懶)", "跳舞一大點", "聽懂", "音樂播放", "向左慢轉", "向左急轉", "搖頭(回答否定)", "跳舞一小點", 
                             "害羞", "聽不懂", "跳舞二", "連續搖頭", "搖頭晃腦", "跳舞極快", "搖頭", "結束打招呼", "一般訊息二", "向右慢轉", "向右急轉", "結束向左慢轉", "結束向右慢轉",
@@ -1143,7 +1143,7 @@ ext.Add_and_update_sentence_number = function (ip) {
             Stop_moving: 'IP %s 停止移动',
             Head_movement: 'IP %s 转动头部 向 %m.head_direction %m.head_degree 度',
             Body_turn: 'IP %s 转动身体 向 %m.body_turn_direction %m.body_turn_degree 度',
-            Remote_control_body: 'IP %s 控制身体 %m.remote_control_body_type',
+            Remote_control_body: 'IP %s 控制身体 %m.remote_control_body',
             Action: 'IP %s 做出罐头动作 %m.action_type',
             Cancel_actionset: 'IP %s 停止罐头动作',
             Facial: 'IP %s 做出表情 %m.facial_type', 
@@ -1173,7 +1173,7 @@ ext.Add_and_update_sentence_number = function (ip) {
             move_speed: ["慢", "一般", "快"],
             body_turn_direction: ["左转", "右转"],
             body_turn_degree: ["0", "15", "30", "45", "60", "75", "90", "105", "120", "135", "150", "165", "180"],
-            remote_control_body_type: ["停止", "前进", "左转", "右转"],
+            remote_control_body: ["停止", "前进", "左转", "右转"],
             action_type: ["轻松(预设)", "听指令/briefing(高)", "完成任务/满足", "打招呼", "一般讯息一", "待机(无聊)", "充电(满足)", "听指令/briefing(矮)", "连续任务冲突", "失望(使用者结束)",
                             "沮丧(使用者结束)", "待机(疲倦)", "快没电", "充电(愉悦)", "充电(慵懒)", "跳舞一大点", "听懂", "音乐播放", "向左慢转", "向左急转", "摇头(回答否定)", "跳舞一小点",
                             "害羞", "听不懂", "跳舞二", "连续摇头", "摇头晃脑", "跳舞极快", "摇头", "结束打招呼", "一般讯息二", "向右慢转", "向右急转", "结束向左慢转", "结束向右慢转",
@@ -1235,7 +1235,7 @@ ext.Add_and_update_sentence_number = function (ip) {
             ['', translate.Stop_moving, 'Stop_moving', "192.168.0.1"],
             ['', translate.Head_movement, 'Head_movement', "192.168.0.1", translate.head_direction[0], translate.head_degree[3]], 
             ['', translate.Body_turn, 'Body_turn', "192.168.0.1", translate.body_turn_direction[0], translate.body_turn_degree[6]],
-            ['', translate.Remote_control_body, 'Remote_control_body', "192.168.0.1", translate.remote_control_body_type[3]],
+            ['', translate.Remote_control_body, 'Remote_control_body', "192.168.0.1", translate.remote_control_body[3]],
             ['', translate.Action, 'Action', "192.168.0.1", translate.action_type[3]],
             ['', translate.Cancel_actionset, 'Cancel_actionset', "192.168.0.1"],
             ['', translate.Facial, 'Facial', "192.168.0.1", translate.facial_type[5]],
@@ -1267,7 +1267,7 @@ ext.Add_and_update_sentence_number = function (ip) {
             "move_speed": translate.move_speed,
             "body_turn_direction": translate.body_turn_direction,
             "body_turn_degree": translate.body_turn_degree,
-            "remote_control_body_type": translate.remote_control_body_type,
+            "remote_control_body": translate.remote_control_body,
             "action_type": translate.action_type,
             "facial_type": translate.facial_type,
             "tts_type": translate.tts_type,
