@@ -149,6 +149,36 @@
     };
 
     ext.Body_movement = function (ip, p1, p2, p3, callback) {
+		
+		for(var i = 0; i < translate.move_direction.length; i++){
+
+            if ( p1 == translate.move_direction[i]) {
+                                         
+				p1 = TRANSLATIONS.tw.move_direction[i];
+            }   
+	  
+        }
+		
+		for(var j = 0; j < translate.move_far.length; j++){
+
+            if ( p2 == translate.move_far[j]) {
+                                         
+				p2 = TRANSLATIONS.tw.move_far[j];
+            }   
+	  
+        }
+		
+		for(var k = 0; k < translate.move_speed.length; k++){
+
+            if ( p3 == translate.move_speed[k]) {
+                                         
+				p3 = TRANSLATIONS.tw.move_speed[k];
+            }   
+	  
+        }
+		
+		
+		
         console.log("Body_movement");
         console.log(ip);
         console.log(p1);
