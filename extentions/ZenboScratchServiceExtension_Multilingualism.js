@@ -111,20 +111,20 @@
 	
     ext.Head_movement = function (ip, p1, p2, callback) {
 		
-		for(var i = 0; i < translate.head_direction.length; i++){
+	for(var i = 0; i < translate.head_direction.length; i++){
 
             if ( p1 == translate.head_direction[i]) {
                                          
-				p1 = TRANSLATIONS.tw.head_direction[i];
+		 p1 = TRANSLATIONS.tw.head_direction[i];
             }   
 	  
         }
 		
-		for(var j = 0; j < translate.head_degree.length; j++){
+	for(var j = 0; j < translate.head_degree.length; j++){
 
             if ( p2 == translate.head_degree[j]) {
                                          
-				p2 = TRANSLATIONS.tw.head_degree[j];
+		 p2 = TRANSLATIONS.tw.head_degree[j];
             }   
 	  
         }
@@ -150,29 +150,29 @@
 
     ext.Body_movement = function (ip, p1, p2, p3, callback) {
 		
-		for(var i = 0; i < translate.move_direction.length; i++){
+	for(var i = 0; i < translate.move_direction.length; i++){
 
             if ( p1 == translate.move_direction[i]) {
                                          
-				p1 = TRANSLATIONS.tw.move_direction[i];
+		 p1 = TRANSLATIONS.tw.move_direction[i];
             }   
 	  
         }
 		
-		for(var j = 0; j < translate.move_far.length; j++){
+	for(var j = 0; j < translate.move_far.length; j++){
 
             if ( p2 == translate.move_far[j]) {
                                          
-				p2 = TRANSLATIONS.tw.move_far[j];
+		 p2 = TRANSLATIONS.tw.move_far[j];
             }   
 	  
         }
 		
-		for(var k = 0; k < translate.move_speed.length; k++){
+	for(var k = 0; k < translate.move_speed.length; k++){
 
             if ( p3 == translate.move_speed[k]) {
                                          
-				p3 = TRANSLATIONS.tw.move_speed[k];
+		 p3 = TRANSLATIONS.tw.move_speed[k];
             }   
 	  
         }
@@ -200,20 +200,20 @@
 
     ext.Body_turn = function (ip, p1, p2, callback) {
 		
-		for(var i = 0; i < translate.body_turn_direction.length; i++){
+	for(var i = 0; i < translate.body_turn_direction.length; i++){
 
             if ( p1 == translate.body_turn_direction[i]) {
                                          
-				p1 = TRANSLATIONS.tw.body_turn_direction[i];
+		 p1 = TRANSLATIONS.tw.body_turn_direction[i];
             }   
 	  
         }
 		
-		for(var j = 0; j < translate.body_turn_degree.length; j++){
+	for(var j = 0; j < translate.body_turn_degree.length; j++){
 
             if ( p2 == translate.body_turn_degree[j]) {
                                          
-				p2 = TRANSLATIONS.tw.body_turn_degree[j];
+		 p2 = TRANSLATIONS.tw.body_turn_degree[j];
             }   
 	  
         }
@@ -239,11 +239,11 @@
 
     ext.Remote_control_body = function (ip, p1, callback){
 		
-		for(var i = 0; i < translate.remote_control_body_type.length; i++){
+	for(var i = 0; i < translate.remote_control_body_type.length; i++){
 
             if ( p1 == translate.remote_control_body_type[i]) {
                                          
-				p1 = TRANSLATIONS.tw.remote_control_body_type[i];
+		 p1 = TRANSLATIONS.tw.remote_control_body_type[i];
             }   
 	  
         }
@@ -284,11 +284,11 @@
 
     ext.Action = function (ip, p1,callback){
 		
-		for(var i = 0; i < translate.action_type.length; i++){
+	for(var i = 0; i < translate.action_type.length; i++){
 
             if ( p1 == translate.action_type[i]) {
                                          
-				p1 = TRANSLATIONS.tw.action_type[i];
+		 p1 = TRANSLATIONS.tw.action_type[i];
             }   
 	  
         }
@@ -313,11 +313,11 @@
 
     ext.Facial = function (ip, p1, callback) {
 		
-		for(var i = 0; i < translate.facial_type.length; i++){
+	for(var i = 0; i < translate.facial_type.length; i++){
 
             if ( p1 == translate.facial_type[i]) {
                                          
-				p1 = TRANSLATIONS.tw.facial_type[i];
+		 p1 = TRANSLATIONS.tw.facial_type[i];
             }   
 	  
         }
@@ -394,20 +394,20 @@
 
     ext.Adjust_stream_volume = function (ip, p1, p2, callback) {
 		
-		for(var i = 0; i < translate.volume_option_type.length; i++){
+	for(var i = 0; i < translate.volume_option_type.length; i++){
 
             if ( p1 == translate.volume_option_type[i]) {
                                          
-				p1 = TRANSLATIONS.tw.volume_option_type[i];
+		 p1 = TRANSLATIONS.tw.volume_option_type[i];
             }   
 	  
         }
 		
-		for(var j = 0; j < translate.volume_type.length; j++){
+	for(var j = 0; j < translate.volume_type.length; j++){
 
             if ( p2 == translate.volume_type[j]) {
                                          
-				p2 = TRANSLATIONS.tw.volume_type[j];
+		 p2 = TRANSLATIONS.tw.volume_type[j];
             }   
 	  
         }
@@ -433,11 +433,11 @@
 
     ext.Add_and_update_sentence = function (ip, p1, p2) {
 		
-		for(var i = 0; i < translate.sentence_type.length; i++){
+	for(var i = 0; i < translate.sentence_type.length; i++){
 
             if ( p1 == translate.sentence_type[i]) {
                                          
-				p1 = TRANSLATIONS.tw.sentence_type[i];
+		 p1 = TRANSLATIONS.tw.sentence_type[i];
             }   
 	  
         }
@@ -551,11 +551,11 @@
 
     ext.Adjust_tts_and_speed = function (ip, p1, p2, callback) {
 		
-		for(var i = 0; i < translate.tts_speed_type.length; i++){
+	for(var i = 0; i < translate.tts_speed_type.length; i++){
 
             if ( p2 == translate.tts_speed_type[i]) {
                                          
-				p2 = TRANSLATIONS.tw.tts_speed_type[i];
+		 p2 = TRANSLATIONS.tw.tts_speed_type[i];
             }   
 	  
         }
@@ -599,11 +599,11 @@
 
     ext.when_listen_and_run = function(ip, p1) {
 
-	for(var s = 0; s < translate.sentence_type.length; s++){
+    for(var s = 0; s < translate.sentence_type.length; s++){
 
             if ( p1 == translate.sentence_type[s]) {
                                          
-				p1 = TRANSLATIONS.tw.sentence_type[s];
+		 p1 = TRANSLATIONS.tw.sentence_type[s];
             }   
 	  
     }	
@@ -720,26 +720,26 @@
              }
     }
 	
-    if ( valueIndex_3 === -1 ) {
+        if ( valueIndex_3 === -1 ) {
 	
-        console.log('valueIndex_3 === -1');  	
+           console.log('valueIndex_3 === -1');  	
 		return 'no device';
 	}
 
-    console.log('getCorrectedSentence: ' + flagArray.data[valueIndex_3].correctedSentence);   
+        console.log('getCorrectedSentence: ' + flagArray.data[valueIndex_3].correctedSentence);   
   		
-     return flagArray.data[valueIndex_3].correctedSentence;
+        return flagArray.data[valueIndex_3].correctedSentence;
     };
 
 
     ext.playVideosInYoutube = function (ip, p1, p2) {
 		
 		
-		for(var i = 0; i < translate.playVideosInYoutubeItems.length; i++){
+	for(var i = 0; i < translate.playVideosInYoutubeItems.length; i++){
 
             if ( p1 == translate.playVideosInYoutubeItems[i]) {
                                          
-				p1 = TRANSLATIONS.tw.playVideosInYoutubeItems[i];
+		 p1 = TRANSLATIONS.tw.playVideosInYoutubeItems[i];
             }   
 	  
         }
@@ -764,11 +764,11 @@
 
     ext.displayUrlPictures = function (ip, p1, p2) {
 		
-		for(var i = 0; i < translate.displayUrlPicturesItems.length; i++){
+	for(var i = 0; i < translate.displayUrlPicturesItems.length; i++){
 
             if ( p1 == translate.displayUrlPicturesItems[i]) {
                                          
-				p1 = TRANSLATIONS.tw.displayUrlPicturesItems[i];
+		 p1 = TRANSLATIONS.tw.displayUrlPicturesItems[i];
             }   
 	  
         }
@@ -793,11 +793,11 @@
 	
     ext.playUrlMusic = function (ip, p1, p2) {
 		
-		for(var i = 0; i < translate.playUrlMusicItems.length; i++){
+	for(var i = 0; i < translate.playUrlMusicItems.length; i++){
 
             if ( p1 == translate.playUrlMusicItems[i]) {
                                          
-				p1 = TRANSLATIONS.tw.playUrlMusicItems[i];
+		 p1 = TRANSLATIONS.tw.playUrlMusicItems[i];
             }   
 	  
         }
@@ -858,11 +858,11 @@
 
     ext.openDriveVideoUrl = function (ip, p1, p2) {
 		
-		for(var i = 0; i < translate.openDriveVideoUrlItems.length; i++){
+	for(var i = 0; i < translate.openDriveVideoUrlItems.length; i++){
 
             if ( p1 == translate.openDriveVideoUrlItems[i]) {
                                          
-				p1 = TRANSLATIONS.tw.openDriveVideoUrlItems[i];
+		 p1 = TRANSLATIONS.tw.openDriveVideoUrlItems[i];
             }   
 	  
         }
@@ -887,11 +887,11 @@
 
     ext.openDriveAudioUrl = function (ip, p1, p2) {
 		
-		for(var i = 0; i < translate.openDriveAudioUrlItems.length; i++){
+	for(var i = 0; i < translate.openDriveAudioUrlItems.length; i++){
 
             if ( p1 == translate.openDriveAudioUrlItems[i]) {
                                          
-				p1 = TRANSLATIONS.tw.openDriveAudioUrlItems[i];
+		 p1 = TRANSLATIONS.tw.openDriveAudioUrlItems[i];
             }   
 	  
         }
@@ -917,11 +917,11 @@
     ext.openDrivePictureUrl = function (ip, p1, p2) {
 		
 		
-		for(var i = 0; i < translate.openDrivePictureUrlItems.length; i++){
+	for(var i = 0; i < translate.openDrivePictureUrlItems.length; i++){
 
             if ( p1 == translate.openDrivePictureUrlItems[i]) {
                                          
-				p1 = TRANSLATIONS.tw.openDrivePictureUrlItems[i];
+		 p1 = TRANSLATIONS.tw.openDrivePictureUrlItems[i];
             }   
 	  
         }
@@ -946,11 +946,11 @@
 
     ext.openDriveDocumentUrl = function (ip, p1, p2) {
 		
-		for(var i = 0; i < translate.openDriveDocumentUrlItems.length; i++){
+	for(var i = 0; i < translate.openDriveDocumentUrlItems.length; i++){
 
             if ( p1 == translate.openDriveDocumentUrlItems[i]) {
                                          
-				p1 = TRANSLATIONS.tw.openDriveDocumentUrlItems[i];
+		 p1 = TRANSLATIONS.tw.openDriveDocumentUrlItems[i];
             }   
 	  
         }
