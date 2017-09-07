@@ -1,5 +1,7 @@
 (function (ext) {
 
+    var recursionFlag = true;
+
     var flagArray = {
         data:[]
     };
@@ -432,6 +434,8 @@
     };
 
     ext.Add_and_update_sentence = function (ip, p1, p2) {
+
+        if  (recursionFlag === true) {
 		
 	for(var i = 0; i < translate.sentence_type.length; i++){
 
@@ -478,6 +482,9 @@
             }
         }); 
          
+           recursionFlag = false;      
+        } 
+
         console.log("Add_and_update_sentence");
         console.log(ip);
         console.log(p1);
@@ -975,7 +982,9 @@
 
 
 ext.Add_and_update_sentence_number = function (ip) {
-        
+    
+        if  (recursionFlag === true) { 
+    
         $.ajax({
             url: 'http://' + ip + port + '/?name=Add_and_update_sentence' + '&p1=' + 'test' + '&p2=' + 'zenbo',
             dataType: 'text',
@@ -1011,6 +1020,9 @@ ext.Add_and_update_sentence_number = function (ip) {
             }
         }); 
          
+        recursionFlag = false; 
+
+       }
 
     };    
 
