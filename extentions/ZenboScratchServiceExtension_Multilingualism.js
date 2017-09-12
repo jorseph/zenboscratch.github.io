@@ -6,7 +6,7 @@
         data:[]
     };
 	
-	port = ":8080";
+    port = ":8080";
 	
     ext._shutdown = function () {
         console.log('Shutting down...');
@@ -1063,7 +1063,7 @@ ext.Add_and_update_sentence_number = function (ip) {
             move_far: ["0.25", "0.50", "0.75", "1.00", "1.25", "1.50", "1.75", "2.00"],
             move_speed: ["slowly", "normally", "fast"],
             body_turn_direction: ["left", "right"],
-            body_turn_degree: ["0", "15", "30", "45", "60", "75", "90", "105", "120", "135", "150", "165", "180"],
+            body_turn_degree: ["0", "15", "30", "45", "60", "75", "90", "105", "120", "135", "150", "165", "180", "195", "210", "225", "240", "255", "270", "285", "300", "315", "330", "345", "360"],
             remote_control_body: ["stop", "move forward", "turn left", "turn right"],
             action_type: ["relax(default)", "listen to the command/briefing(high)", "complete the task/satisfaction", "greet", "there is a general message-1", "standby(boring)",
                           "charge(satisfaction)", "listen to the command/briefing(low)", "there are continuous task conflicts", "be disappointed(user finishing)", 
@@ -1125,7 +1125,7 @@ ext.Add_and_update_sentence_number = function (ip) {
             move_far: ["0.25", "0.50", "0.75", "1.00", "1.25", "1.50", "1.75", "2.00"],
             move_speed: ["慢", "一般", "快"],
             body_turn_direction: ["左轉", "右轉"],
-            body_turn_degree: ["0", "15", "30", "45", "60", "75", "90", "105", "120", "135", "150", "165", "180"],
+            body_turn_degree: ["0", "15", "30", "45", "60", "75", "90", "105", "120", "135", "150", "165", "180", "195", "210", "225", "240", "255", "270", "285", "300", "315", "330", "345", "360"],
             remote_control_body: ["停止", "前進", "左轉", "右轉"],
             action_type: ["輕鬆(預設)", "Listen to the command/briefing(high)", "Complete the task/satisfaction", "打招呼", "一般訊息一", "待機(無聊)", "充電(滿足)", "聽指令/briefing(矮)", "連續任務衝突", "失望(使用者結束)",
                             "沮喪(使用者結束)", "待機(疲倦)", "快沒電", "充電(愉悅)", "充電(慵懶)", "跳舞一大點", "聽懂", "音樂播放", "向左慢轉", "向左急轉", "搖頭(回答否定)", "跳舞一小點", 
@@ -1184,7 +1184,7 @@ ext.Add_and_update_sentence_number = function (ip) {
             move_far: ["0.25", "0.50", "0.75", "1.00", "1.25", "1.50", "1.75", "2.00"],
             move_speed: ["慢", "一般", "快"],
             body_turn_direction: ["左转", "右转"],
-            body_turn_degree: ["0", "15", "30", "45", "60", "75", "90", "105", "120", "135", "150", "165", "180"],
+            body_turn_degree: ["0", "15", "30", "45", "60", "75", "90", "105", "120", "135", "150", "165", "180" , "195", "210", "225", "240", "255", "270", "285", "300", "315", "330", "345", "360"],
             remote_control_body: ["停止", "前进", "左转", "右转"],
             action_type: ["轻松(预设)", "听指令/briefing(高)", "完成任务/满足", "打招呼", "一般讯息一", "待机(无聊)", "充电(满足)", "听指令/briefing(矮)", "连续任务冲突", "失望(使用者结束)",
                             "沮丧(使用者结束)", "待机(疲倦)", "快没电", "充电(愉悦)", "充电(慵懒)", "跳舞一大点", "听懂", "音乐播放", "向左慢转", "向左急转", "摇头(回答否定)", "跳舞一小点",
