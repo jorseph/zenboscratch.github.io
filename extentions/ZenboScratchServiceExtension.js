@@ -9,20 +9,6 @@
     ext._shutdown = function () {
         console.log('Shutting down...');
 
-        $.ajax({
-            url: 'http://' + ip + port + '/?name=Delete_instance',
-            dataType: 'text',
-            crossDomain: true,
-            success: function (data) {
-                console.log("success handler");
-                console.log("shutdown-Delete_instance");
-
-            },
-            error: function (jqXHR, textStatus, errorThrown) {
-                console.log("error handler");
-            }
-        });
-
     };
 
     ext._getStatus = function () {
