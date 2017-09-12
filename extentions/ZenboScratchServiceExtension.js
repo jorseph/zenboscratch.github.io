@@ -22,6 +22,96 @@
 
     port = ":8080";
 
+ var getSentencesRecursion = function(ip, flagIndex) {
+
+		if ( flagArray.data[flagIndex].get_sentences_flag === true ) {  	 
+			 flagArray.data[flagIndex].get_sentences_flag = false;  
+			 
+		$.ajax({
+				type: 'GET',
+				url: 'http://' + ip + port + '/?name=Get_sentences',
+				dataType: 'text',
+				crossDomain: true,
+				success: function (data) {
+		
+                		console.log("Get_sentences-success handler");
+                             
+                                console.log('splitedData[0]' + data.split(",")[0]);
+                                 
+		    switch(data.split(",")[0]) {
+
+                    case 'number':
+                                 
+                        console.log('辨識到number');
+                        console.log( ip + " "  + flagIndex + " " + "number_flag true");
+                        flagArray.data[flagIndex].number_flag = true;
+                        flagArray.data[flagIndex].correctedSentence = data.split(",")[1];
+                        console.log('correctedSentence:' + flagArray.data[flagIndex].correctedSentence);
+                                              
+                        break; 
+
+		    case '語句一':
+						
+			console.log('辨識到語句一'); 
+			console.log( ip + " "  + flagIndex + " " + "sentence_1_flag true");
+			flagArray.data[flagIndex].sentence_1_flag = true;
+
+			break;
+
+		    case '語句二':
+						
+  	                console.log('辨識到語句二'); 
+			console.log( ip + " "  + flagIndex + " " + "sentence_2_flag true");
+			flagArray.data[flagIndex].sentence_2_flag = true;
+
+			break;
+
+		    case '語句三':
+						
+
+		         console.log('辨識到語句三');  
+		         console.log( ip + " "  + flagIndex + " " + "sentence_3_flag true");
+	  	         flagArray.data[flagIndex].sentence_3_flag = true;
+
+		    break;
+
+		    case '語句四':
+						
+		    console.log('辨識到語句四'); 
+		    console.log( ip + " "  + flagIndex + " " + "sentence_4_flag true");
+		    flagArray.data[flagIndex].sentence_4_flag = true;
+
+		    break;
+
+
+		    case '語句五':
+
+		    console.log('辨識到語句五');                   
+		    console.log( ip + " "  + flagIndex + " " + "sentence_5_flag true");
+		    flagArray.data[flagIndex].sentence_5_flag = true;
+
+		    break;
+					   
+		}  
+
+                     flagArray.data[flagIndex].get_sentences_flag = true;
+                     getSentencesRecursion(ip, flagIndex);  				 
+				
+		},
+		 error: function (jqXHR, textStatus, errorThrown) {
+		     console.log("error handler");
+			 
+	             flagArray.data[flagIndex].get_sentences_flag = true;
+                     getSentencesRecursion(ip, flagIndex);	 
+					
+		}
+		});
+				
+            }    
+	
+	
+    };
+
     ext.Head_movement = function (ip, p1, p2, callback) {
         console.log("Head_movement");
         console.log(ip);
@@ -247,7 +337,7 @@
                         }
 
                         if (setupFlag == true) {
-                                flagArray.data.push( { device: ip,  sentence_1_flag: false, sentence_2_flag: false, sentence_3_flag: false, sentence_4_flag: false, sentence_5_flag: false, get_sentences_flag: true } );
+                                flagArray.data.push( { device: ip, correctedSentence: "", sentence_1_flag: false, sentence_2_flag: false, sentence_3_flag: false, sentence_4_flag: false, sentence_5_flag: false, number_flag: false, get_sentences_flag: true } );
                                 console.log("add new device IP and its flags");
                                 flagIndex = flagArray.data.length -1 ;
                                 console.log("true " + "flagIndex: "+ flagIndex);
@@ -281,85 +371,6 @@
             }
         });
     };    
-
-    var getSentencesRecursion = function(ip, flagIndex) {
-
-		if ( flagArray.data[flagIndex].get_sentences_flag === true ) {  	 
-			 flagArray.data[flagIndex].get_sentences_flag = false;  
-			 
-			$.ajax({
-				type: 'GET',
-				url: 'http://' + ip + port + '/?name=Get_sentences',
-				dataType: 'text',
-				crossDomain: true,
-				success: function (data) {
-				console.log("Get_sentences-success handler");
-
-				switch(data) {
-
-					case '語句一':
-						
-						console.log('辨識到語句一'); 
-						console.log( ip + " "  + flagIndex + "sentence_1_flag true");
-						flagArray.data[flagIndex].sentence_1_flag = true;
-
-						break;
-
-					case '語句二':
-						
-						console.log('辨識到語句二'); 
-						console.log( ip + " "  + flagIndex + "sentence_2_flag true");
-						flagArray.data[flagIndex].sentence_2_flag = true;
-
-						break;
-
-					case '語句三':
-						
-
-						console.log('辨識到語句三');  
-						console.log( ip + " "  + flagIndex + "sentence_3_flag true");
-						flagArray.data[flagIndex].sentence_3_flag = true;
-
-						break;
-
-					case '語句四':
-						
-						console.log('辨識到語句四'); 
-						console.log( ip + " "  + flagIndex + "sentence_4_flag true");
-						flagArray.data[flagIndex].sentence_4_flag = true;
-
-						break;
-
-
-					case '語句五':
-
-						console.log('辨識到語句五');                   
-						console.log( ip + " "  + flagIndex + "sentence_5_flag true");
-						flagArray.data[flagIndex].sentence_5_flag = true;
-
-					   break;
-					   
-				}  
-
-                 flagArray.data[flagIndex].get_sentences_flag = true;
-                 getSentencesRecursion(ip, flagIndex);  				 
-				
-				},
-				error: function (jqXHR, textStatus, errorThrown) {
-					console.log("error handler");
-			 
-			     flagArray.data[flagIndex].get_sentences_flag = true;
-                 	     getSentencesRecursion(ip, flagIndex);	 
-					
-				}
-			});
-				
-            }    
-	
-	
-	
-    };
-	
 	
     ext.Delete_instance = function (ip,callback){
         console.log("Delete_instance");
