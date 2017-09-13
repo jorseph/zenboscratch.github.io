@@ -268,6 +268,7 @@
     };
 
     ext.Stop_moving = function (ip,callback){
+
         console.log("Stop_moving");
         console.log(ip);
         $.ajax({
@@ -282,6 +283,22 @@
                 console.log("error handler");
             }
         });
+
+        console.log("Cancel_actionset");
+        console.log(ip);
+        $.ajax({
+            url: 'http://' + ip + port + '/?name=Cancel_actionset',
+            dataType: 'text',
+            crossDomain: true,
+            success: function (data) {
+                console.log("success handler");
+
+            },
+            error: function (jqXHR, textStatus, errorThrown) {
+                console.log("error handler");
+            }
+        });
+
     };
 
     ext.Action = function (ip, p1,callback){
@@ -1029,13 +1046,13 @@ ext.Add_and_update_sentence_number = function (ip) {
 	
     var TRANSLATIONS = {
         us: {
-            Setting_targetIP: 'Set target IP: %s',
+            Setting_targetIP: 'Set Zenbo IP: %s',
             Body_movement: 'IP %s move %m.move_direction by %m.move_far Meter %m.move_speed',
             Stop_moving: 'IP %s stop',
             Head_movement: 'IP %s turn head to the %m.head_direction by %m.head_degree degree(s)',
             Body_turn: 'IP %s turn body to the  %m.body_turn_direction by %m.body_turn_degree degree(s)',
             Remote_control_body: 'IP %s control body to %m.remote_control_body',
-            Action: 'IP %s perform the canned action %m.action_type',
+            Action: 'IP %s Zenbo do the action %m.action_type',
             Cancel_actionset: 'IP %s stop the canned action',
             Facial: 'IP %s make the %m.facial_type expression', 
             hideFace: 'IP %s hide the expression',
@@ -1091,13 +1108,13 @@ ext.Add_and_update_sentence_number = function (ip) {
 	    defaultAddedSentence: 'eating'
         },
 	tw: {
-            Setting_targetIP: '設定目標IP: %s',
+            Setting_targetIP: '設定Zenbo IP: %s',
             Body_movement: 'IP %s 移動 %m.move_direction %m.move_far 公尺 %m.move_speed 速度',
-            Stop_moving: 'IP %s 停止移動',
+            Stop_moving: 'IP %s 停止',
             Head_movement: 'IP %s 轉動頭部 向 %m.head_direction %m.head_degree 度',
             Body_turn: 'IP %s 轉動身體 向 %m.body_turn_direction %m.body_turn_degree 度',
             Remote_control_body: 'IP %s 控制身體 %m.remote_control_body',
-            Action: 'IP %s 做出罐頭動作 %m.action_type',
+            Action: 'IP %s Zenbo 做動作 %m.action_type',
             Cancel_actionset: 'IP %s 停止罐頭動作',
             Facial: 'IP %s 做出表情 %m.facial_type', 
             hideFace: 'IP %s 隱藏表情',
@@ -1150,13 +1167,13 @@ ext.Add_and_update_sentence_number = function (ip) {
             defaultAddedSentence: '吃飯'			
         },  		
 	cn: {
-            Setting_targetIP: '设定目标IP: %s',
+            Setting_targetIP: '设定Zenbo IP: %s',
             Body_movement: 'IP %s 移动 %m.move_direction %m.move_far 公尺 %m.move_speed 速度',
-            Stop_moving: 'IP %s 停止移动',
+            Stop_moving: 'IP %s 停止',
             Head_movement: 'IP %s 转动头部 向 %m.head_direction %m.head_degree 度',
             Body_turn: 'IP %s 转动身体 向 %m.body_turn_direction %m.body_turn_degree 度',
             Remote_control_body: 'IP %s 控制身体 %m.remote_control_body',
-            Action: 'IP %s 做出罐头动作 %m.action_type',
+            Action: 'IP %s Zenbo 做动作 %m.action_type',
             Cancel_actionset: 'IP %s 停止罐头动作',
             Facial: 'IP %s 做出表情 %m.facial_type', 
             hideFace: 'IP %s 隐藏表情',
@@ -1249,7 +1266,7 @@ ext.Add_and_update_sentence_number = function (ip) {
             ['', translate.Body_turn, 'Body_turn', "192.168.0.1", translate.body_turn_direction[0], translate.body_turn_degree[6]],
             ['', translate.Remote_control_body, 'Remote_control_body', "192.168.0.1", translate.remote_control_body[3]],
             ['', translate.Action, 'Action', "192.168.0.1", translate.action_type[3]],
-            ['', translate.Cancel_actionset, 'Cancel_actionset', "192.168.0.1"],
+          //  ['', translate.Cancel_actionset, 'Cancel_actionset', "192.168.0.1"],
             ['', translate.Facial, 'Facial', "192.168.0.1", translate.facial_type[5]],
             ['', translate.hideFace, 'hideFace', "192.168.0.1"],
             ['', translate.TTS, 'TTS', "192.168.0.1", translate.tts_type[0]],
