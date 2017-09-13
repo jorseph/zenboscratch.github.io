@@ -6,7 +6,7 @@
         data:[]
     };
 	
-	port = ":8080";
+    port = ":8080";
 	
     ext._shutdown = function () {
         console.log('Shutting down...');
