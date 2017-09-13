@@ -188,6 +188,7 @@
     };
 
     ext.Stop_moving = function (ip,callback){
+
         console.log("Stop_moving");
         console.log(ip);
         $.ajax({
@@ -202,6 +203,22 @@
                 console.log("error handler");
             }
         });
+
+        console.log("Cancel_actionset");
+        console.log(ip);
+        $.ajax({
+            url: 'http://' + ip + port + '/?name=Cancel_actionset',
+            dataType: 'text',
+            crossDomain: true,
+            success: function (data) {
+                console.log("success handler");
+
+            },
+            error: function (jqXHR, textStatus, errorThrown) {
+                console.log("error handler");
+            }
+        });
+       
     };
 
     ext.Action = function (ip, p1,callback){
@@ -806,14 +823,13 @@ ext.Add_and_update_sentence_number = function (ip) {
 
     var descriptor = {
         blocks: [
-            ['r', '設定目標IP: %s', 'Setting_targetIP', "192.168.0.1"],
+            ['r', '設定Zenbo IP: %s', 'Setting_targetIP', "192.168.0.1"],
             ['', 'IP %s 移動 %m.move_direction %m.move_far 公尺 %m.move_speed 速度', 'Body_movement', "192.168.0.1", "前進", "0.25", "一般"],
-            ['', 'IP %s 停止移動', 'Stop_moving', "192.168.0.1"],
+            ['', 'IP %s 停止', 'Stop_moving', "192.168.0.1"],
             ['', 'IP %s 轉動頭部 向 %m.head_direction %m.head_degree 度', 'Head_movement', "192.168.0.1", "左", "45"], 
             ['', 'IP %s 轉動身體 向 %m.body_turn_direction %m.body_turn_degree 度', 'Body_turn', "192.168.0.1", "左轉", "90"],
             ['', 'IP %s 控制身體 %m.remote_control_body', 'Remote_control_body', "192.168.0.1", "右轉"],
-            ['', 'IP %s 做出罐頭動作 %m.action_type', 'Action', "192.168.0.1", '打招呼'],
-            ['', 'IP %s 停止罐頭動作', 'Cancel_actionset', "192.168.0.1"],
+            ['', 'IP %s Zenbo 做動作 %m.action_type', 'Action', "192.168.0.1", '打招呼'],
             ['', 'IP %s 做出表情 %m.facial_type', 'Facial', "192.168.0.1", '期待'],
             ['', 'IP %s 隱藏表情', 'hideFace', "192.168.0.1"],
             ['', 'IP %s 說話 %m.tts_type ', 'TTS', "192.168.0.1", 'Hi,你好'],
