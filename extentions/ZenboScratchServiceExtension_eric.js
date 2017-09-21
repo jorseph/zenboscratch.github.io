@@ -45,7 +45,7 @@
                         }
 
                         if (setupFlag == true) {
-                                flagArray.data.push( { device: ip, correctedSentence: "", sentence_1_flag: false, sentence_2_flag: false, sentence_3_flag: false, sentence_4_flag: false, sentence_5_flag: false, number_flag: false, get_sentences_flag: true } );
+                                flagArray.data.push( { device: ip, correctedSentence: "", sentence_1_flag: false, sentence_2_flag: false, sentence_3_flag: false, sentence_4_flag: false, sentence_5_flag: false, number_flag: false, touch_head_flag: false, get_sentences_flag: true } );
                                 console.log("add new device IP and its flags");
                                 flagIndex = flagArray.data.length -1 ;
                                 console.log("true " + "flagIndex: "+ flagIndex);
@@ -83,6 +83,15 @@
                                 
 				switch(data.split(",")[0]) {
 
+				    case 'touchHead':
+
+                        console.log('摸到頭了');
+                        console.log( ip + " "  + flagIndex + " " + "touch_head_flag true");
+                        flagArray.data[flagIndex].touch_head_flag = true;
+
+                        break;                          					
+				
+				
                     case 'number':
                                  
                         console.log('辨識到number');
@@ -397,7 +406,7 @@
                         }
 
                         if (setupFlag == true) {
-                                flagArray.data.push( { device: ip, correctedSentence: "", sentence_1_flag: false, sentence_2_flag: false, sentence_3_flag: false, sentence_4_flag: false, sentence_5_flag: false, number_flag: false, get_sentences_flag: true } );
+                                flagArray.data.push( { device: ip, correctedSentence: "", sentence_1_flag: false, sentence_2_flag: false, sentence_3_flag: false, sentence_4_flag: false, sentence_5_flag: false, number_flag: false, touch_head_flag: false, get_sentences_flag: true } );
                                 console.log("add new device IP and its flags");
                                 flagIndex = flagArray.data.length -1 ;
                                 console.log("true " + "flagIndex: "+ flagIndex);
@@ -843,7 +852,7 @@ ext.Add_and_update_sentence_number = function () {
                         }
 
                         if (setupFlag == true) {
-                                flagArray.data.push( { device: ip, correctedSentence: "", sentence_1_flag: false, sentence_2_flag: false, sentence_3_flag: false, sentence_4_flag: false, sentence_5_flag: false, number_flag: false, get_sentences_flag: true } );
+                                flagArray.data.push( { device: ip, correctedSentence: "", sentence_1_flag: false, sentence_2_flag: false, sentence_3_flag: false, sentence_4_flag: false, sentence_5_flag: false, number_flag: false, touch_head_flag: false, get_sentences_flag: true } );
                                 console.log("add new device IP and its flags");
                                 flagIndex = flagArray.data.length -1 ;
                                 console.log("true " + "flagIndex: "+ flagIndex);
@@ -863,7 +872,35 @@ ext.Add_and_update_sentence_number = function () {
        }
          
 
-    };    
+    }; 
+
+ ext.when_touch_head_and_run = function() {
+       
+    var valueIndex_touch_head = -1;
+
+    for(var j = 0; j < flagArray.data.length; j++){
+
+             if ( ip == flagArray.data[j].device) {          
+                  valueIndex_touch_head = j;
+             }
+    }
+
+    if ( valueIndex_touch_head === -1 ) {
+	
+        console.log('valueIndex_touch_head === -1');  	
+		return false;
+	}
+         
+    if (flagArray.data[valueIndex_touch_head].touch_head_flag === true) {
+		   console.log('true touch head'); 
+           flagArray.data[valueIndex_touch_head].touch_head_flag = false;             
+           return true;
+    }
+
+     return false;
+    };
+
+	
 
     var descriptor = {
         blocks: [
