@@ -6,7 +6,7 @@
         data:[]
     };
 	
-	ip = "127.0.0.1";
+    ip = "127.0.0.1";
     port = ":8080";
 	
     ext._shutdown = function () {
@@ -271,7 +271,22 @@
                 console.log("error handler");
             }
         });
-       
+
+        console.log("Remote_control_body-Stop");
+        console.log(ip);
+        $.ajax({
+            url: 'http://' + ip + port + '/?name=Remote_control_body' + '&p1=' + '停止',
+            dataType: 'text',
+            crossDomain: true,
+            success: function (data) {
+                console.log("success handler");
+
+            },
+            error: function (jqXHR, textStatus, errorThrown) {
+                console.log("error handler");
+            }
+        });   
+
     };
 
     ext.Action = function (callback){
