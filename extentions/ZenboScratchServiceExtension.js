@@ -218,6 +218,21 @@
                 console.log("error handler");
             }
         });
+
+        console.log("Remote_control_body-Stop");
+        console.log(ip);
+        $.ajax({
+            url: 'http://' + ip + port + '/?name=Remote_control_body' + '&p1=' + '停止',
+            dataType: 'text',
+            crossDomain: true,
+            success: function (data) {
+                console.log("success handler");
+
+            },
+            error: function (jqXHR, textStatus, errorThrown) {
+                console.log("error handler");
+            }
+        });
        
     };
 
