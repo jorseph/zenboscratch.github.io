@@ -20,12 +20,15 @@
 
     ext.Setting_targetIP = function (onlyIPAddress) {
         console.log("Setting_targetIP");
-         
+        ip = onlyIPAddress;
+        console.log("ip: "+ ip + "onlyIPAddress: "+ onlyIPAddress);
+ 
          var setupFlag_init = true;
          var flagIndex_init = 0;
 
          for(var g = 0; g < flagArray.data.length; g++) {
 
+              console.log("flagArray.data[g].device: "+  flagArray.data[g].device ); 
              if ( ip == flagArray.data[g].device) {
                setupFlag_init = false;
                flagIndex_init = g;
@@ -43,8 +46,6 @@
 
          }
    
-	ip = onlyIPAddress;        
-        console.log("ip: "+ ip + "onlyIPAddress: "+ onlyIPAddress);
 		
 	if  ( flagArray.data[flagIndex_init].recursionFlag === true) {
               flagArray.data[flagIndex_init].recursionFlag = false;
