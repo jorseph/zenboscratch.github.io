@@ -20,8 +20,9 @@
 
     ext.Setting_targetIP = function (onlyIPAddress) {
         console.log("Setting_targetIP");
-		
-	ip = onlyIPAddress;
+           	
+	ip = onlyIPAddress;        
+        console.log("ip: "+ ip + "onlyIPAddress: "+ onlyIPAddress);
 		
 	if  (recursionFlag === true) {
 
@@ -915,7 +916,7 @@ ext.Add_and_update_sentence_number = function () {
      return false;
     };
 
-    ext.stop_sending_commands_to_target = function (callback){
+    ext.stop_sending_commands_to_target = function () {
        
         console.log("stop_sending_commands_to_target");
         ip = "127.0.0.1";    
