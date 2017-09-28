@@ -919,7 +919,7 @@ ext.Add_and_update_sentence_number = function () {
 
     var descriptor = {
         blocks: [
-            ['', '設定 Zenbo IP: %s', 'Setting_targetIP', "192.168.0.1"],
+            ['', '設定 Zenbo IP: %s', 'Setting_targetIP', "127.0.0.1"],
             ['', '移動 %m.move_direction %m.move_far 公尺 %m.move_speed 速度', 'Body_movement', "前進", "0.25", "一般"],
             ['', '停止', 'Stop_moving' ],
             ['', '轉動頭部 向 %m.head_direction %m.head_degree 度', 'Head_movement', "左", "45"], 
