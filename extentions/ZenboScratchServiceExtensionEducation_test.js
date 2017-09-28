@@ -1,7 +1,5 @@
 (function (ext) {
 
-    var recursionFlag = true;
-
     var flagArray = {
         data:[]
     };
