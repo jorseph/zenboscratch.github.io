@@ -10,8 +10,52 @@
     ext._stop = function () {   
         console.log('stop...');
 
-        ext.Stop_moving();
+        console.log("Stop_moving");
+        console.log(ip);
+        $.ajax({
+            url: 'http://' + ip + port + '/?name=Stop_moving',
+            dataType: 'text',
+            crossDomain: true,
+            success: function (data) {
+                console.log("success handler");
 
+            },
+            error: function (jqXHR, textStatus, errorThrown) {
+                console.log("error handler");
+            }
+        });
+
+        console.log("Cancel_actionset");
+        console.log(ip);
+        $.ajax({
+            url: 'http://' + ip + port + '/?name=Cancel_actionset',
+            dataType: 'text',
+            crossDomain: true,
+            success: function (data) {
+                console.log("success handler");
+
+            },
+            error: function (jqXHR, textStatus, errorThrown) {
+                console.log("error handler");
+            }
+        });
+
+        console.log("Remote_control_body-Stop");
+        console.log(ip);
+        $.ajax({
+            url: 'http://' + ip + port + '/?name=Remote_control_body' + '&p1=' + '停止',
+            dataType: 'text',
+            crossDomain: true,
+            success: function (data) {
+                console.log("success handler");
+
+            },
+            error: function (jqXHR, textStatus, errorThrown) {
+                console.log("error handler");
+            }
+        }); 
+
+        console.log("stopAll");
         console.log(ip);
         $.ajax({
             url: 'http://' + ip + port + '/?name=stopAll',
