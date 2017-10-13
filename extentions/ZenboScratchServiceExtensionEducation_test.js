@@ -25,21 +25,6 @@
             }
         });
 
-        console.log("Cancel_actionset");
-        console.log(ip);
-        $.ajax({
-            url: 'http://' + ip + port + '/?name=Cancel_actionset',
-            dataType: 'text',
-            crossDomain: true,
-            success: function (data) {
-                console.log("success handler");
-
-            },
-            error: function (jqXHR, textStatus, errorThrown) {
-                console.log("error handler");
-            }
-        });
-
         console.log("Remote_control_body-Stop");
         console.log(ip);
         $.ajax({
