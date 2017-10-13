@@ -178,7 +178,7 @@
             crossDomain: true,
             success: function (data) {
                 console.log("success handler");
-
+                callback();
             },
             error: function (jqXHR, textStatus, errorThrown) {
                 console.log("error handler");
@@ -198,6 +198,7 @@
             crossDomain: true,
             success: function (data) {
                 console.log("success handler");
+                callback();
             },
             error: function (jqXHR, textStatus, errorThrown) {
                 console.log("error handler");
@@ -216,7 +217,7 @@
             crossDomain: true,
             success: function (data) {
                 console.log("success handler");
-
+                callback();                
             },
             error: function (jqXHR, textStatus, errorThrown) {
                 console.log("error handler");
@@ -301,7 +302,7 @@
             crossDomain: true,
             success: function (data) {
                 console.log("success handler");
-
+                callback();  
             },
             error: function (jqXHR, textStatus, errorThrown) {
                 console.log("error handler");
@@ -337,7 +338,7 @@
             crossDomain: true,
             success: function (data) {
                 console.log("success handler");
-
+                callback(); 
             },
             error: function (jqXHR, textStatus, errorThrown) {
                 console.log("error handler");
@@ -355,7 +356,7 @@
             crossDomain: true,
             success: function (data) {
                 console.log("success handler");
-
+                callback();
             },
             error: function (jqXHR, textStatus, errorThrown) {
                 console.log("error handler");
@@ -528,7 +529,7 @@
             crossDomain: true,
             success: function (data) {
                 console.log("success handler");
-
+                callback();
             },
             error: function (jqXHR, textStatus, errorThrown) {
                 console.log("error handler");
@@ -937,18 +938,18 @@ ext.Add_and_update_sentence_number = function () {
     var descriptor = {
         blocks: [
             ['', '設定 Zenbo IP: %s', 'Setting_targetIP', "127.0.0.1"],
-            ['', '移動 %m.move_direction %m.move_far 公尺 %m.move_speed 速度', 'Body_movement', "前進", "0.25", "一般"],
+            ['w', '移動 %m.move_direction %m.move_far 公尺 %m.move_speed 速度', 'Body_movement', "前進", "0.25", "一般"],
             ['', '停止', 'Stop_moving' ],
-            ['', '轉動頭部 向 %m.head_direction %m.head_degree 度', 'Head_movement', "左", "45"], 
-            ['', '轉動身體 向 %m.body_turn_direction %m.body_turn_degree 度', 'Body_turn', "左轉", "90"],
+            ['w', '轉動頭部 向 %m.head_direction %m.head_degree 度', 'Head_movement', "左", "45"], 
+            ['w', '轉動身體 向 %m.body_turn_direction %m.body_turn_degree 度', 'Body_turn', "左轉", "90"],
             ['', '控制身體 %m.remote_control_body', 'Remote_control_body', "右轉"],
-            ['', 'Zenbo 做動作 %m.action_type', 'Action', '打招呼'],
+            ['w', 'Zenbo 做動作 %m.action_type', 'Action', '打招呼'],
             ['', '做出表情 %m.facial_type', 'Facial', '期待'],
             ['', '隱藏表情', 'hideFace' ],
-            ['', '說話 %m.tts_type ', 'TTS', 'Hi,你好'],
-            ['', '說話 %s', 'TTS_editor', '請填入文字'],
+            ['w', '說話 %m.tts_type ', 'TTS', 'Hi,你好'],
+            ['w', '說話 %s', 'TTS_editor', '請填入文字'],
             ['', '調整 %m.volume_option_type 音量 %m.volume_type', 'Adjust_stream_volume', '說話', '大聲點'],
-            ['', '說話 %s 速度 %m.tts_speed_type', 'Adjust_tts_and_speed', '請填入文字', 'L2'],
+            ['w', '說話 %s 速度 %m.tts_speed_type', 'Adjust_tts_and_speed', '請填入文字', 'L2'],
             ['', '準備要聽 %m.sentence_type 是 %s', 'Add_and_update_sentence', '語句一', '吃飯'], 
             ['', 'Zenbo 要開始聽', 'Speak_and_listen'], 
             ['h', '當 Zenbo  聽到 %m.sentence_type', 'when_listen_and_run', '語句一'],
