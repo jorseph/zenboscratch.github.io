@@ -7,9 +7,31 @@
     ip = "127.0.0.1";
     port = ":8080";
 
-    ext._stop = function () {
-   
-     console.log('stop...');
+
+    ext._start = function () {
+        console.log('start...');
+
+
+    };
+
+    ext._stop = function () {   
+        console.log('stop...');
+
+        ext.Stop_moving();
+
+        console.log(ip);
+        $.ajax({
+            url: 'http://' + ip + port + '/?name=stopAll',
+            dataType: 'text',
+            crossDomain: true,
+            success: function (data) {
+                console.log("success handler");
+
+            },
+            error: function (jqXHR, textStatus, errorThrown) {
+                console.log("error handler");
+            }
+        });     
 
     };
 	
