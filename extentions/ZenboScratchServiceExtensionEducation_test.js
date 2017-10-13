@@ -7,13 +7,6 @@
     ip = "127.0.0.1";
     port = ":8080";
 
-
-    ext._start = function () {
-        console.log('start...');
-
-
-    };
-
     ext._stop = function () {   
         console.log('stop...');
 
