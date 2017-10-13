@@ -25,6 +25,10 @@
             }
         });
 
+        setTimeout(function() {
+        // Whatever you want to do after the wait
+        }, 1000);
+
         console.log("Remote_control_body-Stop");
         console.log(ip);
         $.ajax({
@@ -40,6 +44,10 @@
             }
         }); 
 
+        setTimeout(function() {
+        // Whatever you want to do after the wait
+        }, 1000);
+
         console.log("stopAll");
         console.log(ip);
         $.ajax({
@@ -53,7 +61,12 @@
             error: function (jqXHR, textStatus, errorThrown) {
                 console.log("error handler");
             }
-        });     
+        });
+
+        setTimeout(function() {
+        // Whatever you want to do after the wait
+        }, 1000);
+     
 
     };
 	
