@@ -7,6 +7,14 @@
     ip = "127.0.0.1";
     port = ":8080";
 
+    function sleep(milliseconds) 
+    { 
+       var start = new Date().getTime(); 
+       while(1)
+       if ((new Date().getTime() - start) > milliseconds)
+          break;
+    }
+
     ext._stop = function () {   
         console.log('stop...');
 
@@ -25,9 +33,7 @@
             }
         });
 
-        setTimeout(function() {
-        // Whatever you want to do after the wait
-        }, 1000);
+        sleep(3000);
 
         console.log("Remote_control_body-Stop");
         console.log(ip);
@@ -44,9 +50,7 @@
             }
         }); 
 
-        setTimeout(function() {
-        // Whatever you want to do after the wait
-        }, 1000);
+        sleep(3000);
 
         console.log("stopAll");
         console.log(ip);
@@ -63,10 +67,7 @@
             }
         });
 
-        setTimeout(function() {
-        // Whatever you want to do after the wait
-        }, 1000);
-     
+        sleep(3000);
 
     };
 	
