@@ -6,6 +6,12 @@
 	
     ip = "127.0.0.1";
     port = ":8080";
+
+    ext._stop = function () {
+   
+     console.log('stop...');
+
+    };
 	
     ext._shutdown = function () {
         console.log('Shutting down...');
