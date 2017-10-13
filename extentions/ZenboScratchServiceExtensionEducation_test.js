@@ -33,7 +33,24 @@
             }
         });
 
-        sleep(3000);
+        sleep(1000);
+
+        console.log("Cancel_actionset");
+        console.log(ip);
+        $.ajax({
+            url: 'http://' + ip + port + '/?name=Cancel_actionset',
+            dataType: 'text',
+            crossDomain: true,
+            success: function (data) {
+                console.log("success handler");
+
+            },
+            error: function (jqXHR, textStatus, errorThrown) {
+                console.log("error handler");
+            }
+        });
+
+        sleep(1000);
 
         console.log("Remote_control_body-Stop");
         console.log(ip);
@@ -50,7 +67,7 @@
             }
         }); 
 
-        sleep(3000);
+        sleep(1000);
 
         console.log("stopAll");
         console.log(ip);
@@ -67,7 +84,7 @@
             }
         });
 
-        sleep(3000);
+        sleep(1000);
 
     };
 	
