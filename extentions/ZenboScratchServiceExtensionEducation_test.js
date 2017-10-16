@@ -33,7 +33,7 @@
             }
         });
 
-        sleep(100);
+        sleep(50);
 
         console.log("Cancel_actionset");
         console.log(ip);
@@ -50,7 +50,7 @@
             }
         });
 
-        sleep(100);
+        sleep(50);
 
         console.log("Remote_control_body-Stop");
         console.log(ip);
@@ -67,7 +67,7 @@
             }
         }); 
 
-        sleep(100);
+        sleep(50);
 
         console.log("stopAll");
         console.log(ip);
@@ -84,7 +84,7 @@
             }
         });
 
-        sleep(100);
+        sleep(50);
 
     };
 	
