@@ -136,14 +136,17 @@
             success: function (data) {
            
              console.log("success handler");
+             sleep(100);
              getSentencesRecursion(ip, flagIndex_init);
  
             },
             error: function (jqXHR, textStatus, errorThrown) {
                 console.log("error handler");
                 flagArray.data[flagIndex_init].recursionFlag = true; 
+                sleep(100);
             }
         }); 
+
 
         } 
 		
@@ -155,19 +158,19 @@
 		if ( flagArray.data[flagIndex].get_sentences_flag === true ) {  	 
 			 flagArray.data[flagIndex].get_sentences_flag = false;  
 			 
-			$.ajax({
-				type: 'GET',
-				url: 'http://' + ip + port + '/?name=Get_sentences',
-				dataType: 'text',
-				crossDomain: true,
-				success: function (data) {
-				console.log("Get_sentences-success handler");
+		$.ajax({
+			type: 'GET',
+			url: 'http://' + ip + port + '/?name=Get_sentences',
+			dataType: 'text',
+			crossDomain: true,
+			success: function (data) {
+			console.log("Get_sentences-success handler");
                                
                 console.log('splitedData[0]' + data.split(",")[0]);
                                 
-				switch(data.split(",")[0]) {
+		switch(data.split(",")[0]) {
 
-				    case 'touchHead':
+		    case 'touchHead':
 
                         console.log('摸到頭了');
                         console.log( ip + " "  + flagIndex + " " + "touch_head_flag true");
@@ -186,62 +189,63 @@
                                               
                         break; 
 
-					case '語句一':
+		    case '語句一':
 						
-						console.log('辨識到語句一'); 
-						console.log( ip + " "  + flagIndex + " " + "sentence_1_flag true");
-						flagArray.data[flagIndex].sentence_1_flag = true;
+			console.log('辨識到語句一'); 
+			console.log( ip + " "  + flagIndex + " " + "sentence_1_flag true");
+			flagArray.data[flagIndex].sentence_1_flag = true;
 
-						break;
+			break;
 
-					case '語句二':
+		    case '語句二':
 						
-  				        console.log('辨識到語句二'); 
-						console.log( ip + " "  + flagIndex + " " + "sentence_2_flag true");
-						flagArray.data[flagIndex].sentence_2_flag = true;
+                        console.log('辨識到語句二'); 
+			console.log( ip + " "  + flagIndex + " " + "sentence_2_flag true");
+			flagArray.data[flagIndex].sentence_2_flag = true;
 
-						break;
+			break;
 
-					case '語句三':
+		    case '語句三':
 						
+			console.log('辨識到語句三');  
+			console.log( ip + " "  + flagIndex + " " + "sentence_3_flag true");
+			flagArray.data[flagIndex].sentence_3_flag = true;
 
-						console.log('辨識到語句三');  
-						console.log( ip + " "  + flagIndex + " " + "sentence_3_flag true");
-						flagArray.data[flagIndex].sentence_3_flag = true;
+			break;
 
-						break;
-
-					case '語句四':
+		    case '語句四':
 						
-						console.log('辨識到語句四'); 
-						console.log( ip + " "  + flagIndex + " " + "sentence_4_flag true");
-						flagArray.data[flagIndex].sentence_4_flag = true;
+			console.log('辨識到語句四'); 
+			console.log( ip + " "  + flagIndex + " " + "sentence_4_flag true");
+			flagArray.data[flagIndex].sentence_4_flag = true;
 
-						break;
+		        break;
 
 
-					case '語句五':
+		    case '語句五':
 
-						console.log('辨識到語句五');                   
-						console.log( ip + " "  + flagIndex + " " + "sentence_5_flag true");
-						flagArray.data[flagIndex].sentence_5_flag = true;
+			console.log('辨識到語句五');                   
+			console.log( ip + " "  + flagIndex + " " + "sentence_5_flag true");
+			flagArray.data[flagIndex].sentence_5_flag = true;
 
-					   break;
+			break;
 					   
-				}  
+		}  
 
-                flagArray.data[flagIndex].get_sentences_flag = true;
-                getSentencesRecursion(ip, flagIndex);  				 
+                    flagArray.data[flagIndex].get_sentences_flag = true;
+                    sleep(100);
+                    getSentencesRecursion(ip, flagIndex);
 				
-				},
-				error: function (jqXHR, textStatus, errorThrown) {
-					console.log("error handler");
+		},
+		error: function (jqXHR, textStatus, errorThrown) {
+		    console.log("error handler");
 			 
-			    flagArray.data[flagIndex].get_sentences_flag = true;
-                getSentencesRecursion(ip, flagIndex);	 
+                    flagArray.data[flagIndex].get_sentences_flag = true;
+                    sleep(100);
+                    getSentencesRecursion(ip, flagIndex);	 
 					
-				}
-			});
+		}
+		});
 				
             }    
 	
@@ -265,6 +269,9 @@
                 console.log("error handler");
             }
         });
+   
+        sleep(100);
+       
     };
 
     ext.Body_movement = function (p1, p2, p3, callback) {
@@ -285,6 +292,9 @@
                 console.log("error handler");
             }
         });
+ 
+        sleep(100);        
+
     };
 
     ext.Body_turn = function (p1, p2, callback) {
@@ -304,6 +314,8 @@
                 console.log("error handler");
             }
         });
+
+        sleep(100); 
     };
 
     ext.Remote_control_body = function (p1, callback){
@@ -322,6 +334,9 @@
                 console.log("error handler");
             }
         });
+
+        sleep(100); 
+
     };
 
     ext.Stop_moving = function (callback){
@@ -341,6 +356,8 @@
             }
         });
 
+        sleep(100);
+
         console.log("Cancel_actionset");
         console.log(ip);
         $.ajax({
@@ -356,6 +373,8 @@
             }
         });
 
+        sleep(100);
+
         console.log("Remote_control_body-Stop");
         console.log(ip);
         $.ajax({
@@ -370,6 +389,8 @@
                 console.log("error handler");
             }
         });   
+
+        sleep(100);
 
     };
 
@@ -388,6 +409,9 @@
                 console.log("error handler");
             }
         });
+
+        sleep(100);       
+
     };
 
     ext.Facial = function (p1, callback) {
@@ -406,6 +430,9 @@
                 console.log("error handler");
             }
         });
+ 
+        sleep(100); 
+
     };
 
     ext.TTS = function (p1, callback) {
@@ -424,6 +451,9 @@
                 console.log("error handler");
             }
         });
+
+        sleep(100);     
+
     };
 
     ext.TTS_editor = function (p1, callback) {
@@ -442,6 +472,9 @@
                 console.log("error handler");
             }
         });
+
+        sleep(100);
+
     };
 
     ext.Cancel_actionset = function (callback){
@@ -459,6 +492,9 @@
                 console.log("error handler");
             }
         });
+
+        sleep(100);
+
     };
 
     ext.Adjust_stream_volume = function (p1, p2, callback) {
@@ -478,6 +514,9 @@
                 console.log("error handler");
             }
         });
+ 
+        sleep(100);
+
     };
 
     ext.Add_and_update_sentence = function (p1, p2) {
@@ -516,14 +555,17 @@
             success: function (data) {
            
              console.log("success handler");
+             sleep(100);
              getSentencesRecursion(ip, flagIndex_init_2);
  
             },
             error: function (jqXHR, textStatus, errorThrown) {
                 console.log("error handler");
-                flagArray.data[flagIndex_init_2].recursionFlag = true; 
+                flagArray.data[flagIndex_init_2].recursionFlag = true;
+                sleep(100); 
             }
         }); 
+
 
         } 
          
@@ -542,6 +584,9 @@
                 console.log("error handler");
             }
         });
+
+        sleep(100);
+
     };    
 
 	
@@ -560,6 +605,9 @@
                 console.log("error handler");
             }
         });
+
+        sleep(100);
+
     };
 
     ext.Speak_and_listen = function (){
@@ -577,6 +625,9 @@
                 console.log("error handler");
             }
         });
+
+        sleep(100);
+
     };
 
     ext.Play_music = function (p1, p2, callback) {
@@ -596,6 +647,9 @@
                 console.log("error handler");
             }
         });
+
+        sleep(100);
+
     };
 
     ext.Adjust_tts_and_speed = function (p1, p2, callback) {
@@ -615,6 +669,9 @@
                 console.log("error handler");
             }
         });
+
+        sleep(100);
+
     };
 
     ext.Get_sentences = function (p1, callback){
@@ -633,7 +690,10 @@
                 console.log("error handler");
                 callback(textStatus);
             }
-        });        
+        }); 
+
+        sleep(100);
+
     };
 
     ext.when_listen_and_run = function(p1) {
@@ -778,6 +838,9 @@
                 console.log("error handler");
             }
         });
+
+        sleep(100);
+
     };
 
     ext.displayUrlPictures = function (p1, p2) {
@@ -797,6 +860,9 @@
                 console.log("error handler");
             }
         });
+
+        sleep(100);
+
     };
 	
     ext.playUrlMusic = function (p1, p2) {
@@ -816,6 +882,9 @@
                 console.log("error handler");
             }
         });
+
+        sleep(100);
+
     };
 
     ext.hideFace = function () {
@@ -833,6 +902,9 @@
                 console.log("error handler");
             }
         });
+
+        sleep(100);
+
     };
 
     ext.openDriveUrl = function (p1, p2) {
@@ -852,6 +924,9 @@
                 console.log("error handler");
             }
         });
+
+        sleep(100);
+
     };
 
     ext.openDriveVideoUrl = function (p1, p2) {
@@ -871,6 +946,9 @@
                 console.log("error handler");
             }
         });
+
+        sleep(100);
+ 
     };
 
     ext.openDriveAudioUrl = function (p1, p2) {
@@ -890,6 +968,9 @@
                 console.log("error handler");
             }
         });
+
+        sleep(100);
+
     };
 
     ext.openDrivePictureUrl = function (p1, p2) {
@@ -909,6 +990,9 @@
                 console.log("error handler");
             }
         });
+
+        sleep(100);
+
     };
 
     ext.openDriveDocumentUrl = function (p1, p2) {
@@ -928,6 +1012,9 @@
                 console.log("error handler");
             }
         });
+ 
+        sleep(100);  
+
     };
 
 
@@ -967,14 +1054,17 @@ ext.Add_and_update_sentence_number = function () {
             success: function (data) {
            
              console.log("success handler");
+             sleep(100);
              getSentencesRecursion(ip, flagIndex_init_3);
  
             },
             error: function (jqXHR, textStatus, errorThrown) {
                 console.log("error handler");
                 flagArray.data[flagIndex_init_3].recursionFlag = true; 
+                sleep(100); 
             }
         }); 
+
 
         } 
          
