@@ -136,14 +136,12 @@
             success: function (data) {
            
              console.log("success handler");
-             sleep(100);
              getSentencesRecursion(ip, flagIndex_init);
  
             },
             error: function (jqXHR, textStatus, errorThrown) {
                 console.log("error handler");
                 flagArray.data[flagIndex_init].recursionFlag = true; 
-                sleep(100);
             }
         }); 
 
@@ -233,7 +231,6 @@
 		}  
 
                     flagArray.data[flagIndex].get_sentences_flag = true;
-                    sleep(100);
                     getSentencesRecursion(ip, flagIndex);
 				
 		},
@@ -241,7 +238,6 @@
 		    console.log("error handler");
 			 
                     flagArray.data[flagIndex].get_sentences_flag = true;
-                    sleep(100);
                     getSentencesRecursion(ip, flagIndex);	 
 					
 		}
@@ -555,14 +551,12 @@
             success: function (data) {
            
              console.log("success handler");
-             sleep(100);
              getSentencesRecursion(ip, flagIndex_init_2);
  
             },
             error: function (jqXHR, textStatus, errorThrown) {
                 console.log("error handler");
                 flagArray.data[flagIndex_init_2].recursionFlag = true;
-                sleep(100); 
             }
         }); 
 
@@ -1054,14 +1048,12 @@ ext.Add_and_update_sentence_number = function () {
             success: function (data) {
            
              console.log("success handler");
-             sleep(100);
              getSentencesRecursion(ip, flagIndex_init_3);
  
             },
             error: function (jqXHR, textStatus, errorThrown) {
                 console.log("error handler");
                 flagArray.data[flagIndex_init_3].recursionFlag = true; 
-                sleep(100); 
             }
         }); 
 
