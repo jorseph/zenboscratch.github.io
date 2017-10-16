@@ -266,8 +266,6 @@
             }
         });
    
-        sleep(100);
-       
     };
 
     ext.Body_movement = function (p1, p2, p3, callback) {
@@ -289,8 +287,6 @@
             }
         });
  
-        sleep(100);        
-
     };
 
     ext.Body_turn = function (p1, p2, callback) {
@@ -311,7 +307,6 @@
             }
         });
 
-        sleep(100); 
     };
 
     ext.Remote_control_body = function (p1, callback){
@@ -448,7 +443,6 @@
             }
         });
 
-        sleep(100);     
 
     };
 
@@ -468,8 +462,6 @@
                 console.log("error handler");
             }
         });
-
-        sleep(100);
 
     };
 
@@ -512,7 +504,7 @@
         });
  
         sleep(100);
-
+ 
     };
 
     ext.Add_and_update_sentence = function (p1, p2) {
@@ -579,8 +571,6 @@
             }
         });
 
-        sleep(100);
-
     };    
 
 	
@@ -642,7 +632,7 @@
             }
         });
 
-        sleep(100);
+        sleep(100); 
 
     };
 
@@ -664,8 +654,6 @@
             }
         });
 
-        sleep(100);
-
     };
 
     ext.Get_sentences = function (p1, callback){
@@ -685,7 +673,7 @@
                 callback(textStatus);
             }
         }); 
-
+ 
         sleep(100);
 
     };
@@ -942,7 +930,7 @@
         });
 
         sleep(100);
- 
+
     };
 
     ext.openDriveAudioUrl = function (p1, p2) {
@@ -1006,9 +994,9 @@
                 console.log("error handler");
             }
         });
- 
-        sleep(100);  
 
+        sleep(100);
+ 
     };
 
 
