@@ -114,6 +114,7 @@
     };
 	
     ext._shutdown = function () {
+        ext.stop_sending_commands_to_target();
         console.log('Shutting down...');
 
     };
@@ -123,6 +124,7 @@
     };
 
     ext.Setting_targetIP = function (onlyIPAddress) {
+        ext.stop_sending_commands_to_target(); 
         console.log("Setting_targetIP");
         ip = onlyIPAddress;
         console.log("ip: "+ ip + "onlyIPAddress: "+ onlyIPAddress);
@@ -321,7 +323,7 @@
 
        sleep(100);
 
-      //  remoteControlBodyHttpRequest('停止');
+       remoteControlBodyHttpRequest('停止');
 
        var valueIndex_body_movement = getValueIndex();
        flagArray.data[valueIndex_body_movement].remoteControlBodyTurnLeftFlag = false;
@@ -349,7 +351,7 @@
 
         sleep(100);
 
-       // remoteControlBodyHttpRequest('停止');
+        remoteControlBodyHttpRequest('停止');
 
         var valueIndex_body_turn = getValueIndex();
         flagArray.data[valueIndex_body_turn].remoteControlBodyTurnLeftFlag = false;
@@ -1231,7 +1233,8 @@ ext.Add_and_update_sentence_number = function () {
     };
 
     ext.stop_sending_commands_to_target = function () {
-       
+     
+        ext._stop();      
         console.log("stop_sending_commands_to_target");
         ip = "127.0.0.1";    
 
