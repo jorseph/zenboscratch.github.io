@@ -124,7 +124,6 @@
     };
 
     ext.Setting_targetIP = function (onlyIPAddress) {
-        ext.stop_sending_commands_to_target(); 
         console.log("Setting_targetIP");
         ip = onlyIPAddress;
         console.log("ip: "+ ip + "onlyIPAddress: "+ onlyIPAddress);
