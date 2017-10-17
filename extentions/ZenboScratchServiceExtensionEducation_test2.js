@@ -7,6 +7,27 @@
     ip = "127.0.0.1";
     port = ":8080";
 
+    var getValueIndex  = function() {
+
+        var returnValueIndex = -1;
+
+        for(var r = 0; r < flagArray.data.length; r++){
+
+             if ( ip == flagArray.data[r].device) {
+                  returnValueIndex = r;
+             }
+        }
+
+        if ( returnValueIndex === -1 ) {
+               console.log('returnValueIndex  === -1');
+        }      
+
+       
+        return returnValueIndex;
+
+    };
+
+
     function sleep(milliseconds) 
     { 
        var start = new Date().getTime(); 
@@ -69,6 +90,10 @@
 
         sleep(100);
 
+        var valueIndex_stop = getValueIndex(); 
+        flagArray.data[valueIndex_stop].remoteControlBodyTurnLeftFlag = false;
+        flagArray.data[valueIndex_stop].remoteControlBodyTurnRightFlag = false;
+
         console.log("stopAll");
         console.log(ip);
         $.ajax({
@@ -119,7 +144,7 @@
               
                flagArray.data.push( { device: ip, correctedSentence: "", sentence_1_flag: false, sentence_2_flag: false, sentence_3_flag: false, 
                sentence_4_flag: false, sentence_5_flag: false, number_flag: false, touch_head_flag: false, get_sentences_flag: true, recursionFlag: true,
-               remoteControlBodyForwardFlag: false, remoteControlBodyTurnLeftFlag: false, remoteControlBodyTurnRightFlag: false } );
+               remoteControlBodyTurnLeftFlag: false, remoteControlBodyTurnRightFlag: false } );
                console.log("add new device IP and its flags");
                flagIndex_init = flagArray.data.length -1 ;
                console.log("true " + "flagIndex_init: "+ flagIndex_init);
@@ -320,7 +345,7 @@
 
     };
 
-var remoteControlBodyHttpRequest  = function(p1) {
+    var remoteControlBodyHttpRequest  = function(p1) {
 
            $.ajax({
             url: 'http://' + ip + port + '/?name=Remote_control_body' + '&p1=' + p1,
@@ -336,27 +361,14 @@ var remoteControlBodyHttpRequest  = function(p1) {
             });
 
             sleep(100);
-}; 
+    }; 
 
     ext.Remote_control_body = function (p1, callback){
         console.log("Remote_control_body");
         console.log(ip);
         console.log(p1);
 
-
-        var valueIndex_remote_control_body = -1;
-
-        for(var r = 0; r < flagArray.data.length; r++){
-
-             if ( ip == flagArray.data[r].device) {
-                  valueIndex_remote_control_body = r;
-             }
-        }
-
-        if ( valueIndex_remote_control_body === -1 ) {
-               console.log('valueIndex_remote_control_body  === -1');              
-        }
-
+        var valueIndex_remote_control_body = getValueIndex();
 
     switch(p1) {
 
@@ -364,7 +376,6 @@ var remoteControlBodyHttpRequest  = function(p1) {
 
            console.log('remoteControlBody command == stop');
            remoteControlBodyHttpRequest(p1);
-           flagArray.data[valueIndex_remote_control_body].remoteControlBodyForwardFlag = false; 
            flagArray.data[valueIndex_remote_control_body].remoteControlBodyTurnLeftFlag = false;
            flagArray.data[valueIndex_remote_control_body].remoteControlBodyTurnRightFlag = false; 
         
@@ -372,19 +383,15 @@ var remoteControlBodyHttpRequest  = function(p1) {
 
     case '前進':
 
-       if (flagArray.data[valueIndex_remote_control_body].remoteControlBodyForwardFlag === false) {
-    
-           flagArray.data[valueIndex_remote_control_body].remoteControlBodyForwardFlag = true; 
-           console.log('remoteControlBodyForwardFlag = true');
+           console.log('remoteControlBody command == forward');
            remoteControlBodyHttpRequest(p1);
-           remoteControlBodyHttpRequest(p1); 
                
-       }
 
         break;
 
     case '左轉':
 
+           console.log('remoteControlBody command == turnLeft');
        if (flagArray.data[valueIndex_remote_control_body].remoteControlBodyTurnLeftFlag === false) {
            flagArray.data[valueIndex_remote_control_body].remoteControlBodyTurnLeftFlag = true; 
            console.log('remoteControlBodyTurnLeftFlag = true');  
@@ -411,6 +418,7 @@ var remoteControlBodyHttpRequest  = function(p1) {
 
      case '右轉':
 
+           console.log('remoteControlBody command == turnRight');  
        if (flagArray.data[valueIndex_remote_control_body].remoteControlBodyTurnRightFlag === false) {
            flagArray.data[valueIndex_remote_control_body].remoteControlBodyTurnRightFlag = true;
            console.log('remoteControlBodyTurnRightFlag = true');
@@ -492,6 +500,11 @@ var remoteControlBodyHttpRequest  = function(p1) {
         });   
 
         sleep(100);
+
+        var valueIndex_Stop_moving = getValueIndex();
+        flagArray.data[valueIndex_Stop_moving].remoteControlBodyTurnLeftFlag = false;
+        flagArray.data[valueIndex_Stop_moving].remoteControlBodyTurnRightFlag = false;
+
 
     };
 
@@ -639,7 +652,7 @@ var remoteControlBodyHttpRequest  = function(p1) {
               
                flagArray.data.push( { device: ip, correctedSentence: "", sentence_1_flag: false, sentence_2_flag: false, sentence_3_flag: false, 
                sentence_4_flag: false, sentence_5_flag: false, number_flag: false, touch_head_flag: false, get_sentences_flag: true, recursionFlag: true,
-               remoteControlBodyForwardFlag: false, remoteControlBodyTurnLeftFlag: false, remoteControlBodyTurnRightFlag: false } );
+               remoteControlBodyTurnLeftFlag: false, remoteControlBodyTurnRightFlag: false } );
                console.log("add new device IP and its flags");
                flagIndex_init_2 = flagArray.data.length -1 ;
                console.log("true " + "flagIndex_init_2: "+ flagIndex_init_2);
@@ -1139,7 +1152,7 @@ ext.Add_and_update_sentence_number = function () {
               
                flagArray.data.push( { device: ip, correctedSentence: "", sentence_1_flag: false, sentence_2_flag: false, sentence_3_flag: false, 
                sentence_4_flag: false, sentence_5_flag: false, number_flag: false, touch_head_flag: false, get_sentences_flag: true, recursionFlag: true,
-               remoteControlBodyForwardFlag: false, remoteControlBodyTurnLeftFlag: false, remoteControlBodyTurnRightFlag: false } );
+               remoteControlBodyTurnLeftFlag: false, remoteControlBodyTurnRightFlag: false } );
                console.log("add new device IP and its flags");
                flagIndex_init_3 = flagArray.data.length -1 ;
                console.log("true " + "flagIndex_init_3: "+ flagIndex_init_3);
