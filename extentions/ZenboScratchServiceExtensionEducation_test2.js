@@ -1212,7 +1212,7 @@ ext.Add_and_update_sentence_number = function () {
         blocks: [
             ['', '設定 Zenbo IP: %s', 'Setting_targetIP', "127.0.0.1"],
             ['w', '移動 %m.move_direction %m.move_far 公尺 %m.move_speed 速度', 'Body_movement', "前進", "0.25", "一般"],
-            ['', '停止', 'Stop_moving' ],
+            ['', '停止動作', 'Stop_moving' ],
             ['w', '轉動頭部 向 %m.head_direction %m.head_degree 度', 'Head_movement', "左", "45"], 
             ['w', '轉動身體 向 %m.body_turn_direction %m.body_turn_degree 度', 'Body_turn', "左轉", "90"],
             ['', '控制身體 %m.remote_control_body', 'Remote_control_body', "右轉"],
