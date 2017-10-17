@@ -321,6 +321,8 @@
 
        sleep(100);
 
+       remoteControlBodyHttpRequest('停止');
+
        var valueIndex_body_movement = getValueIndex();
        flagArray.data[valueIndex_body_movement].remoteControlBodyTurnLeftFlag = false;
        flagArray.data[valueIndex_body_movement].remoteControlBodyTurnRightFlag = false;    
@@ -346,6 +348,8 @@
         });
 
         sleep(100);
+
+        remoteControlBodyHttpRequest('停止');
 
         var valueIndex_body_turn = getValueIndex();
         flagArray.data[valueIndex_body_turn].remoteControlBodyTurnLeftFlag = false;
@@ -532,6 +536,8 @@
         });
 
         sleep(100);  
+         
+        remoteControlBodyHttpRequest('停止');
 
         var valueIndex_action = getValueIndex();
         flagArray.data[valueIndex_action].remoteControlBodyTurnLeftFlag = false;
