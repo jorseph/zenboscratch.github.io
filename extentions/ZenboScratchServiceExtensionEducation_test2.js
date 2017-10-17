@@ -319,7 +319,11 @@
             }
         });
 
-       sleep(100);  
+       sleep(100);
+
+       var valueIndex_body_movement = getValueIndex();
+       flagArray.data[valueIndex_body_movement].remoteControlBodyTurnLeftFlag = false;
+       flagArray.data[valueIndex_body_movement].remoteControlBodyTurnRightFlag = false;    
  
     };
 
@@ -342,6 +346,10 @@
         });
 
         sleep(100);
+
+        var valueIndex_body_turn = getValueIndex();
+        flagArray.data[valueIndex_body_turn].remoteControlBodyTurnLeftFlag = false;
+        flagArray.data[valueIndex_body_turn].remoteControlBodyTurnRightFlag = false; 
 
     };
 
@@ -385,8 +393,9 @@
 
            console.log('remoteControlBody command == forward');
            remoteControlBodyHttpRequest(p1);
+           flagArray.data[valueIndex_remote_control_body].remoteControlBodyTurnLeftFlag = false;
+           flagArray.data[valueIndex_remote_control_body].remoteControlBodyTurnRightFlag = false;
                
-
         break;
 
     case '左轉':
@@ -410,7 +419,6 @@
                   remoteControlBodyHttpRequest(p1);  
 
            }       
-
 
        }       
 
@@ -437,7 +445,6 @@
                   remoteControlBodyHttpRequest(p1);
 
            }
-
 
        }       
 
@@ -501,9 +508,9 @@
 
         sleep(100);
 
-        var valueIndex_Stop_moving = getValueIndex();
-        flagArray.data[valueIndex_Stop_moving].remoteControlBodyTurnLeftFlag = false;
-        flagArray.data[valueIndex_Stop_moving].remoteControlBodyTurnRightFlag = false;
+        var valueIndex_stop_moving = getValueIndex();
+        flagArray.data[valueIndex_stop_moving].remoteControlBodyTurnLeftFlag = false;
+        flagArray.data[valueIndex_stop_moving].remoteControlBodyTurnRightFlag = false;
 
 
     };
@@ -524,7 +531,11 @@
             }
         });
 
-        sleep(100);       
+        sleep(100);  
+
+        var valueIndex_action = getValueIndex();
+        flagArray.data[valueIndex_action].remoteControlBodyTurnLeftFlag = false;
+        flagArray.data[valueIndex_action].remoteControlBodyTurnRightFlag = false;       
 
     };
 
