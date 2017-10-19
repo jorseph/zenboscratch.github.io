@@ -341,7 +341,9 @@
 
        var valueIndex_body_movement = getValueIndex();
        flagArray.data[valueIndex_body_movement].remoteControlBodyTurnLeftFlag = false;
-       flagArray.data[valueIndex_body_movement].remoteControlBodyTurnRightFlag = false;    
+       flagArray.data[valueIndex_body_movement].remoteControlBodyTurnRightFlag = false;
+
+       remoteControlBodyHttpRequest('停止');    
  
     };
 
@@ -368,7 +370,9 @@
 
         var valueIndex_body_turn = getValueIndex();
         flagArray.data[valueIndex_body_turn].remoteControlBodyTurnLeftFlag = false;
-        flagArray.data[valueIndex_body_turn].remoteControlBodyTurnRightFlag = false; 
+        flagArray.data[valueIndex_body_turn].remoteControlBodyTurnRightFlag = false;
+
+        remoteControlBodyHttpRequest('停止'); 
 
     };
 
