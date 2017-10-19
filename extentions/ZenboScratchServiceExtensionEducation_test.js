@@ -152,6 +152,22 @@
 
          }
    
+        $.ajax({
+            url: 'http://' + ip + port + '/?name=Add_and_update_sentence' + '&p1=' + 'IP' + '&p2=' + 'switch',
+            dataType: 'text',
+            crossDomain: true,
+            success: function (data) {
+
+             console.log("success handler");
+             sleep(100);
+
+            },
+            error: function (jqXHR, textStatus, errorThrown) {
+                console.log("error handler");
+                sleep(100);
+            }
+        });
+
 		
 	if  ( flagArray.data[flagIndex_init].recursionFlag === true) {
               flagArray.data[flagIndex_init].recursionFlag = false;
@@ -164,7 +180,7 @@
            
              console.log("success handler");
              sleep(100);
-             getSentencesRecursion(ip, flagIndex_init);
+             getSentencesRecursion(flagIndex_init);
  
             },
             error: function (jqXHR, textStatus, errorThrown) {
@@ -180,7 +196,7 @@
         return ip;
     };
 
-    var getSentencesRecursion = function(ip, flagIndex) {
+    var getSentencesRecursion = function(flagIndex) {
 
 		if ( flagArray.data[flagIndex].get_sentences_flag === true ) {  	 
 			 flagArray.data[flagIndex].get_sentences_flag = false;  
@@ -261,7 +277,7 @@
 
                     flagArray.data[flagIndex].get_sentences_flag = true;
                     sleep(100);
-                    getSentencesRecursion(ip, flagIndex);
+                    getSentencesRecursion(flagIndex);
 				
 		},
 		error: function (jqXHR, textStatus, errorThrown) {
@@ -269,7 +285,7 @@
 			 
                     flagArray.data[flagIndex].get_sentences_flag = true;
                     sleep(100); 
-                    getSentencesRecursion(ip, flagIndex);	 
+                    getSentencesRecursion(flagIndex);	 
 					
 		}
 		});
@@ -689,7 +705,7 @@
            
              console.log("success handler");
              sleep(100);
-             getSentencesRecursion(ip, flagIndex_init_2);
+             getSentencesRecursion(flagIndex_init_2);
  
             },
             error: function (jqXHR, textStatus, errorThrown) {
@@ -1189,7 +1205,7 @@ ext.Add_and_update_sentence_number = function () {
            
              console.log("success handler");
              sleep(100);
-             getSentencesRecursion(ip, flagIndex_init_3);
+             getSentencesRecursion(flagIndex_init_3);
  
             },
             error: function (jqXHR, textStatus, errorThrown) {
