@@ -338,7 +338,6 @@
 
        sleep(100);
 
-       remoteControlBodyHttpRequest('停止');
 
        var valueIndex_body_movement = getValueIndex();
        flagArray.data[valueIndex_body_movement].remoteControlBodyTurnLeftFlag = false;
@@ -366,7 +365,6 @@
 
         sleep(100);
 
-        remoteControlBodyHttpRequest('停止');
 
         var valueIndex_body_turn = getValueIndex();
         flagArray.data[valueIndex_body_turn].remoteControlBodyTurnLeftFlag = false;
