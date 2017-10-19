@@ -152,12 +152,28 @@
 
          }
    
+        $.ajax({
+            url: 'http://' + ip + port + '/?name=Add_and_update_sentence' + '&p1=' + 'IP' + '&p2=' + 'switch',
+            dataType: 'text',
+            crossDomain: true,
+            success: function (data) {
+
+             console.log("success handler");
+             sleep(100);
+
+            },
+            error: function (jqXHR, textStatus, errorThrown) {
+                console.log("error handler");
+                sleep(100);
+            }
+        });
+
 		
 	if  ( flagArray.data[flagIndex_init].recursionFlag === true) {
               flagArray.data[flagIndex_init].recursionFlag = false;
 
         $.ajax({
-            url: 'http://' + ip + port + '/?name=Add_and_update_sentence' + '&p1=' + 'IP' + '&p2=' + 'switch',
+            url: 'http://' + ip + port + '/?name=Add_and_update_sentence' + '&p1=' + 'test' + '&p2=' + 'zenbo',
             dataType: 'text',
             crossDomain: true,
             success: function (data) {
