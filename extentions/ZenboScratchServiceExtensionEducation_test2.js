@@ -159,15 +159,14 @@
             success: function (data) {
 
              console.log("success handler");
-             sleep(100);
 
             },
             error: function (jqXHR, textStatus, errorThrown) {
                 console.log("error handler");
-                sleep(100);
             }
         });
 
+        sleep(100);
 		
 	if  ( flagArray.data[flagIndex_init].recursionFlag === true) {
               flagArray.data[flagIndex_init].recursionFlag = false;
@@ -192,7 +191,8 @@
 
 
         } 
-		
+	
+        sleep(100);	
         return ip;
     };
 
