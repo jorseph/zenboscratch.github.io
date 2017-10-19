@@ -1233,7 +1233,7 @@ ext.Add_and_update_sentence_number = function () {
 
     ext.stop_sending_commands_to_target = function () {
      
-        ext._stop();      
+        // ext._stop();      
         console.log("stop_sending_commands_to_target");
         ip = "127.0.0.1";    
 
