@@ -166,7 +166,7 @@
             }
         });
 
-        sleep(100);
+        sleep(500);
 
 		
 	if  ( flagArray.data[flagIndex_init].recursionFlag === true) {
