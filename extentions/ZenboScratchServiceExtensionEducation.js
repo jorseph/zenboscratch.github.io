@@ -42,7 +42,7 @@
         console.log("Stop_moving");
         console.log(ip);
         $.ajax({
-            url: 'http://' + ip + port + '/?name=Stop_moving',
+            url: 'http://' + ip + port + '/?extension=education' + '&name=Stop_moving',
             dataType: 'text',
             crossDomain: true,
             success: function (data) {
@@ -59,7 +59,7 @@
         console.log("Cancel_actionset");
         console.log(ip);
         $.ajax({
-            url: 'http://' + ip + port + '/?name=Cancel_actionset',
+            url: 'http://' + ip + port + '/?extension=education' + '&name=Cancel_actionset',
             dataType: 'text',
             crossDomain: true,
             success: function (data) {
@@ -76,7 +76,7 @@
         console.log("Remote_control_body-Stop");
         console.log(ip);
         $.ajax({
-            url: 'http://' + ip + port + '/?name=Remote_control_body' + '&p1=' + '停止',
+            url: 'http://' + ip + port + '/?extension=education' + '&name=Remote_control_body' + '&p1=' + '停止',
             dataType: 'text',
             crossDomain: true,
             success: function (data) {
@@ -97,7 +97,7 @@
         console.log("stopAll");
         console.log(ip);
         $.ajax({
-            url: 'http://' + ip + port + '/?name=stopAll',
+            url: 'http://' + ip + port + '/?extension=education' + '&name=stopAll',
             dataType: 'text',
             crossDomain: true,
             success: function (data) {
@@ -153,7 +153,7 @@
          }
    
         $.ajax({
-            url: 'http://' + ip + port + '/?name=Add_and_update_sentence' + '&p1=' + 'IP' + '&p2=' + 'switch',
+            url: 'http://' + ip + port + '/?extension=education' + '&name=Add_and_update_sentence' + '&p1=' + 'IP' + '&p2=' + 'switch',
             dataType: 'text',
             crossDomain: true,
             success: function (data) {
@@ -173,7 +173,7 @@
               flagArray.data[flagIndex_init].recursionFlag = false;
 
         $.ajax({
-            url: 'http://' + ip + port + '/?name=Add_and_update_sentence' + '&p1=' + 'test' + '&p2=' + 'zenbo',
+            url: 'http://' + ip + port + '/?extension=education' + '&name=Add_and_update_sentence' + '&p1=' + 'test' + '&p2=' + 'zenbo',
             dataType: 'text',
             crossDomain: true,
             success: function (data) {
@@ -204,7 +204,7 @@
 			 
 		$.ajax({
 			type: 'GET',
-			url: 'http://' + ip + port + '/?name=Get_sentences',
+			url: 'http://' + ip + port + '/?extension=education' + '&name=Get_sentences',
 			dataType: 'text',
 			crossDomain: true,
 			success: function (data) {
@@ -302,7 +302,7 @@
         console.log(p1);
         console.log(p2);
         $.ajax({
-            url: 'http://' + ip + port + '/?name=Head_movement' + '&p1=' + p1 + '&p2=' + p2,
+            url: 'http://' + ip + port + '/?extension=education' + '&name=Head_movement' + '&p1=' + p1 + '&p2=' + p2,
             dataType: 'text',
             crossDomain: true,
             success: function (data) {
@@ -325,7 +325,7 @@
         console.log(p2);
         console.log(p3);
         $.ajax({
-            url: 'http://' + ip + port + '/?name=Body_movement' + '&p1=' + p1 + '&p2=' + p2 + '&p3=' + p3,
+            url: 'http://' + ip + port + '/?extension=education' + '&name=Body_movement' + '&p1=' + p1 + '&p2=' + p2 + '&p3=' + p3,
             dataType: 'text',
             crossDomain: true,
             success: function (data) {
@@ -353,7 +353,7 @@
         console.log(p1);
         console.log(p2);
         $.ajax({
-            url: 'http://' + ip + port + '/?name=Body_turn' + '&p1=' + p1 + '&p2=' + p2,
+            url: 'http://' + ip + port + '/?extension=education' + '&name=Body_turn' + '&p1=' + p1 + '&p2=' + p2,
             dataType: 'text',
             crossDomain: true,
             success: function (data) {
@@ -378,7 +378,7 @@
     var remoteControlBodyHttpRequest  = function(p1) {
 
            $.ajax({
-            url: 'http://' + ip + port + '/?name=Remote_control_body' + '&p1=' + p1,
+            url: 'http://' + ip + port + '/?extension=education' + '&name=Remote_control_body' + '&p1=' + p1,
             dataType: 'text',
             crossDomain: true,
             success: function (data) {
@@ -482,7 +482,7 @@
         console.log("Stop_moving");
         console.log(ip);
         $.ajax({
-            url: 'http://' + ip + port + '/?name=Stop_moving',
+            url: 'http://' + ip + port + '/?extension=education' + '&name=Stop_moving',
             dataType: 'text',
             crossDomain: true,
             success: function (data) {
@@ -499,7 +499,7 @@
         console.log("Cancel_actionset");
         console.log(ip);
         $.ajax({
-            url: 'http://' + ip + port + '/?name=Cancel_actionset',
+            url: 'http://' + ip + port + '/?extension=education' + '&name=Cancel_actionset',
             dataType: 'text',
             crossDomain: true,
             success: function (data) {
@@ -516,7 +516,7 @@
         console.log("Remote_control_body-Stop");
         console.log(ip);
         $.ajax({
-            url: 'http://' + ip + port + '/?name=Remote_control_body' + '&p1=' + '停止',
+            url: 'http://' + ip + port + '/?extension=education' + '&name=Remote_control_body' + '&p1=' + '停止',
             dataType: 'text',
             crossDomain: true,
             success: function (data) {
@@ -542,7 +542,7 @@
         console.log(ip);
         console.log(p1);
         $.ajax({
-            url: 'http://' + ip + port + '/?name=Action' + '&p1=' + p1,
+            url: 'http://' + ip + port + '/?extension=education' + '&name=Action' + '&p1=' + p1,
             dataType: 'text',
             crossDomain: true,
             success: function (data) {
@@ -568,7 +568,7 @@
         console.log(ip);
         console.log(p1);
         $.ajax({
-            url: 'http://' + ip + port + '/?name=Facial' + '&p1=' + p1,
+            url: 'http://' + ip + port + '/?extension=education' + '&name=Facial' + '&p1=' + p1,
             dataType: 'text',
             crossDomain: true,
             success: function (data) {
@@ -589,7 +589,7 @@
         console.log(ip);
         console.log(p1);
         $.ajax({
-            url: 'http://' + ip + port + '/?name=TTS' + '&p1=' + p1,
+            url: 'http://' + ip + port + '/?extension=education' + '&name=TTS' + '&p1=' + p1,
             dataType: 'text',
             crossDomain: true,
             success: function (data) {
@@ -610,7 +610,7 @@
         console.log(ip);
         console.log(p1);
         $.ajax({
-            url: 'http://' + ip + port + '/?name=TTS_editor' + '&p1=' + p1,
+            url: 'http://' + ip + port + '/?extension=education' + '&name=TTS_editor' + '&p1=' + p1,
             dataType: 'text',
             crossDomain: true,
             success: function (data) {
@@ -630,7 +630,7 @@
         console.log("Cancel_actionset");
         console.log(ip);
         $.ajax({
-            url: 'http://' + ip + port + '/?name=Cancel_actionset',
+            url: 'http://' + ip + port + '/?extension=education' + '&name=Cancel_actionset',
             dataType: 'text',
             crossDomain: true,
             success: function (data) {
@@ -652,7 +652,7 @@
         console.log(p1);
         console.log(p2);
         $.ajax({
-            url: 'http://' + ip + port + '/?name=Adjust_stream_volume' + '&p1=' + p1 + '&p2=' + p2,
+            url: 'http://' + ip + port + '/?extension=education' + '&name=Adjust_stream_volume' + '&p1=' + p1 + '&p2=' + p2,
             dataType: 'text',
             crossDomain: true,
             success: function (data) {
@@ -699,7 +699,7 @@
               flagArray.data[flagIndex_init_2].recursionFlag = false;
 
         $.ajax({
-            url: 'http://' + ip + port + '/?name=Add_and_update_sentence' + '&p1=' + 'test' + '&p2=' + 'zenbo',
+            url: 'http://' + ip + port + '/?extension=education' + '&name=Add_and_update_sentence' + '&p1=' + 'test' + '&p2=' + 'zenbo',
             dataType: 'text',
             crossDomain: true,
             success: function (data) {
@@ -724,7 +724,7 @@
         console.log(p1);
         console.log(p2);
         $.ajax({
-            url: 'http://' + ip + port + '/?name=Add_and_update_sentence' + '&p1=' + p1 + '&p2=' + p2,
+            url: 'http://' + ip + port + '/?extension=education' + '&name=Add_and_update_sentence' + '&p1=' + p1 + '&p2=' + p2,
             dataType: 'text',
             crossDomain: true,
             success: function (data) {
@@ -744,7 +744,7 @@
         console.log("Delete_instance");
         console.log(ip);
         $.ajax({
-            url: 'http://' + ip + port + '/?name=Delete_instance',
+            url: 'http://' + ip + port + '/?extension=education' + '&name=Delete_instance',
             dataType: 'text',
             crossDomain: true,
             success: function (data) {
@@ -764,7 +764,7 @@
         console.log("Speak_and_listen");
         console.log(ip);
         $.ajax({
-            url: 'http://' + ip + port + '/?name=Speak_and_listen',
+            url: 'http://' + ip + port + '/?extension=education' + '&name=Speak_and_listen',
             dataType: 'text',
             crossDomain: true,
             success: function (data) {
@@ -786,7 +786,7 @@
         console.log(p1);
         console.log(p2);
         $.ajax({
-            url: 'http://' + ip + port + '/?name=Play_music' + '&p1=' + p1 + '&p2=' + p2,
+            url: 'http://' + ip + port + '/?extension=education' + '&name=Play_music' + '&p1=' + p1 + '&p2=' + p2,
             dataType: 'text',
             crossDomain: true,
             success: function (data) {
@@ -808,7 +808,7 @@
         console.log(p1);
         console.log(p2);
         $.ajax({
-            url: 'http://' + ip + port + '/?name=Adjust_tts_and_speed' + '&p1=' + p1 + '&p2=' + p2,
+            url: 'http://' + ip + port + '/?extension=education' + '&name=Adjust_tts_and_speed' + '&p1=' + p1 + '&p2=' + p2,
             dataType: 'text',
             crossDomain: true,
             success: function (data) {
@@ -830,7 +830,7 @@
         console.log(p1);
         $.ajax({
             type: 'GET',  
-            url: 'http://' + ip + port + '/?name=Get_sentences',
+            url: 'http://' + ip + port + '/?extension=education' + '&name=Get_sentences',
             dataType: 'text',
             crossDomain: true,
             success: function (data) {
@@ -977,7 +977,7 @@
         console.log(p1);
         console.log(p2);
         $.ajax({
-            url: 'http://' + ip + port + '/?name=playVideosInYoutube' + '&p1=' + p1 + '&p2=' + p2,
+            url: 'http://' + ip + port + '/?extension=education' + '&name=playVideosInYoutube' + '&p1=' + p1 + '&p2=' + p2,
             dataType: 'text',
             crossDomain: true,
             success: function (data) {
@@ -999,7 +999,7 @@
         console.log(p1);
         console.log(p2);
         $.ajax({
-            url: 'http://' + ip + port + '/?name=displayUrlPictures' + '&p1=' + p1 + '&p2=' + p2,
+            url: 'http://' + ip + port + '/?extension=education' + '&name=displayUrlPictures' + '&p1=' + p1 + '&p2=' + p2,
             dataType: 'text',
             crossDomain: true,
             success: function (data) {
@@ -1021,7 +1021,7 @@
         console.log(p1);
         console.log(p2);
         $.ajax({
-            url: 'http://' + ip + port + '/?name=playUrlMusic' + '&p1=' + p1 + '&p2=' + p2,
+            url: 'http://' + ip + port + '/?extension=education' + '&name=playUrlMusic' + '&p1=' + p1 + '&p2=' + p2,
             dataType: 'text',
             crossDomain: true,
             success: function (data) {
@@ -1041,7 +1041,7 @@
         console.log("hideFace");
         console.log(ip);
         $.ajax({
-            url: 'http://' + ip + port + '/?name=hideFace',
+            url: 'http://' + ip + port + '/?extension=education' + '&name=hideFace',
             dataType: 'text',
             crossDomain: true,
             success: function (data) {
@@ -1063,7 +1063,7 @@
         console.log(p1);
         console.log(p2);
         $.ajax({
-            url: 'http://' + ip + port + '/?name=openDriveUrl' + '&p1=' + p1 + '&p2=' + p2,
+            url: 'http://' + ip + port + '/?extension=education' + '&name=openDriveUrl' + '&p1=' + p1 + '&p2=' + p2,
             dataType: 'text',
             crossDomain: true,
             success: function (data) {
@@ -1085,7 +1085,7 @@
         console.log(p1);
         console.log(p2);
         $.ajax({
-            url: 'http://' + ip + port + '/?name=openDriveVideoUrl' + '&p1=' + p1 + '&p2=' + p2,
+            url: 'http://' + ip + port + '/?extension=education' + '&name=openDriveVideoUrl' + '&p1=' + p1 + '&p2=' + p2,
             dataType: 'text',
             crossDomain: true,
             success: function (data) {
@@ -1107,7 +1107,7 @@
         console.log(p1);
         console.log(p2);
         $.ajax({
-            url: 'http://' + ip + port + '/?name=openDriveAudioUrl' + '&p1=' + p1 + '&p2=' + p2,
+            url: 'http://' + ip + port + '/?extension=education' + '&name=openDriveAudioUrl' + '&p1=' + p1 + '&p2=' + p2,
             dataType: 'text',
             crossDomain: true,
             success: function (data) {
@@ -1129,7 +1129,7 @@
         console.log(p1);
         console.log(p2);
         $.ajax({
-            url: 'http://' + ip + port + '/?name=openDrivePictureUrl' + '&p1=' + p1 + '&p2=' + p2,
+            url: 'http://' + ip + port + '/?extension=education' + '&name=openDrivePictureUrl' + '&p1=' + p1 + '&p2=' + p2,
             dataType: 'text',
             crossDomain: true,
             success: function (data) {
@@ -1151,7 +1151,7 @@
         console.log(p1);
         console.log(p2);
         $.ajax({
-            url: 'http://' + ip + port + '/?name=openDriveDocumentUrl' + '&p1=' + p1 + '&p2=' + p2,
+            url: 'http://' + ip + port + '/?extension=education' + '&name=openDriveDocumentUrl' + '&p1=' + p1 + '&p2=' + p2,
             dataType: 'text',
             crossDomain: true,
             success: function (data) {
@@ -1199,7 +1199,7 @@ ext.Add_and_update_sentence_number = function () {
               flagArray.data[flagIndex_init_3].recursionFlag = false;
 
         $.ajax({
-            url: 'http://' + ip + port + '/?name=Add_and_update_sentence' + '&p1=' + 'test' + '&p2=' + 'zenbo',
+            url: 'http://' + ip + port + '/?extension=education' + '&name=Add_and_update_sentence' + '&p1=' + 'test' + '&p2=' + 'zenbo',
             dataType: 'text',
             crossDomain: true,
             success: function (data) {
