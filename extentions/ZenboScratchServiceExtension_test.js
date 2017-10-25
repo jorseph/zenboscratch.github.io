@@ -17,7 +17,74 @@
 
     ext.Setting_targetIP = function (ip) {
         console.log("Setting_targetIP");
-        return ip;
+        console.log("ip: "+ ip );
+
+         var setupFlag_init = true;
+         var flagIndex_init = 0; 
+
+         for(var g = 0; g < flagArray.data.length; g++) {
+
+              console.log("flagArray.data[g].device: "+  flagArray.data[g].device ); 
+             if ( ip == flagArray.data[g].device) {
+               setupFlag_init = false;
+               flagIndex_init = g; 
+               console.log("false" + "flagIndex_init: "+ flagIndex_init);
+             }    
+         }     
+
+         if ( setupFlag_init == true) {
+     
+               flagArray.data.push( { device: ip, correctedSentence: "", sentence_1_flag: false, sentence_2_flag: false, sentence_3_flag: false,
+               sentence_4_flag: false, sentence_5_flag: false, number_flag: false, touch_head_flag: false, get_sentences_flag: true, recursionFlag: true } );
+               console.log("add new device IP and its flags");
+               flagIndex_init = flagArray.data.length -1 ;
+               console.log("true " + "flagIndex_init: "+ flagIndex_init);
+
+         }
+
+        $.ajax({
+            url: 'http://' + ip + port + '/?extension=education' + '&name=Add_and_update_sentence' + '&p1=' + 'IP' + '&p2=' + 'switch',
+            dataType: 'text',
+            crossDomain: true,
+            success: function (data) {
+
+             console.log("success handler");
+
+            },
+            error: function (jqXHR, textStatus, errorThrown) {
+                console.log("error handler");
+            }
+        });
+
+        sleep(500); 
+
+        if  ( flagArray.data[flagIndex_init].recursionFlag === true) {
+              flagArray.data[flagIndex_init].recursionFlag = false;
+
+        $.ajax({
+            url: 'http://' + ip + port + '/?extension=education' + '&name=Add_and_update_sentence' + '&p1=' + 'test' + '&p2=' + 'zenbo',
+            dataType: 'text',
+            crossDomain: true,
+            success: function (data) {
+
+             console.log("success handler");
+             sleep(100);
+             getSentencesRecursion(flagIndex_init);
+
+            },
+            error: function (jqXHR, textStatus, errorThrown) {
+                console.log("error handler");
+                sleep(100);
+                flagArray.data[flagIndex_init].recursionFlag = true;
+            }
+        });
+
+        }
+
+        sleep(500);
+
+        callback();
+
     };
 
     var getSentencesRecursion = function(ip, flagIndex) {
@@ -830,7 +897,7 @@ ext.Add_and_update_sentence_number = function (ip) {
 
     var descriptor = {
         blocks: [
-            ['r', '設定Zenbo IP: %s', 'Setting_targetIP', "192.168.0.1"],
+            ['w', '設定Zenbo IP: %s', 'Setting_targetIP', "192.168.0.1"],
             ['', 'IP %s 移動 %m.move_direction %m.move_far 公尺 %m.move_speed 速度', 'Body_movement', "192.168.0.1", "前進", "0.25", "一般"],
             ['', 'IP %s 停止', 'Stop_moving', "192.168.0.1"],
             ['', 'IP %s 轉動頭部 向 %m.head_direction %m.head_degree 度', 'Head_movement', "192.168.0.1", "左", "45"], 
