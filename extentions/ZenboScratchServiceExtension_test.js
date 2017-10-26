@@ -88,6 +88,8 @@
 
         }
 
+        sleep(100);
+
         callback();  
 
     };
