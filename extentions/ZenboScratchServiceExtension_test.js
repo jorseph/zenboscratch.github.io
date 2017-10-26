@@ -69,8 +69,8 @@
 
              console.log("success handler");
              sleep(100);
-             getSentencesRecursion(flagIndex_init);
              callback();
+             getSentencesRecursion(flagIndex_init);
 
             },
             error: function (jqXHR, textStatus, errorThrown) {
