@@ -15,7 +15,7 @@
          return {status: 2, msg: 'Ready'};
     };
 
-    ext.Setting_targetIP = function (ip) {
+    ext.Setting_targetIP = function (ip, callback) {
         console.log("Setting_targetIP");
         console.log("ip: "+ ip );
 
