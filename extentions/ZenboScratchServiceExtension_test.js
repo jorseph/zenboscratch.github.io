@@ -80,7 +80,11 @@
 
         }
 
+        console.log("proceed callback 1");
+
         sleep(500);
+
+        console.log("proceed callback 2");       
 
         callback();  
 
