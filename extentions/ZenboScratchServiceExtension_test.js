@@ -5,6 +5,14 @@
     };
 	
     port = ":8080";
+
+    function sleep(milliseconds) 
+    { 
+       var start = new Date().getTime(); 
+       while(1)
+       if ((new Date().getTime() - start) > milliseconds)
+          break;
+    }
 	
     ext._shutdown = function () {
         console.log('Shutting down...');
