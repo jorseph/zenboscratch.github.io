@@ -912,7 +912,7 @@ ext.Add_and_update_sentence_number = function (ip) {
             ['', 'IP %s 轉動頭部 向 %m.head_direction %m.head_degree 度', 'Head_movement', "192.168.0.1", "左", "45"], 
             ['', 'IP %s 轉動身體 向 %m.body_turn_direction %m.body_turn_degree 度', 'Body_turn', "192.168.0.1", "左轉", "90"],
             ['', 'IP %s 控制身體 %m.remote_control_body', 'Remote_control_body', "192.168.0.1", "右轉"],
-            ['', 'IP %s Zenbo 做動作 %m.action_type', 'Action', "192.168.0.1", '打招呼'],
+       //   ['', 'IP %s Zenbo 做動作 %m.action_type', 'Action', "192.168.0.1", '打招呼'],
             ['', 'IP %s 做出表情 %m.facial_type', 'Facial', "192.168.0.1", '期待'],
             ['', 'IP %s 隱藏表情', 'hideFace', "192.168.0.1"],
             ['', 'IP %s 說話 %m.tts_type ', 'TTS', "192.168.0.1", 'Hi,你好'],
