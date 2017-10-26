@@ -64,7 +64,7 @@
             }
         });
 
-        sleep(500); 
+        sleep(100); 
 
         console.log("proceed callback 0 " + flagArray.data[flagIndex_init].recursionFlag ); 
 
@@ -90,7 +90,7 @@
 
         }
 
-        sleep(500);
+        sleep(100);
 
         callback();  
 
