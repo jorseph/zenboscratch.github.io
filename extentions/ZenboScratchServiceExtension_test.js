@@ -66,8 +66,8 @@
             dataType: 'text',
             crossDomain: true,
             success: function (data) {
-
-             console.log("success handler");
+             callback();
+             console.log("Add_and_update_sentence test zenbo success handler");
              sleep(100);
              getSentencesRecursion(flagIndex_init);
 
