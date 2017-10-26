@@ -64,9 +64,9 @@
             }
         });
 
-        sleep(500); 
+        sleep(100); 
 
-        console.log("proceed callback 0" + flagArray.data[flagIndex_init].recursionFlag ); 
+        console.log("proceed callback 0 " + flagArray.data[flagIndex_init].recursionFlag ); 
 
         if  ( flagArray.data[flagIndex_init].recursionFlag === true) {
               flagArray.data[flagIndex_init].recursionFlag = false;
@@ -77,24 +77,16 @@
               crossDomain: true,
               success: function (data) {
               console.log("Add_and_update_sentence test zenbo success handler");
-              sleep(100);
               getSentencesRecursion(flagIndex_init);
 
               },
               error: function (jqXHR, textStatus, errorThrown) {
                 console.log("error handler");
-                sleep(100);
                 flagArray.data[flagIndex_init].recursionFlag = true;
               }
             });
 
         }
-
-        console.log("proceed callback 1");
-
-        sleep(500);
-
-        console.log("proceed callback 2");       
 
         callback();  
 
