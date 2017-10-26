@@ -123,7 +123,7 @@
          return {status: 2, msg: 'Ready'};
     };
 
-    ext.Setting_targetIP = function (onlyIPAddress) {
+    ext.Setting_targetIP = function (onlyIPAddress, callback) {
         console.log("Setting_targetIP");
         ip = onlyIPAddress;
         console.log("ip: "+ ip + "onlyIPAddress: "+ onlyIPAddress);
@@ -166,8 +166,7 @@
             }
         });
 
-        sleep(500);
-
+        sleep(100);
 		
 	if  ( flagArray.data[flagIndex_init].recursionFlag === true) {
               flagArray.data[flagIndex_init].recursionFlag = false;
@@ -179,13 +178,11 @@
             success: function (data) {
            
              console.log("success handler");
-             sleep(100);
              getSentencesRecursion(flagIndex_init);
  
             },
             error: function (jqXHR, textStatus, errorThrown) {
                 console.log("error handler");
-                sleep(100);
                 flagArray.data[flagIndex_init].recursionFlag = true; 
             }
         }); 
@@ -193,8 +190,9 @@
         }
      
         sleep(500); 
+ 
+        callback();
 		
-        return ip;
     };
 
     var getSentencesRecursion = function(flagIndex) {
@@ -1259,7 +1257,7 @@ ext.Add_and_update_sentence_number = function () {
 
     var descriptor = {
         blocks: [
-            ['', '設定 Zenbo IP: %s', 'Setting_targetIP', "127.0.0.1"],
+            ['w', '設定 Zenbo IP: %s', 'Setting_targetIP', "127.0.0.1"],
             ['w', '移動 %m.move_direction %m.move_far 公尺 %m.move_speed 速度', 'Body_movement', "前進", "0.25", "一般"],
             ['', '停止動作', 'Stop_moving' ],
             ['w', '轉動頭部 向 %m.head_direction %m.head_degree 度', 'Head_movement', "左", "45"], 
