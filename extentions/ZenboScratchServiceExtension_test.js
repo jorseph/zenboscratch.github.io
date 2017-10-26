@@ -13,6 +13,83 @@
        if ((new Date().getTime() - start) > milliseconds)
           break;
     }
+
+    ext._stop = function () {   
+        console.log('stop...');
+
+    for(var ipIndex = 0; ipIndex < flagArray.data.length; ipIndex++) {
+
+        console.log("Stop_moving");
+        console.log(flagArray.data[ipIndex].device);
+        $.ajax({
+            url: 'http://' + flagArray.data[ipIndex].device + port + '/?extension=education' + '&name=Stop_moving',
+            dataType: 'text',
+            crossDomain: true,
+            success: function (data) {
+                console.log("success handler");
+
+            },
+            error: function (jqXHR, textStatus, errorThrown) {
+                console.log("error handler");
+            }
+        });
+
+        sleep(100);
+
+        console.log("Cancel_actionset");
+        console.log(ipIndex);
+        $.ajax({
+            url: 'http://' + flagArray.data[ipIndex].device + port + '/?extension=education' + '&name=Cancel_actionset',
+            dataType: 'text',
+            crossDomain: true,
+            success: function (data) {
+                console.log("success handler");
+
+            },
+            error: function (jqXHR, textStatus, errorThrown) {
+                console.log("error handler");
+            }
+        });
+
+        sleep(100);
+
+        console.log("Remote_control_body-Stop");
+        console.log(ipIndex);
+        $.ajax({
+            url: 'http://' + flagArray.data[ipIndex].device + port + '/?extension=education' + '&name=Remote_control_body' + '&p1=' + '停止',
+            dataType: 'text',
+            crossDomain: true,
+            success: function (data) {
+                console.log("success handler");
+
+            },
+            error: function (jqXHR, textStatus, errorThrown) {
+                console.log("error handler");
+            }
+        }); 
+
+        sleep(100);
+
+        console.log("stopAll");
+        console.log(ipIndex);
+        $.ajax({
+            url: 'http://' + flagArray.data[ipIndex].device + port + '/?extension=education' + '&name=stopAll',
+            dataType: 'text',
+            crossDomain: true,
+            success: function (data) {
+                console.log("success handler");
+
+            },
+            error: function (jqXHR, textStatus, errorThrown) {
+                console.log("error handler");
+            }
+        });
+
+        sleep(100);
+
+        } 
+
+    };
 	
     ext._shutdown = function () {
         console.log('Shutting down...');
