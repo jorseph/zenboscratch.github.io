@@ -71,6 +71,8 @@
         if  ( flagArray.data[flagIndex_init].recursionFlag === true) {
               flagArray.data[flagIndex_init].recursionFlag = false;
 
+        console.log("proceed callback 1 " + flagArray.data[flagIndex_init].recursionFlag );
+
            $.ajax({
               url: 'http://' + ip + port + '/?extension=advance' + '&name=Add_and_update_sentence' + '&p1=' + 'test' + '&p2=' + 'zenbo',
               dataType: 'text',
