@@ -64,7 +64,7 @@
             }
         });
 
-        sleep(100); 
+        sleep(500); 
 
         console.log("proceed callback 0 " + flagArray.data[flagIndex_init].recursionFlag ); 
 
