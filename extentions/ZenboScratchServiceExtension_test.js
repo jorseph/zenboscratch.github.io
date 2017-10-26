@@ -43,7 +43,7 @@
          }
 
         $.ajax({
-            url: 'http://' + ip + port + '/?extension=education' + '&name=Add_and_update_sentence' + '&p1=' + 'IP' + '&p2=' + 'switch',
+            url: 'http://' + ip + port + '/?extension=advance' + '&name=Add_and_update_sentence' + '&p1=' + 'IP' + '&p2=' + 'switch',
             dataType: 'text',
             crossDomain: true,
             success: function (data) {
@@ -62,14 +62,13 @@
               flagArray.data[flagIndex_init].recursionFlag = false;
 
         $.ajax({
-            url: 'http://' + ip + port + '/?extension=education' + '&name=Add_and_update_sentence' + '&p1=' + 'test' + '&p2=' + 'zenbo',
+            url: 'http://' + ip + port + '/?extension=advance' + '&name=Add_and_update_sentence' + '&p1=' + 'test' + '&p2=' + 'zenbo',
             dataType: 'text',
             crossDomain: true,
             success: function (data) {
 
              console.log("success handler");
              sleep(100);
-             callback();
              getSentencesRecursion(flagIndex_init);
 
             },
