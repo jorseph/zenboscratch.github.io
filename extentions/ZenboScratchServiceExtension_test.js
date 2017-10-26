@@ -58,6 +58,8 @@
 
         sleep(500); 
 
+        console.log("proceed callback 0" + flagArray.data[flagIndex_init].recursionFlag ); 
+
         if  ( flagArray.data[flagIndex_init].recursionFlag === true) {
               flagArray.data[flagIndex_init].recursionFlag = false;
 
