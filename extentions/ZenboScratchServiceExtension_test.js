@@ -77,7 +77,7 @@
               crossDomain: true,
               success: function (data) {
               console.log("Add_and_update_sentence test zenbo success handler");
-              getSentencesRecursion(flagIndex_init);
+              getSentencesRecursion(ip, flagIndex_init);
 
               },
               error: function (jqXHR, textStatus, errorThrown) {
