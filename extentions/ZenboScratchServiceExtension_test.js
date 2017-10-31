@@ -84,7 +84,8 @@
             success: function (data) {
              console.log("success handler");
 			 
-							console.log("proceed callback 0 " + flagArray.data[flagIndex_init].recursionFlag ); 
+							console.log("proceed callback 0 " + flagArray.data[flagIndex_init].recursionFlag );
+                                                        callback(); 
 							if  ( flagArray.data[flagIndex_init].recursionFlag === true) {
 								  flagArray.data[flagIndex_init].recursionFlag = false;
 
@@ -96,7 +97,7 @@
 								  crossDomain: true,
 								  success: function (data) {
 								  console.log("Add_and_update_sentence test zenbo success handler");
-								  getSentencesRecursion(ip, flagIndex_init, callback);
+								  getSentencesRecursion(ip, flagIndex_init);
 
 								  },
 								  error: function (jqXHR, textStatus, errorThrown) {
@@ -117,7 +118,7 @@
 
     };
 
-    var getSentencesRecursion = function(ip, flagIndex, callback) {
+    var getSentencesRecursion = function(ip, flagIndex) {
 
 		if ( flagArray.data[flagIndex].get_sentences_flag === true ) {  	 
 			 flagArray.data[flagIndex].get_sentences_flag = false;  
@@ -203,7 +204,6 @@
 				
             }    
 	
-	callback();
     };
 	
     ext.Head_movement = function (ip, p1, p2, callback) {
