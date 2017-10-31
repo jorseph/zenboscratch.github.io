@@ -462,26 +462,26 @@
             console.log("success handler");
 
 
-            if  ( flagArray.data[flagIndex_init_2].recursionFlag === true) {
-                  flagArray.data[flagIndex_init_2].recursionFlag = false;
+        //    if  ( flagArray.data[flagIndex_init_2].recursionFlag === true) {
+        //          flagArray.data[flagIndex_init_2].recursionFlag = false;
 
-             $.ajax({
-                 url: 'http://' + ip + port + '/?extension=advance' + '&name=Add_and_update_sentence' + '&p1=' + 'test' + '&p2=' + 'zenbo',
-                 dataType: 'text',
-                 crossDomain: true,
-                 success: function (data) {
+         //    $.ajax({
+         //        url: 'http://' + ip + port + '/?extension=advance' + '&name=Add_and_update_sentence' + '&p1=' + 'test' + '&p2=' + 'zenbo',
+        //         dataType: 'text',
+         //        crossDomain: true,
+         //        success: function (data) {
            
-                        console.log("success handler");
+         //               console.log("success handler");
                         getSentencesRecursion(ip, flagIndex_init_2);
  
-                 },
-                 error: function (jqXHR, textStatus, errorThrown) {
-                 console.log("error handler");
-                 flagArray.data[flagIndex_init_2].recursionFlag = true; 
-                 }
-             }); 
+          //       },
+           //      error: function (jqXHR, textStatus, errorThrown) {
+            //     console.log("error handler");
+              //   flagArray.data[flagIndex_init_2].recursionFlag = true; 
+               //  }
+           //  }); 
 
-           } 
+          // } 
 
 	   callback();  	
             },
