@@ -85,7 +85,6 @@
              console.log("success handler");
 			 
 							console.log("proceed callback 0 " + flagArray.data[flagIndex_init].recursionFlag );
-                                                        callback(); 
 							if  ( flagArray.data[flagIndex_init].recursionFlag === true) {
 								  flagArray.data[flagIndex_init].recursionFlag = false;
 
@@ -107,7 +106,7 @@
 								});
 
 							}
-                                                        
+                                                        callback(); 
 
             },
             error: function (jqXHR, textStatus, errorThrown) {
