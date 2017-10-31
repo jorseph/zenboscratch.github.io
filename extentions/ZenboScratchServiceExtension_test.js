@@ -15,7 +15,7 @@
     }
 
     ext._stop = function () {   
-        console.log('stop...');
+    console.log('stop...');
 
     for(var ipIndex = 0; ipIndex < flagArray.data.length; ipIndex++) {
 
@@ -27,6 +27,38 @@
             crossDomain: true,
             success: function (data) {
                 console.log("success handler");
+				
+				console.log("Remote_control_body-Stop");
+				console.log(ipIndex);
+				$.ajax({
+					url: 'http://' + flagArray.data[ipIndex].device + port + '/?extension=advance' + '&name=Remote_control_body' + '&p1=' + '停止',
+					dataType: 'text',
+					crossDomain: true,
+					success: function (data) {
+						console.log("success handler");
+				
+				
+								console.log("stopAll");
+								console.log(ipIndex);
+								$.ajax({
+									url: 'http://' + flagArray.data[ipIndex].device + port + '/?extension=advance' + '&name=stopAll',
+									dataType: 'text',
+									crossDomain: true,
+									success: function (data) {
+										console.log("success handler");
+
+									},
+									error: function (jqXHR, textStatus, errorThrown) {
+										console.log("error handler");
+									}
+								});
+
+				
+					},
+					error: function (jqXHR, textStatus, errorThrown) {
+						console.log("error handler");
+					}
+				});  				
 
             },
             error: function (jqXHR, textStatus, errorThrown) {
@@ -34,58 +66,6 @@
             }
         });
 
-        sleep(100);
-
-        console.log("Cancel_actionset");
-        console.log(ipIndex);
-        $.ajax({
-            url: 'http://' + flagArray.data[ipIndex].device + port + '/?extension=advance' + '&name=Cancel_actionset',
-            dataType: 'text',
-            crossDomain: true,
-            success: function (data) {
-                console.log("success handler");
-
-            },
-            error: function (jqXHR, textStatus, errorThrown) {
-                console.log("error handler");
-            }
-        });
-
-        sleep(100);
-
-        console.log("Remote_control_body-Stop");
-        console.log(ipIndex);
-        $.ajax({
-            url: 'http://' + flagArray.data[ipIndex].device + port + '/?extension=advance' + '&name=Remote_control_body' + '&p1=' + '停止',
-            dataType: 'text',
-            crossDomain: true,
-            success: function (data) {
-                console.log("success handler");
-
-            },
-            error: function (jqXHR, textStatus, errorThrown) {
-                console.log("error handler");
-            }
-        }); 
-
-        sleep(100);
-
-        console.log("stopAll");
-        console.log(ipIndex);
-        $.ajax({
-            url: 'http://' + flagArray.data[ipIndex].device + port + '/?extension=advance' + '&name=stopAll',
-            dataType: 'text',
-            crossDomain: true,
-            success: function (data) {
-                console.log("success handler");
-
-            },
-            error: function (jqXHR, textStatus, errorThrown) {
-                console.log("error handler");
-            }
-        });
-
-        sleep(100);
 
         } 
 
@@ -93,6 +73,7 @@
 	
     ext._shutdown = function () {
         console.log('Shutting down...');
+		ext._stop();
 
     };
 
@@ -132,44 +113,38 @@
             dataType: 'text',
             crossDomain: true,
             success: function (data) {
-
              console.log("success handler");
+			 
+							console.log("proceed callback 0 " + flagArray.data[flagIndex_init].recursionFlag ); 
+							if  ( flagArray.data[flagIndex_init].recursionFlag === true) {
+								  flagArray.data[flagIndex_init].recursionFlag = false;
+
+								console.log("proceed callback 1 " + flagArray.data[flagIndex_init].recursionFlag );
+
+							   $.ajax({
+								  url: 'http://' + ip + port + '/?extension=advance' + '&name=Add_and_update_sentence' + '&p1=' + 'test' + '&p2=' + 'zenbo',
+								  dataType: 'text',
+								  crossDomain: true,
+								  success: function (data) {
+								  console.log("Add_and_update_sentence test zenbo success handler");
+								  getSentencesRecursion(ip, flagIndex_init);
+								  callback(); 
+
+								  },
+								  error: function (jqXHR, textStatus, errorThrown) {
+									console.log("error handler");
+									flagArray.data[flagIndex_init].recursionFlag = true;
+								  }
+								});
+
+							}
 
             },
             error: function (jqXHR, textStatus, errorThrown) {
                 console.log("error handler");
             }
         });
-
-        sleep(100); 
-
-        console.log("proceed callback 0 " + flagArray.data[flagIndex_init].recursionFlag ); 
-
-        if  ( flagArray.data[flagIndex_init].recursionFlag === true) {
-              flagArray.data[flagIndex_init].recursionFlag = false;
-
-        console.log("proceed callback 1 " + flagArray.data[flagIndex_init].recursionFlag );
-
-           $.ajax({
-              url: 'http://' + ip + port + '/?extension=advance' + '&name=Add_and_update_sentence' + '&p1=' + 'test' + '&p2=' + 'zenbo',
-              dataType: 'text',
-              crossDomain: true,
-              success: function (data) {
-              console.log("Add_and_update_sentence test zenbo success handler");
-              getSentencesRecursion(ip, flagIndex_init);
-
-              },
-              error: function (jqXHR, textStatus, errorThrown) {
-                console.log("error handler");
-                flagArray.data[flagIndex_init].recursionFlag = true;
-              }
-            });
-
-        }
-
-        sleep(500);
-
-        callback();  
+        
 
     };
 
@@ -320,7 +295,7 @@
         });
     };
 
-    ext.Remote_control_body = function (ip, p1, callback){
+    ext.Remote_control_body = function (ip, p1){
         console.log("Remote_control_body");
         console.log(ip);
         console.log(p1);
@@ -348,27 +323,29 @@
             crossDomain: true,
             success: function (data) {
                 console.log("success handler");
+				
+					console.log("Cancel_actionset");
+					console.log(ip);
+					$.ajax({
+						url: 'http://' + ip + port + '/?extension=advance' + '&name=Cancel_actionset',
+						dataType: 'text',
+						crossDomain: true,
+						success: function (data) {
+							console.log("success handler");
 
+						},
+						error: function (jqXHR, textStatus, errorThrown) {
+							console.log("error handler");
+						}
+					});
+				
             },
             error: function (jqXHR, textStatus, errorThrown) {
                 console.log("error handler");
             }
         });
 
-        console.log("Cancel_actionset");
-        console.log(ip);
-        $.ajax({
-            url: 'http://' + ip + port + '/?extension=advance' + '&name=Cancel_actionset',
-            dataType: 'text',
-            crossDomain: true,
-            success: function (data) {
-                console.log("success handler");
-
-            },
-            error: function (jqXHR, textStatus, errorThrown) {
-                console.log("error handler");
-            }
-        });
+        
        
     };
 
@@ -444,7 +421,7 @@
         });
     };
 
-    ext.Cancel_actionset = function (ip,callback){
+    ext.Cancel_actionset = function (ip){
         console.log("Cancel_actionset");
         console.log(ip);
         $.ajax({
