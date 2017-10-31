@@ -19,62 +19,30 @@
 
     for(var ipIndex = 0; ipIndex < flagArray.data.length; ipIndex++) {
 
-        console.log("Stop_moving");
         var ipLoop = flagArray.data[ipIndex].device;
         console.log(ipLoop);
-        $.ajax({
-            url: 'http://' + ipLoop + port + '/?extension=advance' + '&name=Stop_moving',
-            dataType: 'text',
-            crossDomain: true,
-            success: function (data) {
-                console.log("success handler");
-				
-				console.log("Remote_control_body-Stop");
-				console.log(ipLoop);
-				$.ajax({
-					url: 'http://' + ipLoop + port + '/?extension=advance' + '&name=Remote_control_body' + '&p1=' + '停止',
-					dataType: 'text',
-					crossDomain: true,
-					success: function (data) {
-						console.log("success handler");
-				
-				
-								console.log("stopAll");
-								console.log(ipLoop);
-								$.ajax({
-									url: 'http://' + ipLoop + port + '/?extension=advance' + '&name=stopAll',
-									dataType: 'text',
-									crossDomain: true,
-									success: function (data) {
-										console.log("success handler");
+							
+	console.log("stopAll");
+	$.ajax({
+ 	  url: 'http://' + ipLoop + port + '/?extension=advance' + '&name=stopAll',
+	  dataType: 'text',
+	  crossDomain: true,
+	  success: function (data) {
+	  console.log("success handler");
 
-									},
-									error: function (jqXHR, textStatus, errorThrown) {
-										console.log("error handler");
-									}
-								});
-
-				
-					},
-					error: function (jqXHR, textStatus, errorThrown) {
-						console.log("error handler");
-					}
-				});  				
-
-            },
-            error: function (jqXHR, textStatus, errorThrown) {
-                console.log("error handler");
-            }
-        });
-
-
-        } 
+	  },
+  	  error: function (jqXHR, textStatus, errorThrown) {
+	  console.log("error handler");
+          }
+	});
+			
+     } 
 
     };
 	
     ext._shutdown = function () {
         console.log('Shutting down...');
-		ext._stop();
+	ext._stop();
 
     };
 
@@ -128,7 +96,7 @@
 								  crossDomain: true,
 								  success: function (data) {
 								  console.log("Add_and_update_sentence test zenbo success handler");
-								  getSentencesRecursion(ip, flagIndex_init);
+								  getSentencesRecursion(ip, flagIndex_init, callback);
 
 								  },
 								  error: function (jqXHR, textStatus, errorThrown) {
@@ -138,7 +106,7 @@
 								});
 
 							}
-                                                        callback();
+                                                        
 
             },
             error: function (jqXHR, textStatus, errorThrown) {
@@ -149,7 +117,7 @@
 
     };
 
-    var getSentencesRecursion = function(ip, flagIndex) {
+    var getSentencesRecursion = function(ip, flagIndex, callback) {
 
 		if ( flagArray.data[flagIndex].get_sentences_flag === true ) {  	 
 			 flagArray.data[flagIndex].get_sentences_flag = false;  
@@ -166,15 +134,15 @@
                                 
 				switch(data.split(",")[0]) {
 
-                    case 'number':
+                                        case 'number':
                                  
-                        console.log('辨識到number');
-                        console.log( ip + " "  + flagIndex + " " + "number_flag true");
-                        flagArray.data[flagIndex].number_flag = true;
-                        flagArray.data[flagIndex].correctedSentence = data.split(",")[1];
-                        console.log('correctedSentence:' + flagArray.data[flagIndex].correctedSentence);
+                                        console.log('辨識到number');
+                                        console.log( ip + " "  + flagIndex + " " + "number_flag true");
+                                        flagArray.data[flagIndex].number_flag = true;
+                                        flagArray.data[flagIndex].correctedSentence = data.split(",")[1];
+                                        console.log('correctedSentence:' + flagArray.data[flagIndex].correctedSentence);
                                               
-                        break; 
+                                        break; 
 
 					case '語句一':
 						
@@ -220,22 +188,22 @@
 					   
 				}  
 
-                flagArray.data[flagIndex].get_sentences_flag = true;
-                getSentencesRecursion(ip, flagIndex);  				 
+                                        flagArray.data[flagIndex].get_sentences_flag = true;
+                                        getSentencesRecursion(ip, flagIndex);  				 
 				
 				},
 				error: function (jqXHR, textStatus, errorThrown) {
 					console.log("error handler");
 			 
-			    flagArray.data[flagIndex].get_sentences_flag = true;
-                getSentencesRecursion(ip, flagIndex);	 
+			                flagArray.data[flagIndex].get_sentences_flag = true;
+                                        getSentencesRecursion(ip, flagIndex);	 
 					
 				}
 			});
 				
             }    
 	
-	
+	callback();
     };
 	
     ext.Head_movement = function (ip, p1, p2, callback) {
