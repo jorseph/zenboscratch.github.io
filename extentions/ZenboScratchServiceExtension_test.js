@@ -20,18 +20,19 @@
     for(var ipIndex = 0; ipIndex < flagArray.data.length; ipIndex++) {
 
         console.log("Stop_moving");
-        console.log(flagArray.data[ipIndex].device);
+        var ipLoop = flagArray.data[ipIndex].device;
+        console.log(ipLoop);
         $.ajax({
-            url: 'http://' + flagArray.data[ipIndex].device + port + '/?extension=advance' + '&name=Stop_moving',
+            url: 'http://' + ipLoop + port + '/?extension=advance' + '&name=Stop_moving',
             dataType: 'text',
             crossDomain: true,
             success: function (data) {
                 console.log("success handler");
 				
 				console.log("Remote_control_body-Stop");
-				console.log(ipIndex);
+				console.log(ipLoop);
 				$.ajax({
-					url: 'http://' + flagArray.data[ipIndex].device + port + '/?extension=advance' + '&name=Remote_control_body' + '&p1=' + '停止',
+					url: 'http://' + ipLoop + port + '/?extension=advance' + '&name=Remote_control_body' + '&p1=' + '停止',
 					dataType: 'text',
 					crossDomain: true,
 					success: function (data) {
@@ -39,9 +40,9 @@
 				
 				
 								console.log("stopAll");
-								console.log(ipIndex);
+								console.log(ipLoop);
 								$.ajax({
-									url: 'http://' + flagArray.data[ipIndex].device + port + '/?extension=advance' + '&name=stopAll',
+									url: 'http://' + ipLoop + port + '/?extension=advance' + '&name=stopAll',
 									dataType: 'text',
 									crossDomain: true,
 									success: function (data) {
