@@ -115,7 +115,7 @@
             }
         });
         
-
+        callback();
     };
 
     var getSentencesRecursion = function(ip, flagIndex) {
