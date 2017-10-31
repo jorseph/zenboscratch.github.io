@@ -425,7 +425,7 @@
         });
     };
 
-    ext.Add_and_update_sentence = function (ip, p1, p2) {
+    ext.Add_and_update_sentence = function (ip, p1, p2, callback) {
         
          var setupFlag_init_2 = true;
          var flagIndex_init_2 = 0;
@@ -450,29 +450,6 @@
 
          }
    
-		
-	if  ( flagArray.data[flagIndex_init_2].recursionFlag === true) {
-              flagArray.data[flagIndex_init_2].recursionFlag = false;
-
-        $.ajax({
-            url: 'http://' + ip + port + '/?extension=advance' + '&name=Add_and_update_sentence' + '&p1=' + 'test' + '&p2=' + 'zenbo',
-            dataType: 'text',
-            crossDomain: true,
-            success: function (data) {
-           
-             console.log("success handler");
-             getSentencesRecursion(ip, flagIndex_init_2);
- 
-            },
-            error: function (jqXHR, textStatus, errorThrown) {
-                console.log("error handler");
-                flagArray.data[flagIndex_init_2].recursionFlag = true; 
-            }
-        }); 
-
-        } 
-
-         
         console.log("Add_and_update_sentence");
         console.log(ip);
         console.log(p1);
@@ -482,11 +459,37 @@
             dataType: 'text',
             crossDomain: true,
             success: function (data) {
-            console.log("success handler");			
+            console.log("success handler");
+
+
+            if  ( flagArray.data[flagIndex_init_2].recursionFlag === true) {
+                  flagArray.data[flagIndex_init_2].recursionFlag = false;
+
+             $.ajax({
+                 url: 'http://' + ip + port + '/?extension=advance' + '&name=Add_and_update_sentence' + '&p1=' + 'test' + '&p2=' + 'zenbo',
+                 dataType: 'text',
+                 crossDomain: true,
+                 success: function (data) {
+           
+                        console.log("success handler");
+                        getSentencesRecursion(ip, flagIndex_init_2);
+ 
+                 },
+                 error: function (jqXHR, textStatus, errorThrown) {
+                 console.log("error handler");
+                 flagArray.data[flagIndex_init_2].recursionFlag = true; 
+                 }
+             }); 
+
+           } 
+
+	   callback();  	
             },
             error: function (jqXHR, textStatus, errorThrown) {
                 console.log("error handler");
             }
+
+            callback(); 
         });
     };    
 
@@ -941,7 +944,7 @@ ext.Add_and_update_sentence_number = function (ip) {
             ['', 'IP %s 說話 %s', 'TTS_editor', "192.168.0.1", '請填入文字'],
             ['', 'IP %s 調整 %m.volume_option_type 音量 %m.volume_type', 'Adjust_stream_volume', "192.168.0.1", '說話', '大聲點'],
             ['', 'IP %s 說話 %s 速度 %m.tts_speed_type', 'Adjust_tts_and_speed', "192.168.0.1", '請填入文字', 'L2'],
-            ['', 'IP %s 準備要聽 %m.sentence_type 是 %s', 'Add_and_update_sentence', "192.168.0.1", '語句一', '吃飯'], 
+            ['w', 'IP %s 準備要聽 %m.sentence_type 是 %s', 'Add_and_update_sentence', "192.168.0.1", '語句一', '吃飯'], 
             ['', 'IP %s 我要開始聽', 'Speak_and_listen', "192.168.0.1"], 
             ['h', '當我聽到 IP %s 的 %m.sentence_type', 'when_listen_and_run', "192.168.0.1", '語句一'],
             ['', 'IP %s 刪除全部語句', 'Delete_instance', "192.168.0.1"],
