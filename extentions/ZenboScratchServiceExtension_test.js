@@ -112,10 +112,10 @@
             },
             error: function (jqXHR, textStatus, errorThrown) {
                 console.log("error handler");
+                callback();
             }
         });
         
-        callback();
     };
 
     var getSentencesRecursion = function(ip, flagIndex) {
