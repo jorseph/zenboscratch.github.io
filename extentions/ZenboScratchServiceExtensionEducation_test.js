@@ -995,15 +995,14 @@
        return false;
    };
 
-    ext.stop_sending_commands_to_target = function () {
+   ext.stop_sending_commands_to_target = function () {
      
         ext._stop();      
         console.log("stop_sending_commands_to_target");
         ip = "127.0.0.1";    
 
-    };
+   };
 	
-
     var descriptor = {
         blocks: [
             ['w', '設定 Zenbo IP: %s', 'Setting_targetIP', "127.0.0.1"],
