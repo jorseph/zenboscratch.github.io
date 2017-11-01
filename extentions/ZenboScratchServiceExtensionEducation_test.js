@@ -37,59 +37,6 @@
     }
 
     ext._stop = function () {   
-        console.log('stop...');
-
-        console.log("Stop_moving");
-        console.log(ip);
-        $.ajax({
-            url: 'http://' + ip + port + '/?extension=education' + '&name=Stop_moving',
-            dataType: 'text',
-            crossDomain: true,
-            success: function (data) {
-                console.log("success handler");
-
-            },
-            error: function (jqXHR, textStatus, errorThrown) {
-                console.log("error handler");
-            }
-        });
-
-        sleep(100);
-
-        console.log("Cancel_actionset");
-        console.log(ip);
-        $.ajax({
-            url: 'http://' + ip + port + '/?extension=education' + '&name=Cancel_actionset',
-            dataType: 'text',
-            crossDomain: true,
-            success: function (data) {
-                console.log("success handler");
-
-            },
-            error: function (jqXHR, textStatus, errorThrown) {
-                console.log("error handler");
-            }
-        });
-
-        sleep(100);
-
-        console.log("Remote_control_body-Stop");
-        console.log(ip);
-        $.ajax({
-            url: 'http://' + ip + port + '/?extension=education' + '&name=Remote_control_body' + '&p1=' + '停止',
-            dataType: 'text',
-            crossDomain: true,
-            success: function (data) {
-                console.log("success handler");
-
-            },
-            error: function (jqXHR, textStatus, errorThrown) {
-                console.log("error handler");
-            }
-        }); 
-
-        sleep(100);
-
         console.log("stopAll");
         console.log(ip);
         $.ajax({
@@ -105,7 +52,6 @@
             }
         });
 
-        sleep(100);
 
     };
 	
@@ -152,42 +98,38 @@
             dataType: 'text',
             crossDomain: true,
             success: function (data) {
-
              console.log("success handler");
+
+
+      			  if  ( flagArray.data[flagIndex_init].recursionFlag === true) {
+             			 flagArray.data[flagIndex_init].recursionFlag = false;
+
+    			    $.ajax({
+          			url: 'http://' + ip + port + '/?extension=education' + '&name=Add_and_update_sentence' + '&p1=' + 'test' + '&p2=' + 'zenbo',
+        			dataType: 'text',
+           			crossDomain: true,
+           			success: function (data) {
+                 
+            			console.log("success handler");
+         			getSentencesRecursion(flagIndex_init);
+ 
+ 			        },   
+            			error: function (jqXHR, textStatus, errorThrown) {
+               			console.log("error handler");
+              			flagArray.data[flagIndex_init].recursionFlag = true; 
+       				}    
+      				});  
+
+      			  }                    
+                          callback();  
 
             },
             error: function (jqXHR, textStatus, errorThrown) {
                 console.log("error handler");
+                callback(); 
             }
         });
 
-        sleep(100);
-		
-	if  ( flagArray.data[flagIndex_init].recursionFlag === true) {
-              flagArray.data[flagIndex_init].recursionFlag = false;
-
-        $.ajax({
-            url: 'http://' + ip + port + '/?extension=education' + '&name=Add_and_update_sentence' + '&p1=' + 'test' + '&p2=' + 'zenbo',
-            dataType: 'text',
-            crossDomain: true,
-            success: function (data) {
-           
-             console.log("success handler");
-             getSentencesRecursion(flagIndex_init);
- 
-            },
-            error: function (jqXHR, textStatus, errorThrown) {
-                console.log("error handler");
-                flagArray.data[flagIndex_init].recursionFlag = true; 
-            }
-        }); 
-
-        }
-     
-        sleep(500); 
- 
-        callback();
-		
     };
 
     var getSentencesRecursion = function(flagIndex) {
@@ -270,7 +212,6 @@
 		}  
 
                     flagArray.data[flagIndex].get_sentences_flag = true;
-                    sleep(100);
                     getSentencesRecursion(flagIndex);
 				
 		},
@@ -278,7 +219,6 @@
 		    console.log("error handler");
 			 
                     flagArray.data[flagIndex].get_sentences_flag = true;
-                    sleep(100); 
                     getSentencesRecursion(flagIndex);	 
 					
 		}
@@ -307,8 +247,6 @@
             }
         });
 
-        sleep(100);
-   
     };
 
     ext.Body_movement = function (p1, p2, p3, callback) {
@@ -330,8 +268,6 @@
             }
         });
 
-       sleep(100);
- 
     };
 
     ext.Body_turn = function (p1, p2, callback) {
@@ -352,11 +288,12 @@
             }
         });
 
-        sleep(100);
-
     };
 
-    var remoteControlBodyHttpRequest  = function(p1) {
+    ext.Remote_control_body = function (p1){
+        console.log("Remote_control_body");
+        console.log(ip);
+        console.log(p1);
 
            $.ajax({
             url: 'http://' + ip + port + '/?extension=education' + '&name=Remote_control_body' + '&p1=' + p1,
@@ -371,16 +308,6 @@
             }
             });
 
-            sleep(100);
-    }; 
-
-    ext.Remote_control_body = function (p1){
-        console.log("Remote_control_body");
-        console.log(ip);
-        console.log(p1);
-
-        remoteControlBodyHttpRequest(p1); 
-
     };
 
     ext.Stop_moving = function (callback){
@@ -393,48 +320,27 @@
             crossDomain: true,
             success: function (data) {
                 console.log("success handler");
+			
+			console.log("Remote_control_body-Stop");
+			console.log(ip);
+				$.ajax({
+				url: 'http://' + ip + port + '/?extension=education' + '&name=Remote_control_body' + '&p1=' + '停止',
+				dataType: 'text',
+ 				crossDomain: true,
+ 				success: function (data) {
+				console.log("success handler");
+
+				},
+ 				error: function (jqXHR, textStatus, errorThrown) {
+				console.log("error handler");
+ 				}
+			});
 
             },
             error: function (jqXHR, textStatus, errorThrown) {
                 console.log("error handler");
             }
         });
-
-        sleep(100);
-
-        console.log("Cancel_actionset");
-        console.log(ip);
-        $.ajax({
-            url: 'http://' + ip + port + '/?extension=education' + '&name=Cancel_actionset',
-            dataType: 'text',
-            crossDomain: true,
-            success: function (data) {
-                console.log("success handler");
-
-            },
-            error: function (jqXHR, textStatus, errorThrown) {
-                console.log("error handler");
-            }
-        });
-
-        sleep(100);
-
-        console.log("Remote_control_body-Stop");
-        console.log(ip);
-        $.ajax({
-            url: 'http://' + ip + port + '/?extension=education' + '&name=Remote_control_body' + '&p1=' + '停止',
-            dataType: 'text',
-            crossDomain: true,
-            success: function (data) {
-                console.log("success handler");
-
-            },
-            error: function (jqXHR, textStatus, errorThrown) {
-                console.log("error handler");
-            }
-        });   
-
-        sleep(100);
 
     };
 
@@ -454,8 +360,6 @@
             }
         });
 
-        sleep(100);  
-         
     };
 
     ext.Facial = function (p1, callback) {
@@ -475,8 +379,6 @@
             }
         });
  
-        sleep(100); 
-
     };
 
     ext.TTS = function (p1, callback) {
@@ -495,8 +397,6 @@
                 console.log("error handler");
             }
         });
-
-        sleep(100);
 
     };
 
@@ -517,8 +417,6 @@
             }
         });
 
-        sleep(100);
-
     };
 
     ext.Cancel_actionset = function (callback){
@@ -536,8 +434,6 @@
                 console.log("error handler");
             }
         });
-
-        sleep(100);
 
     };
 
@@ -558,8 +454,6 @@
                 console.log("error handler");
             }
         });
- 
-        sleep(100);
  
     };
 
@@ -589,30 +483,6 @@
          }
    
 		
-	if  ( flagArray.data[flagIndex_init_2].recursionFlag === true) {
-              flagArray.data[flagIndex_init_2].recursionFlag = false;
-
-        $.ajax({
-            url: 'http://' + ip + port + '/?extension=education' + '&name=Add_and_update_sentence' + '&p1=' + 'test' + '&p2=' + 'zenbo',
-            dataType: 'text',
-            crossDomain: true,
-            success: function (data) {
-           
-             console.log("success handler");
-             sleep(100);
-             getSentencesRecursion(flagIndex_init_2);
- 
-            },
-            error: function (jqXHR, textStatus, errorThrown) {
-                console.log("error handler");
-                flagArray.data[flagIndex_init_2].recursionFlag = true;
-                sleep(100);
-            }
-        }); 
-
-
-        } 
-         
         console.log("Add_and_update_sentence");
         console.log(ip);
         console.log(p1);
@@ -622,14 +492,36 @@
             dataType: 'text',
             crossDomain: true,
             success: function (data) {
-            console.log("success handler");			
+            console.log("success handler");
+
+
+        if  ( flagArray.data[flagIndex_init_2].recursionFlag === true) {
+              flagArray.data[flagIndex_init_2].recursionFlag = false;
+
+        $.ajax({
+            url: 'http://' + ip + port + '/?extension=education' + '&name=Add_and_update_sentence' + '&p1=' + 'test' + '&p2=' + 'zenbo',
+            dataType: 'text',
+            crossDomain: true,
+            success: function (data) {
+
+             console.log("success handler");
+             getSentencesRecursion(flagIndex_init_2);
+
+            },
+            error: function (jqXHR, textStatus, errorThrown) {
+                console.log("error handler");
+                flagArray.data[flagIndex_init_2].recursionFlag = true;
+            }
+        });
+
+
+        }
+			
             },
             error: function (jqXHR, textStatus, errorThrown) {
                 console.log("error handler");
             }
         });
-
-        sleep(100);
 
     };    
 
@@ -650,8 +542,6 @@
             }
         });
 
-        sleep(100);
-
     };
 
     ext.Speak_and_listen = function (){
@@ -669,8 +559,6 @@
                 console.log("error handler");
             }
         });
-
-        sleep(100);
 
     };
 
@@ -692,8 +580,6 @@
             }
         });
 
-        sleep(100); 
-
     };
 
     ext.Adjust_tts_and_speed = function (p1, p2, callback) {
@@ -713,8 +599,6 @@
                 console.log("error handler");
             }
         });
-
-        sleep(100);
 
     };
 
@@ -736,61 +620,58 @@
             }
         }); 
  
-        sleep(100);
-
     };
 
     ext.when_listen_and_run = function(p1) {
        
-    var checkFlag = false;
-    var valueIndex = 0;
+        var checkFlag = false;
+        var valueIndex = 0;
 
-    for(var i = 0; i < flagArray.data.length; i++){
+        for(var i = 0; i < flagArray.data.length; i++){
 
              if ( ip == flagArray.data[i].device) {
                   checkFlag = true;
                   valueIndex = i;
              }
-    }
+        }
 
-    if ( checkFlag === false )
-    return false;
+	if ( checkFlag === false )
+	return false;
 
-    switch(p1) {
+	switch(p1) {
 
-    case '語句一':
+	case '語句一':
         
-       if (flagArray.data[valueIndex].sentence_1_flag === true) {
+ 	if (flagArray.data[valueIndex].sentence_1_flag === true) {
            flagArray.data[valueIndex].sentence_1_flag = false;
 		   console.log('true 語句一'); 
            return true;
-       }
+        }
 
         break;
 
-    case '語句二':
+        case '語句二':
         
-       if (flagArray.data[valueIndex].sentence_2_flag === true) {
-           flagArray.data[valueIndex].sentence_2_flag = false;
+        if (flagArray.data[valueIndex].sentence_2_flag === true) {
+            flagArray.data[valueIndex].sentence_2_flag = false;
 		   console.log('true 語句二'); 
            return true;
-       }
+        }
 
 
         break;
 
-    case '語句三':
+        case '語句三':
          
-       if (flagArray.data[valueIndex].sentence_3_flag === true) {
-           flagArray.data[valueIndex].sentence_3_flag = false;
+        if (flagArray.data[valueIndex].sentence_3_flag === true) {
+            flagArray.data[valueIndex].sentence_3_flag = false;
 		   console.log('true 語句三'); 
            return true;
-       }
-
+        }
 
         break;
 
-    case '語句四':
+       case '語句四':
         
        if (flagArray.data[valueIndex].sentence_4_flag === true) {
            flagArray.data[valueIndex].sentence_4_flag = false;
@@ -798,9 +679,9 @@
            return true;
        }
 
-        break;
+       break;
 
-    case '語句五':
+       case '語句五':
                
        if (flagArray.data[valueIndex].sentence_5_flag === true) {
            flagArray.data[valueIndex].sentence_5_flag = false;
@@ -810,7 +691,8 @@
 
        break;
        
-   }
+       }
+
      return false;
     };
 
@@ -883,8 +765,6 @@
             }
         });
 
-        sleep(100);
-
     };
 
     ext.displayUrlPictures = function (p1, p2) {
@@ -904,8 +784,6 @@
                 console.log("error handler");
             }
         });
-
-        sleep(100);
 
     };
 	
@@ -927,8 +805,6 @@
             }
         });
 
-        sleep(100);
-
     };
 
     ext.hideFace = function () {
@@ -946,8 +822,6 @@
                 console.log("error handler");
             }
         });
-
-        sleep(100);
 
     };
 
@@ -969,8 +843,6 @@
             }
         });
 
-        sleep(100);
-
     };
 
     ext.openDriveVideoUrl = function (p1, p2) {
@@ -990,8 +862,6 @@
                 console.log("error handler");
             }
         });
-
-        sleep(100);
 
     };
 
@@ -1013,8 +883,6 @@
             }
         });
 
-        sleep(100);
-
     };
 
     ext.openDrivePictureUrl = function (p1, p2) {
@@ -1034,8 +902,6 @@
                 console.log("error handler");
             }
         });
-
-        sleep(100);
 
     };
 
@@ -1057,14 +923,12 @@
             }
         });
 
-        sleep(100);
- 
     };
 
 
-ext.Add_and_update_sentence_number = function () {
+   ext.Add_and_update_sentence_number = function () {
        
-       var setupFlag_init_3 = true;
+         var setupFlag_init_3 = true;
          var flagIndex_init_3 = 0;
 
          for(var f = 0; f < flagArray.data.length; f++) {
@@ -1098,14 +962,12 @@ ext.Add_and_update_sentence_number = function () {
             success: function (data) {
            
              console.log("success handler");
-             sleep(100);
              getSentencesRecursion(flagIndex_init_3);
  
             },
             error: function (jqXHR, textStatus, errorThrown) {
                 console.log("error handler");
                 flagArray.data[flagIndex_init_3].recursionFlag = true;
-                sleep(100); 
             }
         }); 
 
@@ -1115,7 +977,7 @@ ext.Add_and_update_sentence_number = function () {
 
     }; 
 
- ext.when_touch_head_and_run = function() {
+   ext.when_touch_head_and_run = function() {
        
     var valueIndex_touch_head = -1;
 
