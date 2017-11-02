@@ -312,17 +312,17 @@
 
     ext.Stop_moving = function (callback){
 
-	    console.log("Stop_moving");
-		console.log("Remote_control_body-Stop");
-		console.log(ip);
-		$.ajax({
-			url: 'http://' + ip + port + '/?extension=education' + '&name=Remote_control_body' + '&p1=' + '停止',
-			dataType: 'text',
- 			crossDomain: true,
- 			success: function (data) {
-			console.log("success handler");
+	console.log("Stop_moving");
+	console.log("Remote_control_body-Stop");
+	console.log(ip);
+	$.ajax({
+	    url: 'http://' + ip + port + '/?extension=education' + '&name=Remote_control_body' + '&p1=' + '停止',
+	    dataType: 'text',
+ 	    crossDomain: true,
+ 	    success: function (data) {
+	    console.log("success handler");
 
-			console.log(ip);
+	    console.log(ip);
             $.ajax({
                 url: 'http://' + ip + port + '/?extension=education' + '&name=Stop_moving',
                 dataType: 'text',
@@ -336,11 +336,11 @@
                 }
             });
 				
-			},
- 			error: function (jqXHR, textStatus, errorThrown) {
-			console.log("error handler");
- 			}
-		});	
+	    },
+ 	    error: function (jqXHR, textStatus, errorThrown) {
+	    console.log("error handler");
+ 	    }
+	});	
 	
     };
 
