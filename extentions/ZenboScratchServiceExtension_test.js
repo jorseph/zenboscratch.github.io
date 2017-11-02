@@ -33,7 +33,10 @@
   	        error: function (jqXHR, textStatus, errorThrown) {
 	        console.log("error handler");
                 }
-   	    });			
+   	    });
+
+            sleep(100);
+			
         }
  
     };
@@ -280,39 +283,34 @@
     };
 
     ext.Stop_moving = function (ip,callback){
-
         console.log("Stop_moving");
+	console.log("Remote_control_body-Stop");
         console.log(ip);
-        $.ajax({
-            url: 'http://' + ip + port + '/?extension=advance' + '&name=Stop_moving',
+       	$.ajax({
+            url: 'http://' + ip + port + '/?extension=advance' + '&name=Remote_control_body' + '&p1=' + '停止',
             dataType: 'text',
             crossDomain: true,
             success: function (data) {
-                console.log("success handler");
-				
-	        console.log("Remote_control_body-Stop");
-       		 console.log(ip);
-       		 $.ajax({
-            		url: 'http://' + ip + port + '/?extension=education' + '&name=Remote_control_body' + '&p1=' + '停止',
-            		dataType: 'text',
-            		crossDomain: true,
-            		success: function (data) {
-               		 console.log("success handler");
-
-            		},
-           		 error: function (jqXHR, textStatus, errorThrown) {
-                	console.log("error handler");
-            		}
-        	});   			
-
-            },
-            error: function (jqXHR, textStatus, errorThrown) {
+            console.log("success handler");
+					
+            console.log(ip);
+            $.ajax({
+                url: 'http://' + ip + port + '/?extension=advance' + '&name=Stop_moving',
+                dataType: 'text',
+                crossDomain: true,
+                success: function (data) {
+                console.log("success handler");					        		
+                },
+                error: function (jqXHR, textStatus, errorThrown) {
                 console.log("error handler");
+                }
+            });
+					
+	    },
+            error: function (jqXHR, textStatus, errorThrown) {
+            console.log("error handler");
             }
-        });
-
-        
-       
+        });   		 
     };
 
     ext.Action = function (ip, p1,callback){
