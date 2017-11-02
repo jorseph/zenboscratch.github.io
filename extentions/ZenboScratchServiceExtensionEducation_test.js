@@ -312,36 +312,36 @@
 
     ext.Stop_moving = function (callback){
 
-        console.log("Stop_moving");
-        console.log(ip);
-        $.ajax({
-            url: 'http://' + ip + port + '/?extension=education' + '&name=Stop_moving',
-            dataType: 'text',
-            crossDomain: true,
-            success: function (data) {
+	    console.log("Stop_moving");
+		console.log("Remote_control_body-Stop");
+		console.log(ip);
+		$.ajax({
+			url: 'http://' + ip + port + '/?extension=education' + '&name=Remote_control_body' + '&p1=' + '停止',
+			dataType: 'text',
+ 			crossDomain: true,
+ 			success: function (data) {
+			console.log("success handler");
+
+			console.log(ip);
+            $.ajax({
+                url: 'http://' + ip + port + '/?extension=education' + '&name=Stop_moving',
+                dataType: 'text',
+                crossDomain: true,
+                success: function (data) {
                 console.log("success handler");
 			
-			console.log("Remote_control_body-Stop");
-			console.log(ip);
-				$.ajax({
-				url: 'http://' + ip + port + '/?extension=education' + '&name=Remote_control_body' + '&p1=' + '停止',
-				dataType: 'text',
- 				crossDomain: true,
- 				success: function (data) {
-				console.log("success handler");
-
-				},
- 				error: function (jqXHR, textStatus, errorThrown) {
-				console.log("error handler");
- 				}
-			});
-
-            },
-            error: function (jqXHR, textStatus, errorThrown) {
+                },
+                error: function (jqXHR, textStatus, errorThrown) {
                 console.log("error handler");
-            }
-        });
-
+                }
+            });
+				
+			},
+ 			error: function (jqXHR, textStatus, errorThrown) {
+			console.log("error handler");
+ 			}
+		});	
+	
     };
 
     ext.Action = function (callback){
@@ -459,10 +459,10 @@
 
     ext.Add_and_update_sentence = function (p1, p2) {
         
-       var setupFlag_init_2 = true;
-         var flagIndex_init_2 = 0;
+        var setupFlag_init_2 = true;
+        var flagIndex_init_2 = 0;
 
-         for(var h = 0; h < flagArray.data.length; h++) {
+        for(var h = 0; h < flagArray.data.length; h++) {
 
               console.log("flagArray.data[h].device: "+  flagArray.data[h].device ); 
              if ( ip == flagArray.data[h].device) {
@@ -470,9 +470,9 @@
                flagIndex_init_2 = h;
                console.log("false" + "flagIndex_init_2: "+ flagIndex_init_2);
              }
-         }         
+        }         
 
-         if ( setupFlag_init_2 == true) {
+        if ( setupFlag_init_2 == true) {
               
                flagArray.data.push( { device: ip, correctedSentence: "", sentence_1_flag: false, sentence_2_flag: false, sentence_3_flag: false, 
                sentence_4_flag: false, sentence_5_flag: false, number_flag: false, touch_head_flag: false, get_sentences_flag: true, recursionFlag: true } );
@@ -480,9 +480,8 @@
                flagIndex_init_2 = flagArray.data.length -1 ;
                console.log("true " + "flagIndex_init_2: "+ flagIndex_init_2);
 
-         }
-   
-		
+        }
+   	
         console.log("Add_and_update_sentence");
         console.log(ip);
         console.log(p1);
