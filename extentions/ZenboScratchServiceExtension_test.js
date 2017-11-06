@@ -135,6 +135,14 @@
                                 
 				switch(data.split(",")[0]) {
 
+    		                        case 'touchHead':
+
+                                        console.log('摸到頭了');
+                                        console.log( ip + " "  + flagIndex + " " + "touch_head_flag true");
+                                        flagArray.data[flagIndex].touch_head_flag = true;
+
+                                        break; 
+
                                         case 'number':
                                  
                                         console.log('辨識到number');
@@ -916,6 +924,32 @@ ext.Add_and_update_sentence_number = function (ip) {
 
    };    
 
+   ext.when_touch_head_and_run = function() {
+       
+       var valueIndex_touch_head = -1;
+
+       for(var j = 0; j < flagArray.data.length; j++){
+
+             if ( ip == flagArray.data[j].device) {          
+                  valueIndex_touch_head = j;
+             }
+       }
+
+       if ( valueIndex_touch_head === -1 ) {
+	
+              console.log('valueIndex_touch_head === -1');  	
+	      return false;
+       }
+         
+       if (flagArray.data[valueIndex_touch_head].touch_head_flag === true) {
+		   console.log('true touch head'); 
+                   flagArray.data[valueIndex_touch_head].touch_head_flag = false;             
+               return true;
+       }
+
+       return false;
+   };
+
     var descriptor = {
         blocks: [
             ['w', '設定Zenbo IP: %s', 'Setting_targetIP', "192.168.0.1"],
@@ -945,6 +979,7 @@ ext.Add_and_update_sentence_number = function (ip) {
             ['', 'IP %s %m.openDriveAudioUrlItems 播放 Google Drive 音樂: %s', 'openDriveAudioUrl', "192.168.0.1", '開始', 'https://drive.google.com/open?id=0B5o6VwYT7NaibHJ0LWtHN0JtVFU'], 
             ['', 'IP %s %m.openDrivePictureUrlItems 瀏覽 Google Drive 圖片: %s', 'openDrivePictureUrl', "192.168.0.1", '開始', 'https://drive.google.com/open?id=0B5o6VwYT7NaiSVJ0S3JKeEZwODA'],
             ['', 'IP %s %m.openDriveDocumentUrlItems 瀏覽 Google Drive 文件: %s', 'openDriveDocumentUrl', "192.168.0.1", '開始', 'https://drive.google.com/open?id=0B5o6VwYT7NaiN1h3SXZHTjRsc2s'],
+            ['h', '當摸到 Zenbo 的頭', 'when_touch_head_and_run'],  
         ],
         menus: {
             "head_direction": ["左", "右", "上", "下"],
