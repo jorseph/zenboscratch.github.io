@@ -6,6 +6,26 @@
 	
     port = ":8080";
 
+    var getValueIndex  = function(ip) {
+
+        var returnValueIndex = -1;
+
+        for(var r = 0; r < flagArray.data.length; r++){
+
+             if ( ip == flagArray.data[r].device) {
+                  returnValueIndex = r;
+             }
+        }
+
+        if ( returnValueIndex === -1 ) {
+               console.log('returnValueIndex  === -1');
+        }      
+
+       
+        return returnValueIndex;
+
+    };
+
     function sleep(milliseconds) 
     { 
        var start = new Date().getTime(); 
@@ -924,25 +944,18 @@ ext.Add_and_update_sentence_number = function (ip) {
 
    };    
 
-   ext.when_touch_head_and_run = function() {
+   ext.when_touch_head_and_run = function(ip) {
        
-       var valueIndex_touch_head = -1;
-
-       for(var j = 0; j < flagArray.data.length; j++){
-
-             if ( ip == flagArray.data[j].device) {          
-                  valueIndex_touch_head = j;
-             }
-       }
+       var valueIndex_touch_head =  getValueIndex(ip);
 
        if ( valueIndex_touch_head === -1 ) {
 	
-              console.log('valueIndex_touch_head === -1');  	
+              console.log('return false, valueIndex_touch_head === -1');  	
 	      return false;
        }
          
        if (flagArray.data[valueIndex_touch_head].touch_head_flag === true) {
-		   console.log('true touch head'); 
+		   console.log('return true, touch head'); 
                    flagArray.data[valueIndex_touch_head].touch_head_flag = false;             
                return true;
        }
@@ -979,7 +992,7 @@ ext.Add_and_update_sentence_number = function (ip) {
             ['', 'IP %s %m.openDriveAudioUrlItems 播放 Google Drive 音樂: %s', 'openDriveAudioUrl', "192.168.0.1", '開始', 'https://drive.google.com/open?id=0B5o6VwYT7NaibHJ0LWtHN0JtVFU'], 
             ['', 'IP %s %m.openDrivePictureUrlItems 瀏覽 Google Drive 圖片: %s', 'openDrivePictureUrl', "192.168.0.1", '開始', 'https://drive.google.com/open?id=0B5o6VwYT7NaiSVJ0S3JKeEZwODA'],
             ['', 'IP %s %m.openDriveDocumentUrlItems 瀏覽 Google Drive 文件: %s', 'openDriveDocumentUrl', "192.168.0.1", '開始', 'https://drive.google.com/open?id=0B5o6VwYT7NaiN1h3SXZHTjRsc2s'],
-            ['h', '當摸到 Zenbo 的頭', 'when_touch_head_and_run'],  
+            ['h', '當摸到 IP %s 的頭', 'when_touch_head_and_run', "192.168.0.1"],  
         ],
         menus: {
             "head_direction": ["左", "右", "上", "下"],
