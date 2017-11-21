@@ -243,10 +243,11 @@
                 callback();
 
                 if (data == 'Must set Zenbo IP')
-                alert(data);  
+                alert('請先設置 Zenbo IP');  
             },
             error: function (jqXHR, textStatus, errorThrown) {
                 console.log("error handler");
+                alert('請先設置 Zenbo IP');  
             }
         });
 
