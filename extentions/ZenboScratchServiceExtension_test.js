@@ -245,10 +245,13 @@
             crossDomain: true,
             success: function (data) {
                 console.log("success handler");
-
+          
+                if (data == 'Must set Zenbo IP')
+                alert('請先設置 Zenbo IP'); 
             },
             error: function (jqXHR, textStatus, errorThrown) {
                 console.log("error handler");
+                alert('請先設置 Zenbo IP');
             }
         });
     };
@@ -265,10 +268,12 @@
             crossDomain: true,
             success: function (data) {
                 console.log("success handler");
-
+                if (data == 'Must set Zenbo IP')
+                alert('請先設置 Zenbo IP'); 
             },
             error: function (jqXHR, textStatus, errorThrown) {
                 console.log("error handler");
+                alert('請先設置 Zenbo IP');
             }
         });
     };
@@ -284,10 +289,12 @@
             crossDomain: true,
             success: function (data) {
                 console.log("success handler");
-
+                if (data == 'Must set Zenbo IP')
+                alert('請先設置 Zenbo IP'); 
             },
             error: function (jqXHR, textStatus, errorThrown) {
                 console.log("error handler");
+                alert('請先設置 Zenbo IP');
             }
         });
     };
@@ -302,10 +309,12 @@
             crossDomain: true,
             success: function (data) {
                 console.log("success handler");
-
+                if (data == 'Must set Zenbo IP')
+                alert('請先設置 Zenbo IP'); 
             },
             error: function (jqXHR, textStatus, errorThrown) {
                 console.log("error handler");
+                alert('請先設置 Zenbo IP');
             }
         });
     };
@@ -320,7 +329,10 @@
             crossDomain: true,
             success: function (data) {
             console.log("success handler");
-					
+
+	    if (data == 'Must set Zenbo IP')
+            alert('請先設置 Zenbo IP'); 
+				
             console.log(ip);
             $.ajax({
                 url: 'http://' + ip + port + '/?extension=advance' + '&name=Stop_moving',
@@ -337,6 +349,7 @@
 	    },
             error: function (jqXHR, textStatus, errorThrown) {
             console.log("error handler");
+            alert('請先設置 Zenbo IP');
             }
         });   		 
     };
@@ -351,10 +364,12 @@
             crossDomain: true,
             success: function (data) {
                 console.log("success handler");
-
+                if (data == 'Must set Zenbo IP')
+                alert('請先設置 Zenbo IP'); 
             },
             error: function (jqXHR, textStatus, errorThrown) {
                 console.log("error handler");
+                alert('請先設置 Zenbo IP');
             }
         });
     };
@@ -369,10 +384,12 @@
             crossDomain: true,
             success: function (data) {
                 console.log("success handler");
-
+                if (data == 'Must set Zenbo IP')
+                alert('請先設置 Zenbo IP'); 
             },
             error: function (jqXHR, textStatus, errorThrown) {
                 console.log("error handler");
+                alert('請先設置 Zenbo IP');
             }
         });
     };
@@ -387,10 +404,12 @@
             crossDomain: true,
             success: function (data) {
                 console.log("success handler");
-
+                if (data == 'Must set Zenbo IP')
+                alert('請先設置 Zenbo IP'); 
             },
             error: function (jqXHR, textStatus, errorThrown) {
                 console.log("error handler");
+                alert('請先設置 Zenbo IP');
             }
         });
     };
@@ -405,10 +424,12 @@
             crossDomain: true,
             success: function (data) {
                 console.log("success handler");
-
+                if (data == 'Must set Zenbo IP')
+                alert('請先設置 Zenbo IP'); 
             },
             error: function (jqXHR, textStatus, errorThrown) {
                 console.log("error handler");
+                alert('請先設置 Zenbo IP');
             }
         });
     };
@@ -422,10 +443,12 @@
             crossDomain: true,
             success: function (data) {
                 console.log("success handler");
-
+                if (data == 'Must set Zenbo IP')
+                alert('請先設置 Zenbo IP'); 
             },
             error: function (jqXHR, textStatus, errorThrown) {
                 console.log("error handler");
+                alert('請先設置 Zenbo IP');
             }
         });
     };
@@ -441,10 +464,12 @@
             crossDomain: true,
             success: function (data) {
                 console.log("success handler");
-
+                if (data == 'Must set Zenbo IP')
+                alert('請先設置 Zenbo IP'); 
             },
             error: function (jqXHR, textStatus, errorThrown) {
                 console.log("error handler");
+                alert('請先設置 Zenbo IP');
             }
         });
     };
@@ -485,6 +510,9 @@
             success: function (data) {
             console.log("success handler");
 
+            if (data == 'Must set Zenbo IP')
+            alert('請先設置 Zenbo IP'); 
+
                if  ( flagArray.data[flagIndex_init_2].recursionFlag === true) {
                      flagArray.data[flagIndex_init_2].recursionFlag = false;
 
@@ -509,6 +537,7 @@
             },
             error: function (jqXHR, textStatus, errorThrown) {
                 console.log("error handler");
+                alert('請先設置 Zenbo IP');
             }
         });
     };    
@@ -523,10 +552,12 @@
             crossDomain: true,
             success: function (data) {
                 console.log("success handler");
-
+                if (data == 'Must set Zenbo IP')
+                alert('請先設置 Zenbo IP'); 
             },
             error: function (jqXHR, textStatus, errorThrown) {
                 console.log("error handler");
+                alert('請先設置 Zenbo IP');
             }
         });
     };
@@ -540,10 +571,12 @@
             crossDomain: true,
             success: function (data) {
             console.log("Speak_and_listen-success handler");	 
-				               				   
+	    if (data == 'Must set Zenbo IP')
+            alert('請先設置 Zenbo IP'); 			               				   
             },
             error: function (jqXHR, textStatus, errorThrown) {
                 console.log("error handler");
+                alert('請先設置 Zenbo IP');
             }
         });
     };
@@ -559,10 +592,12 @@
             crossDomain: true,
             success: function (data) {
                 console.log("success handler");
-
+                if (data == 'Must set Zenbo IP')
+                alert('請先設置 Zenbo IP'); 
             },
             error: function (jqXHR, textStatus, errorThrown) {
                 console.log("error handler");
+                alert('請先設置 Zenbo IP');
             }
         });
     };
@@ -578,10 +613,12 @@
             crossDomain: true,
             success: function (data) {
                 console.log("success handler");
-
+                if (data == 'Must set Zenbo IP')
+                alert('請先設置 Zenbo IP'); 
             },
             error: function (jqXHR, textStatus, errorThrown) {
                 console.log("error handler");
+                alert('請先設置 Zenbo IP');
             }
         });
     };
@@ -737,10 +774,12 @@
             crossDomain: true,
             success: function (data) {
                 console.log("success handler");
-
+                if (data == 'Must set Zenbo IP')
+                alert('請先設置 Zenbo IP'); 
             },
             error: function (jqXHR, textStatus, errorThrown) {
                 console.log("error handler");
+                alert('請先設置 Zenbo IP');
             }
         });
     };
@@ -756,10 +795,12 @@
             crossDomain: true,
             success: function (data) {
                 console.log("success handler");
-
+                if (data == 'Must set Zenbo IP')
+                alert('請先設置 Zenbo IP'); 
             },
             error: function (jqXHR, textStatus, errorThrown) {
                 console.log("error handler");
+                alert('請先設置 Zenbo IP');
             }
         });
     };
@@ -775,10 +816,12 @@
             crossDomain: true,
             success: function (data) {
                 console.log("success handler");
-
+                if (data == 'Must set Zenbo IP')
+                alert('請先設置 Zenbo IP'); 
             },
             error: function (jqXHR, textStatus, errorThrown) {
                 console.log("error handler");
+                alert('請先設置 Zenbo IP');
             }
         });
     };
@@ -792,10 +835,12 @@
             crossDomain: true,
             success: function (data) {
                 console.log("success handler");
-
+                if (data == 'Must set Zenbo IP')
+                alert('請先設置 Zenbo IP'); 
             },
             error: function (jqXHR, textStatus, errorThrown) {
                 console.log("error handler");
+                alert('請先設置 Zenbo IP');
             }
         });
     };
@@ -811,10 +856,12 @@
             crossDomain: true,
             success: function (data) {
                 console.log("success handler");
-
+                if (data == 'Must set Zenbo IP')
+                alert('請先設置 Zenbo IP');  
             },
             error: function (jqXHR, textStatus, errorThrown) {
                 console.log("error handler");
+                alert('請先設置 Zenbo IP');
             }
         });
     };
@@ -830,10 +877,12 @@
             crossDomain: true,
             success: function (data) {
                 console.log("success handler");
-
+                if (data == 'Must set Zenbo IP')
+                alert('請先設置 Zenbo IP'); 
             },
             error: function (jqXHR, textStatus, errorThrown) {
                 console.log("error handler");
+                alert('請先設置 Zenbo IP');
             }
         });
     };
@@ -849,10 +898,12 @@
             crossDomain: true,
             success: function (data) {
                 console.log("success handler");
-
+                if (data == 'Must set Zenbo IP')
+                alert('請先設置 Zenbo IP'); 
             },
             error: function (jqXHR, textStatus, errorThrown) {
                 console.log("error handler");
+                alert('請先設置 Zenbo IP');
             }
         });
     };
@@ -868,10 +919,12 @@
             crossDomain: true,
             success: function (data) {
                 console.log("success handler");
-
+                if (data == 'Must set Zenbo IP')
+                alert('請先設置 Zenbo IP'); 
             },
             error: function (jqXHR, textStatus, errorThrown) {
                 console.log("error handler");
+                alert('請先設置 Zenbo IP');
             }
         });
     };
@@ -887,10 +940,12 @@
             crossDomain: true,
             success: function (data) {
                 console.log("success handler");
-            
+                if (data == 'Must set Zenbo IP')
+                alert('請先設置 Zenbo IP'); 
             },
             error: function (jqXHR, textStatus, errorThrown) {
                 console.log("error handler");
+                alert('請先設置 Zenbo IP');
             }
         });
     };
