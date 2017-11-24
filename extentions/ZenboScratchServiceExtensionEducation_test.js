@@ -45,13 +45,9 @@
             crossDomain: true,
             success: function (data) {
                 console.log("success handler");
-
-                if (data == 'Must set Zenbo IP')
-                alert('請先設置 Zenbo IP');
             },
             error: function (jqXHR, textStatus, errorThrown) {
                 console.log("error handler");
-                alert('請先設置 Zenbo IP');
             }
         });
 
