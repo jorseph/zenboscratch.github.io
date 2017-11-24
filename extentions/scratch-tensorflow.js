@@ -31,12 +31,11 @@
         console.log(p1);
         $.ajax({
             url: 'http://' + diango_ip + port + '/opencv_to_gray/?' + 'p1=' + p1,
-            dataType: 'image/png',
+            dataType: 'text',
             crossDomain: true,
-            async: true,
             success: function (data) {
                 console.log("success handler");
-                $('.div_imagetranscrits').html('<img src="data:image/png;base64,' + data + '">');
+                console.log(data);
 
             },
             error: function (jqXHR, textStatus, errorThrown) {
