@@ -30,7 +30,7 @@
         console.log(diango_ip);
         console.log(p1);
         $.ajax({
-            url: 'http://' + diango_ip + port + '/?name=opencv_to_gray' + '&p1=' + p1,
+            url: 'http://' + diango_ip + port + '/opencv_to_gray/?' + 'p1=' + p1,
             dataType: 'image/png',
             crossDomain: true,
             async: true,
