@@ -94,7 +94,7 @@
 	
     var descriptor = {
         blocks: [
-            ['r', translate.Setting_targetIP, 'Setting_targetIP', "10.193.114.59"],
+            ['', translate.Setting_targetIP, 'Setting_targetIP', "10.193.114.59"],
             ['', translate.opencv_to_gray, 'opencv_to_gray', "https://3spxpi1radr22mzge33bla91-wpengine.netdna-ssl.com/wp-content/uploads/2017/04/iStock-180073266.jpg"],
            
         ],
