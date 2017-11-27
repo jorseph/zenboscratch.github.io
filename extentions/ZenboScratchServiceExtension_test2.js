@@ -982,7 +982,7 @@ ext.Add_and_update_sentence_number = function (ip) {
         });  
     }; 
 
-    ext.recordAudio = function (ip, p1, p2) {
+    ext.recordVideo = function (ip, p1, p2) {
         console.log("recordVideo");
         console.log(ip);
         console.log(p1);
