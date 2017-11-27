@@ -982,6 +982,25 @@ ext.Add_and_update_sentence_number = function (ip) {
         });  
     }; 
 
+    ext.recordAudio = function (ip, p1, p2) {
+        console.log("recordVideo");
+        console.log(ip);
+        console.log(p1);
+        console.log(p2);
+        $.ajax({
+            url: 'http://' + ip + port + '/?extension=advance' + '&name=recordVideo' + '&p1=' + p1 + '&p2=' + p2,
+            dataType: 'text',
+            crossDomain: true,
+            success: function (data) {
+                console.log("success handler");
+
+            },
+            error: function (jqXHR, textStatus, errorThrown) {
+                console.log("error handler");
+            }
+        });
+    };
+
     var descriptor = {
         blocks: [
             ['w', '設定Zenbo IP: %s', 'Setting_targetIP', "192.168.0.1"],
@@ -1012,7 +1031,8 @@ ext.Add_and_update_sentence_number = function (ip) {
             ['', 'IP %s %m.openDrivePictureUrlItems 瀏覽 Google Drive 圖片: %s', 'openDrivePictureUrl', "192.168.0.1", '開始', 'https://drive.google.com/open?id=0B5o6VwYT7NaiSVJ0S3JKeEZwODA'],
             ['', 'IP %s %m.openDriveDocumentUrlItems 瀏覽 Google Drive 文件: %s', 'openDriveDocumentUrl', "192.168.0.1", '開始', 'https://drive.google.com/open?id=0B5o6VwYT7NaiN1h3SXZHTjRsc2s'],
             ['h', '當摸到 IP %s 的頭', 'when_touch_head_and_run', "192.168.0.1"],
-            ['', 'IP %s %m.recordAudioItems 錄音, 檔名: %s', 'recordAudio', "192.168.0.1", '開始', 'test'],  
+            ['', 'IP %s %m.recordAudioItems 錄音, 檔名: %s', 'recordAudio', "192.168.0.1", '開始', 'testAudio'],
+            ['', 'IP %s %m.recordVideoItems 錄影, 檔名: %s', 'recordVideo', "192.168.0.1", '開始', 'testVideo'],  
         ],
         menus: {
             "head_direction": ["左", "右", "上", "下"],
@@ -1043,6 +1063,7 @@ ext.Add_and_update_sentence_number = function (ip) {
             "openDrivePictureUrlItems": ["開始", "關閉"],
             "openDriveDocumentUrlItems": ["開始", "關閉"],
             "recordAudioItems": ["開始", "關閉"], 
+            "recordVideoItems": ["開始", "關閉"],
         },
         url: 'https://zenboscratchservice.github.io/' // Link to extension documentation, homepage, etc.
     };
