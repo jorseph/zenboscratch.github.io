@@ -242,20 +242,20 @@
 function ConfirmDialog(message){
 
     $('<div></div>').appendTo('body')
-                    .html('<div><h6>'+message+'?</h6></div>')
+                    .html('<div><p><span class="\"ui-icon" ui-icon-alert\"="" style="\"float:left;" margin:12px="" 12px="" 20px="" 0;\"=""></span>' + message + '</p></div>')
                     .dialog({
                         modal: true, 
-                        title: 'Delete message',
+                        title: '警告視窗',
                         width: 400, 
                         height: 200,
                         resizable: false,
                         buttons: {
-                            Yes: function () { 
+                           取消警告視窗: function () { 
                                                              
                                                              
                                 $(this).dialog("close");
                             },   
-                            No: function () {     
+                            OK: function () {     
      
      
                                 $(this).dialog("close");
@@ -280,7 +280,7 @@ function ConfirmDialog(message){
                 console.log("success handler");
                 callback();
 
-                ConfirmDialog('Are you sure');
+                ConfirmDialog('請先設置 Zenbo IP');
 
                 if (data == 'Must set Zenbo IP')
                 alert('請先設置 Zenbo IP');  
