@@ -240,7 +240,7 @@
 
 
 function ConfirmDialog(message){
-
+/*
     $('<div></div>').appendTo('body')
                     .html('<div><p><span class="\"ui-icon" ui-icon-alert\"="" style="\"float:left;" margin:12px="" 12px="" 20px="" 0;\"=""></span>' + message + '</p></div>')
                     .dialog({
@@ -264,8 +264,16 @@ function ConfirmDialog(message){
                         close: function (event, ui) {
                             $(this).remove();
                         }    
+                    });
+*/
+ 
+  
+       $('<div></div>').appendTo('body')
+                    .html('<p>'+ message + '</p>')
+                    .dialog({ 
+                        title: '警告視窗',
                     });  
-    };   
+        };   
 	
     ext.Head_movement = function (p1, p2, callback) {
         console.log("Head_movement");
