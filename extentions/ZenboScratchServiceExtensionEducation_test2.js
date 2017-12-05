@@ -242,6 +242,22 @@
                 console.log("success handler");
                 callback();
 
+                var x = "Are you sure you want to take this action";
+
+ $('<div>' + x + '</div>').dialog({
+        resizable: false,
+        buttons: {
+            "Yes": function() {
+                alert('action taken') // do something here
+                $(this).dialog("close");
+            },
+            Cancel: function() {
+                $(this).dialog("close"); //close confirmation
+            }
+        }
+    });
+ 
+
                 if (data == 'Must set Zenbo IP')
                 alert('請先設置 Zenbo IP');  
             },
