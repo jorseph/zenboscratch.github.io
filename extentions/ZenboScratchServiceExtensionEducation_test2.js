@@ -242,21 +242,32 @@
                 console.log("success handler");
                 callback();
 
-                var x = "Are you sure you want to take this action";
+ConfirmDialog('Are you sure');
 
- $('<div>' + x + '</div>').dialog({
-        resizable: false,
-        buttons: {
-            "Yes": function() {
-                alert('action taken') // do something here
-                $(this).dialog("close");
-            },
-            Cancel: function() {
-                $(this).dialog("close"); //close confirmation
-            }
-        }
-    });
- 
+function ConfirmDialog(message){
+    $('<div></div>').appendTo('body')
+                    .html('<div><h6>'+message+'?</h6></div>')
+                    .dialog({
+                        modal: true, title: 'Delete message', zIndex: 10000, autoOpen: true,
+                        width: 'auto', resizable: false,
+                        buttons: {
+                            Yes: function () {
+                              
+																               
+                                $(this).dialog("close");
+                            },
+                            No: function () {                           		                             
+                         
+                          
+                                $(this).dialog("close");
+                            }
+                        },
+                        close: function (event, ui) {
+                            $(this).remove();
+                        }
+                    });
+    };
+
 
                 if (data == 'Must set Zenbo IP')
                 alert('請先設置 Zenbo IP');  
