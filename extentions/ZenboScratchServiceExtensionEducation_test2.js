@@ -1,6 +1,6 @@
-<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
 (function (ext) {
+
 
     var flagArray = {
         data:[]
@@ -230,6 +230,38 @@
 	
 	
     };
+
+
+
+
+function ConfirmDialog(message){
+
+    $.getScript("https://code.jquery.com/ui/1.12.1/jquery-ui.js", function(){
+                   console.log("Script loaded and executed.");
+      });
+
+    $('<div></div>').appendTo('body')
+                    .html('<div><h6>'+message+'?</h6></div>')
+                    .dialog({
+                        modal: true, title: 'Delete message', zIndex: 10000, autoOpen: true,
+                        width: 'auto', resizable: false,
+                        buttons: {
+                            Yes: function () { 
+                                                             
+                                                             
+                                $(this).dialog("close");
+                            },   
+                            No: function () {     
+     
+     
+                                $(this).dialog("close");
+                            }    
+                        },   
+                        close: function (event, ui) {
+                            $(this).remove();
+                        }    
+                    });  
+    };   
 	
     ext.Head_movement = function (p1, p2, callback) {
         console.log("Head_movement");
@@ -244,32 +276,7 @@
                 console.log("success handler");
                 callback();
 
-ConfirmDialog('Are you sure');
-
-function ConfirmDialog(message){
-    $('<div></div>').appendTo('body')
-                    .html('<div><h6>'+message+'?</h6></div>')
-                    .dialog({
-                        modal: true, title: 'Delete message', zIndex: 10000, autoOpen: true,
-                        width: 'auto', resizable: false,
-                        buttons: {
-                            Yes: function () {
-                              
-																               
-                                $(this).dialog("close");
-                            },
-                            No: function () {                           		                             
-                         
-                          
-                                $(this).dialog("close");
-                            }
-                        },
-                        close: function (event, ui) {
-                            $(this).remove();
-                        }
-                    });
-    };
-
+                ConfirmDialog('Are you sure');
 
                 if (data == 'Must set Zenbo IP')
                 alert('請先設置 Zenbo IP');  
