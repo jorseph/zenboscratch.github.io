@@ -244,8 +244,11 @@ function ConfirmDialog(message){
     $('<div></div>').appendTo('body')
                     .html('<div><h6>'+message+'?</h6></div>')
                     .dialog({
-                        modal: true, title: 'Delete message', zIndex: 10000, autoOpen: true,
-                        width: 'auto', resizable: false,
+                        modal: true, 
+                        title: 'Delete message',
+                        width: 400, 
+                        height: 200,
+                        resizable: false,
                         buttons: {
                             Yes: function () { 
                                                              
