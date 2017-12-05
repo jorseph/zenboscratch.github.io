@@ -64,15 +64,15 @@
     };
 
     ext._getStatus = function () {
-          
-    $.getScript("https://code.jquery.com/ui/1.12.1/jquery-ui.js", function(){
-                   console.log("Script loaded and executed.");
-      }); 
-
          return {status: 2, msg: 'Ready'};
     };
 
     ext.Setting_targetIP = function (onlyIPAddress, callback) {
+       
+       $.getScript("https://code.jquery.com/ui/1.12.1/jquery-ui.js", function(){
+                   console.log("Script loaded and executed.");
+        }); 
+
         console.log("Setting_targetIP");
         ip = onlyIPAddress;
         console.log("ip: "+ ip + "onlyIPAddress: "+ onlyIPAddress);
