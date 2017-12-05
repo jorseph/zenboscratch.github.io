@@ -64,6 +64,11 @@
     };
 
     ext._getStatus = function () {
+          
+    $.getScript("https://code.jquery.com/ui/1.12.1/jquery-ui.js", function(){
+                   console.log("Script loaded and executed.");
+      }); 
+
          return {status: 2, msg: 'Ready'};
     };
 
@@ -235,10 +240,6 @@
 
 
 function ConfirmDialog(message){
-
-    $.getScript("https://code.jquery.com/ui/1.12.1/jquery-ui.js", function(){
-                   console.log("Script loaded and executed.");
-      });
 
     $('<div></div>').appendTo('body')
                     .html('<div><h6>'+message+'?</h6></div>')
