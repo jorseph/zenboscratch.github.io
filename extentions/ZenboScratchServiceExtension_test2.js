@@ -982,13 +982,14 @@ ext.Add_and_update_sentence_number = function (ip) {
         });  
     }; 
 
-    ext.recordVideo = function (ip, p1, p2) {
+    ext.recordVideo = function (ip, p1, p2, p3 ) {
         console.log("recordVideo");
         console.log(ip);
         console.log(p1);
         console.log(p2);
+        console.log(p3);
         $.ajax({
-            url: 'http://' + ip + port + '/?extension=advance' + '&name=recordVideo' + '&p1=' + p1 + '&p2=' + p2,
+            url: 'http://' + ip + port + '/?extension=advance' + '&name=recordVideo' + '&p1=' + p1 + '&p2=' + p2 + '&p3=' + p3 ,
             dataType: 'text',
             crossDomain: true,
             success: function (data) {
@@ -1032,7 +1033,7 @@ ext.Add_and_update_sentence_number = function (ip) {
             ['', 'IP %s %m.openDriveDocumentUrlItems 瀏覽 Google Drive 文件: %s', 'openDriveDocumentUrl', "192.168.0.1", '開始', 'https://drive.google.com/open?id=0B5o6VwYT7NaiN1h3SXZHTjRsc2s'],
             ['h', '當摸到 IP %s 的頭', 'when_touch_head_and_run', "192.168.0.1"],
             ['', 'IP %s %m.recordAudioItems 錄音, 檔名: %s', 'recordAudio', "192.168.0.1", '開始', 'testAudio'],
-            ['', 'IP %s %m.recordVideoItems 錄影, 檔名: %s', 'recordVideo', "192.168.0.1", '開始', 'testVideo'],  
+            ['', 'IP %s %m.recordVideoItems %m.recordVideoSizes 錄影, 檔名: %s', 'recordVideo', "192.168.0.1", '開始', '720P', 'testVideo'],  
         ],
         menus: {
             "head_direction": ["左", "右", "上", "下"],
@@ -1064,6 +1065,7 @@ ext.Add_and_update_sentence_number = function (ip) {
             "openDriveDocumentUrlItems": ["開始", "關閉"],
             "recordAudioItems": ["開始", "關閉"], 
             "recordVideoItems": ["開始", "關閉"],
+            "recordVideoSizes": ["720P", "480P", "240P"],  
         },
         url: 'https://zenboscratchservice.github.io/' // Link to extension documentation, homepage, etc.
     };
