@@ -8,6 +8,7 @@
 	
     ip = "127.0.0.1";
     port = ":8080";
+    zenboIPWarningWindowFlag = true; 
 
     var getValueIndex  = function() {
 
@@ -269,9 +270,19 @@ function ConfirmDialog(message){
  
   
        $('<div></div>').appendTo('body')
-                    .html('<p>'+ message + '</p>')
+                    .html('<p>'+ '必須要先設置 Zenbo IP, Zenbo Scratch 才能動作' + '</p>')
                     .dialog({ 
-                        title: '警告視窗',
+                        title: message,
+                        buttons: {
+                            永久取消警告: function () { 
+                                zenboIPWarningWindowFlag = false;                                                                  
+                                $(this).dialog("close");
+                            }                                   
+                        }, 
+                        close: function (event, ui) {
+                            $(this).remove();
+                        }   
+
                     });  
         };   
 	
@@ -288,14 +299,19 @@ function ConfirmDialog(message){
                 console.log("success handler");
                 callback();
 
-                ConfirmDialog('請先設置 Zenbo IP');
-
-                if (data == 'Must set Zenbo IP')
-                alert('請先設置 Zenbo IP');  
+                if (data == 'Must set Zenbo IP') {
+ 
+                   if (zenboIPWarningWindowFlag == true)
+                   ConfirmDialog('請先設置 Zenbo IP');
+                 
+                }
+                   //alert('請先設置 Zenbo IP');  
             },
             error: function (jqXHR, textStatus, errorThrown) {
                 console.log("error handler");
-                alert('請先設置 Zenbo IP');  
+                // alert('請先設置 Zenbo IP');
+                if (zenboIPWarningWindowFlag == true)
+                   ConfirmDialog('請先設置 Zenbo IP');                 
             }
         });
 
