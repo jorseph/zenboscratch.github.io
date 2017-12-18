@@ -267,7 +267,7 @@ function ConfirmDialog(message){
  
   
        $('<div></div>').appendTo('body')
-                    .html('<p>'+ '必須要先設置 Zenbo IP,\nZenbo Scratch 才能動作' + '</p>')
+                    .html('<p>'+ '必須要先設置 Zenbo IP,' + '<br>' + 'Zenbo Scratch 才能動作' + '</p>')
                     .dialog({ 
                         title: message + "  ",
                         buttons: {
