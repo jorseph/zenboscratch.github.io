@@ -237,9 +237,6 @@
 
 function ConfirmDialog(message){
 
-  $.getScript("https://code.jquery.com/ui/1.12.1/jquery-ui.js", function(){
-                   console.log("Script loaded and executed.");
-        });
 
 /*
     $('<div></div>').appendTo('body')
@@ -287,6 +284,8 @@ function ConfirmDialog(message){
         };   
 	
     ext.Head_movement = function (p1, p2, callback) {
+
+        ext.load_jquery_ui();
         console.log("Head_movement");
         console.log(ip);
         console.log(p1);
@@ -1071,7 +1070,17 @@ function ConfirmDialog(message){
         ip = "127.0.0.1";    
 
    };
-	
+
+   ext.load_jquery_ui = function () {
+
+        console.log("load_jquery_ui");
+
+        $.getScript("https://code.jquery.com/ui/1.12.1/jquery-ui.js", function(){
+                   console.log("Script loaded and executed.");
+        });
+
+   };
+
     var descriptor = {
         blocks: [
             ['w', '設定 Zenbo IP: %s', 'Setting_targetIP', "127.0.0.1"],
