@@ -69,11 +69,6 @@
     };
 
     ext.Setting_targetIP = function (onlyIPAddress, callback) {
-       
-       $.getScript("https://code.jquery.com/ui/1.12.1/jquery-ui.js", function(){
-                   console.log("Script loaded and executed.");
-        }); 
-
         console.log("Setting_targetIP");
         ip = onlyIPAddress;
         console.log("ip: "+ ip + "onlyIPAddress: "+ onlyIPAddress);
@@ -241,6 +236,11 @@
 
 
 function ConfirmDialog(message){
+
+  $.getScript("https://code.jquery.com/ui/1.12.1/jquery-ui.js", function(){
+                   console.log("Script loaded and executed.");
+        });
+
 /*
     $('<div></div>').appendTo('body')
                     .html('<div><p><span class="\"ui-icon" ui-icon-alert\"="" style="\"float:left;" margin:12px="" 12px="" 20px="" 0;\"=""></span>' + message + '</p></div>')
@@ -270,9 +270,9 @@ function ConfirmDialog(message){
  
   
        $('<div></div>').appendTo('body')
-                    .html('<p>'+ '必須要先設置 Zenbo IP, Zenbo Scratch 才能動作' + '</p>')
+                    .html('<p>'+ '必須要先設置 Zenbo IP,\nZenbo Scratch 才能動作' + '</p>')
                     .dialog({ 
-                        title: message,
+                        title: message + "  ",
                         buttons: {
                             永久取消警告: function () { 
                                 zenboIPWarningWindowFlag = false;                                                                  
