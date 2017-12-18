@@ -277,7 +277,7 @@ function ConfirmDialog(message){
                             永久取消警告: function () { 
                                 zenboIPWarningWindowFlag = false;                                                                  
                                 $(this).dialog("close");
-                            }                                   
+                            },                                   
                         }, 
                         close: function (event, ui) {
                             $(this).remove();
@@ -301,7 +301,7 @@ function ConfirmDialog(message){
 
                 if (data == 'Must set Zenbo IP') {
  
-                   if (zenboIPWarningWindowFlag == true)
+                   if (zenboIPWarningWindowFlag === true)
                    ConfirmDialog('請先設置 Zenbo IP');
                  
                 }
@@ -310,8 +310,10 @@ function ConfirmDialog(message){
             error: function (jqXHR, textStatus, errorThrown) {
                 console.log("error handler");
                 // alert('請先設置 Zenbo IP');
-                if (zenboIPWarningWindowFlag == true)
-                   ConfirmDialog('請先設置 Zenbo IP');                 
+                if (zenboIPWarningWindowFlag === true) {
+                   console.log("zenboIPWarningWindowFlag 1"); 
+                   ConfirmDialog('請先設置 Zenbo IP');  
+                }                  
             }
         });
 
