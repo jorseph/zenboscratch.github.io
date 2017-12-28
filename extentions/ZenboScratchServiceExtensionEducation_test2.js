@@ -237,7 +237,7 @@
 function showMessage(message)  
 {  
 
-    $("<div id='dialog' title='系统提示  '>").appendTo("body");
+    $("<div id='dialog' title='系統提示      '>").appendTo("body");
 	
      $( "#dialog" ).html(message);  	
 	
