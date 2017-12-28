@@ -243,7 +243,7 @@ function showMessage(message)
 	
 	console.log("zenboIPWarningWindowFlag 2"); 
 	
-     $( "#dialog" ).html( '<style> .mytest {  border: 1px solid #b9cd6d; color: #FFFFFF; font-weight: bold; }</style>' + message);  	
+     $( "#dialog" ).html( '<style> .mytest { display: none; border: 1px solid #b9cd6d; color: #000000; font-weight: bold; }</style>' + message);  	
 	
 	console.log("zenboIPWarningWindowFlag 3"); 
 	
@@ -251,15 +251,12 @@ function showMessage(message)
       dialogClass:"mytest" ,	    
       modal: true,  
       position: { my: "center", at: "left+300px top+300px ", of: window  } ,
-      title: "系統提示",	    
+      title: "",	    
       buttons: {  
-        "不再提示": function() {
+        "永遠不再提示": function() {
 	    zenboIPWarningWindowFlag = false;	
             $( this ).dialog( "close" );  
-        },
-	 "取消": function() {
-              $( this ).dialog( "close" );
-        }       
+        }  
       }  
     });  
       
