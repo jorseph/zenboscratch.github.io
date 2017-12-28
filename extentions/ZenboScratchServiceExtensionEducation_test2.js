@@ -232,8 +232,11 @@
 	
     };
 
-
-$(function() {  
+	
+	
+function showMessage(message)  
+{  
+    $(function() {  
     $("<div id='dialog' title='系统提示'>").appendTo("body");  
     $( "#dialog" ).dialog({  
       autoOpen: false,  
@@ -246,11 +249,9 @@ $(function() {
       }  
     });  
       
-}); 
 	
 	
-function showMessage(message)  
-{  
+	
     $( "#dialog" ).html("<p>"+message+"</p>");  
     $( "#dialog" ).dialog("open");  
 }  	
