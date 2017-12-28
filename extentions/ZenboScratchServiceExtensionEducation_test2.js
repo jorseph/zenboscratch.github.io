@@ -265,8 +265,26 @@ function ConfirmDialog(message){
                     });
 */
   
-       $('<div style=\"position: absolute; top: 80px; left: 80px;\"></div>').appendTo('body')
-                    .html('<p>'+ '必須要先設置 Zenbo IP,' + '<br>' + 'Zenbo Scratch 才能動作' + '</p>')
+       $('<div id=\"dialog-confirm\" title=\"請先設置 Zenbo IP\" style=\"position: absolute; top: 80px; left: 80px;\">必須要先設置 Zenbo IP,<br>Zenbo Scratch 才能動作</div>').appendTo('body');
+       
+       $( "#dialog-confirm" ).dialog({
+         resizable: false,
+         height: "400",
+         width: 400,
+         modal: true,
+         buttons: {
+           "永久取消警告": function() {
+	      zenboIPWarningWindowFlag = false;
+              $( this ).dialog( "close" );
+           },
+           Cancel: function() {
+              $( this ).dialog( "close" );
+           }
+          }
+         });
+	
+	            /*   
+	            .html('<p>'+ '必須要先設置 Zenbo IP,' + '<br>' + 'Zenbo Scratch 才能動作' + '</p>')
                     .dialog({ 
                         title: message + "  ",
                         buttons: {
@@ -280,6 +298,8 @@ function ConfirmDialog(message){
                         }   
 
                     });  
+	            */
+	
         };   
 	
     ext.Head_movement = function (p1, p2, callback) {
