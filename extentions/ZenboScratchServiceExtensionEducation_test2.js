@@ -233,7 +233,27 @@
     };
 
 
-
+$(function() {  
+    $("<div id='dialog' title='系统提示'>").appendTo("body");  
+    $( "#dialog" ).dialog({  
+      autoOpen: false,  
+      modal: true,  
+      position: { my: "center", at: "left+800px top+500px ", of: window  } ,  
+      buttons: {  
+        "确定": function() {  
+            $( this ).dialog( "close" );  
+        }  
+      }  
+    });  
+      
+}); 
+	
+	
+function showMessage(message)  
+{  
+    $( "#dialog" ).html("<p>"+message+"</p>");  
+    $( "#dialog" ).dialog("open");  
+}  	
 
 function ConfirmDialog(message){
 
@@ -269,7 +289,7 @@ function ConfirmDialog(message){
        
        $( "#dialog-confirm" ).dialog({
          resizable: false,
-         height: "400",
+         height: 400,
          width: 400,
          modal: true,
          buttons: {
@@ -320,7 +340,8 @@ function ConfirmDialog(message){
                 if (data == 'Must set Zenbo IP') {
  
                    if (zenboIPWarningWindowFlag === true)
-                   ConfirmDialog('請先設置 Zenbo IP');
+                   // ConfirmDialog('請先設置 Zenbo IP');
+			   showMessage("請先設置 Zenbo IP");
                  
                 }
                    //alert('請先設置 Zenbo IP');  
@@ -330,7 +351,8 @@ function ConfirmDialog(message){
                 // alert('請先設置 Zenbo IP');
                 if (zenboIPWarningWindowFlag === true) {
                    console.log("zenboIPWarningWindowFlag 1"); 
-                   ConfirmDialog('請先設置 Zenbo IP');  
+                   // ConfirmDialog('請先設置 Zenbo IP');
+			showMessage("請先設置 Zenbo IP");
                 }                  
             }
         });
