@@ -243,9 +243,10 @@ function showMessage(message)
 	
     $( "#dialog" ).dialog({    
       modal: true,  
-      position: { my: "center", at: "left+80px top+80px ", of: window  } ,  
+      position: { my: "center", at: "left+200px top+200px ", of: window  } ,  
       buttons: {  
-        "永久取消警告": function() {  
+        "永久取消警告": function() {
+	    zenboIPWarningWindowFlag = false;	
             $( this ).dialog( "close" );  
         }  
       }  
