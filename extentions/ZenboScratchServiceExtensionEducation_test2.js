@@ -239,7 +239,7 @@ function showMessage(message)
     // $("<div id='dialog' title='系統提示      '>").appendTo("head");
 	
 	
-     $("<style> .dlg-no-close .ui-dialog-titlebar-close {display: none;} </style>, <div id='dialog'>message</div>").appendTo("body");
+     $("<style> .dlg-no-close .ui-dialog-titlebar-close {display: none;} </style>, <div id='dialog'></div>").appendTo("body");
 	
      // $( "#dialog" ).html(message);  	
 	
@@ -247,12 +247,15 @@ function showMessage(message)
       dialogClass: "dlg-no-close", 	    
       modal: true,  
       position: { my: "center", at: "left+300px top+300px ", of: window  } ,
-      title: "系統提示",	    
+      title: "請先設置 Zenbo IP",	    
       buttons: {  
-        "永久取消警告": function() {
+        "不再提示": function() {
 	    zenboIPWarningWindowFlag = false;	
             $( this ).dialog( "close" );  
-        }  
+        },
+	 "取消": function() {
+              $( this ).dialog( "close" );
+        }       
       }  
     });  
       
