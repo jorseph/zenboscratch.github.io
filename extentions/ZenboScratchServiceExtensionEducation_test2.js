@@ -244,10 +244,10 @@ function showMessage(message)
      $( "#dialog" ).html(message);  	
 	
     $( "#dialog" ).dialog({
-      dialogClass: "dlg-no-close" 	    
+      dialogClass: "dlg-no-close", 	    
       modal: true,  
       position: { my: "center", at: "left+300px top+300px ", of: window  } ,
-      title: "系統提示"	    
+      title: "系統提示",	    
       buttons: {  
         "永久取消警告": function() {
 	    zenboIPWarningWindowFlag = false;	
