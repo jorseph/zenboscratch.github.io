@@ -240,7 +240,7 @@ function ConfirmDialog(message){
 
 /*
     $('<div></div>').appendTo('body')
-                    .html('<div><p><span class="\"ui-icon" ui-icon-alert\"="" style="\"float:left;" margin:12px="" 12px="" 20px="" 0;\"=""></span>' + message + '</p></div>')
+                    .html('<div><p><span class="\" ui-icon"="" ui-icon-alert\"="" style="\" float:left;"="" margin:12px="" 12px="" 20px="" 0;\"=""></span>' + message + '</p></div>')
                     .dialog({
                         modal: true, 
                         title: '警告視窗',
