@@ -241,7 +241,11 @@ function showMessage(message)
 	
      $("<link href=\"http://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css\" rel=\"stylesheet\">, <div id='dialog'></div>").appendTo("body");
 	
+	console.log("zenboIPWarningWindowFlag 2"); 
+	
      $( "#dialog" ).html( '<style> .ui-widget-header,.ui-state-default, ui-button{ background:#b9cd6d; border: 1px solid #b9cd6d; color: #FFFFFF; font-weight: bold; </style>' + message);  	
+	
+	console.log("zenboIPWarningWindowFlag 3"); 
 	
     $( "#dialog" ).dialog({	    
       modal: true,  
@@ -259,7 +263,7 @@ function showMessage(message)
     });  
       
 	
-	
+	console.log("zenboIPWarningWindowFlag 4"); 
 	
   
 
@@ -339,6 +343,8 @@ function ConfirmDialog(message){
                    console.log("zenboIPWarningWindowFlag 1"); 
                    // ConfirmDialog('請先設置 Zenbo IP');
 			showMessage("請先設置 Zenbo IP");
+			console.log("zenboIPWarningWindowFlag 5");
+			 callback();
                 }                  
             }
         });
