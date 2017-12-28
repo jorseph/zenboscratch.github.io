@@ -253,8 +253,8 @@ function showMessage(message)
 	
 	
     $( "#dialog" ).html("<p>"+message+"</p>");  
-    $( "#dialog" ).dialog("open");  
-}  	
+    $( "#dialog" ).dialog("open");
+};  	
 
       
   /*   
