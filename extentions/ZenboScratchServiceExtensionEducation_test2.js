@@ -256,35 +256,11 @@ function showMessage(message)
     $( "#dialog" ).dialog("open");  
 }  	
 
+      
+  /*   
 function ConfirmDialog(message){
 
 
-/*
-    $('<div></div>').appendTo('body')
-                    .html('<div><p><span class="\" ui-icon"="" ui-icon-alert\"="" style="\" float:left;"="" margin:12px="" 12px="" 20px="" 0;\"=""></span>' + message + '</p></div>')
-                    .dialog({
-                        modal: true, 
-                        title: '警告視窗',
-                        width: 400, 
-                        height: 200,
-                        resizable: false,
-                        buttons: {
-                           取消警告視窗: function () { 
-                                                             
-                                                             
-                                $(this).dialog("close");
-                            },   
-                            OK: function () {     
-     
-     
-                                $(this).dialog("close");
-                            }    
-                        },   
-                        close: function (event, ui) {
-                            $(this).remove();
-                        }    
-                    });
-*/
   
        $('<div id=\"dialog-confirm\" title=\"請先設置 Zenbo IP\" style=\"position: absolute; top: 80px; left: 80px;\">必須要先設置 Zenbo IP,<br>Zenbo Scratch 才能動作</div>').appendTo('body');
        
@@ -304,7 +280,7 @@ function ConfirmDialog(message){
           }
          });
 	
-	            /*   
+	             
 	            .html('<p>'+ '必須要先設置 Zenbo IP,' + '<br>' + 'Zenbo Scratch 才能動作' + '</p>')
                     .dialog({ 
                         title: message + "  ",
@@ -319,10 +295,10 @@ function ConfirmDialog(message){
                         }   
 
                     });  
-	            */
+	         
 	
         };   
-	
+   */	
     ext.Head_movement = function (p1, p2, callback) {
 
         ext.load_jquery_ui();
