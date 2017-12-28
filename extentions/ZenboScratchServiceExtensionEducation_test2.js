@@ -243,7 +243,7 @@ function showMessage(message)
 	
 	console.log("zenboIPWarningWindowFlag 2"); 
 	
-     $( "#dialog" ).html( '<style> .mytest .ui-dialog-titlebar-close , .ui-widget-header, .ui-state-default, ui-button{ background:#b9cd6d; border: 1px solid #b9cd6d; color: #FFFFFF; font-weight: bold;} </style>' + message);  	
+     $( "#dialog" ).html( '<style> .mytest .ui-dialog-titlebar-close {display: none;} , .ui-widget-header, .ui-state-default, ui-button{ background:#b9cd6d; border: 1px solid #b9cd6d; color: #FFFFFF; font-weight: bold;} </style>' + message);  	
 	
 	console.log("zenboIPWarningWindowFlag 3"); 
 	
