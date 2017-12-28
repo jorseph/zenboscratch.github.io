@@ -243,11 +243,12 @@ function showMessage(message)
 	
 	console.log("zenboIPWarningWindowFlag 2"); 
 	
-     $( "#dialog" ).html( '<style> .ui-widget-header,.ui-state-default, ui-button{ background:#b9cd6d; border: 1px solid #b9cd6d; color: #FFFFFF; font-weight: bold; </style>' + message);  	
+     $( "#dialog" ).html( '<style> .mytest { background:#b9cd6d; border: 1px solid #b9cd6d; color: #FFFFFF; font-weight: bold; }</style>' + message);  	
 	
 	console.log("zenboIPWarningWindowFlag 3"); 
 	
-    $( "#dialog" ).dialog({	    
+    $( "#dialog" ).dialog({
+      dialogClass:"mytest" ,	    
       modal: true,  
       position: { my: "center", at: "left+300px top+300px ", of: window  } ,
       title: "系統提示",	    
