@@ -239,7 +239,7 @@ function showMessage(message)
     // $("<div id='dialog' title='系統提示      '>").appendTo("head");
 	
 	
-     $("<link href=\"http://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css\" rel=\"stylesheet\">, <div id='dialog'></div>").appendTo("body");
+     $("<div id='dialog'></div>").appendTo("body");
 	
 	console.log("zenboIPWarningWindowFlag 2"); 
 	
