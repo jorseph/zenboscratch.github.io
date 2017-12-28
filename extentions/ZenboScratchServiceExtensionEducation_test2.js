@@ -236,14 +236,18 @@
 	
 function showMessage(message)  
 {  
-
-    $("<div id='dialog' title='系統提示      '>").appendTo("body");
+    // $("<div id='dialog' title='系統提示      '>").appendTo("head");
+	
+	
+     $("<div id='dialog'></div>").appendTo("body");
 	
      $( "#dialog" ).html(message);  	
 	
-    $( "#dialog" ).dialog({    
+    $( "#dialog" ).dialog({
+      dialogClass: "dlg-no-close" 	    
       modal: true,  
-      position: { my: "center", at: "left+300px top+300px ", of: window  } ,  
+      position: { my: "center", at: "left+300px top+300px ", of: window  } ,
+      title: "系統提示"	    
       buttons: {  
         "永久取消警告": function() {
 	    zenboIPWarningWindowFlag = false;	
