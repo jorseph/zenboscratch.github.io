@@ -243,7 +243,7 @@ function showMessage(message)
 	
 	console.log("zenboIPWarningWindowFlag 2"); 
 	
-     $( "#dialog" ).html( '<style> .mytest .ui-dialog-titlebar-close {display: none;} , .ui-widget-header, .ui-state-default, ui-button{ background:#b9cd6d; border: 1px solid #b9cd6d; color: #FFFFFF; font-weight: bold;} </style>' + message);  	
+     $( "#dialog" ).html( '<style> .mytest .ui-dialog-titlebar-close {display: none;} , .ui-widget-header, .ui-state-default, ui-button{ background:#b9cd6d; border: 1px solid #b9cd6d; color: #FFFFFF; font-weight: bold;} </style>');  	
 	
 	console.log("zenboIPWarningWindowFlag 3"); 
 	
@@ -251,11 +251,14 @@ function showMessage(message)
       dialogClass:"mytest" ,	    
       modal: true,  
       position: { my: "center", at: "left+300px top+300px ", of: window  } ,
-      title: "",	    
+      title: "請先設置 Zenbo IP",	    
       buttons: {  
         "永遠不再提示": function() {
 	    zenboIPWarningWindowFlag = false;	
             $( this ).dialog( "close" );  
+        },
+         "取消": function() {
+              $( this ).dialog( "close" );
         }  
       }  
     });  
