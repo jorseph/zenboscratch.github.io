@@ -237,15 +237,15 @@
 function showMessage(message)  
 {  
 
-    $("<div id='dialog' title='系统提示'>").appendTo("body");
+    $("<div id='dialog' title='系统提示  '>").appendTo("body");
 	
-     $( "#dialog" ).html("<p>"+message+"</p>");  	
+     $( "#dialog" ).html(message);  	
 	
     $( "#dialog" ).dialog({    
       modal: true,  
-      position: { my: "center", at: "left+800px top+500px ", of: window  } ,  
+      position: { my: "center", at: "left+80px top+80px ", of: window  } ,  
       buttons: {  
-        "确定": function() {  
+        "永久取消警告": function() {  
             $( this ).dialog( "close" );  
         }  
       }  
