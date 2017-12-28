@@ -241,10 +241,9 @@ function showMessage(message)
 	
      $("<link href=\"http://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css\" rel=\"stylesheet\">, <div id='dialog'></div>").appendTo("body");
 	
-     $( "#dialog" ).html( '<style> .dlg-no-close .ui-dialog-titlebar-close {display: none; background:#b9cd6d; border: 1px solid #b9cd6d; color: #FFFFFF; font-weight: bold; } </style>'   + message);  	
+     $( "#dialog" ).html( '<style> .ui-widget-header,.ui-state-default, ui-button{ background:#b9cd6d; border: 1px solid #b9cd6d; color: #FFFFFF; font-weight: bold; </style>' + message);  	
 	
-    $( "#dialog" ).dialog({
-      dialogClass: "dlg-no-close", 	    
+    $( "#dialog" ).dialog({	    
       modal: true,  
       position: { my: "center", at: "left+300px top+300px ", of: window  } ,
       title: "系統提示",	    
