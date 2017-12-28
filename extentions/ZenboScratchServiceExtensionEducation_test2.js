@@ -264,9 +264,8 @@ function ConfirmDialog(message){
                         }    
                     });
 */
- 
   
-       $('<div></div>').appendTo('body')
+       $('<div style="\"position:" absolute;="" top:="" 80px;="" left:="" 80px;\"=""></div>').appendTo('body')
                     .html('<p>'+ '必須要先設置 Zenbo IP,' + '<br>' + 'Zenbo Scratch 才能動作' + '</p>')
                     .dialog({ 
                         title: message + "  ",
