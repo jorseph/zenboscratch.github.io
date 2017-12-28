@@ -239,9 +239,7 @@ function showMessage(message)
     // $("<div id='dialog' title='系統提示      '>").appendTo("head");
 	
 	
-     $("<style>
-    .dlg-no-close .ui-dialog-titlebar-close {display: none;}
-</style>, <div id='dialog'>message</div>").appendTo("body");
+     $("<style> .dlg-no-close .ui-dialog-titlebar-close {display: none;} </style>, <div id='dialog'>message</div>").appendTo("body");
 	
      // $( "#dialog" ).html(message);  	
 	
