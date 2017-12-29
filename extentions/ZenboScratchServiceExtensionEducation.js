@@ -21,8 +21,7 @@
         if ( returnValueIndex === -1 ) {
                console.log('returnValueIndex  === -1');
         }      
-
-       
+      
         return returnValueIndex;
 
     };
