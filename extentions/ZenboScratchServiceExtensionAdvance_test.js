@@ -235,6 +235,23 @@
     };
 	
     ext.Head_movement = function (ip, p1, p2, callback) {
+		
+		for(var i = 0; i < translate.head_direction.length; i++){
+
+            if ( p1 == translate.head_direction[i]) {                                        
+		         p1 = TRANSLATIONS.tw.head_direction[i];
+            }   
+	  
+        }
+		
+	     for(var j = 0; j < translate.head_degree.length; j++){
+
+            if ( p2 == translate.head_degree[j]) {                                         
+		         p2 = TRANSLATIONS.tw.head_degree[j];
+            }   
+	  
+        }
+		
         console.log("Head_movement");
         console.log(ip);
         console.log(p1);
@@ -257,6 +274,31 @@
     };
 
     ext.Body_movement = function (ip, p1, p2, p3, callback) {
+		
+		for(var i = 0; i < translate.move_direction.length; i++){
+
+            if ( p1 == translate.move_direction[i]) {                                         
+		      p1 = TRANSLATIONS.tw.move_direction[i];
+            }   
+	  
+        }
+		
+	    for(var j = 0; j < translate.move_far.length; j++){
+
+            if ( p2 == translate.move_far[j]) {                                         
+		      p2 = TRANSLATIONS.tw.move_far[j];
+            }   
+	  
+        }
+		
+	    for(var k = 0; k < translate.move_speed.length; k++){
+
+            if ( p3 == translate.move_speed[k]) {                                         
+		      p3 = TRANSLATIONS.tw.move_speed[k];
+            }   
+	  
+        }
+						
         console.log("Body_movement");
         console.log(ip);
         console.log(p1);
@@ -279,6 +321,23 @@
     };
 
     ext.Body_turn = function (ip, p1, p2, callback) {
+		
+	for(var i = 0; i < translate.body_turn_direction.length; i++){
+
+            if ( p1 == translate.body_turn_direction[i]) {                                         
+		         p1 = TRANSLATIONS.tw.body_turn_direction[i];
+            }   
+	  
+        }
+		
+	for(var j = 0; j < translate.body_turn_degree.length; j++){
+
+            if ( p2 == translate.body_turn_degree[j]) {                                         
+		         p2 = TRANSLATIONS.tw.body_turn_degree[j];
+            }   
+	  
+        }		
+				
         console.log("Body_turn");
         console.log(ip);
         console.log(p1);
@@ -300,6 +359,15 @@
     };
 
     ext.Remote_control_body = function (ip, p1){
+		
+    	for(var i = 0; i < translate.remote_control_body.length; i++){
+
+            if ( p1 == translate.remote_control_body[i]) {                                         
+		         p1 = TRANSLATIONS.tw.remote_control_body[i];
+            }   
+	  
+        }		
+		
         console.log("Remote_control_body");
         console.log(ip);
         console.log(p1);
@@ -321,7 +389,7 @@
 
     ext.Stop_moving = function (ip,callback){
         console.log("Stop_moving");
-	console.log("Remote_control_body-Stop");
+	    console.log("Remote_control_body-Stop");
         console.log(ip);
        	$.ajax({
             url: 'http://' + ip + port + '/?extension=advance' + '&name=Remote_control_body' + '&p1=' + '停止',
@@ -355,6 +423,15 @@
     };
 
     ext.Action = function (ip, p1,callback){
+		
+		for(var i = 0; i < translate.action_type.length; i++){
+
+            if ( p1 == translate.action_type[i]) {                                         
+		         p1 = TRANSLATIONS.tw.action_type[i];
+            }   
+	  
+        }	
+		
         console.log("Action");
         console.log(ip);
         console.log(p1);
@@ -375,6 +452,15 @@
     };
 
     ext.Facial = function (ip, p1, callback) {
+		
+		for(var i = 0; i < translate.facial_type.length; i++){
+
+            if ( p1 == translate.facial_type[i]) {                                         
+		         p1 = TRANSLATIONS.tw.facial_type[i];
+            }   
+	  
+        }
+		
         console.log("Facial");
         console.log(ip);
         console.log(p1);
@@ -454,6 +540,23 @@
     };
 
     ext.Adjust_stream_volume = function (ip, p1, p2, callback) {
+		
+		for(var i = 0; i < translate.volume_option_type.length; i++){
+
+            if ( p1 == translate.volume_option_type[i]) {                                         
+		        p1 = TRANSLATIONS.tw.volume_option_type[i];
+            }   
+	  
+        }
+		
+	    for(var j = 0; j < translate.volume_type.length; j++){
+
+            if ( p2 == translate.volume_type[j]) {                                         
+		         p2 = TRANSLATIONS.tw.volume_type[j];
+            }   
+	  
+        }
+		
         console.log("Adjust_stream_volume");
         console.log(ip);
         console.log(p1);
@@ -475,7 +578,15 @@
     };
 
     ext.Add_and_update_sentence = function (ip, p1, p2) {
-        
+ 
+	    for(var i = 0; i < translate.sentence_type.length; i++){
+
+            if ( p1 == translate.sentence_type[i]) {                                         
+		         p1 = TRANSLATIONS.tw.sentence_type[i];
+            }   
+	  
+        }
+		 
         var setupFlag_init_2 = true;
         var flagIndex_init_2 = 0;
 
@@ -581,28 +692,16 @@
         });
     };
 
-    ext.Play_music = function (ip, p1, p2, callback) {
-        console.log("Play_music");
-        console.log(ip);
-        console.log(p1);
-        console.log(p2);
-        $.ajax({
-            url: 'http://' + ip + port + '/?extension=advance' + '&name=Play_music' + '&p1=' + p1 + '&p2=' + p2,
-            dataType: 'text',
-            crossDomain: true,
-            success: function (data) {
-                console.log("success handler");
-                if (data == 'Must set Zenbo IP')
-                alert('請先設置 Zenbo IP'); 
-            },
-            error: function (jqXHR, textStatus, errorThrown) {
-                console.log("error handler");
-                alert('請先設置 Zenbo IP');
-            }
-        });
-    };
-
     ext.Adjust_tts_and_speed = function (ip, p1, p2, callback) {
+		
+		for(var i = 0; i < translate.tts_speed_type.length; i++){
+
+            if ( p2 == translate.tts_speed_type[i]) {                                         
+		         p2 = TRANSLATIONS.tw.tts_speed_type[i];
+            }   
+	  
+        }
+				
         console.log("Adjust_tts_and_speed");
         console.log(ip);
         console.log(p1);
@@ -643,8 +742,16 @@
     };
 
     ext.when_listen_and_run = function(ip, p1) {
+		
+    for(var s = 0; s < translate.sentence_type.length; s++){
+
+            if ( p1 == translate.sentence_type[s]) {                                         
+		         p1 = TRANSLATIONS.tw.sentence_type[s];
+            }   
+	  
+    }		
        
-    	var checkFlag = false;
+    var checkFlag = false;
    	var valueIndex = 0;
 
    	for(var i = 0; i < flagArray.data.length; i++){
@@ -715,7 +822,7 @@
     };
 	
     ext.when_listen_number_and_run = function(ip) {
-       
+		   	       
        var valueIndex_2 = -1;
 
        for(var j = 0; j < flagArray.data.length; j++){
@@ -764,6 +871,15 @@
 
 
     ext.playVideosInYoutube = function (ip, p1, p2) {
+				
+		for(var i = 0; i < translate.playVideosInYoutubeItems.length; i++){
+
+            if ( p1 == translate.playVideosInYoutubeItems[i]) {                                         
+		         p1 = TRANSLATIONS.tw.playVideosInYoutubeItems[i];
+            }   
+	  
+        }
+		
         console.log("playVideosInYoutube");
         console.log(ip);
         console.log(p1);
@@ -785,6 +901,15 @@
     };
 
     ext.displayUrlPictures = function (ip, p1, p2) {
+		
+		for(var i = 0; i < translate.displayUrlPicturesItems.length; i++){
+
+            if ( p1 == translate.displayUrlPicturesItems[i]) {                                         
+		         p1 = TRANSLATIONS.tw.displayUrlPicturesItems[i];
+            }   
+	  
+        }		
+		
         console.log("displayUrlPictures");
         console.log(ip);
         console.log(p1);
@@ -806,6 +931,15 @@
     };
 	
     ext.playUrlMusic = function (ip, p1, p2) {
+		
+		for(var i = 0; i < translate.playUrlMusicItems.length; i++){
+
+            if ( p1 == translate.playUrlMusicItems[i]) {                                         
+		         p1 = TRANSLATIONS.tw.playUrlMusicItems[i];
+            }   
+	  
+        }
+				
         console.log("playUrlMusic");
         console.log(ip);
         console.log(p1);
@@ -845,7 +979,7 @@
         });
     };
 
-    ext.openDriveUrl = function (ip, p1, p2) {
+    ext.openDriveUrl = function (ip, p1, p2) {				
         console.log("openDriveUrl");
         console.log(ip);
         console.log(p1);
@@ -867,6 +1001,15 @@
     };
 
     ext.openDriveVideoUrl = function (ip, p1, p2) {
+				
+		for(var i = 0; i < translate.openDriveVideoUrlItems.length; i++){
+
+            if ( p1 == translate.openDriveVideoUrlItems[i]) {                                         
+		         p1 = TRANSLATIONS.tw.openDriveVideoUrlItems[i];
+            }   
+	  
+        }
+		
         console.log("openDriveVideoUrl");
         console.log(ip);
         console.log(p1);
@@ -888,6 +1031,15 @@
     };
 
     ext.openDriveAudioUrl = function (ip, p1, p2) {
+		
+		for(var i = 0; i < translate.openDriveAudioUrlItems.length; i++){
+
+            if ( p1 == translate.openDriveAudioUrlItems[i]) {                                        
+		         p1 = TRANSLATIONS.tw.openDriveAudioUrlItems[i];
+            }   
+	  
+        }
+		
         console.log("openDriveAudioUrl");
         console.log(ip);
         console.log(p1);
@@ -909,6 +1061,15 @@
     };
 
     ext.openDrivePictureUrl = function (ip, p1, p2) {
+		
+		for(var i = 0; i < translate.openDrivePictureUrlItems.length; i++){
+
+            if ( p1 == translate.openDrivePictureUrlItems[i]) {                                         
+		         p1 = TRANSLATIONS.tw.openDrivePictureUrlItems[i];
+            }   
+	  
+        }
+		
         console.log("openDrivePictureUrl");
         console.log(ip);
         console.log(p1);
@@ -930,6 +1091,15 @@
     };
 
     ext.openDriveDocumentUrl = function (ip, p1, p2) {
+				
+		for(var i = 0; i < translate.openDriveDocumentUrlItems.length; i++){
+
+            if ( p1 == translate.openDriveDocumentUrlItems[i]) {                                         
+		         p1 = TRANSLATIONS.tw.openDriveDocumentUrlItems[i];
+            }   
+	  
+        }
+		
         console.log("openDriveDocumentUrl");
         console.log(ip);
         console.log(p1);
@@ -1023,6 +1193,15 @@ ext.Add_and_update_sentence_number = function (ip) {
    };
 
    ext.recordAudio = function (ip, p1, p2) {
+	   	
+		for(var i = 0; i < translate.recordAudioItems.length; i++){
+
+            if ( p1 == translate.recordAudioItems[i]) {                                         
+		         p1 = TRANSLATIONS.tw.recordAudioItems[i];
+            }   
+	  
+        }
+	   	   
         console.log("recordAudio");
         console.log(ip);
         console.log(p1);
@@ -1045,6 +1224,15 @@ ext.Add_and_update_sentence_number = function (ip) {
     }; 
 
    ext.recordVideo = function (ip, p1, p2, p3 ) {
+	   
+	   	for(var i = 0; i < translate.recordVideoItems.length; i++){
+
+            if ( p1 == translate.recordVideoItems[i]) {                                         
+		         p1 = TRANSLATIONS.tw.recordVideoItems[i];
+            }   
+	  
+        }
+	   
         console.log("recordVideo");
         console.log(ip);
         console.log(p1);
