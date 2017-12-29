@@ -1237,7 +1237,7 @@ ext.Add_and_update_sentence_number = function (ip) {
     var TRANSLATIONS = {
         us: {
             Setting_targetIP: 'setup Zenbo IP: %s',
-            Body_movement: 'IP %s move %m.move_direction by %m.move_far Meter %m.move_speed',
+            Body_movement: 'IP %s move %m.move_direction by %m.move_far meter %m.move_speed',
             Stop_moving: 'IP %s stop action',
             Head_movement: 'IP %s turn head to the %m.head_direction by %m.head_degree degree(s)',
             Body_turn: 'IP %s turn body to the  %m.body_turn_direction by %m.body_turn_degree degree(s)',
