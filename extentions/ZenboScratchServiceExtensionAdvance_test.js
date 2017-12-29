@@ -264,11 +264,11 @@
                 console.log("success handler");
           
                 if (data == 'Must set Zenbo IP')
-                alert('請先設置 Zenbo IP'); 
+                alert(translate.pleaseSetupZenboIP); 
             },
             error: function (jqXHR, textStatus, errorThrown) {
                 console.log("error handler");
-                alert('請先設置 Zenbo IP');
+                alert(translate.pleaseSetupZenboIP);
             }
         });
     };
@@ -311,11 +311,11 @@
             success: function (data) {
                 console.log("success handler");
                 if (data == 'Must set Zenbo IP')
-                alert('請先設置 Zenbo IP'); 
+                alert(translate.pleaseSetupZenboIP); 
             },
             error: function (jqXHR, textStatus, errorThrown) {
                 console.log("error handler");
-                alert('請先設置 Zenbo IP');
+                alert(translate.pleaseSetupZenboIP);
             }
         });
     };
@@ -349,11 +349,11 @@
             success: function (data) {
                 console.log("success handler");
                 if (data == 'Must set Zenbo IP')
-                alert('請先設置 Zenbo IP'); 
+                alert(translate.pleaseSetupZenboIP); 
             },
             error: function (jqXHR, textStatus, errorThrown) {
                 console.log("error handler");
-                alert('請先設置 Zenbo IP');
+                alert(translate.pleaseSetupZenboIP);
             }
         });
     };
@@ -378,11 +378,11 @@
             success: function (data) {
                 console.log("success handler");
                 if (data == 'Must set Zenbo IP')
-                alert('請先設置 Zenbo IP'); 
+                alert(translate.pleaseSetupZenboIP);
             },
             error: function (jqXHR, textStatus, errorThrown) {
                 console.log("error handler");
-                alert('請先設置 Zenbo IP');
+                alert(translate.pleaseSetupZenboIP);
             }
         });
     };
@@ -399,7 +399,7 @@
             console.log("success handler");
 
 	    if (data == 'Must set Zenbo IP')
-            alert('請先設置 Zenbo IP'); 
+            alert(translate.pleaseSetupZenboIP); 
 				
             console.log(ip);
             $.ajax({
@@ -417,7 +417,7 @@
 	    },
             error: function (jqXHR, textStatus, errorThrown) {
             console.log("error handler");
-            alert('請先設置 Zenbo IP');
+            alert(translate.pleaseSetupZenboIP);
             }
         });   		 
     };
@@ -442,11 +442,11 @@
             success: function (data) {
                 console.log("success handler");
                 if (data == 'Must set Zenbo IP')
-                alert('請先設置 Zenbo IP'); 
+                alert(translate.pleaseSetupZenboIP);
             },
             error: function (jqXHR, textStatus, errorThrown) {
                 console.log("error handler");
-                alert('請先設置 Zenbo IP');
+                alert(translate.pleaseSetupZenboIP);
             }
         });
     };
@@ -471,11 +471,11 @@
             success: function (data) {
                 console.log("success handler");
                 if (data == 'Must set Zenbo IP')
-                alert('請先設置 Zenbo IP'); 
+                alert(translate.pleaseSetupZenboIP); 
             },
             error: function (jqXHR, textStatus, errorThrown) {
                 console.log("error handler");
-                alert('請先設置 Zenbo IP');
+                alert(translate.pleaseSetupZenboIP);
             }
         });
     };
@@ -491,11 +491,11 @@
             success: function (data) {
                 console.log("success handler");
                 if (data == 'Must set Zenbo IP')
-                alert('請先設置 Zenbo IP'); 
+                alert(translate.pleaseSetupZenboIP); 
             },
             error: function (jqXHR, textStatus, errorThrown) {
                 console.log("error handler");
-                alert('請先設置 Zenbo IP');
+                alert(translate.pleaseSetupZenboIP);
             }
         });
     };
@@ -511,11 +511,11 @@
             success: function (data) {
                 console.log("success handler");
                 if (data == 'Must set Zenbo IP')
-                alert('請先設置 Zenbo IP'); 
+                alert(translate.pleaseSetupZenboIP); 
             },
             error: function (jqXHR, textStatus, errorThrown) {
                 console.log("error handler");
-                alert('請先設置 Zenbo IP');
+                alert(translate.pleaseSetupZenboIP);
             }
         });
     };
@@ -530,11 +530,11 @@
             success: function (data) {
                 console.log("success handler");
                 if (data == 'Must set Zenbo IP')
-                alert('請先設置 Zenbo IP'); 
+                alert(translate.pleaseSetupZenboIP);
             },
             error: function (jqXHR, textStatus, errorThrown) {
                 console.log("error handler");
-                alert('請先設置 Zenbo IP');
+                alert(translate.pleaseSetupZenboIP);
             }
         });
     };
@@ -568,11 +568,11 @@
             success: function (data) {
                 console.log("success handler");
                 if (data == 'Must set Zenbo IP')
-                alert('請先設置 Zenbo IP'); 
+                alert(translate.pleaseSetupZenboIP); 
             },
             error: function (jqXHR, textStatus, errorThrown) {
                 console.log("error handler");
-                alert('請先設置 Zenbo IP');
+                alert(translate.pleaseSetupZenboIP);
             }
         });
     };
@@ -622,7 +622,7 @@
             console.log("success handler");
 
             if (data == 'Must set Zenbo IP')
-            alert('請先設置 Zenbo IP'); 
+            alert(translate.pleaseSetupZenboIP);
 
                if  ( flagArray.data[flagIndex_init_2].recursionFlag === true) {
                      flagArray.data[flagIndex_init_2].recursionFlag = false;
@@ -648,7 +648,7 @@
             },
             error: function (jqXHR, textStatus, errorThrown) {
                 console.log("error handler");
-                alert('請先設置 Zenbo IP');
+                alert(translate.pleaseSetupZenboIP);
             }
         });
     };    
@@ -664,11 +664,11 @@
             success: function (data) {
                 console.log("success handler");
                 if (data == 'Must set Zenbo IP')
-                alert('請先設置 Zenbo IP'); 
+                alert(translate.pleaseSetupZenboIP);
             },
             error: function (jqXHR, textStatus, errorThrown) {
                 console.log("error handler");
-                alert('請先設置 Zenbo IP');
+                alert(translate.pleaseSetupZenboIP);
             }
         });
     };
@@ -683,11 +683,11 @@
             success: function (data) {
             console.log("Speak_and_listen-success handler");	 
 	    if (data == 'Must set Zenbo IP')
-            alert('請先設置 Zenbo IP'); 			               				   
+            alert(translate.pleaseSetupZenboIP); 			               				   
             },
             error: function (jqXHR, textStatus, errorThrown) {
                 console.log("error handler");
-                alert('請先設置 Zenbo IP');
+                alert(translate.pleaseSetupZenboIP);
             }
         });
     };
@@ -713,11 +713,11 @@
             success: function (data) {
                 console.log("success handler");
                 if (data == 'Must set Zenbo IP')
-                alert('請先設置 Zenbo IP'); 
+                alert(translate.pleaseSetupZenboIP);
             },
             error: function (jqXHR, textStatus, errorThrown) {
                 console.log("error handler");
-                alert('請先設置 Zenbo IP');
+                alert(translate.pleaseSetupZenboIP);
             }
         });
     };
@@ -891,11 +891,11 @@
             success: function (data) {
                 console.log("success handler");
                 if (data == 'Must set Zenbo IP')
-                alert('請先設置 Zenbo IP'); 
+                alert(translate.pleaseSetupZenboIP);
             },
             error: function (jqXHR, textStatus, errorThrown) {
                 console.log("error handler");
-                alert('請先設置 Zenbo IP');
+                alert(translate.pleaseSetupZenboIP);
             }
         });
     };
@@ -921,11 +921,11 @@
             success: function (data) {
                 console.log("success handler");
                 if (data == 'Must set Zenbo IP')
-                alert('請先設置 Zenbo IP'); 
+                alert(translate.pleaseSetupZenboIP);
             },
             error: function (jqXHR, textStatus, errorThrown) {
                 console.log("error handler");
-                alert('請先設置 Zenbo IP');
+                alert(translate.pleaseSetupZenboIP);
             }
         });
     };
@@ -951,11 +951,11 @@
             success: function (data) {
                 console.log("success handler");
                 if (data == 'Must set Zenbo IP')
-                alert('請先設置 Zenbo IP'); 
+                alert(translate.pleaseSetupZenboIP);
             },
             error: function (jqXHR, textStatus, errorThrown) {
                 console.log("error handler");
-                alert('請先設置 Zenbo IP');
+                alert(translate.pleaseSetupZenboIP);
             }
         });
     };
@@ -1000,11 +1000,11 @@
             success: function (data) {
                 console.log("success handler");
                 if (data == 'Must set Zenbo IP')
-                alert('請先設置 Zenbo IP'); 
+                alert(translate.pleaseSetupZenboIP); 
             },
             error: function (jqXHR, textStatus, errorThrown) {
                 console.log("error handler");
-                alert('請先設置 Zenbo IP');
+                alert(translate.pleaseSetupZenboIP);
             }
         });
     };
@@ -1030,11 +1030,11 @@
             success: function (data) {
                 console.log("success handler");
                 if (data == 'Must set Zenbo IP')
-                alert('請先設置 Zenbo IP'); 
+                alert(translate.pleaseSetupZenboIP);
             },
             error: function (jqXHR, textStatus, errorThrown) {
                 console.log("error handler");
-                alert('請先設置 Zenbo IP');
+                alert(translate.pleaseSetupZenboIP);
             }
         });
     };
@@ -1060,11 +1060,11 @@
             success: function (data) {
                 console.log("success handler");
                 if (data == 'Must set Zenbo IP')
-                alert('請先設置 Zenbo IP'); 
+                alert(translate.pleaseSetupZenboIP);
             },
             error: function (jqXHR, textStatus, errorThrown) {
                 console.log("error handler");
-                alert('請先設置 Zenbo IP');
+                alert(translate.pleaseSetupZenboIP);
             }
         });
     };
@@ -1090,11 +1090,11 @@
             success: function (data) {
                 console.log("success handler");
                 if (data == 'Must set Zenbo IP')
-                alert('請先設置 Zenbo IP'); 
+                alert(translate.pleaseSetupZenboIP); 
             },
             error: function (jqXHR, textStatus, errorThrown) {
                 console.log("error handler");
-                alert('請先設置 Zenbo IP');
+                alert(translate.pleaseSetupZenboIP);
             }
         });
     };
@@ -1136,14 +1136,14 @@ ext.Add_and_update_sentence_number = function (ip) {
              console.log("success handler");
 
              if (data == 'Must set Zenbo IP')
-                alert('請先設置 Zenbo IP');
+                alert(translate.pleaseSetupZenboIP);
 
              getSentencesRecursion(ip, flagIndex_init_3);
  
             },
             error: function (jqXHR, textStatus, errorThrown) {
                 console.log("error handler");
-                alert('請先設置 Zenbo IP'); 
+                alert(translate.pleaseSetupZenboIP);
                 flagArray.data[flagIndex_init_3].recursionFlag = true; 
             }
         }); 
@@ -1192,12 +1192,12 @@ ext.Add_and_update_sentence_number = function (ip) {
             success: function (data) {
                 console.log("success handler");
                 if (data == 'Must set Zenbo IP')
-                alert('請先設置 Zenbo IP');
+                alert(translate.pleaseSetupZenboIP);
      
             },   
             error: function (jqXHR, textStatus, errorThrown) {
                 console.log("error handler");
-                alert('請先設置 Zenbo IP');
+                alert(translate.pleaseSetupZenboIP);
             }    
         });  
     }; 
@@ -1224,12 +1224,12 @@ ext.Add_and_update_sentence_number = function (ip) {
             success: function (data) {
                 console.log("success handler");
                 if (data == 'Must set Zenbo IP')
-                alert('請先設置 Zenbo IP'); 
+                alert(translate.pleaseSetupZenboIP);
 
             },
             error: function (jqXHR, textStatus, errorThrown) {
                 console.log("error handler");
-                alert('請先設置 Zenbo IP');
+                alert(translate.pleaseSetupZenboIP);
             }
         });
     };
@@ -1302,6 +1302,7 @@ ext.Add_and_update_sentence_number = function (ip) {
  			recordAudioItems: ["start", "end"],
 			recordVideoItems: ["start", "end"],
 			recordVideoSizes: ["720P", "480P", "240P"],
+			pleaseSetupZenboIP: 'Please setup Zenbo IP',
         },
 	tw: {
             Setting_targetIP: '設定Zenbo IP: %s',
@@ -1367,6 +1368,7 @@ ext.Add_and_update_sentence_number = function (ip) {
  			recordAudioItems: ["開始", "關閉"],
 			recordVideoItems: ["開始", "關閉"],
 			recordVideoSizes: ["720P", "480P", "240P"],
+			pleaseSetupZenboIP: '請先設置 Zenbo IP',
         },  		
     }	
 	
