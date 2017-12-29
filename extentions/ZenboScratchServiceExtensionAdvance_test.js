@@ -978,28 +978,7 @@
             }
         });
     };
-
-    ext.openDriveUrl = function (ip, p1, p2) {				
-        console.log("openDriveUrl");
-        console.log(ip);
-        console.log(p1);
-        console.log(p2);
-        $.ajax({
-            url: 'http://' + ip + port + '/?extension=advance' + '&name=openDriveUrl' + '&p1=' + p1 + '&p2=' + p2,
-            dataType: 'text',
-            crossDomain: true,
-            success: function (data) {
-                console.log("success handler");
-                if (data == 'Must set Zenbo IP')
-                alert('請先設置 Zenbo IP');  
-            },
-            error: function (jqXHR, textStatus, errorThrown) {
-                console.log("error handler");
-                alert('請先設置 Zenbo IP');
-            }
-        });
-    };
-
+	
     ext.openDriveVideoUrl = function (ip, p1, p2) {
 				
 		for(var i = 0; i < translate.openDriveVideoUrlItems.length; i++){
@@ -1257,7 +1236,7 @@ ext.Add_and_update_sentence_number = function (ip) {
 
     var TRANSLATIONS = {
         us: {
-            Setting_targetIP: 'Set Zenbo IP: %s',
+            Setting_targetIP: 'setup Zenbo IP: %s',
             Body_movement: 'IP %s move %m.move_direction by %m.move_far Meter %m.move_speed',
             Stop_moving: 'IP %s stop action',
             Head_movement: 'IP %s turn head to the %m.head_direction by %m.head_degree degree(s)',
@@ -1273,11 +1252,11 @@ ext.Add_and_update_sentence_number = function (ip) {
 	    Adjust_tts_and_speed: 'IP %s speak: %s by %m.tts_speed_type speed',
 	    Add_and_update_sentence: 'IP %s is ready to listen %m.sentence_type which is %s',
 	    Speak_and_listen: 'IP %s would start listening',
-	    when_listen_and_run: 'When IP %s heard %m.sentence_type',
+	    when_listen_and_run: 'when IP %s heard %m.sentence_type',
 	    Delete_instance: 'IP %s delete all sentences',
 	    Add_and_update_sentence_number: 'IP %s is ready to listen to numbers',
-	    when_listen_number_and_run: 'When IP %s heard numbers',
-	    getCorrectedSentence: 'Current number heard by IP %s',
+	    when_listen_number_and_run: 'when IP %s heard numbers',
+	    getCorrectedSentence: 'current number heard by IP %s',
 	    playVideosInYoutube: 'IP %s %m.playVideosInYoutubeItems playing a Youtube URL: %s',
 	    playUrlMusic: 'IP %s %m.playUrlMusicItems playing an online audio file: %s',
 	    displayUrlPictures: 'IP %s %m.displayUrlPicturesItems browsing an online image file: %s',
@@ -1285,7 +1264,7 @@ ext.Add_and_update_sentence_number = function (ip) {
 	    openDriveAudioUrl: 'IP %s %m.openDriveAudioUrlItems playing Google Drive audio shareable link: %s',
 	    openDrivePictureUrl: 'IP %s %m.openDrivePictureUrlItems browsing a Google Drive image shareable link: %s',
         openDriveDocumentUrl: 'IP %s %m.openDriveDocumentUrlItems browsing a Google Drive document shareable link: %s',
-		when_touch_head_and_run: 'When the head of IP %s is touched',
+		when_touch_head_and_run: 'when the head of IP %s is touched',
 		recordAudio: 'IP %s %m.recordAudioItems audio recording, file name: %s',
 		recordVideo: 'IP %s %m.recordVideoItems %m.recordVideoSizes video recording, file name: %s',
 	    head_direction: ["left", "right", "top", "bottom"],
@@ -1370,7 +1349,7 @@ ext.Add_and_update_sentence_number = function (ip) {
                             "結束向左急轉", "結束向右急轉", "解除連續任務衝突"],
             facial_type: ["有興趣", "疑惑", "驕傲", "輕鬆愉快(預設)", "開心", "期待", "愣一下", "質疑", "不耐煩", "自信", "有活力一", "得意", "無奈", "嚴肅", "煩惱", "裝平靜", "慵懶", "察覺", 
                             "倦怠", "害羞", "無辜", "有活力二", "察覺", "預設"],
-            tts_type: ["Hi,你好", "看這裡", "WoW", "YA"],
+            tts_type: ["嗨,你好", "看這裡", "WoW", "YA"],
             volume_type: ["大聲點", "小聲點"],
             music_type: ["開始", "暫停", "繼續", "停止", "重新"],
             volume_option_type: ["音樂", "鬧鐘", "通知", "說話"],
