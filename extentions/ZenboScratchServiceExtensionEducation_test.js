@@ -1307,7 +1307,7 @@
     var TRANSLATIONS = {
         us: {
             Setting_targetIP: 'setup Zenbo IP: %s',
-            Body_movement: 'move %m.move_direction by %m.move_far Meter %m.move_speed',
+            Body_movement: 'move %m.move_direction by %m.move_far meter %m.move_speed',
             Stop_moving: 'stop any action',
             Head_movement: 'turn head to the %m.head_direction by %m.head_degree degree(s)',
             Body_turn: 'turn body to the %m.body_turn_direction by %m.body_turn_degree degree(s)',
@@ -1316,10 +1316,10 @@
             Cancel_actionset: 'stop the canned action',
             Facial: 'make the %m.facial_type expression', 
             hideFace: 'hide the expression',
-            TTS: 'speak  %m.tts_type ',
-	    TTS_editor: 'speak  %s',
+            TTS: 'speak:  %m.tts_type ',
+	    TTS_editor: 'speak:  %s',
 	    Adjust_stream_volume: 'make %m.volume_option_type volume %m.volume_type',
-	    Adjust_tts_and_speed: 'speak  %s by %m.tts_speed_type speed',
+	    Adjust_tts_and_speed: 'speak:  %s by %m.tts_speed_type speed',
 	    Add_and_update_sentence: 'Zenbo is ready to listen %m.sentence_type which is %s',
 	    Speak_and_listen: 'Zenbo would start listening',
 	    when_listen_and_run: 'when Zenbo heard %m.sentence_type',
