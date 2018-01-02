@@ -243,7 +243,7 @@ function showMessage(message)
 	
 	console.log("zenboIPWarningWindowFlag 2"); 
 	
-     $( "#dialog" ).html( '<style> .mytest .ui-dialog-titlebar-close {display: none;} , .ui-widget-header, .ui-state-default, ui-button{ background:#b9cd6d; border: 1px solid #b9cd6d; color: #FFFFFF; font-weight: bold;} </style>');  	
+     $( "#dialog" ).html( '<style> .mytest .ui-dialog-titlebar-close {display: none;} , .ui-widget-header, .ui-state-default, ui-button{ background:#b9cd6d; border: 1px solid #b9cd6d; color: #FFFFFF; font-weight: bold;} </style> <input type="checkbox" name="ck" value="true"> 永遠不再提示');  	
 	
 	console.log("zenboIPWarningWindowFlag 3"); 
 	
@@ -258,6 +258,12 @@ function showMessage(message)
             $( this ).dialog( "close" );  
         },
          "取消": function() {
+		 
+	      var ckValue = $("input:[name='ck']:checked").val();
+	      if  (ckValue == "true") {
+	       zenboIPWarningWindowFlag = false;	    
+	      }
+		 
               $( this ).dialog( "close" );
         }  
       }  
