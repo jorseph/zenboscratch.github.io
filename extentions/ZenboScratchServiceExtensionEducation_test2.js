@@ -259,7 +259,8 @@ function showMessage(message)
         },
          "取消": function() {
 		 
-	      var ckValue = $("input:[name='ck']:checked").val();
+	      var ckValue = $("input:checkbox:checked").val();
+	      console.log(ckValue);   	 
 	      if  (ckValue == "true") {
 	       zenboIPWarningWindowFlag = false;	    
 	      }
