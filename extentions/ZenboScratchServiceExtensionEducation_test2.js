@@ -242,9 +242,9 @@ function showMessage(message)
      $("<div id='dialog'></div>").appendTo("body");
 	
 	console.log("zenboIPWarningWindowFlag 2"); 
-	
-     $( "#dialog" ).html( '<style> .mytest .ui-dialog-titlebar-close {display: none;} , .ui-widget-header, .ui-state-default, ui-button{ background:#b9cd6d; border: 1px solid #b9cd6d; color: #ADADAD; font-weight: bold;} </style> <input type="checkbox" name="ck" value="true"> 永遠不再提示');  	
-	
+		 $( "#dialog" ).html( '<style> .mytest .ui-dialog-titlebar-close {display: none;} </style> <input type="checkbox" name="ck" value="true"> 永遠不再提示');  
+    // $( "#dialog" ).html( '<style> .mytest .ui-dialog-titlebar-close {display: none;} , .ui-widget-header, .ui-state-default, ui-button{ background:#b9cd6d; border: 1px solid #b9cd6d; color: #ADADAD; font-weight: bold;} </style> <input type="checkbox" name="ck" value="true"> 永遠不再提示');  	
+
 	console.log("zenboIPWarningWindowFlag 3"); 
 	
     $( "#dialog" ).dialog({
