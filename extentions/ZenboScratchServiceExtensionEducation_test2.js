@@ -239,7 +239,7 @@ function showMessage(message)
     // $("<div id='dialog' title='系統提示      '>").appendTo("head");
 	
 	
-     $("<div id='dialog'></div>").appendTo("body");
+     $("<div id='dialog' style=\"border-width:3px; border-style:outset; border-color:#FFAC55; padding:5px;\" ></div>").appendTo("body");
 	
 	console.log("zenboIPWarningWindowFlag 2"); 
 		 $( "#dialog" ).html( '<style> .mytest .ui-dialog-titlebar-close {display: none;} </style> <input type="checkbox" name="ck" value="true"> 永遠不再提示');  
