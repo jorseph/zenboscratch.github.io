@@ -239,12 +239,24 @@ function showMessage(message)
     // $("<div id='dialog' title='系統提示      '>").appendTo("head");
 	
 	
-     $("<div id='dialog' style=\"border-width:3px; border-style:outset; border-color:#FFAC55; padding:5px;\" ></div>").appendTo("body");
+     $("<div id=\"dialog\"></div>").appendTo("body");
 	
 	console.log("zenboIPWarningWindowFlag 2"); 
 	// $( "#dialog" ).html( '<style> .mytest .ui-dialog-titlebar-close {display: none;} </style> 請先設置 Zenbo IP <br> <input type="checkbox" name="ck" value="true"> 永遠不再提示 <br> <button onclick="">取消</button>');  
     // $( "#dialog" ).html( '<style> .mytest .ui-dialog-titlebar-close {display: none;} , .ui-widget-header, .ui-state-default, ui-button{ background:#b9cd6d; border: 1px solid #b9cd6d; color: #ADADAD; font-weight: bold;} </style> <input type="checkbox" name="ck" value="true"> 永遠不再提示');  	
-    $( "#dialog" ).html( '請先設置 Zenbo IP <br> <input type="checkbox" name="ck" value="true"> 永遠不再提示 <br> <button onclick="">取消</button>');
+   
+	$("#dialog").css({ 
+	    position: "absolute",
+            display: "block",
+	    left: "300px",
+	    top': "300px", 	
+            border: "3px solid green",
+	    background-color: "#fbca93", 	
+	    width: "100px", 	
+            height: "50px"  
+        }); 
+	
+	$( "#dialog" ).html( '請先設置 Zenbo IP <br> <input type="checkbox" name="ck" value="true"> 永遠不再提示 <br> <button onclick="">取消</button>');
 	 	
      $("#dialog").show();	
 	console.log("zenboIPWarningWindowFlag 3"); 
@@ -321,7 +333,7 @@ function ConfirmDialog(message){
    */	
     ext.Head_movement = function (p1, p2, callback) {
 
-        ext.load_jquery_ui();
+        // ext.load_jquery_ui();
         console.log("Head_movement");
         console.log(ip);
         console.log(p1);
