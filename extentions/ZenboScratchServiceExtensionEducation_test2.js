@@ -10,6 +10,16 @@
     port = ":8080";
     zenboIPWarningWindowFlag = true; 
 
+    function checkValueAndSwitchZenboIPWarningWindowFlag() 
+    { 
+       console.log("checkValueAndSwitchZenboIPWarningWindowFlag");       	    
+       var ckValue = $("input:checkbox:checked").val();
+       console.log(ckValue);   	 
+	      if  (ckValue == "true") {
+	       zenboIPWarningWindowFlag = false;	    
+	      } 
+    }	
+		
     var getValueIndex  = function() {
 
         var returnValueIndex = -1;
@@ -257,7 +267,7 @@ function showMessage(message)
         }); 
 	
 	
-	$( "#dialog" ).html( '請先設置 Zenbo IP <br> <input type="checkbox" name="ck" value="true"> 永遠不再提示 <br> <button onclick="">取消</button>');
+	$( "#dialog" ).html( '請先設置 Zenbo IP <br> <input type="checkbox" name="ck" value="true"> 永遠不再提示 <br> <button onclick="checkValueAndSwitchZenboIPWarningWindowFlag()">取消</button>');
 	 	
      $("#dialog").show();	
 	console.log("zenboIPWarningWindowFlag 3"); 
