@@ -270,14 +270,14 @@ function showMessage(message)
         }); 
 	
 	
-	$( "#dialog" ).html( '請先設置 Zenbo IP <br> <input type="checkbox" name="ck" value="true"> 永遠不再提示 <br> <br>  <button id="myButton">取消</button>');
+	$( "#dialog" ).html( '請先設置 Zenbo IP <br> <input type="checkbox" name="ck" value="true">永遠不再提示 <br> <br>  <button id="myButton">取消</button>');
 	
         $("#myButton").css({ 
 	    "background-color": "#e7e7e7",
 	    "color": "black",
 	    "border": "2px solid black", 	
 	    "width": "60px", 	
-            "height": "30px",
+            "height": "35px",
 	    "font-size": "16px",
 	    "text-align": "center",
 	    "float": "right",
