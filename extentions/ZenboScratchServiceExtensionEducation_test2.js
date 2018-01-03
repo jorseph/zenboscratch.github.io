@@ -265,7 +265,8 @@ function showMessage(message)
 	    "width": "150px", 	
             "height": "120px",
 	    "font-size": "16px",
-	    "padding": "2px 2px 2px 2px"  	
+	    "padding": "2px 2px 2px 2px",
+	    "text-align": "center" 	
         }); 
 	
 	
