@@ -272,7 +272,7 @@ function showMessage(message)
 		
 		  console.log("checkValueAndSwitchZenboIPWarningWindowFlag");       	    
                   var ckValue = $("input:checkbox:checked").val();
-                  console.log(ckValue);   	 
+                  console.log("ckValue");   	 
 	          if  (ckValue == "true") {
 	          zenboIPWarningWindowFlag = false;	    
 	          } 
