@@ -248,12 +248,12 @@ function showMessage(message)
 	$("#dialog").css({ 
 	    "position": "absolute",  	
             "display": "block",
-	    "left": "300px",
-	    "top": "300px", 	
+	    "left": "200px",
+	    "top": "200px", 	
             "border": "3px solid green",
 	    "background-color": "#fbca93", 	
-	    "width": "300px", 	
-            "height": "300px"  
+	    "width": "150px", 	
+            "height": "100px"  
         }); 
 	
 	
