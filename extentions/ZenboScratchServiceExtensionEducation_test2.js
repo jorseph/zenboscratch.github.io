@@ -264,7 +264,8 @@ function showMessage(message)
 	    "background-color": "#fbca93", 	
 	    "width": "150px", 	
             "height": "100px",
-	    "font-size": "16px"  	
+	    "font-size": "16px",
+	    "padding": "2px 5px 2px 8px"  	
         }); 
 	
 	
