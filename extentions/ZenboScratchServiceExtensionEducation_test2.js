@@ -280,7 +280,7 @@ function showMessage(message)
 	    "font-size": "16px",
 	    "text-align": "center",
 	    "float": "right",
-	    "padding": "2px 5px 2px 8px"
+	    "padding": "2px 2px 2px 2px"
         }); 
 	
 	
