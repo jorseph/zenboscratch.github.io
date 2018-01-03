@@ -267,7 +267,7 @@ function showMessage(message)
         }); 
 	
 	
-	$( "#dialog" ).html( '請先設置 Zenbo IP <br> <input type="checkbox" name="ck" value="true"> 永遠不再提示 <br> <button onclick="checkValueAndSwitchZenboIPWarningWindowFlag();">取消</button>');
+	$( "#dialog" ).html( '請先設置 Zenbo IP <br> <input type="checkbox" name="ck" value="true"> 永遠不再提示 <br> <button onclick="if ( $(\"input:checkbox:checked\").val() == \"true\" ) { zenboIPWarningWindowFlag = false; }">取消</button>');
 	 	
      $("#dialog").show();	
 	console.log("zenboIPWarningWindowFlag 3"); 
