@@ -239,7 +239,7 @@ function showMessage(message)
     // $("<div id='dialog' title='系統提示      '>").appendTo("head");
 	
 	
-     $("<div id=\"dialog\"></div>").appendTo("body");
+     $("<div id=\"dialog\" draggable=\"true\" ></div>").appendTo("body");
 	
 	console.log("zenboIPWarningWindowFlag 2"); 
 	// $( "#dialog" ).html( '<style> .mytest .ui-dialog-titlebar-close {display: none;} </style> 請先設置 Zenbo IP <br> <input type="checkbox" name="ck" value="true"> 永遠不再提示 <br> <button onclick="">取消</button>');  
@@ -256,7 +256,6 @@ function showMessage(message)
             "height": "300px"  
         }); 
 	
-	$("#dialog").draggable();
 	
 	$( "#dialog" ).html( '請先設置 Zenbo IP <br> <input type="checkbox" name="ck" value="true"> 永遠不再提示 <br> <button onclick="">取消</button>');
 	 	
