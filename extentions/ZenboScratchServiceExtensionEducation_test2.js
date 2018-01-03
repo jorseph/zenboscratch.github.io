@@ -245,8 +245,10 @@ function showMessage(message)
 		 $( "#dialog" ).html( '<style> .mytest .ui-dialog-titlebar-close {display: none;} </style> 請先設置 Zenbo IP <br> <input type="checkbox" name="ck" value="true"> 永遠不再提示 <br> <button onclick="">取消</button>');  
     // $( "#dialog" ).html( '<style> .mytest .ui-dialog-titlebar-close {display: none;} , .ui-widget-header, .ui-state-default, ui-button{ background:#b9cd6d; border: 1px solid #b9cd6d; color: #ADADAD; font-weight: bold;} </style> <input type="checkbox" name="ck" value="true"> 永遠不再提示');  	
 
+$("#dialog").show();	
 	console.log("zenboIPWarningWindowFlag 3"); 
 	
+/*	
     $( "#dialog" ).dialog({
       dialogClass:"mytest" ,	    
       modal: true,  
@@ -266,7 +268,7 @@ function showMessage(message)
       }  
     });  
      
-	
+*/	
 	console.log("zenboIPWarningWindowFlag 4"); 
 	
   
