@@ -246,15 +246,17 @@ function showMessage(message)
     // $( "#dialog" ).html( '<style> .mytest .ui-dialog-titlebar-close {display: none;} , .ui-widget-header, .ui-state-default, ui-button{ background:#b9cd6d; border: 1px solid #b9cd6d; color: #ADADAD; font-weight: bold;} </style> <input type="checkbox" name="ck" value="true"> 永遠不再提示');  	
    
 	$("#dialog").css({ 
-	    "position": "absolute",
+	    "position": "absolute",  	
             "display": "block",
 	    "left": "300px",
 	    "top": "300px", 	
             "border": "3px solid green",
 	    "background-color": "#fbca93", 	
-	    "width": "100px", 	
-            "height": "50px"  
+	    "width": "300px", 	
+            "height": "300px"  
         }); 
+	
+	$("#dialog").draggable();
 	
 	$( "#dialog" ).html( '請先設置 Zenbo IP <br> <input type="checkbox" name="ck" value="true"> 永遠不再提示 <br> <button onclick="">取消</button>');
 	 	
