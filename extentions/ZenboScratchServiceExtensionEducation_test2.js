@@ -249,7 +249,7 @@ function showMessage(message)
 	    position: "absolute",
             display: "block",
 	    left: "300px",
-	    top': "300px", 	
+	    top: "300px", 	
             border: "3px solid green",
 	    background-color: "#fbca93", 	
 	    width: "100px", 	
