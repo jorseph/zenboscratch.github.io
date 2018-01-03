@@ -274,8 +274,8 @@ function showMessage(message)
 	    "background-color": "#e7e7e7",
 	    "color": "black",
 	    "border": "2px solid black", 	
-	    "width": "40px", 	
-            "height": "40px",
+	    "width": "80px", 	
+            "height": "20px",
 	    "font-size": "16px",
 	    "text-align": "center" 	
         }); 
