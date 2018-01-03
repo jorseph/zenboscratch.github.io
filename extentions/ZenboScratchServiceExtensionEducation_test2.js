@@ -263,7 +263,8 @@ function showMessage(message)
             "border": "3px solid green",
 	    "background-color": "#fbca93", 	
 	    "width": "150px", 	
-            "height": "100px"  
+            "height": "100px",
+	    "font-size": "16px"  	
         }); 
 	
 	
@@ -274,7 +275,9 @@ function showMessage(message)
 	    "color": "black",
 	    "border": "2px solid black", 	
 	    "width": "20px", 	
-            "height": "10px"  
+            "height": "20px",
+	    "font-size": "16px",
+	    "text-align": "center"; 	
         }); 
 	
 	
