@@ -278,7 +278,7 @@ function showMessage(message)
             "height": "40px",
 	    "font-size": "16px",
 	    "text-align": "center",
-	    "vertical-align": "middle"
+	    "align": "right"
         }); 
 	
 	
