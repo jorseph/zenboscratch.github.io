@@ -272,7 +272,9 @@ function showMessage(message)
         $("#myButton").css({ 
 	    "background-color": "#e7e7e7",
 	    "color": "black",
-	    "border": "2px solid black"	            
+	    "border": "2px solid black", 	
+	    "width": "20px", 	
+            "height": "10px"  
         }); 
 	
 	
