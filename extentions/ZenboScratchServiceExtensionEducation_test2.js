@@ -277,6 +277,7 @@ function showMessage(message)
 	          zenboIPWarningWindowFlag = false;	    
 	          } 
 		
+		  $( "#dialog" ).remove();
 	});
  
 	 	
