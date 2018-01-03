@@ -275,7 +275,7 @@ function showMessage(message)
 	    "color": "black",
 	    "border": "2px solid black", 	
 	    "width": "80px", 	
-            "height": "20px",
+            "height": "40px",
 	    "font-size": "16px",
 	    "text-align": "center" 	
         }); 
