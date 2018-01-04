@@ -1343,7 +1343,7 @@
             move_far: ["0.25", "0.50", "0.75", "1.00", "1.25", "1.50", "1.75", "2.00"],
             move_speed: ["slowly", "normally", "fast"],
             body_turn_direction: ["left", "right"],
-            body_turn_degree: ["0", "15", "30", "45", "60", "75", "90", "105", "120", "135", "150", "165", "180", "195", "210", "225", "240", "255", "270", "285", "300", "315", "330", "345", "360"],
+            body_turn_degree: ["0", "30", "60", "90", "120", "150", "180, "210", "240", "270", "300", "330", "360"],
             remote_control_body: ["stop", "move forward", "turn left", "turn right"],
             action_type: ["relax(default)", "listen to the command/briefing(high)", "complete the task/satisfaction", "greet", "there is a general message-1", "standby(boring)",
                           "charge(satisfaction)", "listen to the command/briefing(low)", "there are continuous task conflicts", "be disappointed(user finishing)", 
