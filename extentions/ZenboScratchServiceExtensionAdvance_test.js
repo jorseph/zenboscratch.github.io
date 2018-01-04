@@ -1406,7 +1406,7 @@ ext.Add_and_update_sentence_number = function (ip) {
             ['', translate.Body_movement, 'Body_movement', "192.168.0.1", translate.move_direction[0], translate.move_far[0], translate.move_speed[0]],
             ['', translate.Stop_moving, 'Stop_moving', "192.168.0.1"],
             ['', translate.Head_movement, 'Head_movement', "192.168.0.1", translate.head_direction[0], translate.head_degree[3]], 
-            ['', translate.Body_turn, 'Body_turn', "192.168.0.1", translate.body_turn_direction[0], translate.body_turn_degree[6]],
+            ['', translate.Body_turn, 'Body_turn', "192.168.0.1", translate.body_turn_direction[0], translate.body_turn_degree[3]],
             ['', translate.Remote_control_body, 'Remote_control_body', "192.168.0.1", translate.remote_control_body[3]],
           //  ['', translate.Action, 'Action', "192.168.0.1", translate.action_type[3]],
           //  ['', translate.Cancel_actionset, 'Cancel_actionset', "192.168.0.1"],
