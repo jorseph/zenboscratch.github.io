@@ -1462,7 +1462,7 @@
     }
 	
     // how which language translation is chosen (increasing priority):
-    //   1 - explicit 'lang' parameter in the url (e.g: http://scratchx.org/?url=https://zenboscratchservice.github.io/extentions/ZenboScratchServiceExtensionAdvance.js&lang=en#scratch)
+    //   1 - explicit 'lang' parameter in the url (e.g: http://scratchx.org/?url=https://zenboscratchservice.github.io/extentions/ZenboScratchServiceExtensionEducation.js&lang=en#scratch)
     //   2 - browser first preferred language (navigator.languages[0])
     //   3 - default (en-us)
 		
