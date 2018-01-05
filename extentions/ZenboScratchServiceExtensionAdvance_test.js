@@ -1160,7 +1160,7 @@ ext.Add_and_update_sentence_number = function (ip) {
 
     if ( setupFlag_init_3 == true) {
               
-               flagArray.data.push( { { device: ip, correctedSentence: "", index: "", sentence_1_flag: false, sentence_2_flag: false, sentence_3_flag: false,
+               flagArray.data.push(  { device: ip, correctedSentence: "", index: "", sentence_1_flag: false, sentence_2_flag: false, sentence_3_flag: false,
                sentence_4_flag: false, sentence_5_flag: false, otherSentence_flag: false,  number_flag: false, touch_head_flag: false, get_sentences_flag: true, recursionFlag: true } );
                console.log("add new device IP and its flags");
                flagIndex_init_3 = flagArray.data.length -1 ;
