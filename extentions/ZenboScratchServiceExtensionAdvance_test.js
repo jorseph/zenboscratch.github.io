@@ -90,8 +90,8 @@
 
         if ( setupFlag_init == true) {
      
-               flagArray.data.push( { device: ip, correctedSentence: "", sentence_1_flag: false, sentence_2_flag: false, sentence_3_flag: false,
-               sentence_4_flag: false, sentence_5_flag: false, number_flag: false, touch_head_flag: false, get_sentences_flag: true, recursionFlag: true } );
+               flagArray.data.push( { device: ip, correctedSentence: "", index: "", sentence_1_flag: false, sentence_2_flag: false, sentence_3_flag: false,
+               sentence_4_flag: false, sentence_5_flag: false, otherSentence_flag: false,  number_flag: false, touch_head_flag: false, get_sentences_flag: true, recursionFlag: true } );
                console.log("add new device IP and its flags");
                flagIndex_init = flagArray.data.length -1 ;
                console.log("true " + "flagIndex_init: "+ flagIndex_init);
@@ -168,8 +168,8 @@
                                         console.log('辨識到number');
                                         console.log( ip + " "  + flagIndex + " " + "number_flag true");
                                         flagArray.data[flagIndex].number_flag = true;
-                                        flagArray.data[flagIndex].correctedSentence = data.split(",")[1];
-                                        console.log('correctedSentence:' + flagArray.data[flagIndex].correctedSentence);
+                                        flagArray.data[flagIndex].index = data.split(",")[1];
+                                        console.log('index:' + flagArray.data[flagIndex].index);
                                               
                                         break; 
 
@@ -214,6 +214,16 @@
 						flagArray.data[flagIndex].sentence_5_flag = true;
 
 					   break;
+					
+                    case 'otherSentence':
+
+					    console.log('otherSentence');                   
+						console.log( ip + " "  + flagIndex + " " + "otherSentence_flag true");
+						flagArray.data[flagIndex].otherSentence_flag = true;
+						flagArray.data[flagIndex].correctedSentence = data.split(",")[1];
+                        console.log('correctedSentence:' + flagArray.data[flagIndex].correctedSentence);
+					
+                       break;  					
 					   
 				}  
 
@@ -602,8 +612,8 @@
 
         if ( setupFlag_init_2 == true) {
               
-               flagArray.data.push( { device: ip, correctedSentence: "", sentence_1_flag: false, sentence_2_flag: false, sentence_3_flag: false, 
-               sentence_4_flag: false, sentence_5_flag: false, number_flag: false, touch_head_flag: false, get_sentences_flag: true, recursionFlag: true } );
+               flagArray.data.push( { device: ip, correctedSentence: "", index: "", sentence_1_flag: false, sentence_2_flag: false, sentence_3_flag: false,
+               sentence_4_flag: false, sentence_5_flag: false, otherSentence_flag: false,  number_flag: false, touch_head_flag: false, get_sentences_flag: true, recursionFlag: true } );
                console.log("add new device IP and its flags");
                flagIndex_init_2 = flagArray.data.length -1 ;
                console.log("true " + "flagIndex_init_2: "+ flagIndex_init_2);
@@ -816,6 +826,17 @@
             }
 
             break;
+			
+		case 'otherSentence':
+               
+            if (flagArray.data[valueIndex].otherSentence_flag === true) {
+                flagArray.data[valueIndex].otherSentence_flag = false;
+		console.log('true otherSentence');    
+                return true;
+            }
+
+            break;
+			
        
         }
         return false;
@@ -867,6 +888,28 @@
 
         console.log('getCorrectedSentence: ' + flagArray.data[valueIndex_3].correctedSentence);   		
         return flagArray.data[valueIndex_3].correctedSentence;
+    };
+	
+	
+	ext.getIndex = function(ip) {
+       
+        var valueIndex_4 = -1;
+
+        for(var m = 0; m < flagArray.data.length; m++){
+
+             if ( ip == flagArray.data[m].device) {               
+                  valueIndex_4 = m;
+             }
+        }
+	
+        if ( valueIndex_4 === -1 ) {
+	
+              console.log('valueIndex_4 === -1');  	
+	     return 'no device';
+	}
+
+        console.log('getIndex: ' + flagArray.data[valueIndex_4].index);   		
+        return flagArray.data[valueIndex_4].index;
     };
 
 
@@ -1117,8 +1160,8 @@ ext.Add_and_update_sentence_number = function (ip) {
 
     if ( setupFlag_init_3 == true) {
               
-               flagArray.data.push( { device: ip, correctedSentence: "", sentence_1_flag: false, sentence_2_flag: false, sentence_3_flag: false, 
-               sentence_4_flag: false, sentence_5_flag: false, number_flag: false, touch_head_flag: false, get_sentences_flag: true, recursionFlag: true } );
+               flagArray.data.push( { { device: ip, correctedSentence: "", index: "", sentence_1_flag: false, sentence_2_flag: false, sentence_3_flag: false,
+               sentence_4_flag: false, sentence_5_flag: false, otherSentence_flag: false,  number_flag: false, touch_head_flag: false, get_sentences_flag: true, recursionFlag: true } );
                console.log("add new device IP and its flags");
                flagIndex_init_3 = flagArray.data.length -1 ;
                console.log("true " + "flagIndex_init_3: "+ flagIndex_init_3);
@@ -1256,7 +1299,7 @@ ext.Add_and_update_sentence_number = function (ip) {
 	    Delete_instance: 'IP %s delete all sentences',
 	    Add_and_update_sentence_number: 'IP %s is ready to listen to numbers',
 	    when_listen_number_and_run: 'when IP %s heard numbers',
-	    getCorrectedSentence: 'current number heard by IP %s',
+	    getIndex: 'current number heard by IP %s',
 	    playVideosInYoutube: 'IP %s %m.playVideosInYoutubeItems playing a Youtube URL: %s',
 	    playUrlMusic: 'IP %s %m.playUrlMusicItems playing an online audio file: %s',
 	    displayUrlPictures: 'IP %s %m.displayUrlPicturesItems browsing an online image file: %s',
@@ -1326,7 +1369,7 @@ ext.Add_and_update_sentence_number = function (ip) {
 	    Delete_instance: 'IP %s 刪除全部語句',
 	    Add_and_update_sentence_number: 'IP %s 準備要聽數字',
 	    when_listen_number_and_run: '當我聽到 IP %s 的數字',
-	    getCorrectedSentence: '目前 IP %s 聽到的數字 ',
+	    getIndex: '目前 IP %s 聽到的數字 ',
 	    playVideosInYoutube: 'IP %s %m.playVideosInYoutubeItems 播放 Youtube 網址: %s',
 	    playUrlMusic: 'IP %s %m.playUrlMusicItems 播放線上音樂: %s',
 	    displayUrlPictures: 'IP %s %m.displayUrlPicturesItems 瀏覽線上圖片: %s',
@@ -1424,7 +1467,7 @@ ext.Add_and_update_sentence_number = function (ip) {
             ['', translate.Delete_instance, 'Delete_instance', "192.168.0.1"],
           //  ['', translate.Add_and_update_sentence_number, 'Add_and_update_sentence_number', "192.168.0.1"],
             ['h', translate.when_listen_number_and_run, 'when_listen_number_and_run', "192.168.0.1"],
-            ['r', translate.getCorrectedSentence, 'getCorrectedSentence', "192.168.0.1"],
+            ['r', translate.getIndex, 'getIndex', "192.168.0.1"],
             ['', translate.playVideosInYoutube, 'playVideosInYoutube', "192.168.0.1", translate.playVideosInYoutubeItems[0], 'https://www.youtube.com/watch?v=Ou21RusvBcg'],
             ['', translate.playUrlMusic, 'playUrlMusic', "192.168.0.1", translate.playUrlMusicItems[0], 'https://zenboscratch.github.io/examples/zenbo_music.mp3'],
             ['', translate.displayUrlPictures, 'displayUrlPictures', "192.168.0.1", translate.displayUrlPicturesItems[0], 'https://zenboscratch.github.io/images/zenbo.jpg'],
@@ -1491,7 +1534,7 @@ ext.Add_and_update_sentence_number = function (ip) {
             ['', 'IP %s 刪除全部語句', 'Delete_instance', "192.168.0.1"],
           //  ['', 'IP %s 準備要聽數字', 'Add_and_update_sentence_number', "192.168.0.1"],
             ['h', '當我聽到 IP %s 的數字', 'when_listen_number_and_run', "192.168.0.1"],
-            ['r', '目前 IP %s 聽到的數字 ', 'getCorrectedSentence', "192.168.0.1"],
+            ['r', '目前 IP %s 聽到的數字 ', 'getIndex', "192.168.0.1"],
             ['', 'IP %s %m.playVideosInYoutubeItems 播放 Youtube 網址: %s', 'playVideosInYoutube', "192.168.0.1", '開始', 'https://www.youtube.com/watch?v=Ou21RusvBcg'],
             ['', 'IP %s %m.playUrlMusicItems 播放線上音樂: %s', 'playUrlMusic', "192.168.0.1", '開始', 'https://zenboscratch.github.io/examples/zenbo_music.mp3'],
             ['', 'IP %s %m.displayUrlPicturesItems 瀏覽線上圖片: %s', 'displayUrlPictures', "192.168.0.1", '開始', 'https://zenboscratch.github.io/images/zenbo.jpg'],
