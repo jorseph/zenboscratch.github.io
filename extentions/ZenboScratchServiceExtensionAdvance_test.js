@@ -215,15 +215,15 @@
 
 					   break;
 					
-                    case 'otherSentence':
+                                        case 'otherSentence':
 
-					    console.log('otherSentence');                   
+					        console.log('otherSentence');                   
 						console.log( ip + " "  + flagIndex + " " + "otherSentence_flag true");
 						flagArray.data[flagIndex].otherSentence_flag = true;
 						flagArray.data[flagIndex].correctedSentence = data.split(",")[1];
-                        console.log('correctedSentence:' + flagArray.data[flagIndex].correctedSentence);
+                                                console.log('correctedSentence:' + flagArray.data[flagIndex].correctedSentence);
 					
-                       break;  					
+                                           break;  					
 					   
 				}  
 
@@ -827,7 +827,7 @@
 
             break;
 			
-		case 'otherSentence':
+	case '其他語句':
                
             if (flagArray.data[valueIndex].otherSentence_flag === true) {
                 flagArray.data[valueIndex].otherSentence_flag = false;
@@ -1306,8 +1306,8 @@ ext.Add_and_update_sentence_number = function (ip) {
 	    openDriveVideoUrl: 'IP %s %m.openDriveVideoUrlItems playing a Google Drive video shareable link: %s',
 	    openDriveAudioUrl: 'IP %s %m.openDriveAudioUrlItems playing Google Drive audio shareable link: %s',
 	    openDrivePictureUrl: 'IP %s %m.openDrivePictureUrlItems browsing a Google Drive image shareable link: %s',
-        openDriveDocumentUrl: 'IP %s %m.openDriveDocumentUrlItems browsing a Google Drive document shareable link: %s',
-		when_touch_head_and_run: 'when the head of IP %s is touched',
+            openDriveDocumentUrl: 'IP %s %m.openDriveDocumentUrlItems browsing a Google Drive document shareable link: %s',
+	when_touch_head_and_run: 'when the head of IP %s is touched',
 		recordAudio: 'IP %s %m.recordAudioItems audio recording, file name: %s',
 		recordVideo: 'IP %s %m.recordVideoItems %m.recordVideoSizes video recording, file name: %s',
 	    head_direction: ["left", "right", "top", "bottom"],
