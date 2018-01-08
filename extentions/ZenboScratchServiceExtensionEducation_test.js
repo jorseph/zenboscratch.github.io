@@ -214,9 +214,9 @@
 			console.log( ip + " "  + flagIndex + " " + "otherSentence_flag true");
 			flagArray.data[flagIndex].otherSentence_flag = true;
 			flagArray.data[flagIndex].correctedSentence = data.split(",")[1];
-            console.log('correctedSentence:' + flagArray.data[flagIndex].correctedSentence);
+                        console.log('correctedSentence:' + flagArray.data[flagIndex].correctedSentence);
 					
-            break;  
+                        break;  
 					   
 		}  
 
@@ -860,13 +860,13 @@
 
     		    break;
 
-		     case 'otherSentence':
+		  case '其他語句':
                
-              if (flagArray.data[valueIndex].otherSentence_flag === true) {
-                  flagArray.data[valueIndex].otherSentence_flag = false;
-		          console.log('true otherSentence');    
-                return true;
-            }
+                    if (flagArray.data[valueIndex].otherSentence_flag === true) {
+                        flagArray.data[valueIndex].otherSentence_flag = false;
+		        console.log('true otherSentence');    
+                        return true;
+                    }
 
             break;
 				
