@@ -259,6 +259,7 @@ function showMessage(message)
 		return this;
 	}
 
+         /*
 	$(document).ready(function() {		
 			
 		$(document).keypress(function(e){
@@ -279,7 +280,8 @@ function showMessage(message)
 			$("#dialog").fadeOut("slow");
 		});
 		
-	});	
+	});
+	*/
 	
 	console.log("zenboIPWarningWindowFlag 2"); 
 	// $( "#dialog" ).html( '<style> .mytest .ui-dialog-titlebar-close {display: none;} </style> 請先設置 Zenbo IP <br> <input type="checkbox" name="ck" value="true"> 永遠不再提示 <br> <button onclick="">取消</button>');  
@@ -311,7 +313,8 @@ function showMessage(message)
 	    "font-size": "16px",
 	    "padding": "2px 2px 2px 2px",
 	    "text-align": "center",
-	    "z-index": "10" 	
+	    "z-index": "10",
+	    "cursor": "pointer"
         }); 
 	
 	
@@ -339,7 +342,8 @@ function showMessage(message)
 	          zenboIPWarningWindowFlag = false;	    
 	          } 
 		
-		  $( "#dialog" ).remove();
+		  $("#background").fadeOut("slow");
+	          $("#dialog").fadeOut("slow");
 	});
  
 	 
