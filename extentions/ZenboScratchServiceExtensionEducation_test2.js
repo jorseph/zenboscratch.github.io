@@ -246,8 +246,7 @@
 	
 function showMessage(message)  
 {  
-    // $("<div id='dialog' title='系統提示      '>").appendTo("head");
-	
+  
 	
      $("<div align=\"center\"> <div id=\"dialog\" draggable=\"true\" ></div> <div id=\"background\"></div> </div>").appendTo("body");
 	
@@ -349,85 +348,16 @@ function showMessage(message)
 	});
  
 	 
-         $("#background").css({"opacity" : "0.7"}).fadeIn("slow");			
-						
-	 $("#dialog").center().fadeIn("slow");			
-	
-	
+     $("#background").css({"opacity" : "0.7"}).fadeIn("slow");									
+     $("#dialog").center().fadeIn("slow");			
 	
      $("#dialog").show();	
-	console.log("zenboIPWarningWindowFlag 3"); 
-	
-/*	
-    $( "#dialog" ).dialog({
-      dialogClass:"mytest" ,	    
-      modal: true,  
-      position: { my: "center", at: "left+300px top+300px ", of: window  } ,
-      title: "請先設置 Zenbo IP",	    
-      buttons: {  
-         "取消": function() {
-		 
-	      var ckValue = $("input:checkbox:checked").val();
-	      console.log(ckValue);   	 
-	      if  (ckValue == "true") {
-	       zenboIPWarningWindowFlag = false;	    
-	      }
-		 
-              $( this ).dialog( "close" );
-        }  
-      }  
-    });  
+
+  
+
+   };  	
+
      
-*/	
-	console.log("zenboIPWarningWindowFlag 4"); 
-	
-  
-
-};  	
-
-      
-  /*   
-function ConfirmDialog(message){
-
-
-  
-       $('<div id=\"dialog-confirm\" title=\"請先設置 Zenbo IP\" style=\"position: absolute; top: 80px; left: 80px;\">必須要先設置 Zenbo IP,<br>Zenbo Scratch 才能動作</div>').appendTo('body');
-       
-       $( "#dialog-confirm" ).dialog({
-         resizable: false,
-         height: 400,
-         width: 400,
-         modal: true,
-         buttons: {
-           "永久取消警告": function() {
-	      zenboIPWarningWindowFlag = false;
-              $( this ).dialog( "close" );
-           },
-           Cancel: function() {
-              $( this ).dialog( "close" );
-           }
-          }
-         });
-	
-	             
-	            .html('<p>'+ '必須要先設置 Zenbo IP,' + '<br>' + 'Zenbo Scratch 才能動作' + '</p>')
-                    .dialog({ 
-                        title: message + "  ",
-                        buttons: {
-                            永久取消警告: function () { 
-                                zenboIPWarningWindowFlag = false;                                                                  
-                                $(this).dialog("close");
-                            },                                   
-                        }, 
-                        close: function (event, ui) {
-                            $(this).remove();
-                        }   
-
-                    });  
-	         
-	
-        };   
-   */	
     ext.Head_movement = function (p1, p2, callback) {
 
         // ext.load_jquery_ui();
