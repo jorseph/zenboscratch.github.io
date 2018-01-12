@@ -249,12 +249,56 @@ function showMessage(message)
     // $("<div id='dialog' title='系統提示      '>").appendTo("head");
 	
 	
-     $("<div id=\"dialog\" draggable=\"true\" ></div>").appendTo("body");
+     $("<div align=\"center\"> <div id=\"dialog\" draggable=\"true\" ></div> <div id=\"background\"></div> </div>").appendTo("body");
+	
+	
+     jQuery.fn.center = function () {
+		this.css("position","absolute");
+		this.css("top", ( $(window).height() - this.height() ) / 2+$(window).scrollTop() + "px");
+		this.css("left", ( $(window).width() - this.width() ) / 2+$(window).scrollLeft() + "px");
+		return this;
+	}
+
+	$(document).ready(function() {		
+			
+		$(document).keypress(function(e){
+			
+			if(e.keyCode==27){
+				$("#background").fadeOut("slow");
+				$("#dialog").fadeOut("slow");
+			}
+		});
+		
+		$("#background").click(function(){
+			$("#background").fadeOut("slow");
+			$("#dialog").fadeOut("slow");
+		});
+		
+		$("#dialog").click(function(){
+			$("#background").fadeOut("slow");
+			$("#dialog").fadeOut("slow");
+		});
+		
+	});	
 	
 	console.log("zenboIPWarningWindowFlag 2"); 
 	// $( "#dialog" ).html( '<style> .mytest .ui-dialog-titlebar-close {display: none;} </style> 請先設置 Zenbo IP <br> <input type="checkbox" name="ck" value="true"> 永遠不再提示 <br> <button onclick="">取消</button>');  
     // $( "#dialog" ).html( '<style> .mytest .ui-dialog-titlebar-close {display: none;} , .ui-widget-header, .ui-state-default, ui-button{ background:#b9cd6d; border: 1px solid #b9cd6d; color: #ADADAD; font-weight: bold;} </style> <input type="checkbox" name="ck" value="true"> 永遠不再提示');  	
    
+	$("#background").css({ 
+	
+	"display": "none",
+	"position": "absolute",
+	"height": "100%",
+	"width": "100%",
+	"top": "0",
+	"left": "0",
+	"background": "#000000",	
+	"z-index": "1"
+        
+	}); 	
+	
+	
 	$("#dialog").css({ 
 	    "position": "absolute",  	
             "display": "block",
@@ -266,7 +310,8 @@ function showMessage(message)
             "height": "120px",
 	    "font-size": "16px",
 	    "padding": "2px 2px 2px 2px",
-	    "text-align": "center" 	
+	    "text-align": "center",
+	    "z-index": "10" 	
         }); 
 	
 	
@@ -297,7 +342,13 @@ function showMessage(message)
 		  $( "#dialog" ).remove();
 	});
  
-	 	
+	 
+         $("#background").css({"opacity" : "0.7"}).fadeIn("slow");			
+						
+	 $("#dialog").center().fadeIn("slow");			
+	
+	
+	
      $("#dialog").show();	
 	console.log("zenboIPWarningWindowFlag 3"); 
 	
