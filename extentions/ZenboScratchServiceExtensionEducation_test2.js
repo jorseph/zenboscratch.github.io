@@ -259,7 +259,7 @@ function showMessage(message)
 		return this;
 	}
 
-         /*
+        /*
 	$(document).ready(function() {		
 			
 		$(document).keypress(function(e){
@@ -284,9 +284,7 @@ function showMessage(message)
 	*/
 	
 	console.log("zenboIPWarningWindowFlag 2"); 
-	// $( "#dialog" ).html( '<style> .mytest .ui-dialog-titlebar-close {display: none;} </style> 請先設置 Zenbo IP <br> <input type="checkbox" name="ck" value="true"> 永遠不再提示 <br> <button onclick="">取消</button>');  
-    // $( "#dialog" ).html( '<style> .mytest .ui-dialog-titlebar-close {display: none;} , .ui-widget-header, .ui-state-default, ui-button{ background:#b9cd6d; border: 1px solid #b9cd6d; color: #ADADAD; font-weight: bold;} </style> <input type="checkbox" name="ck" value="true"> 永遠不再提示');  	
-   
+
 	$("#background").css({ 
 	
 	"display": "none",
@@ -317,7 +315,11 @@ function showMessage(message)
         }); 
 	
 	
-	$( "#dialog" ).html( '請先設置 Zenbo IP <br> <input type="checkbox" name="ck" value="true">永遠不再提示 <br> <br>  <button id="myButton">確定</button>');
+	$( "#dialog" ).html( '請先設置 Zenbo IP <br> <input id="myCheckBox" type="checkbox" name="ck" value="true">永遠不再提示 <br> <br>  <button id="myButton">確定</button>');
+	
+	$("#myCheckBox").css({ 
+	    "cursor": "pointer"
+        }); 
 	
         $("#myButton").css({ 
 	    "background-color": "#e7e7e7",
