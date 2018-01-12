@@ -334,7 +334,7 @@ function showMessage(message)
         }); 
 	
 	
-	$( '#myButton' ).click(function(){
+     $( '#myButton' ).click(function(){
 		
 		  console.log("checkValueAndSwitchZenboIPWarningWindowFlag");       	    
                   var ckValue = $("input:checkbox:checked").val();
@@ -347,13 +347,18 @@ function showMessage(message)
 	          $("#dialog").fadeOut("slow");
 	});
  
+     $("#myButton").hover(
+	     function(){		
+             $(this).css("background-color", "yellow");
+        }, 
+	     function(){
+             $(this).css("background-color", "#e7e7e7");
+        }
+     );	
 	 
      $("#background").css({"opacity" : "0.7"}).fadeIn("slow");									
-     $("#dialog").center().fadeIn("slow");			
-	
+     $("#dialog").center().fadeIn("slow");		
      $("#dialog").show();	
-
-  
 
    };  	
 
