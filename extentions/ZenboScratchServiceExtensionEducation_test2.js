@@ -244,13 +244,10 @@
 
 	
 	
-function showMessage(message)  
+function showAlertMessage()  
 {  
-  
-	
-     $("<div align=\"center\"> <div id=\"dialog\" draggable=\"true\" ></div> <div id=\"background\"></div> </div>").appendTo("body");
-	
-	
+ 	
+     $("<div align=\"center\"> <div id=\"dialog\" draggable=\"true\" ></div> <div id=\"background\"></div> </div>").appendTo("body");	
      jQuery.fn.center = function () {
 		this.css("position","absolute");
 		this.css("top", ( $(window).height() - this.height() ) / 2+$(window).scrollTop() + "px");
@@ -281,8 +278,6 @@ function showMessage(message)
 		
 	});
 	*/
-	
-	console.log("zenboIPWarningWindowFlag 2"); 
 
 	$("#background").css({ 
 	
@@ -365,7 +360,6 @@ function showMessage(message)
      
     ext.Head_movement = function (p1, p2, callback) {
 
-        // ext.load_jquery_ui();
         console.log("Head_movement");
         console.log(ip);
         console.log(p1);
@@ -379,24 +373,17 @@ function showMessage(message)
                 callback();
 
                 if (data == 'Must set Zenbo IP') {
- 
-                   if (zenboIPWarningWindowFlag === true)
-                   // ConfirmDialog('請先設置 Zenbo IP');
-			   showMessage("請先設置 Zenbo IP");
-                 
+                   if (zenboIPWarningWindowFlag === true)            
+			   showAlertMessage(); //alert('請先設置 Zenbo IP');                   
                 }
-                   //alert('請先設置 Zenbo IP');  
+                 
             },
             error: function (jqXHR, textStatus, errorThrown) {
                 console.log("error handler");
-                // alert('請先設置 Zenbo IP');
-                if (zenboIPWarningWindowFlag === true) {
-                   console.log("zenboIPWarningWindowFlag 1"); 
-                   // ConfirmDialog('請先設置 Zenbo IP');
-			showMessage("請先設置 Zenbo IP");
-			console.log("zenboIPWarningWindowFlag 5");
-			 callback();
-                }                  
+                
+                if (zenboIPWarningWindowFlag === true)                              
+			showAlertMessage(); // alert('請先設置 Zenbo IP');		
+                                  
             }
         });
 
