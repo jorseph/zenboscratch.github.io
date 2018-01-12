@@ -318,7 +318,7 @@ function showMessage(message)
         }); 
 	
 	
-	$( "#dialog" ).html( '請先設置 Zenbo IP <br> <input type="checkbox" name="ck" value="true">永遠不再提示 <br> <br>  <button id="myButton">取消</button>');
+	$( "#dialog" ).html( '請先設置 Zenbo IP <br> <input type="checkbox" name="ck" value="true">永遠不再提示 <br> <br>  <button id="myButton">確定</button>');
 	
         $("#myButton").css({ 
 	    "background-color": "#e7e7e7",
