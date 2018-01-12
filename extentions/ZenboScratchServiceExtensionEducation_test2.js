@@ -313,8 +313,7 @@ function showMessage(message)
 	    "font-size": "16px",
 	    "padding": "2px 2px 2px 2px",
 	    "text-align": "center",
-	    "z-index": "10",
-	    "cursor": "pointer"
+	    "z-index": "10
         }); 
 	
 	
@@ -329,7 +328,8 @@ function showMessage(message)
 	    "font-size": "16px",
 	    "text-align": "center",
 	    "float": "right",
-	    "padding": "2px 2px 2px 2px"
+	    "padding": "2px 2px 2px 2px"",
+	    "cursor": "pointer"
         }); 
 	
 	
