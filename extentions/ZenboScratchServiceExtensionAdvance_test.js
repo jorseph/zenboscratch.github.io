@@ -154,8 +154,85 @@
                                 console.log('splitedData[0]:' + data.split(",")[0]);
                                 
 				console.log('splitedData[2]:' + data.split(",")[2]);	
+				
+				if ( data.split(",")[2] != "undefined") {
+				
+				 switch(data.split(",")[2]) {
+
+    		                        case 'touchHead':
+
+                                        console.log('touchHead');
+                                        console.log( ip + " "  + flagIndex + " " + "touch_head_flag true");
+                                        flagArray.data[flagIndex].touch_head_flag = true;
+
+                                        break; 
+
+                                        case 'number':
+                                 
+                                        console.log('recognize number');
+                                        console.log( ip + " "  + flagIndex + " " + "number_flag true");
+                                        flagArray.data[flagIndex].number_flag = true;
+                                        flagArray.data[flagIndex].index = data.split(",")[1];
+                                        console.log('index:' + flagArray.data[flagIndex].index);
+                                              
+                                        break; 
+
+					case 'sentence1':
+						
+						console.log('recognize sentence1'); 
+						console.log( ip + " "  + flagIndex + " " + "sentence_1_flag true");
+						flagArray.data[flagIndex].sentence_1_flag = true;
+
+						break;
+
+					case 'sentence2':
+						
+  				        console.log('recognize sentence2'); 
+						console.log( ip + " "  + flagIndex + " " + "sentence_2_flag true");
+						flagArray.data[flagIndex].sentence_2_flag = true;
+
+						break;
+
+					case 'sentence3':
+						
+
+						console.log('recognize sentence3');  
+						console.log( ip + " "  + flagIndex + " " + "sentence_3_flag true");
+						flagArray.data[flagIndex].sentence_3_flag = true;
+
+						break;
+
+					case 'sentence4':
+						
+						console.log('recognize sentence4'); 
+						console.log( ip + " "  + flagIndex + " " + "sentence_4_flag true");
+						flagArray.data[flagIndex].sentence_4_flag = true;
+
+						break;
+
+
+					case 'sentence5':
+
+						console.log('recognize sentence5');                   
+						console.log( ip + " "  + flagIndex + " " + "sentence_5_flag true");
+						flagArray.data[flagIndex].sentence_5_flag = true;
+
+					   break;
 					
-				switch(data.split(",")[0]) {
+                                        case 'otherSentence':
+
+					        console.log('recognize otherSentence');                   
+						console.log( ip + " "  + flagIndex + " " + "otherSentence_flag true");
+						flagArray.data[flagIndex].otherSentence_flag = true;
+						flagArray.data[flagIndex].correctedSentence = data.split(",")[1];
+                                                console.log('correctedSentence:' + flagArray.data[flagIndex].correctedSentence);
+                                           break;  					
+			                }  	
+					
+				}
+				else {	
+					
+				    switch(data.split(",")[0]) {
 
     		                        case 'touchHead':
 
@@ -219,15 +296,14 @@
 					
                                         case 'otherSentence':
 
-					        console.log('otherSentence');                   
+					        console.log('辨識到otherSentence');                   
 						console.log( ip + " "  + flagIndex + " " + "otherSentence_flag true");
 						flagArray.data[flagIndex].otherSentence_flag = true;
 						flagArray.data[flagIndex].correctedSentence = data.split(",")[1];
                                                 console.log('correctedSentence:' + flagArray.data[flagIndex].correctedSentence);
-					
                                            break;  					
-					   
-				}  
+			                }  
+				}
 
                                         flagArray.data[flagIndex].get_sentences_flag = true;
                                         getSentencesRecursion(ip, flagIndex);  				 
