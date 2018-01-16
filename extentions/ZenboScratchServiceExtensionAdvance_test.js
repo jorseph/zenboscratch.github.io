@@ -151,9 +151,9 @@
 				success: function (data) {
 				console.log("Get_sentences-success handler");
                                
-                                console.log('splitedData[0]' + data.split(",")[0]);
+                                console.log('splitedData[0]:' + data.split(",")[0]);
                                 
-				console.log('splitedData[2] ' + data.split(",")[2]);	
+				console.log('splitedData[2]:' + data.split(",")[2]);	
 					
 				switch(data.split(",")[0]) {
 
