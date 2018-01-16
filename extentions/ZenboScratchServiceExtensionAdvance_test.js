@@ -155,7 +155,7 @@
                                 
 				console.log('splitedData[2]:' + data.split(",")[2]);	
 				
-				if ( data.split(",")[2] != "undefined") {
+				if ( data.split(",")[2] !== null) {
 				
 				 switch(data.split(",")[2]) {
 
