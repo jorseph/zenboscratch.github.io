@@ -153,6 +153,8 @@
                                
                                 console.log('splitedData[0]' + data.split(",")[0]);
                                 
+				console.log('splitedData[2] ' + data.split(",")[2]);	
+					
 				switch(data.split(",")[0]) {
 
     		                        case 'touchHead':
