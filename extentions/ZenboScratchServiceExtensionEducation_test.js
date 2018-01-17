@@ -289,7 +289,7 @@
 			
 			case 'otherSentence':
 
-			console.log('otherSentence');                   
+			console.log('辨識到其他語句');                   
 			console.log( ip + " "  + flagIndex + " " + "otherSentence_flag true");
 			flagArray.data[flagIndex].otherSentence_flag = true;
 			flagArray.data[flagIndex].correctedSentence = data.split(",")[1];
@@ -323,7 +323,7 @@
 	    for(var i = 0; i < translate.head_direction.length; i++){
 
             if ( p1 == translate.head_direction[i]) {                                        
-		         p1 = TRANSLATIONS.tw.head_direction[i];
+		         p1 = TRANSLATIONS.us.head_direction[i];
             }   
 	  
         }
@@ -331,7 +331,7 @@
 	     for(var j = 0; j < translate.head_degree.length; j++){
 
             if ( p2 == translate.head_degree[j]) {                                         
-		         p2 = TRANSLATIONS.tw.head_degree[j];
+		         p2 = TRANSLATIONS.us.head_degree[j];
             }   
 	  
         }	
@@ -366,7 +366,7 @@
 		for(var i = 0; i < translate.move_direction.length; i++){
 
             if ( p1 == translate.move_direction[i]) {                                         
-		      p1 = TRANSLATIONS.tw.move_direction[i];
+		      p1 = TRANSLATIONS.us.move_direction[i];
             }   
 	  
         }
@@ -374,7 +374,7 @@
 	    for(var j = 0; j < translate.move_far.length; j++){
 
             if ( p2 == translate.move_far[j]) {                                         
-		      p2 = TRANSLATIONS.tw.move_far[j];
+		      p2 = TRANSLATIONS.us.move_far[j];
             }   
 	  
         }
@@ -382,7 +382,7 @@
 	    for(var k = 0; k < translate.move_speed.length; k++){
 
             if ( p3 == translate.move_speed[k]) {                                         
-		      p3 = TRANSLATIONS.tw.move_speed[k];
+		      p3 = TRANSLATIONS.us.move_speed[k];
             }   
 	  
         }
@@ -416,7 +416,7 @@
 		for(var i = 0; i < translate.body_turn_direction.length; i++){
 
             if ( p1 == translate.body_turn_direction[i]) {                                         
-		         p1 = TRANSLATIONS.tw.body_turn_direction[i];
+		         p1 = TRANSLATIONS.us.body_turn_direction[i];
             }   
 	  
         }
@@ -424,7 +424,7 @@
 	    for(var j = 0; j < translate.body_turn_degree.length; j++){
 
             if ( p2 == translate.body_turn_degree[j]) {                                         
-		         p2 = TRANSLATIONS.tw.body_turn_degree[j];
+		         p2 = TRANSLATIONS.us.body_turn_degree[j];
             }   
 	  
         }	
@@ -457,7 +457,7 @@
 		for(var i = 0; i < translate.remote_control_body.length; i++){
 
             if ( p1 == translate.remote_control_body[i]) {                                         
-		         p1 = TRANSLATIONS.tw.remote_control_body[i];
+		         p1 = TRANSLATIONS.us.remote_control_body[i];
             }   
 	  
         }	
@@ -490,7 +490,7 @@
 	console.log("Remote_control_body-Stop");
 	console.log(ip);
 	$.ajax({
-	    url: 'http://' + ip + port + '/?extension=education' + '&name=Remote_control_body' + '&p1=' + '停止',
+	    url: 'http://' + ip + port + '/?extension=education' + '&name=Remote_control_body' + '&p1=' + 'stop',
 	    dataType: 'text',
  	    crossDomain: true,
  	    success: function (data) {
@@ -527,7 +527,7 @@
 		for(var i = 0; i < translate.action_type.length; i++){
 
             if ( p1 == translate.action_type[i]) {                                         
-		         p1 = TRANSLATIONS.tw.action_type[i];
+		         p1 = TRANSLATIONS.us.action_type[i];
             }   
 	  
         }	
@@ -558,7 +558,7 @@
 		for(var i = 0; i < translate.facial_type.length; i++){
 
             if ( p1 == translate.facial_type[i]) {                                         
-		         p1 = TRANSLATIONS.tw.facial_type[i];
+		         p1 = TRANSLATIONS.us.facial_type[i];
             }   
 	  
         }
@@ -656,7 +656,7 @@
 		for(var i = 0; i < translate.volume_option_type.length; i++){
 
             if ( p1 == translate.volume_option_type[i]) {                                         
-		        p1 = TRANSLATIONS.tw.volume_option_type[i];
+		        p1 = TRANSLATIONS.us.volume_option_type[i];
             }   
 	  
         }
@@ -664,7 +664,7 @@
 	    for(var j = 0; j < translate.volume_type.length; j++){
 
             if ( p2 == translate.volume_type[j]) {                                         
-		         p2 = TRANSLATIONS.tw.volume_type[j];
+		         p2 = TRANSLATIONS.us.volume_type[j];
             }   
 	  
         }
@@ -696,7 +696,7 @@
 		for(var i = 0; i < translate.sentence_type.length; i++){
 
             if ( p1 == translate.sentence_type[i]) {                                         
-		         p1 = TRANSLATIONS.tw.sentence_type[i];
+		         p1 = TRANSLATIONS.us.sentence_type[i];
             }   
 	  
         }
@@ -816,7 +816,7 @@
 		for(var i = 0; i < translate.tts_speed_type.length; i++){
 
             if ( p2 == translate.tts_speed_type[i]) {                                         
-		         p2 = TRANSLATIONS.tw.tts_speed_type[i];
+		         p2 = TRANSLATIONS.us.tts_speed_type[i];
             }   
 	  
         }
@@ -869,7 +869,7 @@
     for(var s = 0; s < translate.sentence_type.length; s++){
 
             if ( p1 == translate.sentence_type[s]) {                                         
-		         p1 = TRANSLATIONS.tw.sentence_type[s];
+		         p1 = TRANSLATIONS.us.sentence_type[s];
             }   
 	  
     }			   
@@ -890,9 +890,69 @@
 
 	switch(p1) {
 
-		case '語句一':
+		     case 'sentence1':
         
- 	 	   if (flagArray.data[valueIndex].sentence_1_flag === true) {
+ 	 	       if (flagArray.data[valueIndex].sentence_1_flag === true) {
+        	       flagArray.data[valueIndex].sentence_1_flag = false;
+		       console.log('true sentence1'); 
+  	               return true;
+ 	           }
+
+       	  	   break;
+
+       		 case 'sentence2':
+        
+      		   if (flagArray.data[valueIndex].sentence_2_flag === true) {
+       		       flagArray.data[valueIndex].sentence_2_flag = false;
+	               console.log('true sentence2'); 
+         	       return true;
+       		   }
+
+         	   break;
+
+       		 case 'sentence3':
+         
+          	   if (flagArray.data[valueIndex].sentence_3_flag === true) {
+                       flagArray.data[valueIndex].sentence_3_flag = false;
+		       console.log('true sentence3'); 
+                       return true;
+        	   }
+
+        	   break;
+
+      		 case 'sentence4':
+        
+      		   if (flagArray.data[valueIndex].sentence_4_flag === true) {
+                       flagArray.data[valueIndex].sentence_4_flag = false;
+		       console.log('true sentence4'); 
+                       return true;
+                   }
+
+     		   break;
+
+      		 case 'sentence5':
+               
+     	  	    if (flagArray.data[valueIndex].sentence_5_flag === true) {
+                        flagArray.data[valueIndex].sentence_5_flag = false;
+		        console.log('true sentence5');    
+         	        return true;
+       		    }
+
+    		    break;
+
+		     case 'otherSentence':
+               
+                    if (flagArray.data[valueIndex].otherSentence_flag === true) {
+                        flagArray.data[valueIndex].otherSentence_flag = false;
+		        console.log('true otherSentence');    
+                        return true;
+                    }
+
+                break;	
+	
+		     case '語句一':
+        
+ 	 	       if (flagArray.data[valueIndex].sentence_1_flag === true) {
         	       flagArray.data[valueIndex].sentence_1_flag = false;
 		       console.log('true 語句一'); 
   	               return true;
@@ -940,15 +1000,15 @@
 
     		    break;
 
-		  case '其他語句':
+		     case '其他語句':
                
                     if (flagArray.data[valueIndex].otherSentence_flag === true) {
                         flagArray.data[valueIndex].otherSentence_flag = false;
-		        console.log('true otherSentence');    
+		        console.log('true 其他語句');    
                         return true;
                     }
 
-            break;
+                break;
 				
        	}
 
@@ -1032,7 +1092,7 @@
 		for(var i = 0; i < translate.playVideosInYoutubeItems.length; i++){
 
             if ( p1 == translate.playVideosInYoutubeItems[i]) {                                         
-		         p1 = TRANSLATIONS.tw.playVideosInYoutubeItems[i];
+		         p1 = TRANSLATIONS.us.playVideosInYoutubeItems[i];
             }   
 	  
         }
@@ -1064,7 +1124,7 @@
 		for(var i = 0; i < translate.displayUrlPicturesItems.length; i++){
 
             if ( p1 == translate.displayUrlPicturesItems[i]) {                                         
-		         p1 = TRANSLATIONS.tw.displayUrlPicturesItems[i];
+		         p1 = TRANSLATIONS.us.displayUrlPicturesItems[i];
             }   
 	  
         }	
@@ -1096,7 +1156,7 @@
 		for(var i = 0; i < translate.playUrlMusicItems.length; i++){
 
             if ( p1 == translate.playUrlMusicItems[i]) {                                         
-		         p1 = TRANSLATIONS.tw.playUrlMusicItems[i];
+		         p1 = TRANSLATIONS.us.playUrlMusicItems[i];
             }   
 	  
         }
@@ -1149,7 +1209,7 @@
 		for(var i = 0; i < translate.openDriveVideoUrlItems.length; i++){
 
             if ( p1 == translate.openDriveVideoUrlItems[i]) {                                         
-		         p1 = TRANSLATIONS.tw.openDriveVideoUrlItems[i];
+		         p1 = TRANSLATIONS.us.openDriveVideoUrlItems[i];
             }   
 	  
         }
@@ -1181,7 +1241,7 @@
 		for(var i = 0; i < translate.openDriveAudioUrlItems.length; i++){
 
             if ( p1 == translate.openDriveAudioUrlItems[i]) {                                        
-		         p1 = TRANSLATIONS.tw.openDriveAudioUrlItems[i];
+		         p1 = TRANSLATIONS.us.openDriveAudioUrlItems[i];
             }   
 	  
         }
@@ -1213,7 +1273,7 @@
 		for(var i = 0; i < translate.openDrivePictureUrlItems.length; i++){
 
             if ( p1 == translate.openDrivePictureUrlItems[i]) {                                         
-		         p1 = TRANSLATIONS.tw.openDrivePictureUrlItems[i];
+		         p1 = TRANSLATIONS.us.openDrivePictureUrlItems[i];
             }   
 	  
         }
@@ -1245,7 +1305,7 @@
 		for(var i = 0; i < translate.openDriveDocumentUrlItems.length; i++){
 
             if ( p1 == translate.openDriveDocumentUrlItems[i]) {                                         
-		         p1 = TRANSLATIONS.tw.openDriveDocumentUrlItems[i];
+		         p1 = TRANSLATIONS.us.openDriveDocumentUrlItems[i];
             }   
 	  
         }
@@ -1366,7 +1426,7 @@
 		for(var i = 0; i < translate.recordAudioItems.length; i++){
 
             if ( p1 == translate.recordAudioItems[i]) {                                         
-		         p1 = TRANSLATIONS.tw.recordAudioItems[i];
+		         p1 = TRANSLATIONS.us.recordAudioItems[i];
             }   
 	  
         }
@@ -1398,7 +1458,7 @@
 	    for(var i = 0; i < translate.recordVideoItems.length; i++){
 
             if ( p1 == translate.recordVideoItems[i]) {                                         
-		         p1 = TRANSLATIONS.tw.recordVideoItems[i];
+		         p1 = TRANSLATIONS.us.recordVideoItems[i];
             }   
 	  
         }
