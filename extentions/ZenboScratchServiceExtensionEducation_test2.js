@@ -318,7 +318,7 @@ function showAlertMessage()
 	          "left": "200px",
 		  "border-radius": "5px",
 		  "border": "@grey solid 1px",
-	          "background-color": "@blue",
+	          "background-color": "#4682B4",
 		  "width": "288px", 	
                   "height": "72px",
 	          "color": "#fff",
