@@ -311,11 +311,7 @@ function showAlertMessage()
         }); 
 	
 	
-	$( "#dialog" ).html( ' <div id="modal-header"> <h2> 請先設置 Zenbo IP </h2> </div>  <br> <input id="myCheckBox" type="checkbox" name="ck" value="true">永遠不再提示 <br> <br>  <button id="myButton">確定</button>');
-	
-	$("#modal-header").css({ 
-	     "border-bottom": "@gray solid 1px"
-        }); 
+	$( "#dialog" ).html( '<h2> 請先設置 Zenbo IP </h2> <hr/> <input id="myCheckBox" type="checkbox" name="ck" value="true">永遠不再提示 <hr/>  <button id="myButton">確定</button>');
 	
 	
 	$("#myCheckBox").css({ 
