@@ -308,7 +308,7 @@ function showAlertMessage()
 	    "z-index": "10"
         }); 
 	
-	$( "#dialog" ).html( ' <br><br><br><br><br><br> <button id="myButton">確定</button>');
+	$( "#dialog" ).html( '<br><br><br><br> <button id="myButton">確定</button>');
 
 		
 	$("#alertHeader").css({ 
