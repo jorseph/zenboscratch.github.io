@@ -247,7 +247,8 @@
 function showAlertMessage()  
 {  
  	
-     $("<div align=\"center\"> <div id=\"dialog\" draggable=\"true\" ></div> <div id=\"background\"></div> </div>").appendTo("body");	
+     $("<div align=\"center\"> <div id=\"dialog\"> <div id= \"alertHeader\">     </div>     </div> <div id=\"background\"></div> </div>").appendTo("body");	
+   
      jQuery.fn.center = function () {
 		this.css("position","absolute");
 		this.css("top", ( $(window).height() - this.height() ) / 2+$(window).scrollTop() + "px");
@@ -307,9 +308,15 @@ function showAlertMessage()
 	    "z-index": "10"
         }); 
 	
+	$( "#dialog" ).html( '<input id="myCheckBox" type="checkbox" name="ck" value="true">永遠不再提示 <hr/> <button id="myButton">確定</button>');
+
+		
+	$("#alertHeader").css({ 
+	     "border-bottom": "@gray-lighter solid 1px"
+        }); 
 	
-	$( "#dialog" ).html( '<h2>請先設置 Zenbo IP !</h2> <input id="myCheckBox" type="checkbox" name="ck" value="true">永遠不再提示 <hr/> <button id="myButton">確定</button>');
-	
+	$( "#alertHeader" ).html('<h2>請先設置 Zenbo IP !</h2>');
+
 	
 	$("#myCheckBox").css({ 
 	    "cursor": "pointer"
