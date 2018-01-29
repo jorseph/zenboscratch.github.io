@@ -311,15 +311,14 @@ function showAlertMessage()
 	$( "#dialog" ).html( '<div id="alertHeader" > <h2>請先設置 Zenbo IP !</h2> <input id="myCheckBox" type="checkbox" name="ck" value="true">永遠不再提示 </div> <br> <button id="myButton">確定</button>');
 
 	$("#alertHeader").css({
-		  "position": "relative",
-		  "top":"0px",
-		  "left":"0px", 
 		  "border-radius": "5px",
 		  "border": "#333 solid 1px",
 	          "background-color": "#4682B4",
 	          "color": "#fff",
 	          "font-size": "14px",
-	          "text-align": "center"
+	          "text-align": "center",
+		  "width": "288px", 	
+                  "height": "72px",
 	        
         }); 
 
