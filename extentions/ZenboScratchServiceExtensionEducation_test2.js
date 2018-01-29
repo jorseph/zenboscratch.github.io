@@ -310,22 +310,13 @@ function showAlertMessage()
 	
 	$( "#dialog" ).html( '<br><br><br><br> <button id="myButton">確定</button>');
 
+
 	
 	$("#alertHeader").css({ 
-		
-	          "background-color": "#4682B4",
-	          "color": "#fff",
-	          "font-size": "14px",
-	          "text-align": "center",
-	          "padding": "8px 15px",
-	       
-        }); 
-	
-	/*
-	$("#alertHeader").css({ 
- 		  "position": "absolute", 
+ 		  "position": "relative", 
 		  "display": "block",
 		  "border-radius": "5px",
+		  "bottom": "72px",
 		  "border": "@grey solid 1px",
 	          "background-color": "#4682B4",
 		  "width": "288px", 	
@@ -336,7 +327,7 @@ function showAlertMessage()
 	          "padding": "8px 15px",
 	          "z-index": "11"  
         }); 
-	*/
+
 	
 	$( "#alertHeader" ).html('<h2>請先設置 Zenbo IP !</h2> <input id="myCheckBox" type="checkbox" name="ck" value="true">永遠不再提示');
 
