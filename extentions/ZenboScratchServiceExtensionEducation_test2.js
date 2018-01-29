@@ -247,7 +247,7 @@
 function showAlertMessage()  
 {  
  	
-     $("<div align=\"center\"> <div id=\"dialog\"><div style=\"background-color:#FFBB73;\" > </div></div> <div id=\"background\"></div> </div>").appendTo("body");	
+     $("<div align=\"center\"> <div id=\"dialog\"></div> <div id=\"background\"></div> </div>").appendTo("body");	
    
      jQuery.fn.center = function () {
 		this.css("position","absolute");
@@ -308,7 +308,7 @@ function showAlertMessage()
 	    "z-index": "10"
         }); 
 	
-	$( "#dialog" ).html( '<br><br><br><br> <button id="myButton">確定</button>');
+	$( "#dialog" ).html( '<div style="background-color:#FFBB73;" > 請先設置 Zenbo IP ! </div> <br><br><br><br> <button id="myButton">確定</button>');
 
 /*
 	
