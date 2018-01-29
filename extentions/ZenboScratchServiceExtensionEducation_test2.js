@@ -318,16 +318,19 @@ function showAlertMessage()
         }); 
 	
         $("#myButton").css({ 
-	    "background-color": "#e7e7e7",
-	    "color": "black",
-	    "border": "2px solid black", 	
+	    "background-color": "@blue",
+	    "color": "#fff",
+	    "border": "@blue-dark solid 1px",
+	    "border-radius": "3px",
 	    "width": "60px", 	
             "height": "35px",
-	    "font-size": "16px",
+	    "font-size": "14px",
 	    "text-align": "center",
 	    "float": "right",
-	    "padding": "2px 2px 2px 2px",
-	    "cursor": "pointer"
+	    "padding": "8px 15px",
+	    "cursor": "pointer",
+	    "text-decoration": "none",
+		"min-width": "60px",
         }); 
 	
 	
@@ -346,10 +349,10 @@ function showAlertMessage()
  
      $("#myButton").hover(
 	     function(){		
-             $(this).css("background-color", "yellow");
+             $(this).css("background-color", "blue-dark");
         }, 
 	     function(){
-             $(this).css("background-color", "#e7e7e7");
+             $(this).css("background-color", "@blue");
         }
      );	
 	 
