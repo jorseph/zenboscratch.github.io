@@ -385,9 +385,8 @@ function showAlertMessage()
      );	
 	 
      $("#background").css({"opacity" : "0.7"}).fadeIn("slow");	
-     $("#alertHeader").center().fadeIn("slow");	
-     $("#dialog").fadeIn("slow");		
-     $("#dialog").show();	
+     $("#alertHeader").fadeIn("slow");	
+     $("#dialog").center().fadeIn("slow");		
 
    };  	
 
