@@ -308,7 +308,7 @@ function showAlertMessage()
 	    "z-index": "10"
         }); 
 	
-	$( "#dialog" ).html( '<h2>請先設置 Zenbo IP !</h2> <hr> <input id="myCheckBox" type="checkbox" name="ck" value="true">永遠不再提示 <button id="myButton">確定</button>');
+	$( "#dialog" ).html( '<h2>請先設置 Zenbo IP !</h2> <hr>  <button id="myButton">確定</button>');
 
 		
 	$("#alertHeader").css({ 
@@ -328,7 +328,7 @@ function showAlertMessage()
 	          "z-index": "11"  
         }); 
 	
-	$( "#alertHeader" ).html('<h2>請先設置 Zenbo IP !</h2>');
+	$( "#alertHeader" ).html('<h2>請先設置 Zenbo IP !</h2> <input id="myCheckBox" type="checkbox" name="ck" value="true">永遠不再提示');
 
 	
 	$("#myCheckBox").css({ 
