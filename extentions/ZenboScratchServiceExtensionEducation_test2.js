@@ -308,11 +308,15 @@ function showAlertMessage()
 	    "z-index": "10"
         }); 
 	
-	$( "#dialog" ).html( '<input id="myCheckBox" type="checkbox" name="ck" value="true">永遠不再提示 <hr/> <button id="myButton">確定</button>');
+	$( "#dialog" ).html( '<input id="myCheckBox" type="checkbox" name="ck" value="true">永遠不再提示 <button id="myButton">確定</button>');
 
 		
 	$("#alertHeader").css({ 
-	     "border-bottom": "@gray-lighter solid 1px"
+	       "background-color": "@blue",
+	       "color": "#fff",
+	       "font-size": "14px",
+	       "text-align": "center",
+	       "padding": "8px 15px",
         }); 
 	
 	$( "#alertHeader" ).html('<h2>請先設置 Zenbo IP !</h2>');
