@@ -314,8 +314,6 @@ function showAlertMessage()
 		  "border-radius": "5px",
 		  "border": "#333 solid 1px",
 	          "background-color": "#4682B4",
-		  "width": "288px", 	
-                  "height": "72px",
 	          "color": "#fff",
 	          "font-size": "14px",
 	          "text-align": "center",
@@ -357,8 +355,8 @@ function showAlertMessage()
 	          } 
 		
 		  $("#background").fadeOut("slow");
-	         // $("#dialog").fadeOut("slow");
-	          $("#alertHeader").fadeOut("slow");
+	          $("#dialog").fadeOut("slow");
+	         // $("#alertHeader").fadeOut("slow");
 	});
  
      $("#myButton").hover(
