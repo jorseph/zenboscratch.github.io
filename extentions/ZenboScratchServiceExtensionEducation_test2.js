@@ -317,7 +317,7 @@ function showAlertMessage()
 	          "color": "#fff",
 	          "font-size": "14px",
 	          "text-align": "center",
-		  "width": "285px", 	
+		  "width": "286px", 	
                   "height": "80px"
 	        
         }); 
