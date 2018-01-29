@@ -312,7 +312,7 @@ function showAlertMessage()
 	$("#alertHeader").css({
 		  "border-top-left-radius": "5px",
 		  "border-top-right-radius": "5px",
-		  "border": "#333 solid 1px",
+		  "border": "0px",
 	          "background-color": "#4682B4",
 	          "color": "#fff",
 	          "font-size": "14px",
