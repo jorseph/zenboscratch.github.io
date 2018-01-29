@@ -314,8 +314,6 @@ function showAlertMessage()
 	$("#alertHeader").css({ 
  		  "position": "absolute", 
 		  "display": "block",
-		  "top": "200px",
-	          "left": "200px",
 		  "border-radius": "5px",
 		  "border": "@grey solid 1px",
 	          "background-color": "#4682B4",
@@ -375,7 +373,7 @@ function showAlertMessage()
      );	
 	 
      $("#background").css({"opacity" : "0.7"}).fadeIn("slow");	
-     $("#alertHeader").fadeIn("slow");	
+     $("#alertHeader").center().fadeIn("slow");	
      $("#dialog").center().fadeIn("slow");		
      $("#dialog").show();	
 
