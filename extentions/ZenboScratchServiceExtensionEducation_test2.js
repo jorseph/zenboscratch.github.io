@@ -360,7 +360,7 @@ function showAlertMessage()
 		
 		  $("#background").fadeOut("slow");
 	          $("#dialog").fadeOut("slow");
-	          $("#alertHeader").fadeOut("slow");
+	         // $("#alertHeader").fadeOut("slow");
 	});
  
      $("#myButton").hover(
@@ -373,7 +373,7 @@ function showAlertMessage()
      );	
 	 
      $("#background").css({"opacity" : "0.7"}).fadeIn("slow");	
-     $("#alertHeader").center().fadeIn("slow");	
+     // $("#alertHeader").center().fadeIn("slow");	
      $("#dialog").center().fadeIn("slow");		
      $("#dialog").show();	
 
