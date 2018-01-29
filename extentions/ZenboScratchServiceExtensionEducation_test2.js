@@ -298,7 +298,7 @@ function showAlertMessage()
 	    "position": "absolute",  	
             "display": "block",
 	    "border-radius": "5px",
-            "border": "@grey solid 1px",
+            "border": "#333 solid 1px",
 	    "background-color": "#fefefe", 	
 	    "width": "288px", 	
             "height": "144px",
@@ -308,16 +308,11 @@ function showAlertMessage()
 	    "z-index": "10"
         }); 
 	
-	$( "#dialog" ).html( '<div style="background-color:#FFBB73;" > 請先設置 Zenbo IP ! </div> <br><br><br><br> <button id="myButton">確定</button>');
+	$( "#dialog" ).html( '<div id="alertHeader" > <h2>請先設置 Zenbo IP !</h2> <input id="myCheckBox" type="checkbox" name="ck" value="true">永遠不再提示 </div> <br> <button id="myButton">確定</button>');
 
-/*
-	
 	$("#alertHeader").css({ 
- 		  "position": "relative", 
-		  "display": "block",
 		  "border-radius": "5px",
-		  "bottom": "72px",
-		  "border": "@grey solid 1px",
+		  "border": "#333 solid 1px",
 	          "background-color": "#4682B4",
 		  "width": "288px", 	
                   "height": "72px",
@@ -325,10 +320,10 @@ function showAlertMessage()
 	          "font-size": "14px",
 	          "text-align": "center",
 	          "padding": "8px 15px",
-	          "z-index": "11"  
+	        
         }); 
 
-	
+/*	
 	$( "#alertHeader" ).html('<h2>請先設置 Zenbo IP !</h2> <input id="myCheckBox" type="checkbox" name="ck" value="true">永遠不再提示');
 
 */	
