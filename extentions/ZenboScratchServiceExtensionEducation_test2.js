@@ -247,7 +247,7 @@
 function showAlertMessage()  
 {  
  	
-     $("<div align=\"center\"> <div id=\"dialog\"> <div id= \"alertHeader\">     </div>     </div> <div id=\"background\"></div> </div>").appendTo("body");	
+     $("<div align=\"center\"> <div id=\"dialog\"></div> <div id= \"alertHeader\"></div><div id=\"background\"></div> </div>").appendTo("body");	
    
      jQuery.fn.center = function () {
 		this.css("position","absolute");
@@ -308,16 +308,22 @@ function showAlertMessage()
 	    "z-index": "10"
         }); 
 	
-	$( "#dialog" ).html( '<input id="myCheckBox" type="checkbox" name="ck" value="true">永遠不再提示 <button id="myButton">確定</button>');
+	$( "#dialog" ).html( '<h2>請先設置 Zenbo IP !</h2> <input id="myCheckBox" type="checkbox" name="ck" value="true">永遠不再提示 </hr> <button id="myButton">確定</button>');
 
 		
 	$("#alertHeader").css({ 
-	       "background-color": "@blue",
-	       "color": "#fff",
-	       "font-size": "14px",
-	       "text-align": "center",
-	       "padding": "8px 15px",
-	       "z-index": "11"  
+ 		  "position": "absolute", 
+		  "display": "block",
+		  "border-radius": "5px",
+		  "border": "@grey solid 1px",
+	          "background-color": "@blue",
+		  "width": "288px", 	
+                  "height": "72px",
+	          "color": "#fff",
+	          "font-size": "14px",
+	          "text-align": "center",
+	          "padding": "8px 15px",
+	          "z-index": "11"  
         }); 
 	
 	$( "#alertHeader" ).html('<h2>請先設置 Zenbo IP !</h2>');
@@ -354,6 +360,7 @@ function showAlertMessage()
 		
 		  $("#background").fadeOut("slow");
 	          $("#dialog").fadeOut("slow");
+	          $("#alertHeader").fadeOut("slow");
 	});
  
      $("#myButton").hover(
@@ -365,7 +372,8 @@ function showAlertMessage()
         }
      );	
 	 
-     $("#background").css({"opacity" : "0.7"}).fadeIn("slow");									
+     $("#background").css({"opacity" : "0.7"}).fadeIn("slow");	
+     $("#alertHeader").center().fadeIn("slow");	
      $("#dialog").center().fadeIn("slow");		
      $("#dialog").show();	
 
