@@ -317,6 +317,7 @@ function showAlertMessage()
 	       "font-size": "14px",
 	       "text-align": "center",
 	       "padding": "8px 15px",
+	       "z-index": "11"  
         }); 
 	
 	$( "#alertHeader" ).html('<h2>請先設置 Zenbo IP !</h2>');
