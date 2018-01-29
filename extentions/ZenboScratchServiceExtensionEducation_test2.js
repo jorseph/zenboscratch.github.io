@@ -314,6 +314,8 @@ function showAlertMessage()
 	$("#alertHeader").css({ 
  		  "position": "absolute", 
 		  "display": "block",
+		  "top": "200px",
+	          "left": "200px",
 		  "border-radius": "5px",
 		  "border": "@grey solid 1px",
 	          "background-color": "@blue",
@@ -360,7 +362,7 @@ function showAlertMessage()
 		
 		  $("#background").fadeOut("slow");
 	          $("#dialog").fadeOut("slow");
-	         // $("#alertHeader").fadeOut("slow");
+	          $("#alertHeader").fadeOut("slow");
 	});
  
      $("#myButton").hover(
@@ -373,7 +375,7 @@ function showAlertMessage()
      );	
 	 
      $("#background").css({"opacity" : "0.7"}).fadeIn("slow");	
-     // $("#alertHeader").center().fadeIn("slow");	
+     $("#alertHeader").fadeIn("slow");	
      $("#dialog").center().fadeIn("slow");		
      $("#dialog").show();	
 
