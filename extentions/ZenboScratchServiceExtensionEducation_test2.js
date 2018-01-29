@@ -313,7 +313,7 @@ function showAlertMessage()
 		  "border-top-left-radius": "5px",
 		  "border-top-right-radius": "5px",
 		  "border": "0px",
-	          "background-color": "#4682B4",
+	          "background-color": "#2d5986",
 	          "color": "#fff",
 	          "font-size": "14px",
 	          "text-align": "center",
