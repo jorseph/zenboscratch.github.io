@@ -303,7 +303,6 @@ function showAlertMessage()
 	    "width": "288px", 	
             "height": "144px",
 	    "font-size": "14px",
-	    "padding": "8px 15px",
 	    "text-align": "center",
 	    "z-index": "10"
         }); 
