@@ -316,8 +316,7 @@ function showAlertMessage()
 	          "background-color": "#4682B4",
 	          "color": "#fff",
 	          "font-size": "14px",
-	          "text-align": "center",
-	          "padding": "8px 15px",
+	          "text-align": "center"
 	        
         }); 
 
