@@ -312,12 +312,12 @@ function showAlertMessage()
 	$("#alertHeader").css({
 		  "border-top-left-radius": "5px",
 		  "border-top-right-radius": "5px",
-		  "border": "0px",
-	          "background-color": "#254d74",
+		  "border": "1px",
+	          "background-color": "#31669b",
 	          "color": "#fff",
 	          "font-size": "14px",
 	          "text-align": "center",
-		  "width": "286px", 	
+		  "width": "284px", 	
                   "height": "80px"
 	        
         }); 
