@@ -335,7 +335,7 @@ function showAlertMessage()
 	    "padding": "8px 15px",
 	    "cursor": "pointer",
 	    "text-decoration": "none",
-		"min-width": "60px",
+	    "min-width": "60px",
         }); 
 	
 	
