@@ -296,16 +296,13 @@ function showAlertMessage()
 	$("#dialog").css({ 
 	    "position": "absolute",  	
             "display": "block",
-	    "left": "200px",
-	    "top": "200px",
 	    "border-radius": "5px",
-	    "margin-left": "-200px",	
             "border": "@grey solid 1px",
 	    "background-color": "#fefefe", 	
 	    "width": "360px", 	
-            "height": "120px",
-	    "font-size": "16px",
-	    "padding": "2px 2px 2px 2px",
+            "height": "240px",
+	    "font-size": "14px",
+	    "padding": "8px 15px",
 	    "text-align": "center",
 	    "z-index": "10"
         }); 
@@ -331,7 +328,6 @@ function showAlertMessage()
 	    "padding": "8px 15px",
 	    "cursor": "pointer",
 	    "text-decoration": "none",
-	    "min-width": "60px",
         }); 
 	
 	
