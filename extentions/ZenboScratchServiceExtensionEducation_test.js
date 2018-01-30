@@ -1682,7 +1682,9 @@ function showAlertMessage()
 			recordVideoItems: ["start", "end"],
 			recordVideoSizes: ["720P", "480P", "240P"],
 			stop_sending_commands_to_target: 'disconnect Zenbo',
-			pleaseSetupZenboIP: 'Please setup Zenbo IP',
+			pleaseSetupZenboIP: 'Please setup Zenbo IP!',
+			checkBoxMessage   : 'never prompt again',
+			alertButtonText   : 'OK',
         },
 	tw: {
             Setting_targetIP: '設定Zenbo IP: %s',
@@ -1750,7 +1752,9 @@ function showAlertMessage()
 			recordVideoItems: ["開始", "關閉"],
 			recordVideoSizes: ["720P", "480P", "240P"],
 			stop_sending_commands_to_target: '斷線',
-		    pleaseSetupZenboIP: '請先設置 Zenbo IP',
+		    	pleaseSetupZenboIP: '請先設置 Zenbo IP！',
+			checkBoxMessage   : '永遠不再提示',
+			alertButtonText   : '確定',
         },  		
     }	
 	
