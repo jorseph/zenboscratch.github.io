@@ -311,8 +311,8 @@ function showAlertMessage()
 
 	$("#alertHeader").css({
 		  "position": "absolute",  
-		  "top":"1px",
-                  "left":"1px",
+		  "top":"0px",
+                  "left":"0px",
 		  "border-top-left-radius": "5px",
 		  "border-top-right-radius": "5px",
 		  "border": "#333 solid 0px",
@@ -331,11 +331,11 @@ function showAlertMessage()
 	
 	$("#alertButtonDiv").css({
 	    "position": "absolute",  
-	    "bottom":"5px",
-            "left":"50px",
-            "width": "120px", 	
-            "height": "70px",
-	    "background-color": "#7FFF00",	
+	    "bottom":"20px",
+            "left":"114px",
+            "width": "60px", 	
+            "height": "35px",
+	    "background-color": "#fefefe",	
 
         }); 
 	
