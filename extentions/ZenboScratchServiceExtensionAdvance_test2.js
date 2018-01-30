@@ -236,7 +236,7 @@
 
     		                        case 'touchHead':
 
-                                        console.log('ºN¨ìÀY¤F');
+                                        console.log('æ‘¸åˆ°é ­äº†');
                                         console.log( ip + " "  + flagIndex + " " + "touch_head_flag true");
                                         flagArray.data[flagIndex].touch_head_flag = true;
 
@@ -244,7 +244,7 @@
 
                                         case 'number':
                                  
-                                        console.log('¿ëÃÑ¨ìnumber');
+                                        console.log('è¾¨è­˜åˆ°number');
                                         console.log( ip + " "  + flagIndex + " " + "number_flag true");
                                         flagArray.data[flagIndex].number_flag = true;
                                         flagArray.data[flagIndex].index = data.split(",")[1];
@@ -252,43 +252,43 @@
                                               
                                         break; 
 
-					case '»y¥y¤@':
+					case 'èªå¥ä¸€':
 						
-						console.log('¿ëÃÑ¨ì»y¥y¤@'); 
+						console.log('è¾¨è­˜åˆ°èªå¥ä¸€'); 
 						console.log( ip + " "  + flagIndex + " " + "sentence_1_flag true");
 						flagArray.data[flagIndex].sentence_1_flag = true;
 
 						break;
 
-					case '»y¥y¤G':
+					case 'èªå¥äºŒ':
 						
-  				        console.log('¿ëÃÑ¨ì»y¥y¤G'); 
+  				        console.log('è¾¨è­˜åˆ°èªå¥äºŒ'); 
 						console.log( ip + " "  + flagIndex + " " + "sentence_2_flag true");
 						flagArray.data[flagIndex].sentence_2_flag = true;
 
 						break;
 
-					case '»y¥y¤T':
+					case 'èªå¥ä¸‰':
 						
 
-						console.log('¿ëÃÑ¨ì»y¥y¤T');  
+						console.log('è¾¨è­˜åˆ°èªå¥ä¸‰');  
 						console.log( ip + " "  + flagIndex + " " + "sentence_3_flag true");
 						flagArray.data[flagIndex].sentence_3_flag = true;
 
 						break;
 
-					case '»y¥y¥|':
+					case 'èªå¥å››':
 						
-						console.log('¿ëÃÑ¨ì»y¥y¥|'); 
+						console.log('è¾¨è­˜åˆ°èªå¥å››'); 
 						console.log( ip + " "  + flagIndex + " " + "sentence_4_flag true");
 						flagArray.data[flagIndex].sentence_4_flag = true;
 
 						break;
 
 
-					case '»y¥y¤­':
+					case 'èªå¥äº”':
 
-						console.log('¿ëÃÑ¨ì»y¥y¤­');                   
+						console.log('è¾¨è­˜åˆ°èªå¥äº”');                   
 						console.log( ip + " "  + flagIndex + " " + "sentence_5_flag true");
 						flagArray.data[flagIndex].sentence_5_flag = true;
 
@@ -296,7 +296,7 @@
 					
                                         case 'otherSentence':
 
-					        console.log('¿ëÃÑ¨ì¨ä¥L»y¥y');                   
+					        console.log('è¾¨è­˜åˆ°å…¶ä»–èªå¥');                   
 						console.log( ip + " "  + flagIndex + " " + "otherSentence_flag true");
 						flagArray.data[flagIndex].otherSentence_flag = true;
 						flagArray.data[flagIndex].correctedSentence = data.split(",")[1];
@@ -1029,61 +1029,61 @@
 
             break;			
 		
-            case '»y¥y¤@':
+            case 'èªå¥ä¸€':
         
             if (flagArray.data[valueIndex].sentence_1_flag === true) {
                 flagArray.data[valueIndex].sentence_1_flag = false;
-		        console.log('true »y¥y¤@'); 
+		        console.log('true èªå¥ä¸€'); 
                 return true;
             }
 
             break;
 
-            case '»y¥y¤G':
+            case 'èªå¥äºŒ':
         
             if (flagArray.data[valueIndex].sentence_2_flag === true) {
                 flagArray.data[valueIndex].sentence_2_flag = false;
-		        console.log('true »y¥y¤G'); 
+		        console.log('true èªå¥äºŒ'); 
                 return true;
             }
 
             break;
 
-            case '»y¥y¤T':
+            case 'èªå¥ä¸‰':
          
             if (flagArray.data[valueIndex].sentence_3_flag === true) {
                 flagArray.data[valueIndex].sentence_3_flag = false;
-	            console.log('true »y¥y¤T'); 
+	            console.log('true èªå¥ä¸‰'); 
                 return true;
             }
 
             break;
 
-            case '»y¥y¥|':
+            case 'èªå¥å››':
         
             if (flagArray.data[valueIndex].sentence_4_flag === true) {
                 flagArray.data[valueIndex].sentence_4_flag = false;
-		        console.log('true »y¥y¥|'); 
+		        console.log('true èªå¥å››'); 
                 return true;
             }
 
             break;
 
-            case '»y¥y¤­':
+            case 'èªå¥äº”':
                
             if (flagArray.data[valueIndex].sentence_5_flag === true) {
                 flagArray.data[valueIndex].sentence_5_flag = false;
-		        console.log('true »y¥y¤­');    
+		        console.log('true èªå¥äº”');    
                 return true;
             }
 
             break;
 			
-	        case '¨ä¥L»y¥y':
+	        case 'å…¶ä»–èªå¥':
                
             if (flagArray.data[valueIndex].otherSentence_flag === true) {
                 flagArray.data[valueIndex].otherSentence_flag = false;
-		        console.log('true ¨ä¥L»y¥y');    
+		        console.log('true å…¶ä»–èªå¥');    
                 return true;
             }
 
@@ -1264,11 +1264,11 @@
             success: function (data) {
                 console.log("success handler");
                 if (data == 'Must set Zenbo IP')
-                alert('½Ğ¥ı³]¸m Zenbo IP'); 
+                alert('è«‹å…ˆè¨­ç½® Zenbo IP'); 
             },
             error: function (jqXHR, textStatus, errorThrown) {
                 console.log("error handler");
-                alert('½Ğ¥ı³]¸m Zenbo IP');
+                alert('è«‹å…ˆè¨­ç½® Zenbo IP');
             }
         });
     };
@@ -1599,76 +1599,76 @@ ext.Add_and_update_sentence_number = function (ip) {
 			recordVideoSizes: ["720P", "480P", "240P"],
 			pleaseSetupZenboIP: 'Please setup Zenbo IP',
 			checkBoxMessage   : 'never prompt again',
-			alertButtonText   : 'OK'
+			alertButtonText   : 'OK',
         },
 	tw: {
-            Setting_targetIP: '³]©wZenbo IP: %s',
-            Body_movement: 'IP %s ²¾°Ê %m.move_direction %m.move_far ¤½¤Ø %m.move_speed ³t«×',
-            Stop_moving: 'IP %s °±¤î°Ê§@',
-            Head_movement: 'IP %s Âà°ÊÀY³¡ ¦V %m.head_direction %m.head_degree «×',
-            Body_turn: 'IP %s Âà°Ê¨­Åé ¦V %m.body_turn_direction %m.body_turn_degree «×',
-            Remote_control_body: 'IP %s ±±¨î¨­Åé %m.remote_control_body',
-            Action: 'IP %s Zenbo °µ°Ê§@ %m.action_type',
-            Cancel_actionset: 'IP %s °±¤îÅøÀY°Ê§@',
-            Facial: 'IP %s °µ¥Xªí±¡ %m.facial_type', 
-            hideFace: 'IP %s ÁôÂÃªí±¡',
-            TTS: 'IP %s »¡¸Ü %m.tts_type',
-	    TTS_editor: 'IP %s »¡¸Ü %s',
-	    Adjust_stream_volume: 'IP %s ½Õ¾ã %m.volume_option_type ­µ¶q %m.volume_type',
-	    Adjust_tts_and_speed: 'IP %s »¡¸Ü %s ³t«× %m.tts_speed_type',
-	    Add_and_update_sentence: 'IP %s ·Ç³Æ­nÅ¥ %m.sentence_type ¬O %s',
-	    Speak_and_listen: 'IP %s §Ú­n¶}©lÅ¥',
-	    when_listen_and_run: '·í§ÚÅ¥¨ì IP %s ªº %m.second_sentence_type',
-	    Delete_instance: 'IP %s §R°£¥ş³¡»y¥y',
-	    Add_and_update_sentence_number: 'IP %s ·Ç³Æ­nÅ¥¼Æ¦r',
-	    when_listen_number_and_run: '·í§ÚÅ¥¨ì IP %s ªº¼Æ¦r',
-	    getIndex: '¥Ø«e IP %s Å¥¨ìªº¼Æ¦r ',
-	    playVideosInYoutube: 'IP %s %m.playVideosInYoutubeItems ¼½©ñ Youtube ºô§}: %s',
-	    playUrlMusic: 'IP %s %m.playUrlMusicItems ¼½©ñ½u¤W­µ¼Ö: %s',
-	    displayUrlPictures: 'IP %s %m.displayUrlPicturesItems ÂsÄı½u¤W¹Ï¤ù: %s',
-	    openDriveVideoUrl: 'IP %s %m.openDriveVideoUrlItems ¼½©ñ Google Drive ¼v¤ù: %s',
-	    openDriveAudioUrl: 'IP %s %m.openDriveAudioUrlItems ¼½©ñ Google Drive ­µ¼Ö: %s',
-	    openDrivePictureUrl: 'IP %s %m.openDrivePictureUrlItems ÂsÄı Google Drive ¹Ï¤ù: %s',
-            openDriveDocumentUrl: 'IP %s %m.openDriveDocumentUrlItems ÂsÄı Google Drive ¤å¥ó: %s',
-		when_touch_head_and_run: '·íºN¨ì IP %s ªºÀY',
-		recordAudio: 'IP %s %m.recordAudioItems ¿ı­µ, ÀÉ¦W: %s',
-		recordVideo: 'IP %s %m.recordVideoItems %m.recordVideoSizes ¿ı¼v, ÀÉ¦W: %s',
-	    head_direction: ["¥ª", "¥k", "¤W", "¤U"],
+            Setting_targetIP: 'è¨­å®šZenbo IP: %s',
+            Body_movement: 'IP %s ç§»å‹• %m.move_direction %m.move_far å…¬å°º %m.move_speed é€Ÿåº¦',
+            Stop_moving: 'IP %s åœæ­¢å‹•ä½œ',
+            Head_movement: 'IP %s è½‰å‹•é ­éƒ¨ å‘ %m.head_direction %m.head_degree åº¦',
+            Body_turn: 'IP %s è½‰å‹•èº«é«” å‘ %m.body_turn_direction %m.body_turn_degree åº¦',
+            Remote_control_body: 'IP %s æ§åˆ¶èº«é«” %m.remote_control_body',
+            Action: 'IP %s Zenbo åšå‹•ä½œ %m.action_type',
+            Cancel_actionset: 'IP %s åœæ­¢ç½é ­å‹•ä½œ',
+            Facial: 'IP %s åšå‡ºè¡¨æƒ… %m.facial_type', 
+            hideFace: 'IP %s éš±è—è¡¨æƒ…',
+            TTS: 'IP %s èªªè©± %m.tts_type',
+	    TTS_editor: 'IP %s èªªè©± %s',
+	    Adjust_stream_volume: 'IP %s èª¿æ•´ %m.volume_option_type éŸ³é‡ %m.volume_type',
+	    Adjust_tts_and_speed: 'IP %s èªªè©± %s é€Ÿåº¦ %m.tts_speed_type',
+	    Add_and_update_sentence: 'IP %s æº–å‚™è¦è½ %m.sentence_type æ˜¯ %s',
+	    Speak_and_listen: 'IP %s æˆ‘è¦é–‹å§‹è½',
+	    when_listen_and_run: 'ç•¶æˆ‘è½åˆ° IP %s çš„ %m.second_sentence_type',
+	    Delete_instance: 'IP %s åˆªé™¤å…¨éƒ¨èªå¥',
+	    Add_and_update_sentence_number: 'IP %s æº–å‚™è¦è½æ•¸å­—',
+	    when_listen_number_and_run: 'ç•¶æˆ‘è½åˆ° IP %s çš„æ•¸å­—',
+	    getIndex: 'ç›®å‰ IP %s è½åˆ°çš„æ•¸å­— ',
+	    playVideosInYoutube: 'IP %s %m.playVideosInYoutubeItems æ’­æ”¾ Youtube ç¶²å€: %s',
+	    playUrlMusic: 'IP %s %m.playUrlMusicItems æ’­æ”¾ç·šä¸ŠéŸ³æ¨‚: %s',
+	    displayUrlPictures: 'IP %s %m.displayUrlPicturesItems ç€è¦½ç·šä¸Šåœ–ç‰‡: %s',
+	    openDriveVideoUrl: 'IP %s %m.openDriveVideoUrlItems æ’­æ”¾ Google Drive å½±ç‰‡: %s',
+	    openDriveAudioUrl: 'IP %s %m.openDriveAudioUrlItems æ’­æ”¾ Google Drive éŸ³æ¨‚: %s',
+	    openDrivePictureUrl: 'IP %s %m.openDrivePictureUrlItems ç€è¦½ Google Drive åœ–ç‰‡: %s',
+            openDriveDocumentUrl: 'IP %s %m.openDriveDocumentUrlItems ç€è¦½ Google Drive æ–‡ä»¶: %s',
+		when_touch_head_and_run: 'ç•¶æ‘¸åˆ° IP %s çš„é ­',
+		recordAudio: 'IP %s %m.recordAudioItems éŒ„éŸ³, æª”å: %s',
+		recordVideo: 'IP %s %m.recordVideoItems %m.recordVideoSizes éŒ„å½±, æª”å: %s',
+	    head_direction: ["å·¦", "å³", "ä¸Š", "ä¸‹"],
             head_degree: ["0", "15", "30", "45"],
-            move_direction: ["«e¶i", "«á°h"],
+            move_direction: ["å‰é€²", "å¾Œé€€"],
             move_far: ["0.25", "0.50", "0.75", "1.00", "1.25", "1.50", "1.75", "2.00"],
-            move_speed: ["ºC", "¤@¯ë", "§Ö"],
-            body_turn_direction: ["¥ªÂà", "¥kÂà"],
+            move_speed: ["æ…¢", "ä¸€èˆ¬", "å¿«"],
+            body_turn_direction: ["å·¦è½‰", "å³è½‰"],
             body_turn_degree: ["0", "30", "60", "90", "120", "150", "180", "210", "240", "270", "300", "330", "360"],
-            remote_control_body: ["°±¤î", "«e¶i", "¥ªÂà", "¥kÂà"],
-            action_type: ["»´ÃP(¹w³])", "Listen to the command/briefing(high)", "Complete the task/satisfaction", "¥´©Û©I", "¤@¯ë°T®§¤@", "«İ¾÷(µL²á)", "¥R¹q(º¡¨¬)", "Å¥«ü¥O/briefing(¸G)", "³sÄò¥ô°È½Ä¬ğ", "¥¢±æ(¨Ï¥ÎªÌµ²§ô)",
-                            "ªq³à(¨Ï¥ÎªÌµ²§ô)", "«İ¾÷(¯h­Â)", "§Ö¨S¹q", "¥R¹q(´r®®)", "¥R¹q(ºHÃi)", "¸õ»R¤@¤jÂI", "Å¥À´", "­µ¼Ö¼½©ñ", "¦V¥ªºCÂà", "¦V¥ª«æÂà", "·nÀY(¦^µª§_©w)", "¸õ»R¤@¤pÂI", 
-                            "®`²Û", "Å¥¤£À´", "¸õ»R¤G", "³sÄò·nÀY", "·nÀY®Ì¸£", "¸õ»R·¥§Ö", "·nÀY", "µ²§ô¥´©Û©I", "¤@¯ë°T®§¤G", "¦V¥kºCÂà", "¦V¥k«æÂà", "µ²§ô¦V¥ªºCÂà", "µ²§ô¦V¥kºCÂà",
-                            "µ²§ô¦V¥ª«æÂà", "µ²§ô¦V¥k«æÂà", "¸Ñ°£³sÄò¥ô°È½Ä¬ğ"],
-            facial_type: ["¦³¿³½ì", "ºÃ´b", "Åº¶Æ", "»´ÃP´r§Ö(¹w³])", "¶}¤ß", "´Á«İ", "´h¤@¤U", "½èºÃ", "¤£­@·Ğ", "¦Û«H", "¦³¬¡¤O¤@", "±o·N", "µL©`", "ÄYµÂ", "·Ğ´o", "¸Ë¥­ÀR", "ºHÃi", "¹îÄ±", 
-                            "­Â«å", "®`²Û", "µL¶d", "¦³¬¡¤O¤G", "¹îÄ±", "¹w³]"],
-            tts_type: ["¶Ù,§A¦n", "¬İ³o¸Ì", "WoW", "YA"],
-            volume_type: ["¤jÁnÂI", "¤pÁnÂI"],
-            music_type: ["¶}©l", "¼È°±", "Ä~Äò", "°±¤î", "­«·s"],
-            volume_option_type: ["­µ¼Ö", "¾xÄÁ", "³qª¾", "»¡¸Ü"],
+            remote_control_body: ["åœæ­¢", "å‰é€²", "å·¦è½‰", "å³è½‰"],
+            action_type: ["è¼•é¬†(é è¨­)", "Listen to the command/briefing(high)", "Complete the task/satisfaction", "æ‰“æ‹›å‘¼", "ä¸€èˆ¬è¨Šæ¯ä¸€", "å¾…æ©Ÿ(ç„¡èŠ)", "å……é›»(æ»¿è¶³)", "è½æŒ‡ä»¤/briefing(çŸ®)", "é€£çºŒä»»å‹™è¡çª", "å¤±æœ›(ä½¿ç”¨è€…çµæŸ)",
+                            "æ²®å–ª(ä½¿ç”¨è€…çµæŸ)", "å¾…æ©Ÿ(ç–²å€¦)", "å¿«æ²’é›»", "å……é›»(æ„‰æ‚…)", "å……é›»(æ…µæ‡¶)", "è·³èˆä¸€å¤§é»", "è½æ‡‚", "éŸ³æ¨‚æ’­æ”¾", "å‘å·¦æ…¢è½‰", "å‘å·¦æ€¥è½‰", "æ–é ­(å›ç­”å¦å®š)", "è·³èˆä¸€å°é»", 
+                            "å®³ç¾", "è½ä¸æ‡‚", "è·³èˆäºŒ", "é€£çºŒæ–é ­", "æ–é ­æ™ƒè…¦", "è·³èˆæ¥µå¿«", "æ–é ­", "çµæŸæ‰“æ‹›å‘¼", "ä¸€èˆ¬è¨Šæ¯äºŒ", "å‘å³æ…¢è½‰", "å‘å³æ€¥è½‰", "çµæŸå‘å·¦æ…¢è½‰", "çµæŸå‘å³æ…¢è½‰",
+                            "çµæŸå‘å·¦æ€¥è½‰", "çµæŸå‘å³æ€¥è½‰", "è§£é™¤é€£çºŒä»»å‹™è¡çª"],
+            facial_type: ["æœ‰èˆˆè¶£", "ç–‘æƒ‘", "é©•å‚²", "è¼•é¬†æ„‰å¿«(é è¨­)", "é–‹å¿ƒ", "æœŸå¾…", "æ„£ä¸€ä¸‹", "è³ªç–‘", "ä¸è€ç…©", "è‡ªä¿¡", "æœ‰æ´»åŠ›ä¸€", "å¾—æ„", "ç„¡å¥ˆ", "åš´è‚…", "ç…©æƒ±", "è£å¹³éœ", "æ…µæ‡¶", "å¯Ÿè¦º", 
+                            "å€¦æ€ ", "å®³ç¾", "ç„¡è¾œ", "æœ‰æ´»åŠ›äºŒ", "å¯Ÿè¦º", "é è¨­"],
+            tts_type: ["å—¨,ä½ å¥½", "çœ‹é€™è£¡", "WoW", "YA"],
+            volume_type: ["å¤§è²é»", "å°è²é»"],
+            music_type: ["é–‹å§‹", "æš«åœ", "ç¹¼çºŒ", "åœæ­¢", "é‡æ–°"],
+            volume_option_type: ["éŸ³æ¨‚", "é¬§é˜", "é€šçŸ¥", "èªªè©±"],
             tts_speed_type: ["L1", "L2", "L3", "L4", "L5", "L6", "L7", "L8"],
-            sentence_type: ["»y¥y¤@", "»y¥y¤G", "»y¥y¤T", "»y¥y¥|", "»y¥y¤­"],
-			second_sentence_type: ["»y¥y¤@", "»y¥y¤G", "»y¥y¤T", "»y¥y¥|", "»y¥y¤­", "¨ä¥L»y¥y"],
-            playVideosInYoutubeItems: ["¶}©l", "Ãö³¬"],
-            displayUrlPicturesItems: ["¶}©l", "Ãö³¬"],
-            playUrlMusicItems: ["¶}©l", "Ãö³¬"],
-            openDriveVideoUrlItems: ["¶}©l", "Ãö³¬"],
-            openDriveAudioUrlItems: ["¶}©l", "Ãö³¬"],
-            openDrivePictureUrlItems: ["¶}©l", "Ãö³¬"],
-            openDriveDocumentUrlItems: ["¶}©l", "Ãö³¬"],
-   	        ttsEditorDefaultText: '½Ğ¶ñ¤J¤å¦r',
-            defaultAddedSentence: '¦Y¶º',
- 			recordAudioItems: ["¶}©l", "Ãö³¬"],
-			recordVideoItems: ["¶}©l", "Ãö³¬"],
+            sentence_type: ["èªå¥ä¸€", "èªå¥äºŒ", "èªå¥ä¸‰", "èªå¥å››", "èªå¥äº”"],
+			second_sentence_type: ["èªå¥ä¸€", "èªå¥äºŒ", "èªå¥ä¸‰", "èªå¥å››", "èªå¥äº”", "å…¶ä»–èªå¥"],
+            playVideosInYoutubeItems: ["é–‹å§‹", "é—œé–‰"],
+            displayUrlPicturesItems: ["é–‹å§‹", "é—œé–‰"],
+            playUrlMusicItems: ["é–‹å§‹", "é—œé–‰"],
+            openDriveVideoUrlItems: ["é–‹å§‹", "é—œé–‰"],
+            openDriveAudioUrlItems: ["é–‹å§‹", "é—œé–‰"],
+            openDrivePictureUrlItems: ["é–‹å§‹", "é—œé–‰"],
+            openDriveDocumentUrlItems: ["é–‹å§‹", "é—œé–‰"],
+   	        ttsEditorDefaultText: 'è«‹å¡«å…¥æ–‡å­—',
+            defaultAddedSentence: 'åƒé£¯',
+ 			recordAudioItems: ["é–‹å§‹", "é—œé–‰"],
+			recordVideoItems: ["é–‹å§‹", "é—œé–‰"],
 			recordVideoSizes: ["720P", "480P", "240P"],
-			pleaseSetupZenboIP: '½Ğ¥ı³]¸m Zenbo IP',
-			checkBoxMessage   : '¥Ã»·¤£¦A´£¥Ü',
-			alertButtonText   : '½T©w'
+			pleaseSetupZenboIP: 'è«‹å…ˆè¨­ç½® Zenbo IP',
+			checkBoxMessage   : 'æ°¸é ä¸å†æç¤º',
+			alertButtonText   : 'ç¢ºå®š',
         },  		
     }	
 	
@@ -1770,67 +1770,67 @@ ext.Add_and_update_sentence_number = function (ip) {
 	/*
     var descriptor = {
         blocks: [
-            ['w', '³]©wZenbo IP: %s', 'Setting_targetIP', "192.168.0.1"],
-            ['', 'IP %s ²¾°Ê %m.move_direction %m.move_far ¤½¤Ø %m.move_speed ³t«×', 'Body_movement', "192.168.0.1", "«e¶i", "0.25", "¤@¯ë"],
-            ['', 'IP %s °±¤î°Ê§@', 'Stop_moving', "192.168.0.1"],
-            ['', 'IP %s Âà°ÊÀY³¡ ¦V %m.head_direction %m.head_degree «×', 'Head_movement', "192.168.0.1", "¥ª", "45"], 
-            ['', 'IP %s Âà°Ê¨­Åé ¦V %m.body_turn_direction %m.body_turn_degree «×', 'Body_turn', "192.168.0.1", "¥ªÂà", "90"],
-            ['', 'IP %s ±±¨î¨­Åé %m.remote_control_body', 'Remote_control_body', "192.168.0.1", "¥kÂà"],
-       //   ['', 'IP %s Zenbo °µ°Ê§@ %m.action_type', 'Action', "192.168.0.1", '¥´©Û©I'],
-            ['', 'IP %s °µ¥Xªí±¡ %m.facial_type', 'Facial', "192.168.0.1", '´Á«İ'],
-            ['', 'IP %s ÁôÂÃªí±¡', 'hideFace', "192.168.0.1"],
-            ['', 'IP %s »¡¸Ü %m.tts_type ', 'TTS', "192.168.0.1", '¶Ù,§A¦n'],
-            ['', 'IP %s »¡¸Ü %s', 'TTS_editor', "192.168.0.1", '½Ğ¶ñ¤J¤å¦r'],
-            ['', 'IP %s ½Õ¾ã %m.volume_option_type ­µ¶q %m.volume_type', 'Adjust_stream_volume', "192.168.0.1", '»¡¸Ü', '¤jÁnÂI'],
-            ['', 'IP %s »¡¸Ü %s ³t«× %m.tts_speed_type', 'Adjust_tts_and_speed', "192.168.0.1", '½Ğ¶ñ¤J¤å¦r', 'L2'],
-            ['', 'IP %s ·Ç³Æ­nÅ¥ %m.sentence_type ¬O %s', 'Add_and_update_sentence', "192.168.0.1", '»y¥y¤@', '¦Y¶º'], 
-            ['', 'IP %s §Ú­n¶}©lÅ¥', 'Speak_and_listen', "192.168.0.1"], 
-            ['h', '·í§ÚÅ¥¨ì IP %s ªº %m.second_sentence_type', 'when_listen_and_run', "192.168.0.1", '»y¥y¤@'],
-            ['', 'IP %s §R°£¥ş³¡»y¥y', 'Delete_instance', "192.168.0.1"],
-          //  ['', 'IP %s ·Ç³Æ­nÅ¥¼Æ¦r', 'Add_and_update_sentence_number', "192.168.0.1"],
-            ['h', '·í§ÚÅ¥¨ì IP %s ªº¼Æ¦r', 'when_listen_number_and_run', "192.168.0.1"],
-            ['r', '¥Ø«e IP %s Å¥¨ìªº¼Æ¦r ', 'getIndex', "192.168.0.1"],
-            ['', 'IP %s %m.playVideosInYoutubeItems ¼½©ñ Youtube ºô§}: %s', 'playVideosInYoutube', "192.168.0.1", '¶}©l', 'https://www.youtube.com/watch?v=Ou21RusvBcg'],
-            ['', 'IP %s %m.playUrlMusicItems ¼½©ñ½u¤W­µ¼Ö: %s', 'playUrlMusic', "192.168.0.1", '¶}©l', 'https://zenboscratch.github.io/examples/zenbo_music.mp3'],
-            ['', 'IP %s %m.displayUrlPicturesItems ÂsÄı½u¤W¹Ï¤ù: %s', 'displayUrlPictures', "192.168.0.1", '¶}©l', 'https://zenboscratch.github.io/images/zenbo.jpg'],
-            ['', 'IP %s %m.openDriveVideoUrlItems ¼½©ñ Google Drive ¼v¤ù: %s', 'openDriveVideoUrl', "192.168.0.1", '¶}©l', 'https://drive.google.com/open?id=0B5o6VwYT7NaiUUhrTW12Ql9tcUk'],
-            ['', 'IP %s %m.openDriveAudioUrlItems ¼½©ñ Google Drive ­µ¼Ö: %s', 'openDriveAudioUrl', "192.168.0.1", '¶}©l', 'https://drive.google.com/open?id=0B5o6VwYT7NaibHJ0LWtHN0JtVFU'], 
-            ['', 'IP %s %m.openDrivePictureUrlItems ÂsÄı Google Drive ¹Ï¤ù: %s', 'openDrivePictureUrl', "192.168.0.1", '¶}©l', 'https://drive.google.com/open?id=0B5o6VwYT7NaiSVJ0S3JKeEZwODA'],
-            ['', 'IP %s %m.openDriveDocumentUrlItems ÂsÄı Google Drive ¤å¥ó: %s', 'openDriveDocumentUrl', "192.168.0.1", '¶}©l', 'https://drive.google.com/open?id=0B5o6VwYT7NaiN1h3SXZHTjRsc2s'],
-            ['h', '·íºN¨ì IP %s ªºÀY', 'when_touch_head_and_run', "192.168.0.1"],
-            ['', 'IP %s %m.recordAudioItems ¿ı­µ, ÀÉ¦W: %s', 'recordAudio', "192.168.0.1", '¶}©l', 'testAudio'],
-            ['', 'IP %s %m.recordVideoItems %m.recordVideoSizes ¿ı¼v, ÀÉ¦W: %s', 'recordVideo', "192.168.0.1", '¶}©l', '720P', 'testVideo'],    
+            ['w', 'è¨­å®šZenbo IP: %s', 'Setting_targetIP', "192.168.0.1"],
+            ['', 'IP %s ç§»å‹• %m.move_direction %m.move_far å…¬å°º %m.move_speed é€Ÿåº¦', 'Body_movement', "192.168.0.1", "å‰é€²", "0.25", "ä¸€èˆ¬"],
+            ['', 'IP %s åœæ­¢å‹•ä½œ', 'Stop_moving', "192.168.0.1"],
+            ['', 'IP %s è½‰å‹•é ­éƒ¨ å‘ %m.head_direction %m.head_degree åº¦', 'Head_movement', "192.168.0.1", "å·¦", "45"], 
+            ['', 'IP %s è½‰å‹•èº«é«” å‘ %m.body_turn_direction %m.body_turn_degree åº¦', 'Body_turn', "192.168.0.1", "å·¦è½‰", "90"],
+            ['', 'IP %s æ§åˆ¶èº«é«” %m.remote_control_body', 'Remote_control_body', "192.168.0.1", "å³è½‰"],
+       //   ['', 'IP %s Zenbo åšå‹•ä½œ %m.action_type', 'Action', "192.168.0.1", 'æ‰“æ‹›å‘¼'],
+            ['', 'IP %s åšå‡ºè¡¨æƒ… %m.facial_type', 'Facial', "192.168.0.1", 'æœŸå¾…'],
+            ['', 'IP %s éš±è—è¡¨æƒ…', 'hideFace', "192.168.0.1"],
+            ['', 'IP %s èªªè©± %m.tts_type ', 'TTS', "192.168.0.1", 'å—¨,ä½ å¥½'],
+            ['', 'IP %s èªªè©± %s', 'TTS_editor', "192.168.0.1", 'è«‹å¡«å…¥æ–‡å­—'],
+            ['', 'IP %s èª¿æ•´ %m.volume_option_type éŸ³é‡ %m.volume_type', 'Adjust_stream_volume', "192.168.0.1", 'èªªè©±', 'å¤§è²é»'],
+            ['', 'IP %s èªªè©± %s é€Ÿåº¦ %m.tts_speed_type', 'Adjust_tts_and_speed', "192.168.0.1", 'è«‹å¡«å…¥æ–‡å­—', 'L2'],
+            ['', 'IP %s æº–å‚™è¦è½ %m.sentence_type æ˜¯ %s', 'Add_and_update_sentence', "192.168.0.1", 'èªå¥ä¸€', 'åƒé£¯'], 
+            ['', 'IP %s æˆ‘è¦é–‹å§‹è½', 'Speak_and_listen', "192.168.0.1"], 
+            ['h', 'ç•¶æˆ‘è½åˆ° IP %s çš„ %m.second_sentence_type', 'when_listen_and_run', "192.168.0.1", 'èªå¥ä¸€'],
+            ['', 'IP %s åˆªé™¤å…¨éƒ¨èªå¥', 'Delete_instance', "192.168.0.1"],
+          //  ['', 'IP %s æº–å‚™è¦è½æ•¸å­—', 'Add_and_update_sentence_number', "192.168.0.1"],
+            ['h', 'ç•¶æˆ‘è½åˆ° IP %s çš„æ•¸å­—', 'when_listen_number_and_run', "192.168.0.1"],
+            ['r', 'ç›®å‰ IP %s è½åˆ°çš„æ•¸å­— ', 'getIndex', "192.168.0.1"],
+            ['', 'IP %s %m.playVideosInYoutubeItems æ’­æ”¾ Youtube ç¶²å€: %s', 'playVideosInYoutube', "192.168.0.1", 'é–‹å§‹', 'https://www.youtube.com/watch?v=Ou21RusvBcg'],
+            ['', 'IP %s %m.playUrlMusicItems æ’­æ”¾ç·šä¸ŠéŸ³æ¨‚: %s', 'playUrlMusic', "192.168.0.1", 'é–‹å§‹', 'https://zenboscratch.github.io/examples/zenbo_music.mp3'],
+            ['', 'IP %s %m.displayUrlPicturesItems ç€è¦½ç·šä¸Šåœ–ç‰‡: %s', 'displayUrlPictures', "192.168.0.1", 'é–‹å§‹', 'https://zenboscratch.github.io/images/zenbo.jpg'],
+            ['', 'IP %s %m.openDriveVideoUrlItems æ’­æ”¾ Google Drive å½±ç‰‡: %s', 'openDriveVideoUrl', "192.168.0.1", 'é–‹å§‹', 'https://drive.google.com/open?id=0B5o6VwYT7NaiUUhrTW12Ql9tcUk'],
+            ['', 'IP %s %m.openDriveAudioUrlItems æ’­æ”¾ Google Drive éŸ³æ¨‚: %s', 'openDriveAudioUrl', "192.168.0.1", 'é–‹å§‹', 'https://drive.google.com/open?id=0B5o6VwYT7NaibHJ0LWtHN0JtVFU'], 
+            ['', 'IP %s %m.openDrivePictureUrlItems ç€è¦½ Google Drive åœ–ç‰‡: %s', 'openDrivePictureUrl', "192.168.0.1", 'é–‹å§‹', 'https://drive.google.com/open?id=0B5o6VwYT7NaiSVJ0S3JKeEZwODA'],
+            ['', 'IP %s %m.openDriveDocumentUrlItems ç€è¦½ Google Drive æ–‡ä»¶: %s', 'openDriveDocumentUrl', "192.168.0.1", 'é–‹å§‹', 'https://drive.google.com/open?id=0B5o6VwYT7NaiN1h3SXZHTjRsc2s'],
+            ['h', 'ç•¶æ‘¸åˆ° IP %s çš„é ­', 'when_touch_head_and_run', "192.168.0.1"],
+            ['', 'IP %s %m.recordAudioItems éŒ„éŸ³, æª”å: %s', 'recordAudio', "192.168.0.1", 'é–‹å§‹', 'testAudio'],
+            ['', 'IP %s %m.recordVideoItems %m.recordVideoSizes éŒ„å½±, æª”å: %s', 'recordVideo', "192.168.0.1", 'é–‹å§‹', '720P', 'testVideo'],    
         ],
         menus: {
-            "head_direction": ["¥ª", "¥k", "¤W", "¤U"],
+            "head_direction": ["å·¦", "å³", "ä¸Š", "ä¸‹"],
             "head_degree": ["0", "15", "30", "45"],
-            "move_direction": ["«e¶i", "«á°h"],
+            "move_direction": ["å‰é€²", "å¾Œé€€"],
             "move_far": ["0.25", "0.50", "0.75", "1.00", "1.25", "1.50", "1.75", "2.00"],
-            "move_speed": ["ºC", "¤@¯ë", "§Ö"],
-            "body_turn_direction": ["¥ªÂà", "¥kÂà"],
+            "move_speed": ["æ…¢", "ä¸€èˆ¬", "å¿«"],
+            "body_turn_direction": ["å·¦è½‰", "å³è½‰"],
             "body_turn_degree": ["0", "30", "60", "90", "120", "150", "180", "210", "240", "270", "300", "330", "360"],
-            "remote_control_body": ["°±¤î", "«e¶i", "¥ªÂà", "¥kÂà"],
-            "action_type": ["»´ÃP(¹w³])", "Å¥«ü¥O/briefing(°ª)", "§¹¦¨¥ô°È/º¡¨¬", "¥´©Û©I", "¤@¯ë°T®§¤@", "«İ¾÷(µL²á)", "¥R¹q(º¡¨¬)", "Å¥«ü¥O/briefing(¸G)", "³sÄò¥ô°È½Ä¬ğ", "¥¢±æ(¨Ï¥ÎªÌµ²§ô)",
-                            "ªq³à(¨Ï¥ÎªÌµ²§ô)", "«İ¾÷(¯h­Â)", "§Ö¨S¹q", "¥R¹q(´r®®)", "¥R¹q(ºHÃi)", "¸õ»R¤@¤jÂI", "Å¥À´", "­µ¼Ö¼½©ñ", "¦V¥ªºCÂà", "¦V¥ª«æÂà", "·nÀY(¦^µª§_©w)", "¸õ»R¤@¤pÂI", 
-                            "®`²Û", "Å¥¤£À´", "¸õ»R¤G", "³sÄò·nÀY", "·nÀY®Ì¸£", "¸õ»R·¥§Ö", "·nÀY", "µ²§ô¥´©Û©I", "¤@¯ë°T®§¤G", "¦V¥kºCÂà", "¦V¥k«æÂà", "µ²§ô¦V¥ªºCÂà", "µ²§ô¦V¥kºCÂà",
-                            "µ²§ô¦V¥ª«æÂà", "µ²§ô¦V¥k«æÂà", "¸Ñ°£³sÄò¥ô°È½Ä¬ğ"],
-            "facial_type": ["¦³¿³½ì", "ºÃ´b", "Åº¶Æ", "»´ÃP´r§Ö(¹w³])", "¶}¤ß", "´Á«İ", "´h¤@¤U", "½èºÃ", "¤£­@·Ğ", "¦Û«H", "¦³¬¡¤O¤@", "±o·N", "µL©`", "ÄYµÂ", "·Ğ´o", "¸Ë¥­ÀR", "ºHÃi", "¹îÄ±", 
-                            "­Â«å", "®`²Û", "µL¶d", "¦³¬¡¤O¤G", "¹îÄ±", "¹w³]"],
-            "tts_type": ["¶Ù,§A¦n", "¬İ³o¸Ì", "WoW", "YA"],
-            "volume_type": ["¤jÁnÂI", "¤pÁnÂI"],
-            "music_type": ["¶}©l", "¼È°±", "Ä~Äò", "°±¤î", "­«·s"],
-            "volume_option_type": ["­µ¼Ö", "¾xÄÁ", "³qª¾", "»¡¸Ü"],
+            "remote_control_body": ["åœæ­¢", "å‰é€²", "å·¦è½‰", "å³è½‰"],
+            "action_type": ["è¼•é¬†(é è¨­)", "è½æŒ‡ä»¤/briefing(é«˜)", "å®Œæˆä»»å‹™/æ»¿è¶³", "æ‰“æ‹›å‘¼", "ä¸€èˆ¬è¨Šæ¯ä¸€", "å¾…æ©Ÿ(ç„¡èŠ)", "å……é›»(æ»¿è¶³)", "è½æŒ‡ä»¤/briefing(çŸ®)", "é€£çºŒä»»å‹™è¡çª", "å¤±æœ›(ä½¿ç”¨è€…çµæŸ)",
+                            "æ²®å–ª(ä½¿ç”¨è€…çµæŸ)", "å¾…æ©Ÿ(ç–²å€¦)", "å¿«æ²’é›»", "å……é›»(æ„‰æ‚…)", "å……é›»(æ…µæ‡¶)", "è·³èˆä¸€å¤§é»", "è½æ‡‚", "éŸ³æ¨‚æ’­æ”¾", "å‘å·¦æ…¢è½‰", "å‘å·¦æ€¥è½‰", "æ–é ­(å›ç­”å¦å®š)", "è·³èˆä¸€å°é»", 
+                            "å®³ç¾", "è½ä¸æ‡‚", "è·³èˆäºŒ", "é€£çºŒæ–é ­", "æ–é ­æ™ƒè…¦", "è·³èˆæ¥µå¿«", "æ–é ­", "çµæŸæ‰“æ‹›å‘¼", "ä¸€èˆ¬è¨Šæ¯äºŒ", "å‘å³æ…¢è½‰", "å‘å³æ€¥è½‰", "çµæŸå‘å·¦æ…¢è½‰", "çµæŸå‘å³æ…¢è½‰",
+                            "çµæŸå‘å·¦æ€¥è½‰", "çµæŸå‘å³æ€¥è½‰", "è§£é™¤é€£çºŒä»»å‹™è¡çª"],
+            "facial_type": ["æœ‰èˆˆè¶£", "ç–‘æƒ‘", "é©•å‚²", "è¼•é¬†æ„‰å¿«(é è¨­)", "é–‹å¿ƒ", "æœŸå¾…", "æ„£ä¸€ä¸‹", "è³ªç–‘", "ä¸è€ç…©", "è‡ªä¿¡", "æœ‰æ´»åŠ›ä¸€", "å¾—æ„", "ç„¡å¥ˆ", "åš´è‚…", "ç…©æƒ±", "è£å¹³éœ", "æ…µæ‡¶", "å¯Ÿè¦º", 
+                            "å€¦æ€ ", "å®³ç¾", "ç„¡è¾œ", "æœ‰æ´»åŠ›äºŒ", "å¯Ÿè¦º", "é è¨­"],
+            "tts_type": ["å—¨,ä½ å¥½", "çœ‹é€™è£¡", "WoW", "YA"],
+            "volume_type": ["å¤§è²é»", "å°è²é»"],
+            "music_type": ["é–‹å§‹", "æš«åœ", "ç¹¼çºŒ", "åœæ­¢", "é‡æ–°"],
+            "volume_option_type": ["éŸ³æ¨‚", "é¬§é˜", "é€šçŸ¥", "èªªè©±"],
             "tts_speed_type": ["L1", "L2", "L3", "L4", "L5", "L6", "L7", "L8"],
-            "sentence_type": ["»y¥y¤@", "»y¥y¤G", "»y¥y¤T", "»y¥y¥|", "»y¥y¤­"],
-            "playVideosInYoutubeItems": ["¶}©l", "Ãö³¬"],
-            "displayUrlPicturesItems": ["¶}©l", "Ãö³¬"],
-            "playUrlMusicItems": ["¶}©l", "Ãö³¬"],
-            "openDriveVideoUrlItems": ["¶}©l", "Ãö³¬"],
-            "openDriveAudioUrlItems": ["¶}©l", "Ãö³¬"],
-            "openDrivePictureUrlItems": ["¶}©l", "Ãö³¬"],
-            "openDriveDocumentUrlItems": ["¶}©l", "Ãö³¬"],
-            "recordAudioItems": ["¶}©l", "Ãö³¬"], 
-            "recordVideoItems": ["¶}©l", "Ãö³¬"],
+            "sentence_type": ["èªå¥ä¸€", "èªå¥äºŒ", "èªå¥ä¸‰", "èªå¥å››", "èªå¥äº”"],
+            "playVideosInYoutubeItems": ["é–‹å§‹", "é—œé–‰"],
+            "displayUrlPicturesItems": ["é–‹å§‹", "é—œé–‰"],
+            "playUrlMusicItems": ["é–‹å§‹", "é—œé–‰"],
+            "openDriveVideoUrlItems": ["é–‹å§‹", "é—œé–‰"],
+            "openDriveAudioUrlItems": ["é–‹å§‹", "é—œé–‰"],
+            "openDrivePictureUrlItems": ["é–‹å§‹", "é—œé–‰"],
+            "openDriveDocumentUrlItems": ["é–‹å§‹", "é—œé–‰"],
+            "recordAudioItems": ["é–‹å§‹", "é—œé–‰"], 
+            "recordVideoItems": ["é–‹å§‹", "é—œé–‰"],
             "recordVideoSizes": ["720P", "480P", "240P"],  
         },
         url: 'https://zenboscratchservice.github.io/' // Link to extension documentation, homepage, etc.
