@@ -466,11 +466,11 @@
                 console.log("success handler");
           
                 if (data == 'Must set Zenbo IP')
-                alert(translate.pleaseSetupZenboIP); 
+                showAlertMessage();  // alert(translate.pleaseSetupZenboIP); 
             },
             error: function (jqXHR, textStatus, errorThrown) {
                 console.log("error handler");
-                alert(translate.pleaseSetupZenboIP);
+                showAlertMessage();   //  alert(translate.pleaseSetupZenboIP);
             }
         });
     };
