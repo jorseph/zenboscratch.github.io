@@ -6,7 +6,7 @@
 	
     port = ":8080";
 
-	zenboIPWarningWindowFlag = true; 
+    zenboIPWarningWindowFlag = true; 
 
     function checkValueAndSwitchZenboIPWarningWindowFlag() 
     { 
