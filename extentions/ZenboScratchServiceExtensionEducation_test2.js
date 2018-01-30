@@ -324,16 +324,15 @@ function showAlertMessage()
                   "height": "75px"
 	        
         }); 
-
-/*	
-	$( "#alertHeader" ).html('<h2>請先設置 Zenbo IP !</h2> <input id="myCheckBox" type="checkbox" name="ck" value="true">永遠不再提示');
-
-*/	
+	
 	$("#myCheckBox").css({ 
 	    "cursor": "pointer"
         }); 
 	
-        $("#myButton").css({ 
+        $("#myButton").css({
+	    "position": "absolute",  
+	    "bottom":"5",
+            "left":"100",
 	    "background-color": "@blue",
 	    "color": "#fff",
 	    "border": "@blue-dark solid 1px",
