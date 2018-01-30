@@ -329,7 +329,7 @@ function showAlertMessage()
 	
 	$("#alertButtonDiv").css({
 	    "position": "absolute",  
-	    "bottom":"5px",
+	    "bottom":"4px",
             "left":"90px",
             "width": "60px", 	
             "height": "35px",
