@@ -333,6 +333,119 @@
             }    
 	
     };
+
+function showAlertMessage()  
+{  
+ 	
+     $("<div align=\"center\"> <div id=\"dialog\"></div> <div id=\"background\"></div> </div>").appendTo("body");	
+   
+     jQuery.fn.center = function () {
+		this.css("position","absolute");
+		this.css("top", ( $(window).height() - this.height() ) / 2+$(window).scrollTop() + "px");
+		this.css("left", ( $(window).width() - this.width() ) / 2+$(window).scrollLeft() + "px");
+		return this;
+     }
+
+
+	$("#background").css({ 
+	
+	"display": "none",
+	"position": "absolute",
+	"height": "100%",
+	"width": "100%",
+	"top": "0",
+	"left": "0",
+	"background": "#000000",	
+	"z-index": "1"
+        
+	}); 	
+	
+	
+	$("#dialog").css({ 
+	    "position": "absolute",  	
+            "display": "block",
+	    "border-radius": "5px",
+            "border": "#333 solid 1px",
+	    "background-color": "#fefefe", 	
+	    "width": "240px", 	
+            "height": "135px",
+	    "font-size": "14px",
+	    "text-align": "center",
+	    "z-index": "10"
+        }); 
+	
+	$( "#dialog" ).html( '<div id="alertHeader" > <br> <h2>'+ translate.pleaseSetupZenboIP +'</h2> <input id="myCheckBox" type="checkbox" name="ck" value="true">' + translate.checkBoxMessage +'</div>  <div id="alertButtonDiv"> <button id="myButton">' + translate.alertButtonText + '</button>  </div>');
+
+	$("#alertHeader").css({
+		  "position": "absolute",  
+		  "top":"0px",
+                  "left":"0px",
+		  "border": "#333 solid 0px",
+	          "background-color": "#31669b",
+	          "color": "#fff",
+	          "font-size": "14px",
+	          "text-align": "center",
+		  "width": "238px", 	
+                  "height": "90px"
+	        
+        }); 
+	
+	$("#myCheckBox").css({ 
+	    "cursor": "pointer"
+        }); 
+	
+	$("#alertButtonDiv").css({
+	    "position": "absolute",  
+	    "bottom":"4px",
+            "left":"90px",
+            "width": "60px", 	
+            "height": "35px",
+	    "background-color": "#fefefe",	
+
+        }); 
+	
+        $("#myButton").css({
+	    "background-color": "@blue",
+	    "color": "#fff",
+	    "border": "@blue-dark solid 1px",
+	    "border-radius": "3px",
+	    "width": "60px", 	
+            "height": "35px",
+	    "font-size": "14px",
+	    "text-align": "center",
+	    "padding": "8px 15px",
+	    "cursor": "pointer",
+	    "text-decoration": "none",
+        }); 
+	
+	
+     $( '#myButton' ).click(function(){
+		
+		  console.log("checkValueAndSwitchZenboIPWarningWindowFlag");       	    
+                  var ckValue = $("input:checkbox:checked").val();
+                  console.log("ckValue");   	 
+	          if  (ckValue == "true") {
+	          zenboIPWarningWindowFlag = false;	    
+	          } 
+		
+		  $("#background").fadeOut("slow");
+	          $("#dialog").fadeOut("slow");
+	         // $("#alertHeader").fadeOut("slow");
+	});
+ 
+     $("#myButton").hover(
+	     function(){		
+             $(this).css("background-color", "blue-dark");
+        }, 
+	     function(){
+             $(this).css("background-color", "@blue");
+        }
+     );	
+	 
+     $("#background").css({"opacity" : "0.7"}).fadeIn("slow");	
+     $("#dialog").center().fadeIn("slow");		
+
+   };  		
 	
     ext.Head_movement = function (ip, p1, p2, callback) {
 		
