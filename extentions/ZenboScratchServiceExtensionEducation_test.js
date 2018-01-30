@@ -7,6 +7,18 @@
     ip = "127.0.0.1";
     port = ":8080";
 
+	zenboIPWarningWindowFlag = true; 
+
+    function checkValueAndSwitchZenboIPWarningWindowFlag() 
+    { 
+       console.log("checkValueAndSwitchZenboIPWarningWindowFlag");       	    
+       var ckValue = $("input:checkbox:checked").val();
+       console.log(ckValue);   	 
+	      if  (ckValue == "true") {
+	       zenboIPWarningWindowFlag = false;	    
+	      } 
+    }	
+		
     var getValueIndex  = function() {
 
         var returnValueIndex = -1;
@@ -349,12 +361,12 @@
                 callback();
              
                 if (data == 'Must set Zenbo IP')
-                alert(translate.pleaseSetupZenboIP);              
+                if (zenboIPWarningWindowFlag === true) showAlertMessage();               
 
             },
             error: function (jqXHR, textStatus, errorThrown) {
                 console.log("error handler");
-                alert(translate.pleaseSetupZenboIP);
+                if (zenboIPWarningWindowFlag === true) showAlertMessage(); 
             }
         });
 
@@ -401,11 +413,11 @@
                 callback();
 
                 if (data == 'Must set Zenbo IP')
-                alert(translate.pleaseSetupZenboIP);
+                if (zenboIPWarningWindowFlag === true) showAlertMessage(); 
             },
             error: function (jqXHR, textStatus, errorThrown) {
                 console.log("error handler");
-                alert(translate.pleaseSetupZenboIP);
+                if (zenboIPWarningWindowFlag === true) showAlertMessage(); 
             }
         });
 
@@ -442,11 +454,11 @@
                 callback(); 
 
                 if (data == 'Must set Zenbo IP')
-                alert(translate.pleaseSetupZenboIP);              
+                if (zenboIPWarningWindowFlag === true) showAlertMessage();               
             },
             error: function (jqXHR, textStatus, errorThrown) {
                 console.log("error handler");
-                alert(translate.pleaseSetupZenboIP);
+                if (zenboIPWarningWindowFlag === true) showAlertMessage(); 
             }
         });
 
@@ -474,11 +486,11 @@
                 console.log("success handler");
 
                 if (data == 'Must set Zenbo IP')
-                alert(translate.pleaseSetupZenboIP); 
+                if (zenboIPWarningWindowFlag === true) showAlertMessage();  
             },
             error: function (jqXHR, textStatus, errorThrown) {
                 console.log("error handler");
-                alert(translate.pleaseSetupZenboIP);
+                if (zenboIPWarningWindowFlag === true) showAlertMessage(); 
             }
             });
 
@@ -497,7 +509,7 @@
 	    console.log("success handler");
 
             if (data == 'Must set Zenbo IP')
-                alert(translate.pleaseSetupZenboIP);
+                if (zenboIPWarningWindowFlag === true) showAlertMessage(); 
 
 	    console.log(ip);
             $.ajax({
@@ -516,7 +528,7 @@
 	    },
  	    error: function (jqXHR, textStatus, errorThrown) {
 	        console.log("error handler");
-                alert(translate.pleaseSetupZenboIP);
+                if (zenboIPWarningWindowFlag === true) showAlertMessage(); 
  	    }
 	});	
 	
@@ -543,11 +555,11 @@
                 console.log("success handler");
                 
                 if (data == 'Must set Zenbo IP')
-                alert(translate.pleaseSetupZenboIP); 
+                if (zenboIPWarningWindowFlag === true) showAlertMessage();  
             },
             error: function (jqXHR, textStatus, errorThrown) {
                 console.log("error handler");
-                alert(translate.pleaseSetupZenboIP);
+                if (zenboIPWarningWindowFlag === true) showAlertMessage(); 
             }
         });
 
@@ -574,11 +586,11 @@
                 console.log("success handler");
 
                 if (data == 'Must set Zenbo IP')
-                alert(translate.pleaseSetupZenboIP);
+                if (zenboIPWarningWindowFlag === true) showAlertMessage(); 
             },
             error: function (jqXHR, textStatus, errorThrown) {
                 console.log("error handler");
-                alert(translate.pleaseSetupZenboIP);
+                if (zenboIPWarningWindowFlag === true) showAlertMessage(); 
             }
         });
  
@@ -597,11 +609,11 @@
                 callback();
     
                 if (data == 'Must set Zenbo IP')
-                alert(translate.pleaseSetupZenboIP); 
+                if (zenboIPWarningWindowFlag === true) showAlertMessage();  
             },
             error: function (jqXHR, textStatus, errorThrown) {
                 console.log("error handler");
-               alert(translate.pleaseSetupZenboIP);
+               if (zenboIPWarningWindowFlag === true) showAlertMessage(); 
             }
         });
 
@@ -620,11 +632,11 @@
                 callback();
 
                 if (data == 'Must set Zenbo IP')
-                alert(translate.pleaseSetupZenboIP);
+                if (zenboIPWarningWindowFlag === true) showAlertMessage(); 
             },
             error: function (jqXHR, textStatus, errorThrown) {
                 console.log("error handler");
-                alert(translate.pleaseSetupZenboIP);
+                if (zenboIPWarningWindowFlag === true) showAlertMessage(); 
             }
         });
 
@@ -641,11 +653,11 @@
                 console.log("success handler");
 
                 if (data == 'Must set Zenbo IP')
-               alert(translate.pleaseSetupZenboIP);
+               if (zenboIPWarningWindowFlag === true) showAlertMessage(); 
             },
             error: function (jqXHR, textStatus, errorThrown) {
                 console.log("error handler");
-                alert(translate.pleaseSetupZenboIP);
+                if (zenboIPWarningWindowFlag === true) showAlertMessage(); 
             }
         });
 
@@ -681,11 +693,11 @@
                 console.log("success handler");
 
                 if (data == 'Must set Zenbo IP')
-                alert(translate.pleaseSetupZenboIP);
+                if (zenboIPWarningWindowFlag === true) showAlertMessage(); 
             },
             error: function (jqXHR, textStatus, errorThrown) {
                 console.log("error handler");
-                alert(translate.pleaseSetupZenboIP);
+                if (zenboIPWarningWindowFlag === true) showAlertMessage(); 
             }
         });
  
@@ -736,7 +748,7 @@
             console.log("success handler");
 
             if (data == 'Must set Zenbo IP')
-                alert(translate.pleaseSetupZenboIP);
+                if (zenboIPWarningWindowFlag === true) showAlertMessage(); 
 
             if  ( flagArray.data[flagIndex_init_2].recursionFlag === true) {
                   flagArray.data[flagIndex_init_2].recursionFlag = false;
@@ -762,7 +774,7 @@
             },
             error: function (jqXHR, textStatus, errorThrown) {
                 console.log("error handler");
-               alert(translate.pleaseSetupZenboIP);
+               if (zenboIPWarningWindowFlag === true) showAlertMessage(); 
             }
         });
 
@@ -780,11 +792,11 @@
                 console.log("success handler");
 
                 if (data == 'Must set Zenbo IP')
-                alert(translate.pleaseSetupZenboIP);
+                if (zenboIPWarningWindowFlag === true) showAlertMessage(); 
             },
             error: function (jqXHR, textStatus, errorThrown) {
                 console.log("error handler");
-                alert(translate.pleaseSetupZenboIP);
+                if (zenboIPWarningWindowFlag === true) showAlertMessage(); 
             }
         });
 
@@ -801,11 +813,11 @@
             console.log("Speak_and_listen-success handler");
  
             if (data == 'Must set Zenbo IP')
-            alert(translate.pleaseSetupZenboIP); 				               				   
+            if (zenboIPWarningWindowFlag === true) showAlertMessage();  				               				   
             },
             error: function (jqXHR, textStatus, errorThrown) {
                 console.log("error handler");
-                alert(translate.pleaseSetupZenboIP);
+                if (zenboIPWarningWindowFlag === true) showAlertMessage(); 
             }
         });
 
@@ -834,11 +846,11 @@
                 callback();
 
                 if (data == 'Must set Zenbo IP')
-                alert(translate.pleaseSetupZenboIP);
+                if (zenboIPWarningWindowFlag === true) showAlertMessage(); 
             },
             error: function (jqXHR, textStatus, errorThrown) {
                 console.log("error handler");
-               alert(translate.pleaseSetupZenboIP);
+               if (zenboIPWarningWindowFlag === true) showAlertMessage(); 
             }
         });
 
@@ -1109,11 +1121,11 @@
                 console.log("success handler");
 
                 if (data == 'Must set Zenbo IP')
-                alert(translate.pleaseSetupZenboIP);
+                if (zenboIPWarningWindowFlag === true) showAlertMessage(); 
             },
             error: function (jqXHR, textStatus, errorThrown) {
                 console.log("error handler");
-                alert(translate.pleaseSetupZenboIP);
+                if (zenboIPWarningWindowFlag === true) showAlertMessage(); 
             }
         });
 
@@ -1141,11 +1153,11 @@
                 console.log("success handler");
                
                 if (data == 'Must set Zenbo IP')
-                alert(translate.pleaseSetupZenboIP);
+                if (zenboIPWarningWindowFlag === true) showAlertMessage(); 
             },
             error: function (jqXHR, textStatus, errorThrown) {
                 console.log("error handler");
-                alert(translate.pleaseSetupZenboIP);
+                if (zenboIPWarningWindowFlag === true) showAlertMessage(); 
             }
         });
 
@@ -1173,11 +1185,11 @@
                 console.log("success handler");
 
                 if (data == 'Must set Zenbo IP')
-                alert(translate.pleaseSetupZenboIP);
+                if (zenboIPWarningWindowFlag === true) showAlertMessage(); 
             },
             error: function (jqXHR, textStatus, errorThrown) {
                 console.log("error handler");
-                alert(translate.pleaseSetupZenboIP);
+                if (zenboIPWarningWindowFlag === true) showAlertMessage(); 
             }
         });
 
@@ -1194,11 +1206,11 @@
                 console.log("success handler");
 
                 if (data == 'Must set Zenbo IP')
-                alert(translate.pleaseSetupZenboIP);
+                if (zenboIPWarningWindowFlag === true) showAlertMessage(); 
             },
             error: function (jqXHR, textStatus, errorThrown) {
                 console.log("error handler");
-                alert(translate.pleaseSetupZenboIP);
+                if (zenboIPWarningWindowFlag === true) showAlertMessage(); 
             }
         });
 
@@ -1226,11 +1238,11 @@
                 console.log("success handler");
 
                 if (data == 'Must set Zenbo IP')
-                 alert(translate.pleaseSetupZenboIP);
+                 if (zenboIPWarningWindowFlag === true) showAlertMessage(); 
             },
             error: function (jqXHR, textStatus, errorThrown) {
                 console.log("error handler");
-                alert(translate.pleaseSetupZenboIP);
+                if (zenboIPWarningWindowFlag === true) showAlertMessage(); 
             }
         });
 
@@ -1258,11 +1270,11 @@
                 console.log("success handler");
 
                 if (data == 'Must set Zenbo IP')
-                alert(translate.pleaseSetupZenboIP);
+                if (zenboIPWarningWindowFlag === true) showAlertMessage(); 
             },
             error: function (jqXHR, textStatus, errorThrown) {
                 console.log("error handler");
-                alert(translate.pleaseSetupZenboIP);
+                if (zenboIPWarningWindowFlag === true) showAlertMessage(); 
             }
         });
 
@@ -1290,11 +1302,11 @@
                 console.log("success handler");
 
                 if (data == 'Must set Zenbo IP')
-                 alert(translate.pleaseSetupZenboIP);
+                 if (zenboIPWarningWindowFlag === true) showAlertMessage(); 
             },
             error: function (jqXHR, textStatus, errorThrown) {
                 console.log("error handler");
-                alert(translate.pleaseSetupZenboIP);
+                if (zenboIPWarningWindowFlag === true) showAlertMessage(); 
             }
         });
 
@@ -1322,11 +1334,11 @@
                 console.log("success handler");
 
                 if (data == 'Must set Zenbo IP')
-                alert(translate.pleaseSetupZenboIP);     
+                if (zenboIPWarningWindowFlag === true) showAlertMessage();      
             },
             error: function (jqXHR, textStatus, errorThrown) {
                 console.log("error handler");
-                alert(translate.pleaseSetupZenboIP);
+                if (zenboIPWarningWindowFlag === true) showAlertMessage(); 
             }
         });
 
@@ -1370,14 +1382,14 @@
                   console.log("success handler");
 
                   if (data == 'Must set Zenbo IP')
-                  alert(translate.pleaseSetupZenboIP);
+                  if (zenboIPWarningWindowFlag === true) showAlertMessage(); 
 
                   getSentencesRecursion(flagIndex_init_3);
  
                   },
                   error: function (jqXHR, textStatus, errorThrown) {
                   console.log("error handler");
-                 alert(translate.pleaseSetupZenboIP);
+                 if (zenboIPWarningWindowFlag === true) showAlertMessage(); 
                    
                   flagArray.data[flagIndex_init_3].recursionFlag = true;
                   }
@@ -1443,12 +1455,12 @@
                 console.log("success handler");
 
                if (data == 'Must set Zenbo IP')
-                alert(translate.pleaseSetupZenboIP);
+                if (zenboIPWarningWindowFlag === true) showAlertMessage(); 
      
             },   
             error: function (jqXHR, textStatus, errorThrown) {
                 console.log("error handler");
-                alert(translate.pleaseSetupZenboIP);
+                if (zenboIPWarningWindowFlag === true) showAlertMessage(); 
             }    
         });  
     }; 
@@ -1476,12 +1488,12 @@
                 console.log("success handler");
 
                 if (data == 'Must set Zenbo IP')
-                alert(translate.pleaseSetupZenboIP);
+                if (zenboIPWarningWindowFlag === true) showAlertMessage(); 
 
             },
             error: function (jqXHR, textStatus, errorThrown) {
                 console.log("error handler");
-                alert(translate.pleaseSetupZenboIP);
+                if (zenboIPWarningWindowFlag === true) showAlertMessage(); 
             }
         });
     };
