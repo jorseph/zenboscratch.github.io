@@ -313,8 +313,6 @@ function showAlertMessage()
 		  "position": "absolute",  
 		  "top":"0px",
                   "left":"0px",
-		  "border-top-left-radius": "5px",
-		  "border-top-right-radius": "5px",
 		  "border": "#333 solid 0px",
 	          "background-color": "#31669b",
 	          "color": "#fff",
@@ -331,7 +329,7 @@ function showAlertMessage()
 	
 	$("#alertButtonDiv").css({
 	    "position": "absolute",  
-	    "bottom":"20px",
+	    "bottom":"15px",
             "left":"114px",
             "width": "60px", 	
             "height": "35px",
