@@ -317,7 +317,7 @@ function showAlertMessage()
 	          "color": "#fff",
 	          "font-size": "14px",
 	          "text-align": "center",
-		  "width": "286px", 	
+		  "width": "288px", 	
                   "height": "80px"
 	        
         }); 
@@ -369,7 +369,8 @@ function showAlertMessage()
      );	
 	 
      $("#background").css({"opacity" : "0.7"}).fadeIn("slow");	
-    // $("#alertHeader").fadeIn("slow");	
+    // $("#alertHeader").fadeIn("slow");
+     $("#alertHeader").center();
      $("#dialog").center().fadeIn("slow");		
 
    };  	
