@@ -329,7 +329,10 @@ function showAlertMessage()
 	    "cursor": "pointer"
         }); 
 	
-	$("#alertButtonDiv").css({ 
+	$("#alertButtonDiv").css({
+            "width": "120px", 	
+            "height": "70px",
+	    "background-color": "#7FFF00",	
 	    "position": "absolute",  
 	    "bottom":"5",
             "left":"100",
