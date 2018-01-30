@@ -517,7 +517,7 @@ function showAlertMessage()
             },
             error: function (jqXHR, textStatus, errorThrown) {
                 console.log("error handler");
-                ashowAlertMessage();
+                showAlertMessage();
             }
         });
     };
