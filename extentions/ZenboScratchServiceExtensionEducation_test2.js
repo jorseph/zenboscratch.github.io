@@ -300,8 +300,8 @@ function showAlertMessage()
 	    "border-radius": "5px",
             "border": "#333 solid 1px",
 	    "background-color": "#fefefe", 	
-	    "width": "288px", 	
-            "height": "144px",
+	    "width": "240px", 	
+            "height": "135px",
 	    "font-size": "14px",
 	    "text-align": "center",
 	    "z-index": "10"
@@ -318,8 +318,8 @@ function showAlertMessage()
 	          "color": "#fff",
 	          "font-size": "14px",
 	          "text-align": "center",
-		  "width": "286px", 	
-                  "height": "75px"
+		  "width": "238px", 	
+                  "height": "90px"
 	        
         }); 
 	
@@ -329,8 +329,8 @@ function showAlertMessage()
 	
 	$("#alertButtonDiv").css({
 	    "position": "absolute",  
-	    "bottom":"15px",
-            "left":"114px",
+	    "bottom":"5px",
+            "left":"90px",
             "width": "60px", 	
             "height": "35px",
 	    "background-color": "#fefefe",	
