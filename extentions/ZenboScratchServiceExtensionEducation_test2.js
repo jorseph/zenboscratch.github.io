@@ -313,12 +313,12 @@ function showAlertMessage()
 		  "position": "absolute",  
 		  "top":"0px",
                   "left":"0px",
-		  "border": "#333 solid 0px",
+		  "border": "#333 solid 1px",
 	          "background-color": "#31669b",
 	          "color": "#fff",
 	          "font-size": "14px",
 	          "text-align": "center",
-		  "width": "286px", 	
+		  "width": "288px", 	
                   "height": "75px"
 	        
         }); 
