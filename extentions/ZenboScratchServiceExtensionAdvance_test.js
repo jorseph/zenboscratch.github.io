@@ -377,15 +377,17 @@ function showAlertMessage()
 	$( "#dialog" ).html( '<div id="alertHeader" > <br> <h2>'+ translate.pleaseSetupZenboIP +'</h2> <input id="myCheckBox" type="checkbox" name="ck" value="true">' + translate.checkBoxMessage +'</div>  <div id="alertButtonDiv"> <button id="myButton">' + translate.alertButtonText + '</button>  </div>');
 
 	$("#alertHeader").css({
-		  "position": "absolute",  
-		  "top":"0px",
-                  "left":"0px",
-		  "border": "#333 solid 0px",
+		  "position": "absolute",
+		  "top":"-1px",
+                  "left":"-1px",
+		  "border-top-left-radius": "5px",
+		  "border-top-right-radius": "5px",
+		  "border": "#333 solid 1px", 
 	          "background-color": "#31669b",
 	          "color": "#fff",
 	          "font-size": "14px",
 	          "text-align": "center",
-		  "width": "238px", 	
+		  "width": "240px", 	
                   "height": "90px"
 	        
         }); 
