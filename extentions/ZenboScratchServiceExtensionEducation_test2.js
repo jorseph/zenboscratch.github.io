@@ -310,10 +310,11 @@ function showAlertMessage()
 	$( "#dialog" ).html( '<div id="alertHeader" > <br> <h2>請先設置 Zenbo IP !</h2> <input id="myCheckBox" type="checkbox" name="ck" value="true">永遠不再提示 </div>  <div id="alertButtonDiv"> <button id="myButton">確定</button>  </div>');
 
 	$("#alertHeader").css({
-		  "position": "absolute",  
+		  "position": "absolute",
 		  "top":"0px",
                   "left":"0px",
-		  "border-radius": "5px",
+		  "border-top-left-radius": "5px",
+		  "border-top-right-radius": "5px",
 		  "border": "#333 solid 0px",
 	          "background-color": "#31669b",
 	          "color": "#fff",
