@@ -311,11 +311,11 @@ function showAlertMessage()
 
 	$("#alertHeader").css({
 		  "position": "absolute",
-		  "top":"0px",
-                  "left":"0px",
+		  "top":"1px",
+                  "left":"1px",
 		  "border-top-left-radius": "5px",
 		  "border-top-right-radius": "5px",
-		  "border": "#333 solid 1px",
+		  "border": "#333 solid 0px",
 	          "background-color": "#31669b",
 	          "color": "#fff",
 	          "font-size": "14px",
