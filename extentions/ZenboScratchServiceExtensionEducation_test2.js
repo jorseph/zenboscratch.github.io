@@ -53,7 +53,7 @@
         console.log("stopAll");
         console.log(ip);
         $.ajax({
-            url: 'http://' + ip + port + '/?extension=education' + '&name=stopAll',
+            url: 'http://' + ip + port + '/?extension=education' + '&name=stopAll' + '&extensionVersion=1.5',
             dataType: 'text',
             crossDomain: true,
             success: function (data) {
@@ -107,7 +107,7 @@
          }
    
         $.ajax({
-            url: 'http://' + ip + port + '/?extension=education' + '&name=Add_and_update_sentence' + '&p1=' + 'IP' + '&p2=' + 'switch',
+            url: 'http://' + ip + port + '/?extension=education' + '&name=Add_and_update_sentence' + '&p1=' + 'IP' + '&p2=' + 'switch' + '&extensionVersion=1.5',
             dataType: 'text',
             crossDomain: true,
             success: function (data) {
@@ -118,7 +118,7 @@
              			 flagArray.data[flagIndex_init].recursionFlag = false;
 
     			    $.ajax({
-          			url: 'http://' + ip + port + '/?extension=education' + '&name=Add_and_update_sentence' + '&p1=' + 'test' + '&p2=' + 'zenbo',
+          			url: 'http://' + ip + port + '/?extension=education' + '&name=Add_and_update_sentence' + '&p1=' + 'test' + '&p2=' + 'zenbo' + '&extensionVersion=1.5',
         			dataType: 'text',
            			crossDomain: true,
            			success: function (data) {
@@ -152,7 +152,7 @@
 			 
 		$.ajax({
 			type: 'GET',
-			url: 'http://' + ip + port + '/?extension=education' + '&name=Get_sentences',
+			url: 'http://' + ip + port + '/?extension=education' + '&name=Get_sentences' + '&extensionVersion=1.5',
 			dataType: 'text',
 			crossDomain: true,
 			success: function (data) {
@@ -390,7 +390,7 @@ function showAlertMessage()
         console.log(p1);
         console.log(p2);
         $.ajax({
-            url: 'http://' + ip + port + '/?extension=education' + '&name=Head_movement' + '&p1=' + p1 + '&p2=' + p2,
+            url: 'http://' + ip + port + '/?extension=education' + '&name=Head_movement' + '&p1=' + p1 + '&p2=' + p2 + '&extensionVersion=1.5',
             dataType: 'text',
             crossDomain: true,
             success: function (data) {
@@ -421,7 +421,7 @@ function showAlertMessage()
         console.log(p2);
         console.log(p3);
         $.ajax({
-            url: 'http://' + ip + port + '/?extension=education' + '&name=Body_movement' + '&p1=' + p1 + '&p2=' + p2 + '&p3=' + p3,
+            url: 'http://' + ip + port + '/?extension=education' + '&name=Body_movement' + '&p1=' + p1 + '&p2=' + p2 + '&p3=' + p3 + '&extensionVersion=1.5',
             dataType: 'text',
             crossDomain: true,
             success: function (data) {
